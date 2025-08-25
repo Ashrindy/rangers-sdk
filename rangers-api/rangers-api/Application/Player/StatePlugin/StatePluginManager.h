@@ -6,7 +6,8 @@ namespace app::player {
     public:
         Ctx* context;
         csl::ut::MoveArray<hh::fnd::Reference<StatePlugin<Ctx>>> plugins;
-        bool unk1;
+        bool paused;
+        
         StatePluginManager(csl::fnd::IAllocator* allocator);
         static StatePluginManager* Create(csl::fnd::IAllocator* allocator);
         StatePlugin<Ctx>* GetPlugin(unsigned int nameHash);

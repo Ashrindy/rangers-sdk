@@ -5,11 +5,46 @@ namespace hh::dv {
     public:
         class ScenePlaybackInfo : public hh::fnd::ReferencedObject{
         public:
+            struct Info {
+                float dword0;
+                int dword4;
+                int dword8;
+                int dwordC;
+                int qword10;
+                int qword14;
+                int qword18;
+                int qword1C;
+                int qword20;
+                int qword24;
+                int qword28;
+                int qword2C;
+                int qword30;
+                int qword34;
+                int qword38;
+                int qword3C;
+                int qword40;
+                int qword44;
+                bool paused;
+                char char49;
+                char char4A;
+                char char4B;
+                bool useInfo;
+                char dword50;
+                short word52;
+                char unk7;
+
+                Info();
+
+                bool UseInfo() const;
+            };
+
             hh::fnd::Handle<DvSceneControl> dvSceneControl;
+            Info info;
         };
 
         struct Description{
             int64_t unk0; //see 0x1401EE7CD
+            char unk1;
         };
 
         csl::ut::MoveArray<ScenePlaybackInfo*> scenePlaybackInfos;
@@ -35,6 +70,10 @@ namespace hh::dv {
         virtual void AddListener(DvSceneControlListener* listener);
         virtual void RemoveListener(DvSceneControlListener* listener);
         virtual DvSceneControl* GetDvSceneControl();
+
+        void AddScenePlaybackInfo(const char* sceneName);
+        void AddScenePlaybackInfo(const char* sceneName, ScenePlaybackInfo::Info& info);
+        void AddScenePlaybackInfo(ResDvScene* resource, ScenePlaybackInfo::Info& info);
 
         GAMESERVICE_CLASS_DECLARATION(DiEventManager)
     };

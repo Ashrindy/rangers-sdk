@@ -19,9 +19,9 @@ namespace hh::game
 
 		const char* name;
 		CreateFunction* instantiator;
-		void* unk2{};
+		GameServiceClass* parent{};
 
-		GameServiceClass(const char* name, CreateFunction* instantiator, void* unk2) : name{ name }, instantiator{ instantiator }, unk2{ unk2 } {}
+		GameServiceClass(const char* name, CreateFunction* instantiator, GameServiceClass* parent) : name{ name }, instantiator{ instantiator }, parent{ parent } {}
 	};
 	
 	class alignas(8) GameService : public hh::fnd::Messenger

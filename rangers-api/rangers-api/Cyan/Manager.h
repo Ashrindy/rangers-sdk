@@ -1,6 +1,8 @@
 #pragma once
 
 namespace Cyan {
+    struct UpdateLightParam {};
+
     class Emitter;
     class Manager {
     public:
@@ -145,7 +147,7 @@ namespace Cyan {
         virtual void SetNotifyCallback(NotifyCallback* notifyCallback, void* userData) = 0;
         virtual void ResetNotifyCallback() = 0;
         virtual void Bind(Resource::EffectParam* effectParam) = 0;
-        virtual void SetTextureRequestResourceHandler(RequestResourceHandler<Resource::Texture>* handler, void* userData) = 0;
+        virtual void SetTextureRequestResourceHandler(RequestResourceHandler<Resource::TextureParam>* handler, void* userData) = 0;
         virtual void SetNodeAnimRequestResourceHandler(RequestResourceHandler<Resource::NodeAnim>* handler, void* userData) = 0;
         virtual void SetEffectRequestResourceHandler(RequestResourceHandler<Resource::Effect>* handler, void* userData) = 0;
         virtual void SetModelRequestResourceHandler(RequestResourceHandler<Resource::Model>* handler, void* userData) = 0;
@@ -298,7 +300,7 @@ namespace Cyan {
         virtual void SetNotifyCallback(NotifyCallback* notifyCallback, void* userData) override;
         virtual void ResetNotifyCallback() override;
         virtual void Bind(Resource::EffectParam* effectParam) override;
-        virtual void SetTextureRequestResourceHandler(RequestResourceHandler<Resource::Texture>* handler, void* userData) override;
+        virtual void SetTextureRequestResourceHandler(RequestResourceHandler<Resource::TextureParam>* handler, void* userData) override;
         virtual void SetNodeAnimRequestResourceHandler(RequestResourceHandler<Resource::NodeAnim>* handler, void* userData) override;
         virtual void SetEffectRequestResourceHandler(RequestResourceHandler<Resource::Effect>* handler, void* userData) override;
         virtual void SetModelRequestResourceHandler(RequestResourceHandler<Resource::Model>* handler, void* userData) override;
@@ -321,5 +323,6 @@ namespace Cyan {
 
         void UpdateEffect();
         Emitter* CreateEmitter(EffectImpl* effect, const Resource::EmitterParam* emitterParam, const InheritChildParam* inheritChildParam, int unkParam1);
+        bool UpdateLight(UpdateLightParam& param);
     };
 }

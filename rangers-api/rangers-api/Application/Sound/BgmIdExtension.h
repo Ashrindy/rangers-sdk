@@ -43,7 +43,7 @@ namespace app::snd {
         virtual bool ProcessMessage(hh::fnd::Message& message) override;
 
         virtual void EPL_UnkFunc2() override;
-        virtual void EPL_UnkFunc4() override;
+        virtual void CutsceneEnd(const char* cutsceneName) override;
         virtual void EPL_UnkFunc5() override;
         virtual void OnMessage(hh::fnd::Message* msg) override;
     };

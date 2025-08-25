@@ -22,7 +22,7 @@ namespace hh::needle {
     struct RenderTextureCreateArgs {
         enum Flag {
             UNK0 = 1,
-            UNK1 = 2, // decides some even/odd logic in setrenderdimensions... backbuffer?
+            RESOLVE = 2, // decides some even/odd logic in setrenderdimensions... backbuffer?
             UNK2 = 4,
             UNK3 = 8,
             COPIED = 0x10,
@@ -97,5 +97,9 @@ namespace hh::needle {
         void ChangePipeline(RenderingPipeline* pipeline);
         bool IsFlagSet(RenderTextureCreateArgs::Flag flag) const;
         Texture* GetTexture(unsigned int id) const;
+        Texture* GetDepthStencilTexture() const;
+        unsigned int GetClearedTextureCount() const;
+        intrusive_ptr<RenderTarget>* GetRenderTarget(unsigned int idx) const;
+        void Resolve(RenderingDeviceContext* ctx);
     };
 }

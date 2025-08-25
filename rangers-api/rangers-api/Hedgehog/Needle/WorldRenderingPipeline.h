@@ -40,8 +40,6 @@ namespace hh::needle {
         void AddParamBuildJob(ParamBuildJob* gatherDrawPassInfoJob);
         void RemoveParamBuildJob(ParamBuildJob* gatherDrawPassInfoJob);
 
-        virtual uint64_t UnkFunc1() override;
-        virtual void UnkFunc2(PipelineInfo* pipelineInfo) override;
         virtual void StopJobs() override;
         virtual void Execute(PipelineInfo* pipelineInfo, WorldRenderingPipelineExecContext* execContext);
         virtual void UnkFunc14() {}

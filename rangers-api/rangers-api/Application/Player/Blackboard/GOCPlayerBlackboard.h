@@ -9,7 +9,7 @@ namespace app::player {
 
 		virtual void* GetRuntimeTypeInfo() const;
 		virtual void OnGOCEvent(GOCEvent event, hh::game::GameObject& ownerGameObject, void* data) {}
-
+        
         GOCOMPONENT_CLASS_DECLARATION(GOCPlayerBlackboard)
     };
 }

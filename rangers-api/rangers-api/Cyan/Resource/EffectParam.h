@@ -12,7 +12,6 @@ namespace Cyan::Resource {
     class Shader;
     class ComputeShader;
     class Skeleton;
-    class Texture;
 
     template<typename T>
     class ResObject {

@@ -84,25 +84,38 @@ namespace app::player {
 
         };
 
+        enum class FormState : unsigned int {
+            NORMAL,
+            SUPER,
+            UNK0
+        };
+
+        struct Description {
+            char playerId;
+            CharacterIdU8 characterId;
+        };
+
         static constexpr const char* name = "BlackboardStatus";
-        uint16_t word20;
-        uint32_t dword24;
+        uint8_t byte20;
+        CharacterIdU8 characterId;
+        FormState formState;
         csl::ut::Bitset<CombatFlag, uint64_t> combatFlags[2];
         csl::ut::Bitset<StateFlag, uint64_t> stateFlags;
         csl::ut::Bitset<WorldFlag, uint64_t> worldFlags[2];
         float outOfControlTime;
         float inControlTime;
         uint64_t qword58;
-        uint64_t qword60;
+        uint32_t dword60;
+        uint32_t dword64;
         ut::PriorityList<bool, hh::fnd::Handle<hh::fnd::Messenger>> qword68;
         csl::ut::InplaceMoveArray<uint32_t, 4> qword90;
         csl::ut::InplaceMoveArray<uint32_t, 4> qwordC0;
         csl::ut::InplaceMoveArray<uint32_t, 4> qwordF0;
-        uint64_t qword120;
-        uint32_t dword128;
-        ut::PriorityList<Dimension, hh::fnd::Handle<hh::fnd::Messenger>> qword130;
+        uint32_t dword120[2];
+        Dimension lastDimension;
+        ut::PriorityList<Dimension, hh::fnd::Handle<hh::fnd::Messenger>> dimension;
         csl::math::Vector4 oword160;
-        uint32_t dword170;
+        uint32_t dword170; //handle
         uint32_t qword174;
         uint32_t qword178;
         uint32_t dword17C;
@@ -112,12 +125,27 @@ namespace app::player {
 
         virtual unsigned int GetNameHash() const override;
 
-        void SetCombatFlag(CombatFlag combatFlag, bool enabled);
-        void SetStateFlag(StateFlag stateFlag, bool enabled);
-        void SetWorldFlag(WorldFlag worldFlag, bool enabled);
+        void Setup(Description& desc);
+        Dimension GetDimension() const;
+        bool HasQword90() const;
+        int GetDword60() const;
+        int GetDword64() const;
+        int GetDword120(unsigned int idx) const;
+        int* GetDword174() const;
         bool GetCombatFlag(CombatFlag combatFlag);
+        bool GetInvDimension() const;
+        bool HasQwordF0() const;
+        bool HasQwordC0() const;
+        void ResetCombatFlag(CombatFlag combatFlag);
+        void ResetWorldFlag(WorldFlag worldFlag);
+        void SetStateFlag(StateFlag stateFlag, bool enabled);
+        void SetFormState(FormState state);
+        void SetCombatFlag(CombatFlag combatFlag, bool enabled);
+        void SetWorldFlag(WorldFlag worldFlag, bool enabled);
         bool GetStateFlag(StateFlag stateFlag);
         bool GetWorldFlag(WorldFlag worldFlag);
+        FormState GetFormState() const;
+        CharacterIdU8 GetCharacterId() const;
 
         DEFAULT_CREATE_FUNC(BlackboardStatus);
     };

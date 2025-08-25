@@ -70,12 +70,12 @@ namespace gindows{
         int64_t qword660;
         int64_t oword668;
         int64_t oword670;
-        int64_t qword678;
+        float qword678; //related to y axis for position
         int* preferredClientSize;
         int64_t qword688;
         int dword690;
         int64_t qword694;
-        int displayLocation;
+        csl::math::Vector2 displayLocation;
         int64_t qword6A0;
         int64_t qword6A8;
         int dword6B0;
@@ -150,7 +150,12 @@ namespace gindows{
         void SetName(const char* name);
         int GetFontHeight();
         int AddSavePropertyEnabled(const char* name, int value);
+        bool GetSavePropertyEnabled(const char* name);
         Form* FindForm();
+        void SetLeft(int left);
+        void SetTop(int top);
+        void SetWidth(int width);
+        void SetHeight(int height);
 
         Control();
     };

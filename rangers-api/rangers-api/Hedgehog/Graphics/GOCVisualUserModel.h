@@ -37,7 +37,7 @@ namespace hh::gfx {
                 uint32_t qword24;
                 uint32_t qword28;
                 uint32_t dword2C;
-                needle::CNameIDObject* renderingTypeOrSomething;
+                needle::CNameIDObject* renderingLayer;
                 uint64_t qword38;
                 uint64_t qword40;
                 needle::VertexShader* vertexShader;

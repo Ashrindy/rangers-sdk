@@ -39,6 +39,7 @@ namespace app{
         int GetCurrentSequence();
         const char* GetStageName() const;
         hh::fnd::Handle<ScriptSequence> ExecuteScript(const char* name, hh::fnd::Handle<hh::game::GameObject>& scriptObject, hh::fnd::Handle<hh::game::GameObject>& unk0, bool isEndKill);
+        hh::fnd::Handle<ScriptSequence> ExecuteSequence(unsigned int id);
 
         GAMESERVICE_CLASS_DECLARATION(ScriptSequenceManager)
     };

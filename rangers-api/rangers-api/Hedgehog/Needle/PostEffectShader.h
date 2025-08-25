@@ -11,7 +11,7 @@ namespace hh::needle {
 
         PostEffectShader();
         virtual ~PostEffectShader();
-
+        
         void Setup(RenderingDevice* renderingDevice, VertexShader* vertexShader, PixelShader* pixelShader, InstanceParameterContainerData parameters1, InstanceParameterContainerData parameters2, InstanceParameterContainerData parameters3);
     };
 }

@@ -81,7 +81,7 @@ namespace hh::needle {
         virtual void UnkFunc66() = 0;
         virtual void SetScissor(const Rectangle* scissorRects, unsigned int count) = 0;
         virtual uint64_t UnkFunc68() = 0;
-        virtual uint64_t UnkFunc69() = 0;
+        virtual uint64_t UnkFunc69(bool enabled, int64_t* bits) = 0;
         virtual uint64_t UnkFunc70() = 0;
         virtual void GetRsFlagMask(RsFlagMask& rsFlagMask) = 0;
         virtual void SetRenderTargets(const RenderTargetsSetting& renderTargetsSetting) = 0;

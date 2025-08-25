@@ -14,5 +14,7 @@ namespace Cyan {
         volatile int unk1_5;
 
         Scene(ManagerImpl* managerImpl);
+
+        void PrepareRender(const Graphics::DeviceContainer& deviceContainer);
     };
 }

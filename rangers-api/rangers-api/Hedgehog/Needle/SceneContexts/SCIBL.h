@@ -10,7 +10,7 @@ namespace hh::needle {
         class Impl : public NeedleRefcountObject {
         public:
             SCIBL& sceneContext;
-            uint64_t qword18;
+            Texture* iblTexture;
             intrusive_ptr<ProbeBVH> probeBVH;
             RenderingDeviceContext* renderingDeviceContext;
             csl::math::Vector3 probeLocationsMaybe[24];
@@ -31,5 +31,6 @@ namespace hh::needle {
 
         void AddProbes(SupportFXAll* supportFX, hh::gfx::ResProbeData* probeData, float scale, const char* resourceName);
         const csl::math::Vector3& GetProbeLocation(unsigned int idx) const;
+        void SetIBLTexture(Texture* texture);
     };
 }

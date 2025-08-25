@@ -12,6 +12,7 @@ namespace hh::needle {
         uint32_t index;
         intrusive_ptr<RenderTarget> pointer;
 
+        RenderTargetReference();
         RenderTargetReference(unsigned int index);
         RenderTargetReference(RenderTarget* renderTarget);
     };
@@ -30,8 +31,7 @@ namespace hh::needle {
         intrusive_ptr<Texture> renderTargetViews[65];
         intrusive_ptr<RenderTarget> depthStencils[24];
         intrusive_ptr<Texture> depthStencilViews[24];
-        uint64_t pad1;
-        uint64_t pad2;
+        float clearColor[4];
         intrusive_ptr<RenderTarget> unk6[4];
         intrusive_ptr<Texture> unk7[4];
         Unk1 unk8[4];
@@ -62,6 +62,11 @@ namespace hh::needle {
         unsigned int GetRenderTargetHeight(const RenderTargetReference& renderTargetReference) const;
         unsigned int GetDepthStencilWidth(const RenderTargetReference& renderTargetReference) const;
         unsigned int GetDepthStencilHeight(const RenderTargetReference& renderTargetReference) const;
+        void SetRenderTarget(const RenderTargetReference& renderTargetReference, bool setViewport);
+        void ClearRenderTarget(const RenderTargetReference& renderTargetReference, const float (&colorRGBA)[4]);
+        void ClearRenderTarget(const RenderTargetReference& renderTargetReference);
+        void ClearRenderTargets(char unk0);
+        int GetUnk9() const; //somekind of rendertarget id?
         RenderTarget* GetRenderTarget(const RenderTargetReference& renderTargetReference) const;
         Texture* GetRenderTargetView(const RenderTargetReference& renderTargetReference) const;
         RenderTarget* GetDepthStencil(const RenderTargetReference& renderTargetReference) const;

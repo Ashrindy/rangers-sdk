@@ -2,7 +2,7 @@
 
 namespace app_cmn::camera {
     class CameraFrame;
-    class CameraController : public hh::fnd::ReferencedObject {
+    class CameraController : public hh::fnd::RefByHandleObject {
     public:
         CameraParameter parameter;
         CameraFrame* cameraFrame;
@@ -11,7 +11,7 @@ namespace app_cmn::camera {
 
         virtual const char* GetControllerName() const {}
         virtual bool UnkFunc0() { return false; }
-        virtual bool UnkFunc1() { return false; }
+        virtual bool ProcessMessage(hh::fnd::Message& message) { return false; }
         virtual void UnkFunc2(int64_t a2) {}
         virtual int64_t UnkFunc3() { return 0; }
         virtual void UnkFunc4() {}

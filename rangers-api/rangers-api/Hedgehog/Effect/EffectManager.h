@@ -164,6 +164,7 @@ namespace hh::eff {
 
         void Setup(const SetupInfo& setupInfo);
         EffectHandle CreateEffect(char const* resourceName, const csl::math::Matrix34& location, const game::GameObject* object, unsigned int layer, uint32_t unkParam1, uint32_t unkParam2, float unkParam3, void* node);
+        void StopAllEffects();
 
         GAMESERVICE_CLASS_DECLARATION(EffectManager)
     };

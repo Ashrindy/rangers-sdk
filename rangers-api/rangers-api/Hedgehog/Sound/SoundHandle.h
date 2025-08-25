@@ -240,6 +240,10 @@ namespace hh::snd {
 
         SoundListenerHandle(const SoundListenerObject* handle);
         SoundListenerHandle();
+
+        void SetPosition(const csl::math::Vector3& position);
+        void SetOrientation(const csl::math::Vector3& forward, const csl::math::Vector3& up);
+        void SetFocusPoint(const csl::math::Vector3& point);
     };
 
     class SoundHandle {

@@ -8,5 +8,6 @@ namespace app::player {
         DEFAULT_CREATE_FUNC(PlayerStateParameter)
 
         StateParameter* GetByNameHash(unsigned int nameHash) const;
+        void AddParam(StateParameter* param);
     };
 }

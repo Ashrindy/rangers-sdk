@@ -85,7 +85,7 @@ namespace hh::needle::ImplDX11 {
         virtual void UnkFunc66() override;
         virtual void SetScissor(const Rectangle* scissorRects, unsigned int count) override;
         virtual uint64_t UnkFunc68() override;
-        virtual uint64_t UnkFunc69() override;
+        virtual uint64_t UnkFunc69(bool enabled, int64_t* bits) override;
         virtual uint64_t UnkFunc70() override;
         virtual void GetRsFlagMask(RsFlagMask& rsFlagMask) override;
         virtual void SetRenderTargets(const RenderTargetsSetting& renderTargetsSetting) override;

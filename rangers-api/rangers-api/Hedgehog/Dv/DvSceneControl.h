@@ -19,6 +19,16 @@ namespace hh::dv {
             UNK7
         };
 
+        struct Description {
+            DiEventManager* diEvtMgr;
+            csl::ut::MoveArray<DvSceneControlListener*>& listeners;
+            ResDvScene* resource;
+            int layerTimeScaleIdx;
+            bool update;
+            char unk0;
+            bool play;
+        };
+
         DiEventManager* diEvtMgr;
         csl::ut::MoveArray<DvSceneControlListener*> listeners;
         DvSceneNodeTree* nodeTree;
@@ -44,6 +54,7 @@ namespace hh::dv {
 		virtual void PostStepCallback(hh::game::GameManager* gameManager, const game::GameStepInfo& gameStepInfo) override;
         virtual void PreObjectUpdateCallback(game::GameManager* gameManager, fnd::UpdatingPhase phase, const fnd::SUpdateInfo& updateInfo) override;
 
+        void Setup(Description& desc);
         const char* GetCutsceneName();
         csl::ut::MoveArray<DvSceneControlListener*>& GetListeners();
         DvSceneNodeTree* GetNodeTree() const;

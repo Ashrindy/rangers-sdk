@@ -3,24 +3,24 @@
 namespace app::player {
     class GOCPlayerKinematicParams : public hh::game::GOComponent {
     public:
-        struct Unk1 {
+        struct JumpInfo {
             enum class Flag : unsigned char {
                 UNK0,
                 UNK1,
             };
 
-            csl::math::Vector3 unk1;
-            csl::math::Vector3 unk2;
-            uint32_t unk3;
-            uint32_t unk3a;
+            csl::math::Vector3 position;
+            csl::math::Vector3 unk0;
+            float jumpHeight;
+            uint32_t unk3a; // |= 0x02 - in air
             uint32_t unk4;
             hh::fnd::Handle<hh::game::GOComponent> unk5;
-            int unk6;
+            int unk6; //changes when you move
             char unk7;
             csl::ut::Bitset<Flag> flags;
 
-            Unk1();
-            Unk1(bool unk7Param, uint8_t unk8Param, const csl::math::Vector3& unk1Param, const csl::math::Vector3& unk2Param, uint32_t unk3aParam, uint32_t unk4Param, const hh::fnd::Handle<hh::game::GOComponent>& unk5Param, int unk6Param);
+            JumpInfo();
+            JumpInfo(bool unk7Param, uint8_t unk8Param, const csl::math::Vector3& unk1Param, const csl::math::Vector3& unk2Param, uint32_t unk3aParam, uint32_t unk4Param, const hh::fnd::Handle<hh::game::GOComponent>& unk5Param, int unk6Param);
             hh::game::GOComponent* GetUnk5() const;
 
             bool GetUnkFlag1();
@@ -99,8 +99,8 @@ namespace app::player {
         csl::math::Vector4 unk6;
         csl::math::Matrix44 unk7;
         uint32_t unk8;
-        Unk1 unk9;
-        Unk1 unk10;
+        JumpInfo jumpInfo0;
+        JumpInfo jumpInfo1;
         Unk2 unk11;
         Unk2 unk12;
         Unk3 unk13;
@@ -135,6 +135,7 @@ namespace app::player {
         void SetRotation(const csl::math::Quaternion& rotation);
         void SetVelocity(const csl::math::Vector4& velocity);
         void SetGravityScale(float gravityScale);
+        csl::math::Vector3 GetForwardTargetPosition() const;
 
         GOCOMPONENT_CLASS_DECLARATION(GOCPlayerKinematicParams)
     };

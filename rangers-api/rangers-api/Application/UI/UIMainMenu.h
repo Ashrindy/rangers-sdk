@@ -89,7 +89,7 @@ namespace app::ui {
         uint32_t unk201;
         int16_t unk202;
         hh::fnd::Reference<UIMainMenuContext> context;
-        uint64_t unk204;
+        hh::fnd::Reference<hh::game::GOComponent> uiWireframe; //GOCUIWireframe
         uint8_t unk205;
 
 		virtual void* GetRuntimeTypeInfo() const override;

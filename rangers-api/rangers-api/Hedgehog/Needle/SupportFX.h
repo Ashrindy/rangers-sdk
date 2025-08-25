@@ -1,4 +1,5 @@
 #pragma once
+#include <ucsl/resources/shlightfield/v1.h>
 
 namespace hh::needle {
     class PBRModelInstanceRenderer;
@@ -38,7 +39,7 @@ namespace hh::needle {
 
         class SFXAllocator {
         public:
-            uint64_t unk1;
+            SupportFX* supportFx;
             uint8_t unk2;
             uint32_t unk2a[36];
             csl::ut::MoveArray<void*> unk3;
@@ -123,6 +124,11 @@ namespace hh::needle {
             virtual void CIL_UnkFunc2();
         };
 
+        struct LightFieldDescription {
+            ucsl::resources::shlightfield::v1::SHLightFieldData* binaryData;
+            csl::ut::MoveArray<hh::needle::Texture*>* textures;
+        };
+
         bool CreateDevice(unsigned int resX, unsigned int resY, void* unkParam3, intrusive_ptr<RenderingDevice>& renderingDevice, bool unkParam4, void* unkParam5, void* unkParam6);
         void CreateRenderManager(unsigned int resX, unsigned int resY, unsigned int renderResX, unsigned int renderResY, intrusive_ptr<RenderingDevice>& renderingDevice, void* unkParam5);
         RenderingDevice* GetRenderingDevice() const;
@@ -146,6 +152,8 @@ namespace hh::needle {
         VertexShader* GetVertexShader(void* data, size_t size);
         PixelShader* GetPixelShader(void* data, size_t size);
         ComputeShader* GetComputeShader(void* data, size_t size);
+
+        void SetupLightField(LightFieldDescription& desc, const char* sceneName);
 
         static SupportFX* instance;
 

@@ -10,5 +10,6 @@ namespace hh::ui::surfride {
 
         SurfRideTextureDataMIRAGE(unsigned int count, csl::fnd::IAllocator* allocator);
         SurfRideTextureDataMIRAGE* CreateInstance(csl::fnd::IAllocator* allocator);
+        void SetTexture(unsigned int idx, hh::needle::Texture* texture);
     };
 }

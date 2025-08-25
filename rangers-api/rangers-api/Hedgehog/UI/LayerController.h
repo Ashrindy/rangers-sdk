@@ -53,5 +53,6 @@ namespace hh::ui {
         bool ConvertToScreenCoordinates(const csl::math::Vector3& normalized, csl::math::Vector3& out);
         fnd::Handle<SurfRideLayerHandle> GetLayerHandle() const;
         void SetCurrentFrame(float frame);
+        game::GameObject* GetGameObject() const;
     };
 }

@@ -3,7 +3,11 @@
 namespace gindows{
     class PropertyNode : public Object{
     public:
-        int GetValue(const char* name, int* value);
-        int SetName(const char* name);
+        bool GetValue(const char* name, int* value);
+        bool GetValue(const char* name, const char** value);
+        void SetName(const char* name);
+        void Add(const char* key, const char* value);
+        void Add(const char* key, int value);
+        void Add(const char* key, bool value);
     };
 }

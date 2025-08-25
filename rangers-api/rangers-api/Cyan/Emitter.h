@@ -45,7 +45,15 @@ namespace Cyan {
         uint64_t qword50;
         uint64_t qword58;
         uint32_t dword60;
-        uint8_t gap64[764];
+        uint8_t gap64[12];
+        csl::math::Matrix34 unk70;
+        uint8_t gap64b[256];
+        csl::math::Matrix34 emissionMatrix;
+        uint8_t gap64bb[252];
+        csl::math::Matrix34 worldMatrix;
+        uint8_t gap64c[16];
+        csl::math::Vector3 scale;
+        csl::math::Vector3 elementScale;
         System::Random random;
         uint64_t pad0;
         uint64_t qword370;
@@ -78,18 +86,24 @@ namespace Cyan {
         uint64_t qword588;
         uint32_t dword590;
         uint64_t qword598;
-        uint8_t gap5A0[160];
+        csl::ut::Color8 color;
+        float emitRatio;
+        uint8_t gap5A0[152];
         uint64_t qword640;
         uint64_t qword648;
         uint64_t qword650;
         uint32_t dword658;
-        uint8_t gap65C[12];
+        uint8_t gap65C[4];
+        uint32_t billboardViewportId;
+        uint8_t gap65Cb[4];
         FSMEmitter fsm;
         uint64_t qword688;
         WaitingState waitingState;
         AliveState aliveState;
         DeadState deadState;
-        uint8_t gap6C8[368];
+        uint8_t gap6C8[148];
+        csl::math::Position unkRelatedToSpreadVector; //used to calculate spread and spherical vector, if != 0 -> spherical
+        uint8_t gap6C8b[208];
         uint64_t qword838;
         uint64_t qword840;
         uint8_t gap848[576];
@@ -116,7 +130,7 @@ namespace Cyan {
         uint64_t qword15E0;
         uint8_t gap15E8[1360];
         uint64_t qword1B38;
-        uint64_t qword1B40;
+        Graphics::Renderer* renderer;
         uint64_t qword1B48;
         csl::math::Vector3 m1281B50;
         csl::math::Vector3 oword1B60;
@@ -128,12 +142,35 @@ namespace Cyan {
 
         Emitter(Effect* effect, const Resource::EmitterParam* param);
 
-        virtual uint64_t UnkFunc1(void* unkParam1) override;
+        void Start();
+        void Stop(bool unk);
+        void Pause();
+        void Resume();
+        void Step();
+        void SetMatrix(const csl::math::Matrix34& matrix);
+        csl::math::Matrix34 GetMatrix() const;
+        void SetColor(csl::ut::Color8 color);
+        inline csl::ut::Color8 GetColor() const { return color; }
+        void SetAlpha(char alpha);
+        inline char GetAlpha() const { return color.a; }
+        void SetScale(const csl::math::Vector3& scale);
+        inline csl::math::Vector3 GetScale() const { return scale; }
+        void SetElementScale(const csl::math::Vector3& scale);
+        inline csl::math::Vector3 GetElementScale() const { return elementScale; }
+        void SetEmitRatio(float emitRatio);
+        inline float GetEmitRatio() const { return emitRatio; }
+        void SetViewMask(unsigned int viewMask);
+        //inline unsigned int GetViewMask() const { return viewMask; }
+        void SetVisibility(bool enabled);
+        inline void SetBillboardViewportID(unsigned int viewportId) { billboardViewportId = viewportId; }
+        inline unsigned int GetBillboardViewportID() const { return billboardViewportId; }
+
+        virtual void Process(float unk) override;
         virtual uint64_t UnkFunc2(float unkParam1) override;
         virtual uint64_t UnkFunc3(void* unkParam1) override;
         virtual void UnkFunc4(void* unkParam1);
         virtual void UnkFunc5(const Resource::EmitterParam* param);
-        virtual void UnkFunc6(void* unkParam1);
+        virtual void PrepareRender(Graphics::Renderer* renderer, const Graphics::DeviceContainer& deviceContainer);
         virtual void UnkFunc7(unsigned int unkParam1);
         virtual void UnkFunc8();
         virtual void UnkFunc9(void* unkParam1);

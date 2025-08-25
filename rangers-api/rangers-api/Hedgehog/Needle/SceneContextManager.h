@@ -8,7 +8,7 @@ namespace hh::needle {
         CNameIDObject* nameId;
         bool initialized;
         SupportFXAll* supportFX;
-        csl::ut::MoveArray<void*> unk3;
+        csl::ut::MoveArray<intrusive_ptr<ParamBuildJob>> paramBuildJobs;
 
         SceneContextManager(const char* name, SupportFXAll* supportFX);
         virtual void Initialize() = 0;
@@ -17,6 +17,7 @@ namespace hh::needle {
 
         void Setup();
         void AddSceneContext(SceneContext* sceneContext);
+        void AddParamBuildJob(ParamBuildJob* paramBuildJob);
         SceneContext* GetSceneContext(unsigned int nameHash) const;
     };
 

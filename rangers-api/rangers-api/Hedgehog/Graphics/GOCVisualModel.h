@@ -164,6 +164,7 @@ namespace hh::gfx {
         void Setup(const GOCVisualModelDescription& description);
         void SetRootNode(int nodeIndex);
         void SetVisibility(const char* sceneRenderPass, bool visible);
+        void SetWorld(needle::World* world);
 
         // TexSrtControl* SetTexSrtAnimation(hh::gfx::TexSrtDesc& description);
         TexSrtBlender* SetTexSrtBlender(hh::gfx::TexSrtBlenderDesc& description);

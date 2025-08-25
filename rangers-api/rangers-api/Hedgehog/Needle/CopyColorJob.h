@@ -1,0 +1,16 @@
+#pragma once
+
+namespace hh::needle{
+    class CopyColorJob : public PostEffectRenderJob{
+    public:
+        int64_t qwordF0;
+
+        CopyColorJob();
+
+        virtual void Render(PipelineInfo* pipelineInfo) override;
+        virtual unsigned int GetNameHash() override;
+        virtual const char* GetName() override;
+        virtual unsigned int GetClassSize() override;
+        virtual void Setup(intrusive_ptr<RenderingDevice>& device) override;
+    };
+}

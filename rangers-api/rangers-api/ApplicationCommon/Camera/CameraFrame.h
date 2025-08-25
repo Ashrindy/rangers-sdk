@@ -79,6 +79,7 @@ namespace app_cmn::camera {
         void SearchBlendNode(BlendNode* blendNode, CameraController* controller, csl::ut::MoveArray<BlendNode*>* results) const;
         void RemoveBlendNodeHierarchy(BlendNode* blendNode);
         CameraInterpolator* CreateInterpolator(int type);
+        void AddExtension(CameraExtension* ext);
 
         GAMEOBJECT_CLASS_DECLARATION(CameraFrame)
     };

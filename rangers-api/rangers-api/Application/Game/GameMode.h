@@ -44,6 +44,8 @@ namespace app::game {
         GameModeExtension* GetExtension(unsigned int name) const;
         void AddExtension(GameModeExtension* extension);
 
+        void SendMessageImm(hh::fnd::Message& message);
+
         GameMode(csl::fnd::IAllocator* allocator);
     };
 }

@@ -7,6 +7,8 @@ namespace gindows{
         int dword8;
         csl::ut::MoveArray<void*> unkArray;
 
+        void Add(const char* value);
+
         ListViewSubItemCollection();
     };
 }

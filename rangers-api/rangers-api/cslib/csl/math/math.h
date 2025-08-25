@@ -156,6 +156,7 @@ namespace csl::math {
 	float Vector3Length(const Vector3& x);
 	float Vector3LengthSq(const Vector3& x);
 	bool Vector3DistanceLessThan(const Vector3& x, const Vector3& y, float threshold);
+	void Vector3Normalize(const Vector3& vec, Vector3* result);
 	
 	Quaternion QuaternionRotationBetweenNormals(const Vector3& from, const Vector3& to);
 	Quaternion QuaternionRotationBetweenNormalsAxis(const Vector3& from, const Vector3& to, const Vector3& axis);

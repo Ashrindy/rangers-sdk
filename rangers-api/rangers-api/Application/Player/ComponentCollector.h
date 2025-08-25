@@ -32,6 +32,7 @@ namespace app::player {
         Component& GetComponent(int id);
         hh::fnd::HFrame* GetFrame() const;
         void SetVisibility(bool visible);
+        unsigned int GetSize() const;
     };
 
     class GOCPlayerVisual;
