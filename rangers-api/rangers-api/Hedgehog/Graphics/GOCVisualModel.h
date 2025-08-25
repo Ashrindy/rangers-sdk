@@ -3,6 +3,7 @@
 namespace hh::anim {
     class SkeletalMeshBinding;
     class ResSkeleton;
+    class Pose;
 }
 
 namespace hh::gfx {
@@ -39,8 +40,8 @@ namespace hh::gfx {
         bool disableColorDraw;
         bool useGIPRT;
         bool useGISG;
-        unsigned int nameHash;
-        unsigned int masterPoseComponentNameHash; // a GOCVisualModel
+        unsigned int name;
+        unsigned int masterPoseComponentName; // a GOCVisualModel
         bool unk304;
         bool unk305;
 
@@ -146,7 +147,7 @@ namespace hh::gfx {
         uint64_t unk306;
         csl::ut::Bitset<AnimFlag> animFlags;
         uint8_t unk312;
-        uint64_t unk313;
+        anim::Pose* pose;
         uint64_t unk314;
         fnd::Reference<anim::SkeletalMeshBinding> skeletalMeshBinding;
         float unk316;
@@ -165,6 +166,8 @@ namespace hh::gfx {
         void SetRootNode(int nodeIndex);
         void SetVisibility(const char* sceneRenderPass, bool visible);
         void SetWorld(needle::World* world);
+        void SetPose(anim::Pose* pose);
+        void ClearPose(anim::Pose* pose);
 
         // TexSrtControl* SetTexSrtAnimation(hh::gfx::TexSrtDesc& description);
         TexSrtBlender* SetTexSrtBlender(hh::gfx::TexSrtBlenderDesc& description);
