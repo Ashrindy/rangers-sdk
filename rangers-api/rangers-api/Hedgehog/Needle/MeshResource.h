@@ -19,7 +19,7 @@ namespace hh::needle {
         uint16_t word82;
         uint16_t word84;
         uint16_t materialCount;
-        uint16_t word88;
+        uint16_t lodCount;
         uint16_t word8A;
         uint32_t dword8C;
         csl::math::Position aabbMin;

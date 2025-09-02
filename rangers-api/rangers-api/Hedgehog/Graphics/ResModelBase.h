@@ -8,9 +8,9 @@ namespace hh::gfx {
         ResModelBase();
 
         virtual uint32_t GetNodeCount() = 0;
-        virtual uint64_t UnkFunc2() = 0;
-        virtual uint64_t UnkFunc3() = 0;
-        virtual uint64_t UnkFunc4() = 0;
-        virtual uint64_t UnkFunc5() = 0;
+        virtual csl::ut::MoveArray<csl::math::Matrix44> GetNodeMatrices() = 0;
+        virtual int64_t GetParentNodeIndex(unsigned int nodeIndex) = 0;
+        virtual const char* GetNodeName(unsigned int nodeIndex) = 0;
+        virtual int32_t GetLODCount() = 0;
     };
 }

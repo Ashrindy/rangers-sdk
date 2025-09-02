@@ -14,6 +14,20 @@ namespace hh::needle {
         R8G8B8A8,
     };
 
+    enum class SurfaceDimension : uint32_t {
+        TEXTURE_DEFAULT,
+        TEXTURE_1D,
+        TEXTURE_1D_ARRAY,
+        TEXTURE_2D,
+        TEXTURE_2D_ARRAY,
+        TEXTURE_2DMS,
+        TEXTURE_UNK,
+        TEXTURE_3D,
+        TEXTURE_CUBE,
+        TEXTURE_CUBE_ARRAY,
+        TEXTURE_BUFFER
+    };
+
     struct SurfaceDescription {
         SurfaceType type;
         uint32_t arraySize;

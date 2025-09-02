@@ -24,7 +24,7 @@ namespace hh::gfx {
             fnd::Reference<hh::needle::RenderingPipeline>* pipeline{};
             const char* name{};
             const char* sceneName{};
-            uint8_t byteA0{};
+            bool autoCreatePipeline{};
         };
 
         struct SetupInfo {

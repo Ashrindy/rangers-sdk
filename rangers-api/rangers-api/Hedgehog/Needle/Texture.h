@@ -71,16 +71,18 @@ namespace hh::needle {
     };
 
     struct TextureViewCreationInfo {
-        SurfaceFormat format{};
+        SurfaceFormat textureFormat{}; //if 0 -> use DXGI_FORMAT format
         uint8_t unk1{};
         uint8_t unk2{};
         uint8_t unk2a{};
-        uint32_t unk3{};
-        uint32_t unk4{};
+        SurfaceDimension dimension{};
+        unsigned int arraySize{};
         unsigned int mipLevels{};
-        uint32_t unk5{};
+        unsigned int firstArraySlice{};
         uint32_t unk6{};
-        uint32_t unk7{};
+        bool unk7{};
+        uint64_t unk8{};
+        DXGI_FORMAT format{};
     };
 
     class Texture : public SurfaceBase {

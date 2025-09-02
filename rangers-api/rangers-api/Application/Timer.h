@@ -5,13 +5,18 @@ namespace app{
         float target;
         float current;
 
+        Timer(float time);
         Timer();
 
-        void Set(float time);
-        void Reset();
-        bool Add(float time);
         float GetTarget() const;
         float GetCurrent() const;
+        float GetProgress();
+        float GetRemaining() const;
+        bool IsFinished() const;
         bool IsActive() const;
+        void Reset();
+        void ResetCurrent();
+        void Set(float time);
+        bool Add(float time);
     };
 }

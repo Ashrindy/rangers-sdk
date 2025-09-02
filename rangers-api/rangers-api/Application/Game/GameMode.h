@@ -18,6 +18,7 @@ namespace app::game {
 
         void SetState(unsigned int stateId);
 		virtual void* GetRuntimeTypeInfo() const override;
+		virtual bool fUnk3(hh::fnd::Message& message) override;
         virtual bool UnkFunc4() { return true; }
         virtual bool Initialize() {}
         virtual bool UnkFunc6(bool a2) {}

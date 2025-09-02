@@ -43,7 +43,7 @@ namespace hh::gfx {
         unsigned int name;
         unsigned int masterPoseComponentName; // a GOCVisualModel
         bool unk304;
-        bool unk305;
+        bool notUpdateFinal;
 
         GOCVisualModelDescription();
     };

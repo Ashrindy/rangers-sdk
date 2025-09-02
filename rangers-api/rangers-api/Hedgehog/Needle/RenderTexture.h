@@ -3,7 +3,7 @@
 namespace hh::needle {
     class FxRenderTextureCamera : public FxCamera, public NeedleRefcountObject {
     public:
-        csl::math::Vector4 position;
+        csl::math::Vector3 position;
         csl::math::Matrix44 viewMatrix;
         csl::math::Matrix44 projMatrix;
 
@@ -42,7 +42,7 @@ namespace hh::needle {
         RenderTexturePipeline* pipeline;
         const char* name;
         const char* sceneName;
-        bool unk6;
+        bool autoCreatePipeline;
     };
 
     class RenderTextureHandle : public RenderUnit {

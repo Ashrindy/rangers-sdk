@@ -11,6 +11,7 @@ namespace hh::needle {
     MaterialparamSetting* GetMaterialparamSetting(int index);
 
     class PBRModelInstance : public ModelInstance {
+    public:
         void SetShadowReceiveFlag(bool enabled);
         void GetModelSpaceAabb(csl::geom::Aabb* aabb) const;
         static InstanceParameterContainerData* GetGlobalParameterSetting();

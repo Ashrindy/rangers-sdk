@@ -12,17 +12,6 @@ namespace hh::fmv{
             virtual bool MyUnkFunc2() { return true; }
         };
 
-        struct ThreadInfo{
-        public:
-            int threadHandle;
-            void* threadStartFunction;
-            MoviePlayer* moviePlayer;
-            bool unhandled;
-            csl::fnd::IAllocator* allocator;
-
-            ThreadInfo(csl::fnd::IAllocator* allocator);
-        };
-
         struct UnkStr1{
         public:
             float unk0;
@@ -34,7 +23,7 @@ namespace hh::fmv{
         MyRenderable* renderable;
         const char* usmFilePath;
         int64_t qword30;
-        ThreadInfo threadInfo;
+        csl::fnd::Thread thread;
         UnkStr1 unkStr1[3];
         float secondsRunning;
         int framesRunning;

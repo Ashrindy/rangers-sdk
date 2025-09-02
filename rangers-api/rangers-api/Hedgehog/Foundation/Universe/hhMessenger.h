@@ -28,7 +28,7 @@ namespace hh::fnd
 
 		virtual void* GetRuntimeTypeInfo() const;
 		virtual bool ProcessMessage(Message& message);
-		virtual bool fUnk3() { return false; }
+		virtual bool fUnk3(Message& message) { return false; }
 		virtual bool ReceiveMessage(Message& message);
 		virtual bool IsAcceptingMessages() { return true; }
 		

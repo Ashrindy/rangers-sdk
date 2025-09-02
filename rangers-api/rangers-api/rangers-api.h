@@ -105,6 +105,7 @@ namespace rangerssdk::ucsl {
 #include "cslib/csl/fnd/Delegate.h"
 #include "cslib/csl/fnd/Function.h"
 #include "cslib/csl/fnd/ThreadSleep.h"
+#include "cslib/csl/fnd/Thread.h"
 
 #include <LinearMath/btDefaultMotionState.h>
 #include <BulletCollision/CollisionShapes/btSphereShape.h>
@@ -614,6 +615,10 @@ namespace rangerssdk::ucsl {
 #include "Hedgehog/Graphics/DefaultDynamicResolutionController.h"
 #include "Hedgehog/Graphics/RenderManager.h"
 #include "Hedgehog/Graphics/VertexAnimationTextureController.h"
+#include "Hedgehog/Graphics/TextureStreamingModule.h"
+#include "Hedgehog/Graphics/TextureStreamingService.h"
+#include "Hedgehog/Graphics/MTLoadingThreadDispacher.h"
+#include "Hedgehog/Graphics/ResTextureStreamingPackage.h"
 #include "Hedgehog/Graphics/ResAnimCameraContainer.h"
 #include "Hedgehog/Graphics/ResAnimLightContainer.h"
 #include "Hedgehog/Graphics/ResDensityPointCloud.h"
@@ -955,6 +960,9 @@ namespace rangerssdk::ucsl {
 #include "ApplicationCommon/Game/GOCMotorRotate.h"
 #include "ApplicationCommon/Game/GOCMotorOnPath.h"
 #include "ApplicationCommon/Game/GOCMovement.h"
+
+#include "ApplicationCommon/Graphics/RenderTextureFreeCamera.h"
+#include "ApplicationCommon/Graphics/RenderTextureFreeCameraManager.h"
 
 #include "Application/Timer.h"
 #include "Application/ObjNpcBase.h"

@@ -48,14 +48,14 @@ namespace hh::needle {
             };
 
             struct TextureFormatMapping {
-                uint32_t unk1;
-                uint32_t unk2;
+                uint32_t size; // 4 -> R8G8B8A8, 16 -> R32G32B32A32
+                uint32_t unk2; //always 0
                 DXGI_FORMAT format;
-                uint32_t unk3;
-                uint32_t unk4;
-                uint32_t unk5;
-                uint32_t unk6;
-                uint32_t unk7;
+                DXGI_FORMAT defaultView1;
+                DXGI_FORMAT defaultView2;
+                DXGI_FORMAT defaultView3;
+                DXGI_FORMAT defaultView4;
+                DXGI_FORMAT alternativeView;
             };
 
             struct TextureBufferCreationInfo {

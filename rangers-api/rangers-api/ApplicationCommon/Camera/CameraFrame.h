@@ -67,7 +67,7 @@ namespace app_cmn::camera {
         uint64_t qword480;
 
 		virtual bool ProcessMessage(hh::fnd::Message& message) override;
-		virtual bool fUnk3() override;
+		virtual bool fUnk3(hh::fnd::Message& message) override;
 		virtual void AddCallback(hh::game::GameManager* gameManager) override;
 		virtual void RemoveCallback(hh::game::GameManager* gameManager) override;
 		virtual void Update(hh::fnd::UpdatingPhase phase, const hh::fnd::SUpdateInfo& updateInfo) override;

@@ -1,11 +1,19 @@
 #pragma once
 
-#define MANAGED_RESOURCE_CLASS_DECLARATION(ClassName) private:\
+#define MANAGED_RESOURCE_CLASS_DECLARATION_BASE(ClassName) private:\
 		static const hh::fnd::ResourceTypeInfo typeInfo;\
 		ClassName(csl::fnd::IAllocator* allocator);\
-		static hh::fnd::ManagedResource* Create(csl::fnd::IAllocator* allocator);\
+		static hh::fnd::ManagedResource* Create(csl::fnd::IAllocator* allocator);
+
+#define MANAGED_RESOURCE_CLASS_DECLARATION(ClassName) MANAGED_RESOURCE_CLASS_DECLARATION_BASE(ClassName)\
 	public:\
 		static const hh::fnd::ResourceTypeInfo* GetTypeInfo();
+
+#define MANAGED_RESOURCE_CLASS_DECLARATION_INLINE(ClassName) MANAGED_RESOURCE_CLASS_DECLARATION_BASE(ClassName)\
+    public:\
+		static inline const hh::fnd::ResourceTypeInfo* GetTypeInfo() {\
+			return &RESOLVE_STATIC_VARIABLE(typeInfo);\
+		}
 
 namespace hh::fnd {
     class ManagedResource;

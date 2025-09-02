@@ -4,8 +4,8 @@ namespace hh::needle {
     class World : public NeedleRefcountObject {
     public:
         virtual void UnkFunc0() {}
-        virtual void UnkFunc1() {}
-        virtual void UnkFunc2() {}
+        virtual void* UnkFunc1() {}
+        virtual void AddModelInstance(ModelInstance* instance, void* unk0, bool unk1, int unk2, int64_t resourceId) {}
         virtual void UnkFunc3() {}
         virtual void UnkFunc4() {}
         virtual void UnkFunc5() {}
