@@ -1,15 +1,16 @@
 #pragma once
+#include <ucsl/resources/ntsp/v1.h>
 
 namespace hh::gfx{
     class ResTextureStreamingPackage : public fnd::ManagedResource {
     public:
-        csl::ut::StringMap<int64_t> unk0;
-        int64_t unk1;
-        int64_t unk2;
-        int64_t unk3;
-        int64_t unk4;
-        int64_t unk5;
-        hh::fnd::Uri unk6;
+        csl::ut::StringMap<int64_t> indicesByTextureName;
+        ucsl::resources::ntsp::v1::NeedleTextureStreamingPackage* binaryData0;
+        ucsl::resources::ntsp::v1::NeedleTextureStreamingPackage* binaryData1;
+        ucsl::resources::ntsp::v1::Texture* textures;
+        ucsl::resources::ntsp::v1::Block* blocks;
+        fnd::StreamReaderWin32* streamReader;
+        hh::fnd::Uri filepath;
 
         MANAGED_RESOURCE_CLASS_DECLARATION_INLINE(ResTextureStreamingPackage);
     };
