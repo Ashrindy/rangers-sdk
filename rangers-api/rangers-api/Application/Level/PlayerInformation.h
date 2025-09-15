@@ -91,7 +91,11 @@ namespace app::level {
         uint32_t dword3B4;
         uint32_t dword3B8;
         uint32_t dword3BC;
-        std::optional<Unk3> qword3C0;
+        bool bool3C0;
+        bool bool3C1;
+        bool bool3C2;
+        bool bool3C3;
+        std::optional<uint32_t> curRings;
         std::optional<uint32_t> maxRings;
         uint32_t dword3D4;
         uint32_t dword3D8;

@@ -23,8 +23,8 @@ namespace hh::text {
 
         static const ConverseData* Translate(const char* tag, int localeIdx);
         const ConverseData* GetTranslation(const char* tag, int localeIdx);
-        virtual void UnkFunc1() override;
-        virtual void UnkFunc2() override;
+        virtual void AddCallback() override;
+        virtual void RemoveCallback() override;
 
         APPMODULE_CLASS_DECLARATION(TextAppModule)
     };

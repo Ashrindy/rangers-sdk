@@ -21,7 +21,7 @@ namespace hh::needle::ImplDX11 {
         virtual uint32_t UnkFunc3() override;
         virtual uint64_t UnkFunc4() override;
         virtual uint64_t UnkFunc5() override;
-        virtual uint64_t UnkFunc6b() override;
+        virtual void UnmapBuffer() override;
         virtual void SetVertexBuffer(unsigned int bufferSize, SourceBufferSetting* unused, unsigned int totalSize) override;
         virtual uint64_t UnkFunc8() override;
         virtual uint64_t UnkFunc9() override;
@@ -85,7 +85,7 @@ namespace hh::needle::ImplDX11 {
         virtual void UnkFunc66() override;
         virtual void SetScissor(const Rectangle* scissorRects, unsigned int count) override;
         virtual uint64_t UnkFunc68() override;
-        virtual uint64_t UnkFunc69() override;
+        virtual uint64_t UnkFunc69(bool enabled, int64_t* bits) override;
         virtual uint64_t UnkFunc70() override;
         virtual void GetRsFlagMask(RsFlagMask& rsFlagMask) override;
         virtual void SetRenderTargets(const RenderTargetsSetting& renderTargetsSetting) override;
@@ -114,8 +114,8 @@ namespace hh::needle::ImplDX11 {
         virtual uint64_t UnkFunc95() override;
         virtual uint64_t UnkFunc96() override;
         virtual uint64_t UnkFunc97() override;
-        virtual uint64_t UnkFunc98() override;
-        virtual uint64_t UnkFunc99() override;
+        virtual void End(void* async) override;
+        virtual void SetPredicate(void* predicate) override;
         virtual uint64_t UnkFunc100() override;
         virtual void SetLockConstantBuffer(ShaderStage shaderStage, unsigned int slot, ::hh::needle::ConstantBuffer* buffer) override;
         virtual void ResetUnlockConstantBuffer(ShaderStage shaderStage, unsigned int slot, ::hh::needle::ConstantBuffer* buffer) override;

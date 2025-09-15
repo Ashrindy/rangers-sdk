@@ -26,7 +26,7 @@ namespace app::player {
         };
         enum class Flag : uint8_t {
             UNK0,
-            UNK1,
+            UPDATE_PREANIM,
             UNK2,
             UNK3,
             STATE_CHANGE_PENDING,
@@ -61,6 +61,7 @@ namespace app::player {
         void ChangeStateRestart(int stateId, unsigned int priority);
         int GetCurrentState() const;
         int GetNextState() const;
+        void AddParam(StateParameter* param);
 
         GOCOMPONENT_CLASS_DECLARATION(GOCPlayerHsm);
     };

@@ -13,6 +13,8 @@ namespace hh::text {
         virtual void Unload() override {}
         virtual void Reload(void* data, size_t size) override;
 
+        CnvrsTextData* GetTextData() const;
+
         MANAGED_RESOURCE_CLASS_DECLARATION(ResText)
     };
 }

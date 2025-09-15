@@ -4,8 +4,8 @@ namespace csl::fnd {
     class FreeListLikeHeapBase : public HeapBase {
         size_t bufferStart;
         size_t bufferEnd;
-        uint64_t unk103;
-        uint64_t unk104;
+        size_t bufferStart0;
+        size_t bufferStart1;
         uint64_t unk105;
         size_t unused;
         size_t unallocated;

@@ -107,5 +107,6 @@ namespace app::level {
         bool IsNonBossStage() const;
 
         unsigned int GetStageIndex() const;
+        bool GetAttributeFlag(AttributeFlags flag) const;
     };
 }

@@ -15,6 +15,10 @@ namespace hh::game {
 
     class MasterLevel : public fnd::ReferencedObject, public LevelListener {
     public:
+        struct Description{
+            app::level::ResMasterLevel* resource;
+        };
+
         fnd::Reference<app::level::ResMasterLevel> resource;
         csl::ut::MoveArray<Level*> levels;
         csl::ut::StringMap<Level*> levelsByName;
@@ -22,14 +26,17 @@ namespace hh::game {
         csl::ut::MoveArray<void*> unk4;
 
         DEFAULT_CREATE_FUNC(MasterLevel);
-        virtual void LL_UnkFunc1(void* unkParam1) override;
-        virtual void LL_UnkFunc2(void* unkParam1) override;
-        virtual void LL_UnkFunc3(void* unkParam1) override;
+        virtual void LL_UnkFunc1(Level* level) override;
+        virtual void LL_UnkFunc2(Level* level) override;
+        virtual void LL_UnkFunc3(Level* level) override;
 
         struct Unk1 {
             bool unk1;
         };
 
+        void Setup(Description& desc);
+        void AddListener(MasterLevelListener* listener);
+        void RemoveListener(MasterLevelListener* listener);
         Level* GetLevel(const char* name) const;
         void LoadLevel(const char* name);
         Unk1 LoadLevel(const char* name, const Level::LoadInfo& loadInfo);

@@ -12,17 +12,6 @@ namespace hh::fmv{
             virtual bool MyUnkFunc2() { return true; }
         };
 
-        struct ThreadInfo{
-        public:
-            int threadHandle;
-            void* threadStartFunction;
-            MoviePlayer* moviePlayer;
-            bool unhandled;
-            csl::fnd::IAllocator* allocator;
-
-            ThreadInfo(csl::fnd::IAllocator* allocator);
-        };
-
         struct UnkStr1{
         public:
             float unk0;
@@ -34,7 +23,7 @@ namespace hh::fmv{
         MyRenderable* renderable;
         const char* usmFilePath;
         int64_t qword30;
-        ThreadInfo threadInfo;
+        csl::fnd::Thread thread;
         UnkStr1 unkStr1[3];
         float secondsRunning;
         int framesRunning;
@@ -46,7 +35,7 @@ namespace hh::fmv{
 
         virtual void* UnkFunc0(float deltaTime) {}
         virtual void UnkFunc1() {}
-        virtual void UnkFunc1Flag() {}
+        virtual void Play() {}
         virtual void UnkFunc3(char a2) {}
         virtual int SetPause(bool paused) {}
         virtual void UnkFunc5(int a2); //denuvo infested
@@ -130,7 +119,7 @@ namespace hh::fmv{
         char unk12;
         char unk13;
         int unk14;
-        void* unk16; //somekind of critical section
+        csl::fnd::Mutex mutex; //somekind of critical section
         int unk17[6];
         char unk18;
         char unk19;
@@ -146,7 +135,7 @@ namespace hh::fmv{
 
         virtual void* UnkFunc0(float deltaTime) override;
         virtual void UnkFunc1() override;
-        virtual void UnkFunc1Flag() override;
+        virtual void Play() override;
         virtual void UnkFunc3(char a2) override;
         virtual int SetPause(bool paused) override;
         virtual void UnkFunc5(int a2) override;

@@ -78,6 +78,7 @@ namespace app::snd {
         void RemoveExtension(SoundDirectorExtension* extension);
         SoundDirectorExtension* GetExtension(unsigned int nameHash);
         void PlayBgm(const PlayBgmInfo& playBgmInfo);
+        void PlayBgm(unsigned int staticChannel, const PlayBgmInfo& playBgmInfo);
         hh::snd::SoundHandle GetBgmSoundHandle(int index);
 
         template<typename T>

@@ -15,6 +15,7 @@ namespace gindows{
 
         int compare(const char* other) const;
         const char* c_str() const;
+        void set(const char* value);
 
         String();
     };

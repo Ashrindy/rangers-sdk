@@ -81,8 +81,8 @@ namespace hh::eff {
                 uint16_t word170;
                 csl::fnd::Mutex mutex;
 
-                virtual void* Alloc(size_t size, size_t alignment) override;
-                virtual void* Alloc2(size_t size, size_t alignment) override;
+                virtual void* Alloc(size_t size) override;
+                virtual void* Alloc(size_t size, const char* name, size_t alignment) override;
                 virtual void Free(void* ptr) override;
                 virtual void SetupMemory(void* ptr, size_t size) override {}
                 virtual void SetName(const char* name) override;
@@ -164,6 +164,7 @@ namespace hh::eff {
 
         void Setup(const SetupInfo& setupInfo);
         EffectHandle CreateEffect(char const* resourceName, const csl::math::Matrix34& location, const game::GameObject* object, unsigned int layer, uint32_t unkParam1, uint32_t unkParam2, float unkParam3, void* node);
+        void StopAllEffects();
 
         GAMESERVICE_CLASS_DECLARATION(EffectManager)
     };

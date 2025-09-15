@@ -17,7 +17,7 @@ namespace hh::needle {
         virtual uint32_t UnkFunc3() = 0;
         virtual uint64_t UnkFunc4() = 0;
         virtual uint64_t UnkFunc5() = 0;
-        virtual uint64_t UnkFunc6b() = 0;
+        virtual void UnmapBuffer() = 0;
         virtual void SetVertexBuffer(unsigned int bufferSize, SourceBufferSetting* unused, unsigned int totalSize) = 0;
         virtual uint64_t UnkFunc8() = 0;
         virtual uint64_t UnkFunc9() = 0;
@@ -81,7 +81,7 @@ namespace hh::needle {
         virtual void UnkFunc66() = 0;
         virtual void SetScissor(const Rectangle* scissorRects, unsigned int count) = 0;
         virtual uint64_t UnkFunc68() = 0;
-        virtual uint64_t UnkFunc69() = 0;
+        virtual uint64_t UnkFunc69(bool enabled, int64_t* bits) = 0;
         virtual uint64_t UnkFunc70() = 0;
         virtual void GetRsFlagMask(RsFlagMask& rsFlagMask) = 0;
         virtual void SetRenderTargets(const RenderTargetsSetting& renderTargetsSetting) = 0;
@@ -110,8 +110,8 @@ namespace hh::needle {
         virtual uint64_t UnkFunc95() = 0;
         virtual uint64_t UnkFunc96() = 0;
         virtual uint64_t UnkFunc97() = 0;
-        virtual uint64_t UnkFunc98() = 0;
-        virtual uint64_t UnkFunc99() = 0;
+        virtual void End(void* async) = 0;
+        virtual void SetPredicate(void* predicate) = 0;
         virtual uint64_t UnkFunc100() = 0;
         virtual void SetLockConstantBuffer(ShaderStage shaderStage, unsigned int slot, ConstantBuffer* buffer) = 0;
         virtual void ResetUnlockConstantBuffer(ShaderStage shaderStage, unsigned int slot, ConstantBuffer* buffer) = 0;

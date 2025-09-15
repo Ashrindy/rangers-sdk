@@ -51,11 +51,11 @@ namespace hh::needle {
         SebastienSky(csl::fnd::IAllocator* allocator, unsigned int unkParam1, unsigned int unkParam2);
         virtual void Start(const RenderJobContext& context) override;
         virtual void Stop() override;
-        virtual void UnkFunc9() override;
+        virtual void UnkFunc9(PipelineInfo* pipelineInfo) override;
         virtual void Render(PipelineInfo* pipelineInfo) override;
         virtual unsigned int GetNameHash() override;
         virtual const char* GetName() override;
-        virtual unsigned int UnkFunc16() override;
+        virtual unsigned int GetClassSize() override;
 
         void LoadDaySkyParameters(PipelineInfo* pipelineInfo, ParameterValueObject* daySkyParameters);
         void LoadNightSkyParameters(PipelineInfo* pipelineInfo, ParameterValueObject* nightSkyParameters);

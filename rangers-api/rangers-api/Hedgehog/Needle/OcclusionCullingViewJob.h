@@ -10,6 +10,6 @@ namespace hh::needle {
         virtual void Render(PipelineInfo* pipelineInfo) override;
         virtual unsigned int GetNameHash() override;
         virtual const char* GetName() override;
-        virtual unsigned int UnkFunc16() override;
+        virtual unsigned int GetClassSize() override;
     };
 }

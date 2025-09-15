@@ -13,6 +13,7 @@ namespace app::game{
         csl::ut::MoveArray<int64_t> unk3;
 
         void Setup(SetupInfo& setupInfo);
+        void EndHitStop(unsigned nameHash, float time);
 
 		virtual void* GetRuntimeTypeInfo() const override;
 		virtual bool ProcessMessage(hh::fnd::Message& msg) override;

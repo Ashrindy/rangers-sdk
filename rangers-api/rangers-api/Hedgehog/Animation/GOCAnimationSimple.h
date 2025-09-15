@@ -67,7 +67,7 @@ namespace hh::anim {
         };
 
         struct SetupInfo : GOCAnimationSingle::SetupInfo {
-            unsigned int unkCount;
+            unsigned int animationCount;
         };
 
         csl::ut::InplaceMoveArray<SimpleAnimationState, 1> animations;

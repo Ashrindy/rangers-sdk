@@ -56,10 +56,14 @@ namespace hh::gfx {
 
         struct SModelCreationInfo {
             // Check GOCVisualModelImpl::Setup
-            fnd::ManagedResource* unk325; // suspected
-            fnd::ManagedResource* unk326; // suspected
-            fnd::ManagedResource* unk327; // suspected
-            needle::MeshResource* meshResource;
+            needle::Texture* giTexture{ nullptr };
+            needle::Texture* giOcclusionTexture{ nullptr };
+            needle::Texture* unk327{ nullptr }; // suspected
+            needle::MeshResource* meshResource{ nullptr };
+            int64_t unk328{ 0 };
+            csl::ut::StringMap<bool> attributes;
+
+            inline SModelCreationInfo(csl::fnd::IAllocator* allocator) : attributes{ allocator } {}
         };
 
         static RenderManager* instance;

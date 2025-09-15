@@ -120,4 +120,38 @@ namespace app {
 
         MsgGetTargetPosition() : fnd::AppMessage<MsgGetTargetPosition>{ hh::fnd::MessageID::GET_TARGET_POSITION } {}
     };
+
+    class MsgSpringImpulse : public fnd::AppMessage<MsgSpringImpulse> {
+    public:
+        csl::math::Vector4 unk0;
+        csl::math::Vector3 velocity; //or direction
+        csl::math::Vector4 unk1;
+        float outOfControlTime;
+        float keepVelocityTime;
+        int unk2;
+        int unk3;
+
+        MsgSpringImpulse() : fnd::AppMessage<MsgSpringImpulse>{ hh::fnd::MessageID::SPRING_IMPULSE } {}
+    };
+
+    class MsgAddActionChainScore : public fnd::AppMessage<MsgAddActionChainScore> {
+    public:
+        int score;
+        int ownerHandle;
+        int64_t unk0;
+
+        MsgAddActionChainScore() : fnd::AppMessage<MsgAddActionChainScore>{ hh::fnd::MessageID::ADD_ACTION_CHAIN_SCORE } {}
+    };
+
+    class MsgFishingReturnToIsland : public fnd::AppMessage<MsgFishingReturnToIsland> {
+    public:
+        MsgFishingReturnToIsland() : fnd::AppMessage<MsgFishingReturnToIsland>{ hh::fnd::MessageID::FISHING_RETURN_TO_ISLAND } {}
+    };
+
+    class MsgFishingChangeCameraMode : public fnd::AppMessage<MsgFishingChangeCameraMode> {
+    public:
+        int mode;
+
+        MsgFishingChangeCameraMode() : fnd::AppMessage<MsgFishingChangeCameraMode>{ hh::fnd::MessageID::FISHING_CHANGE_CAMERA_MODE } {}
+    };
 }

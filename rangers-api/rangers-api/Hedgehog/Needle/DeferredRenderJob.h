@@ -3,16 +3,17 @@
 namespace hh::needle {
     class DeferredRenderJob : public RenderJob {
     public:
-        uint32_t dword48;
+        uint32_t viewportId0;
         RenderingPipeline* deferredRenderingPipeline;
-        uint64_t qword58;
-        uint64_t qword60;
+        GatherDrawPassInfoJob* gatherDrawPassJob;
+        ParamBuildJob* paramBuildJob;
         uint64_t qword68;
         uint64_t qword70;
         uint32_t dword78;
         uint64_t qword80;
         uint64_t qword88;
-        uint64_t qword90;
+        uint32_t dword90;
+        uint32_t viewportId1;
         uint64_t qword98;
         uint64_t qwordA0;
         uint64_t qwordA8;
@@ -40,11 +41,11 @@ namespace hh::needle {
         virtual unsigned int UnkFunc6(PipelineInfo* pipelineInfo) override;
         virtual void Start(const RenderJobContext& context) override;
         virtual void Stop() override;
-        virtual void UnkFunc9() override;
+        virtual void UnkFunc9(PipelineInfo* pipelineInfo) override;
         virtual void Render(PipelineInfo* pipelineInfo) override;
         virtual unsigned int GetNameHash() override;
         virtual const char* GetName() override;
-        virtual unsigned int UnkFunc16() override;
+        virtual unsigned int GetClassSize() override;
         virtual unsigned int UnkFunc17() override;
         virtual void UnkFunc19() {}
         virtual void UnkFunc20() {}

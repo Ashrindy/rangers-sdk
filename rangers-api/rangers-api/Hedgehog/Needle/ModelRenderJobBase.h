@@ -3,25 +3,23 @@
 namespace hh::needle {
     class ModelRenderJobBase : public RenderJob {
     public:
-        struct Unk1 {
+        struct RenderLayer {
             int32_t unk1;
             int32_t unk1a;
             int32_t unk2;
-            int32_t unk2a;
+            int32_t unk2a; //related to priority?
             CNameIDObject* name;
-            uint32_t unk4;
-            int unk5;
-
-            Unk1();
+            uint32_t unk4; //related to priority?
+            int unk5; //related to priority?
         };
 
         uint32_t unk101;
         unsigned int viewportId;
-        Unk1 unk103[12];
+        RenderLayer renderLayers[12];
 
         ModelRenderJobBase(unsigned int viewportId);
         virtual void Start(const RenderJobContext& context) override {}
         virtual void Stop() override {}
-        virtual void SetUnk103(unsigned int index, const Unk1& newUnk103);
+        virtual void SetRenderLayer(unsigned int index, const RenderLayer& renderLayer);
     };
 }

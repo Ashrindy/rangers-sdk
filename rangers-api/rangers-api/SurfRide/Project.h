@@ -21,6 +21,7 @@ namespace SurfRide
         Scene* GetScene(const char* name);
         void ApplyMemoryImageToTextureList(void* image, BinaryData* binaryData);
         void ApplyMemoryImageToProject(void* image, BinaryData* binaryData, bool unkParam);
+        TextureList* GetTextureListByIdx(unsigned int idx) const;
 
         inline csl::ut::MoveArray<SurfRide::Scene*> GetScenes() const {
             return scenes;

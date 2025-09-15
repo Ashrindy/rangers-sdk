@@ -12,6 +12,7 @@ namespace hh::needle {
         Callback* onAfterRender;
         uint64_t unk103;
 
+        RenderableRenderJob(RenderTextureHandle::RenderStage renderStage, int viewportId);
         RenderableRenderJob(RenderTextureHandle::RenderStage renderStage, int viewportId, const char* name);
         
         virtual unsigned int UnkFunc6(PipelineInfo* pipelineInfo) override;
@@ -20,5 +21,6 @@ namespace hh::needle {
         virtual void Render(PipelineInfo* pipelineInfo) override;
         virtual unsigned int GetNameHash() override;
         virtual const char* GetName() override;
+        virtual unsigned int GetClassSize() override;
     };
 }

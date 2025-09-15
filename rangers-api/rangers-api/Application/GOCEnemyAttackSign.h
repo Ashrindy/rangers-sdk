@@ -7,7 +7,7 @@ namespace app{
         char unk0;
         float unk1;
         float unk2;
-        CRITICAL_SECTION unk3;
+        csl::fnd::Mutex mutex;
         int unk4; //most likely a handle
 
         virtual void* GetRuntimeTypeInfo() const override;

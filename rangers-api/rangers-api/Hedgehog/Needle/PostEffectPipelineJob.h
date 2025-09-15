@@ -11,11 +11,11 @@ namespace hh::needle {
         virtual unsigned int UnkFunc6(PipelineInfo* pipelineInfo) override;
         virtual void Start(const RenderJobContext& context) override;
         virtual void Stop() override;
-        virtual void UnkFunc9() override;
+        virtual void UnkFunc9(PipelineInfo* pipelineInfo) override;
         virtual void Render(PipelineInfo* pipelineInfo) override;
         virtual unsigned int GetNameHash() override;
         virtual const char* GetName() override;
-        virtual unsigned int UnkFunc16() override;
+        virtual unsigned int GetClassSize() override;
         virtual void SetupPipeline(const RenderJobContext& context);
     };
 }

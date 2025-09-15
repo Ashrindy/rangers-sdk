@@ -9,6 +9,6 @@ namespace hh::needle {
 
         RenderTexturePipeline(csl::fnd::IAllocator* allocator, PBRModelInstanceRenderer* modelRenderer, RenderTextureHandle* renderTextureHandle);
 
-        virtual uint64_t UnkFunc11();
+        virtual void InitializeJobs() override;
     };
 }

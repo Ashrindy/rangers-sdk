@@ -1,13 +1,15 @@
 #pragma once
 
 namespace hh::game {
+    class Level;
+
     class LevelListener {
     public:
         virtual ~LevelListener() = default;
 
-        virtual void LL_UnkFunc1(void* unkParam1) {}
-        virtual void LL_UnkFunc2(void* unkParam1) {}
-        virtual void LL_UnkFunc3(void* unkParam1) {}
+        virtual void LL_UnkFunc1(Level* level) {}
+        virtual void LL_UnkFunc2(Level* level) {}
+        virtual void LL_UnkFunc3(Level* level) {}
     };
 
     class MasterLevel;

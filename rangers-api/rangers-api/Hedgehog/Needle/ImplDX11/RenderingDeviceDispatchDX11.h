@@ -20,7 +20,7 @@ namespace hh::needle::ImplDX11 {
 
             Unk5();
         };
-        struct Unk4 {
+        struct Unk4 { //related to blendmode
             uint32_t flags;
             char unk2[60];
             RsFlagMask rsFlagMask;
@@ -41,7 +41,7 @@ namespace hh::needle::ImplDX11 {
             uint32_t unk18;
             uint32_t unk19;
             int unk20;
-            int unk21;
+            bool enabled;
 
             Unk4();
         };
@@ -87,7 +87,9 @@ namespace hh::needle::ImplDX11 {
         uint64_t qword758;
         uint64_t qword760;
         uint64_t qword768;
-        char gap770[276];
+        char gap770[216];
+        ID3D11Buffer* unkBuffer;
+        char gap770b[52];
         unsigned int vertexCount; 
         char gap770a[792];
         uint64_t qwordBA0;

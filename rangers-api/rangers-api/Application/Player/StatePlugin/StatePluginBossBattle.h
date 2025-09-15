@@ -3,6 +3,8 @@
 namespace app::player {
     class StatePluginBossBattle : public PlayerStatePlugin {
     public:
+        static constexpr const char* name = "StatePluginBossBattle";
+
         uint32_t dword28;
         uint64_t qword30;
         uint64_t qword38;
@@ -21,6 +23,11 @@ namespace app::player {
         uint32_t qwordB8;
         uint32_t dwordBC;
         uint8_t byteC0;
+
+        virtual unsigned int GetNameHash() const override;
+        virtual void RemoveCallback() override;
+        virtual void Update(hh::fnd::UpdatingPhase phase, const float deltaTime) override;
+        virtual bool ProcessMessage(hh::fnd::Message& message) override;
 
         DEFAULT_CREATE_FUNC(StatePluginBossBattle);
     };

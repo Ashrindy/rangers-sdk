@@ -8,5 +8,7 @@ namespace Cyan::System {
         Random();
         Random(unsigned int);
         float GetFloat();
+        float GetRange(float min, float max);
+        int Get();
     };
 }

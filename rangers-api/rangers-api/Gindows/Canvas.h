@@ -5,8 +5,8 @@ namespace gindows{
     public:
         void* font;
         void* graphics;
-        int64_t qword10;
-        int oword18;
+        csl::math::Vector2 displayLocation;
+        csl::math::Vector2 displayLocation1;
         int64_t qword28;
         void* backColor;
         void* foreColor;

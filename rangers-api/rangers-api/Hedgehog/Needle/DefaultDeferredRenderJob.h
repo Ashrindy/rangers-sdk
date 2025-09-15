@@ -10,7 +10,7 @@ namespace hh::needle {
 
         virtual unsigned int GetNameHash() override;
         virtual const char* GetName() override;
-        virtual unsigned int UnkFunc16() override;
+        virtual unsigned int GetClassSize() override;
         virtual void UnkFunc19() override;
         virtual void UnkFunc20() override;
         virtual void UnkFunc21() override;

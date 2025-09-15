@@ -2,6 +2,7 @@
 
 namespace hh::ui {
     class UIElement;
+    class UIElementSearchIndex;
     class UIElementGroup;
     class UIElementGroupContainer;
     class GOCUIComposition : public game::GOComponent {
@@ -19,7 +20,7 @@ namespace hh::ui {
         uint32_t unk111;
         UITextInterface* textInterface;
         csl::ut::MoveArray<fnd::Reference<CastSizeBinder>> castSizeBinders;
-        uint64_t unk114;
+        UIElementSearchIndex* elementSearchIndex;
 
         void Unk12421(SurfRide::Project* project, csl::ut::InplaceMoveArray<const char*, 32>& sceneNames);
         int FindGlobalIndexOfGroup(UIElementGroupContainer* container, const char* name);
@@ -44,6 +45,7 @@ namespace hh::ui {
         void SetProject(SurfRide::Project* project);
         void SetCurrentGroup(const char* name);
         UIElement* FindElement(const char* container, const char* name);
+        UIElement* FindElementByType(const char* typeName, const char* name);
         UIElement* FindElement(const char* name);
         UIElementGroupContainer* GetRootContainer() const;
 

@@ -138,9 +138,9 @@ namespace hh::snd {
         virtual unsigned int UnkFunc56() const;
         virtual unsigned int UnkFunc57() const;
         virtual csl::math::Vector3 UnkFunc58() const;
-        virtual void UnkFunc59() {}
-        virtual void UnkFunc60() {}
-        virtual void UnkFunc61() {}
+        virtual void SetListenerPosition(const SoundListenerHandle& source, const csl::math::Vector3& position) {}
+        virtual void SetListenerFocusPoint(const SoundListenerHandle& source, const csl::math::Vector3& point) {}
+        virtual void SetListenerOrientation(const SoundListenerHandle& source, const csl::math::Vector3& forward, const csl::math::Vector3& up) {}
         virtual void UnkFunc62() {}
         virtual csl::math::Vector3 UnkFunc63() const;
         virtual void UnkFunc64() {}
@@ -213,9 +213,9 @@ namespace hh::snd {
         virtual unsigned int UnkFunc56() const override;
         virtual unsigned int UnkFunc57() const override;
         virtual csl::math::Vector3 UnkFunc58() const override;
-        virtual void UnkFunc59() override;
-        virtual void UnkFunc60() override;
-        virtual void UnkFunc61() override;
+        virtual void SetListenerPosition(const SoundListenerHandle& source, const csl::math::Vector3& position) override;
+        virtual void SetListenerFocusPoint(const SoundListenerHandle& source, const csl::math::Vector3& point) override;
+        virtual void SetListenerOrientation(const SoundListenerHandle& source, const csl::math::Vector3& forward, const csl::math::Vector3& up) override;
         virtual void UnkFunc62() override;
         virtual csl::math::Vector3 UnkFunc63() const override;
         virtual void UnkFunc64() override;

@@ -21,5 +21,7 @@ namespace hh::needle {
         virtual void UnkFunc2();
         virtual unsigned int GetNameHash();
         virtual const char* GetName();
+
+        SupportFX::SFXAllocator* GetSFXAllocator() const;
     };
 }

@@ -9,7 +9,9 @@ namespace app::gfx{
         void AddNode(const char* nodeName);
         hh::gfx::ModelNodeHFrame* GetNode(int nodeIndex) const;
         hh::gfx::ModelNodeHFrame* GetNode(const char* nodeName) const;
+        void SetVisualModel(hh::gfx::GOCVisualModel* gocVisualModel);
 
+        ModelNodeContainer(csl::fnd::IAllocator* allocator);
         ModelNodeContainer(csl::fnd::IAllocator* allocator, hh::gfx::GOCVisualModel* visualModel);
     };
 }

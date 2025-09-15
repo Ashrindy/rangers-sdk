@@ -1,15 +1,17 @@
 #pragma once
 
 namespace hh::game {
+    class LevelManager;
+
     class LevelManagerListener {
     public:
         virtual ~LevelManagerListener() = default;
 
-        void LML_UnkFunc1() {}
-        void LML_UnkFunc2() {}
-        void LML_UnkFunc3() {}
-        void LML_UnkFunc4() {}
-        void LML_UnkFunc5() {}
+        virtual void LML_UnkFunc1() {}
+        virtual void LML_UnkFunc2() {}
+        virtual void LML_UnkFunc3() {}
+        virtual void OnMasterLevelLoaded(LevelManager* levelManager, MasterLevel* masterLevel) {}
+        virtual void LML_UnkFunc5() {}
     };
 
     class LevelManager
@@ -46,6 +48,7 @@ namespace hh::game {
         void LoadLevel(const char* name, const Level::LoadInfo& loadInfo);
         void UnloadLevel(const char* name);
         void Setup(Description& desc);
+        void FireMasterLevelLoadedCallback(MasterLevel* masterLevel);
 
         GAMESERVICE_CLASS_DECLARATION(LevelManager);
     };

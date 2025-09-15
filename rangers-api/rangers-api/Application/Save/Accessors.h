@@ -49,17 +49,25 @@ namespace app::save {
 
     class CharacterAc : public SaveDataAccessor<CharacterData> {
     public:
-
+        char GetRingLevel() const;
+        char GetSpeedLevel() const;
+        char GetPowerLevel() const;
+        char GetGuardLevel() const;
+        short GetNumRings() const;
+        short GetBoostGaugeLevel() const;
+        bool HasChaosEmeralds() const;
     };
 
     class ExtraCharacterAc : public SaveDataAccessor<ExtraCharacterData> {
     public:
-
+        float GetBossRushQuickCyloopGauge() const;
+        int GetBossRushNumRings() const;
     };
 
     class ExtraCharacterContainerAc : public SaveDataAccessor<ExtraCharacterContainerData> {
     public:
-
+        ExtraCharacterAc GetExtraCharacterAccessor(unsigned int idx);
+        CharacterAc GetCharacterAccessor(unsigned int idx);
     };
 
     class ExtraCyberStageContainerAc : public SaveDataAccessor<ExtraCyberStageContainerData> {
@@ -96,6 +104,12 @@ namespace app::save {
     public:
         void SetTime(game::Timestamp& time);
         bool GetTime(game::Timestamp& time);
+        GamePlayData::SequenceDeprecated GetSequence() const;
+    };
+
+    class HeaderAc : public SaveDataAccessor<HeaderData> {
+    public:
+        HeaderData::Sequence GetSequence() const;
     };
 
     class GameDataAc : public SaveDataAccessor<GameData> {
@@ -104,11 +118,9 @@ namespace app::save {
         WeatherAc GetWeatherAccessor();
         GamePlayAc GetGamePlayAccessor();
         ExtraFlagContainerAc GetExtraFlagContainerAccessor();
-    };
-
-    class HeaderAc : public SaveDataAccessor<HeaderData> {
-    public:
-
+        ExtraCharacterContainerAc GetExtraCharacterContainerAccessor();
+        CharacterAc GetCharacterAccessor();
+        HeaderAc GetHeaderAccessor();
     };
 
     class IslandStageAc : public SaveDataAccessor<IslandStageData> {

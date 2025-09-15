@@ -21,7 +21,7 @@ namespace app::player {
             float oceanSurface;
             uint8_t unk6;
             int unk7;
-            float unk8;
+            float maxQuickCyloopAmount;
             uint8_t unk9;
             StartType startType;
             float startSpeed;

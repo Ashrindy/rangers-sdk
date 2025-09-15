@@ -1,7 +1,22 @@
 #pragma once
 
+namespace hh::eff{
+    class ResEffect;
+}
+
 namespace Cyan {
+    struct PerEffectData {
+        int64_t unk0;
+        int unk1;
+        float unk2;
+        int unk3;
+        char unk4[0x100];
+        int64_t unk5;
+        csl::math::Matrix44 unk6;
+    };
+
     class Effect;
+    class Emitter;
     class EffectHandle {
     public:
         int unk1;
@@ -20,8 +35,10 @@ namespace Cyan {
 
     class Effect {
     public:
+        struct SetupInfo { };
+
         virtual void Start() = 0;
-        virtual void Stop() = 0;
+        virtual void Stop(bool unk) = 0;
         virtual void Pause() = 0;
         virtual void Resume() = 0;
         virtual bool IsPaused() const = 0;
@@ -50,7 +67,7 @@ namespace Cyan {
         virtual bool GetVisibility() const = 0;
         virtual void SetBillboardViewportID(unsigned int viewportId) = 0;
         virtual void* UnkFunc30() = 0;
-        virtual void UnkFunc31(void* unkParam1) = 0;
+        virtual void Setup(SetupInfo& setupInfo) = 0;
         virtual void SetUnk3(float value) = 0;
         virtual void SetUnk4(float value) = 0;
         virtual bool GetUnk5() const = 0;
@@ -61,14 +78,22 @@ namespace Cyan {
 
     class EffectImpl : public Effect {
     public:
+        struct SetupInfo : Effect::SetupInfo {
+            hh::eff::ResEffect* resource;
+            int64_t unk0;
+            int64_t unk1;
+            int32_t unk2;
+            int64_t unk3;
+        };
+
         char name[128];
         ManagerImpl* manager;
-        uint64_t qword90;
+        uint64_t root;
         Resource::EffectParam* effectParam;
         uint32_t dwordA0;
-        uint32_t dwordA4;
+        uint32_t viewMask;
         uint32_t dwordA8;
-        uint64_t qwordB0;
+        Emitter* emitter;
         uint64_t qwordB8;
         uint64_t qwordC0;
         uint64_t qwordC8;
@@ -83,12 +108,16 @@ namespace Cyan {
         uint64_t qword120;
         uint32_t dword128;
         uint64_t qword130;
-        uint64_t qword138;
+        PerEffectData* perEffectData;
 
         EffectImpl(ManagerImpl* managerImpl, Resource::EffectParam* effectParam, unsigned int unkParam1, void* unkParam2, const InheritChildParam* unkParam3, void* unkParam4, bool unkParam5, int unkParam6);
 
+        void SetDataBuffer(PerEffectData* data);
+        void PrepareRender(Graphics::Renderer* renderer, const Graphics::DeviceContainer& deviceContainer);
+        float GetWorldScale() const;
+
         virtual void Start() override;
-        virtual void Stop() override;
+        virtual void Stop(bool unk) override; //bool prolly means "immediately"
         virtual void Pause() override;
         virtual void Resume() override;
         virtual bool IsPaused() const override;
@@ -117,7 +146,7 @@ namespace Cyan {
         virtual bool GetVisibility() const override;
         virtual void SetBillboardViewportID(unsigned int viewportId) override;
         virtual void* UnkFunc30() override;
-        virtual void UnkFunc31(void* unkParam1) override;
+        virtual void Setup(Effect::SetupInfo& setupInfo) override;
         virtual void SetUnk3(float value) override;
         virtual void SetUnk4(float value) override;
         virtual bool GetUnk5() const override;

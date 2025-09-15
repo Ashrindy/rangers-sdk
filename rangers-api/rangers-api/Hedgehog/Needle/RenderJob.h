@@ -35,7 +35,7 @@ namespace hh::needle {
         virtual unsigned int UnkFunc6(PipelineInfo* pipelineInfo);
         virtual void Start(const RenderJobContext& context) = 0;
         virtual void Stop() = 0;
-        virtual void UnkFunc9() {}
+        virtual void UnkFunc9(PipelineInfo* pipelineInfo) {}
         virtual void Render(PipelineInfo* pipelineInfo) {}
         virtual void CallRender(PipelineInfo* pipelineInfo);
         virtual bool IsEnabled(unsigned int bit);
@@ -43,7 +43,7 @@ namespace hh::needle {
         virtual void SetAllEnabled(bool enabled);
         virtual unsigned int GetNameHash() = 0;
         virtual const char* GetName() = 0;
-        virtual unsigned int UnkFunc16() = 0;
+        virtual unsigned int GetClassSize() = 0;
         virtual unsigned int UnkFunc17();
         virtual void SetUnk7(uint64_t newUnk7);
     };

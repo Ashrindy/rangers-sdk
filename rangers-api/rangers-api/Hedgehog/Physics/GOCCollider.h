@@ -65,6 +65,12 @@ namespace hh::physics {
 
     class GOCCollider : public game::GOComponent, public fnd::HFrame::Listener {
     public:
+        enum class OverlapFlag : uint16_t {
+            ENTER, //reacts to MsgColliderQueryStart
+            LEAVE, //reacts to MsgColliderQueryLeave
+            STAY //reacts to MsgColliderQueryStay
+        };
+
         struct SetupInfo {
             enum class Flag : uint8_t {
                 HAS_POSITION,
@@ -76,7 +82,7 @@ namespace hh::physics {
             uint8_t unk2;
             csl::ut::Bitset<Flag> flags;
             uint16_t filterCategory;
-            uint16_t unk3;
+            csl::ut::Bitset<OverlapFlag> overlapFlags;
             uint32_t unk4;
             uint32_t unk5;
             uint32_t unk6;
@@ -108,7 +114,7 @@ namespace hh::physics {
         uint8_t unk104b;
         uint8_t filterCategory;
         csl::ut::Bitset<Flag> flags;
-        uint16_t unk105b;
+        csl::ut::Bitset<OverlapFlag> overlapFlags;
         uint32_t unk106;
         uint32_t unk106b;
         uint32_t unk107;

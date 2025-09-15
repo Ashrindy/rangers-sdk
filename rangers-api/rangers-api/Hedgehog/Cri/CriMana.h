@@ -14,8 +14,8 @@ namespace hh::cri{
         int64_t unk4;
         int64_t unk5;
 
-        virtual void UnkFunc1() override;
-        virtual void UnkFunc2() override;
+        virtual void AddCallback() override;
+        virtual void RemoveCallback() override;
 
         APPMODULE_CLASS_DECLARATION(CriMana)
     };

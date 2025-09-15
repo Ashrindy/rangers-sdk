@@ -43,7 +43,7 @@ namespace hh::gfx {
         unsigned int name;
         unsigned int masterPoseComponentName; // a GOCVisualModel
         bool unk304;
-        bool unk305;
+        bool notUpdateFinal;
 
         GOCVisualModelDescription();
     };
@@ -165,6 +165,7 @@ namespace hh::gfx {
         void Setup(const GOCVisualModelDescription& description);
         void SetRootNode(int nodeIndex);
         void SetVisibility(const char* sceneRenderPass, bool visible);
+        void SetWorld(needle::World* world);
         void SetPose(anim::Pose* pose);
         void ClearPose(anim::Pose* pose);
 

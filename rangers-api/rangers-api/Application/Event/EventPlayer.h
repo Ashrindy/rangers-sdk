@@ -6,7 +6,7 @@ namespace app::evt {
         virtual void EPL_UnkFunc1() {}
         virtual void EPL_UnkFunc2() {}
         virtual void CutsceneStart(const char* cutsceneName) {}
-        virtual void EPL_UnkFunc4() {}
+        virtual void CutsceneEnd(const char* cutsceneName) {}
         virtual void EPL_UnkFunc5() {}
         virtual void EPL_UnkFunc6() {}
         virtual void OnMessage(hh::fnd::Message* msg) {}
@@ -17,39 +17,44 @@ namespace app::evt {
     class EventPlayer;
 
     struct EventSetupData {
-    public:
-        struct UnkStr {
-        public:
-            float dword0;
-            int64_t qword4;
-            int dwordC;
-            int64_t qword10;
-            int64_t qword18;
-            int64_t qword20;
-            int64_t qword28;
-            int64_t qword30;
-            int64_t qword38;
-            int64_t qword40;
-            int64_t qword48;
-            int dword50;
-            char unk7;
-            int64_t unk8;
+        struct PlayInfo {
+            enum class Flag : unsigned int {
+                USE_SETUP_TRANSFORM, // uses the position, rotation and scale variables instead of the ones in the file
+                NO_UNLOAD,
+                CANT_SKIP,           // whetever the cutscene is unskippable or not
+                UNK0,                // pausable?
+                UNK1,                // unknown
+                ENABLE_HUD,          // whetever the cockpit ui will show up
+                CAPPED_FPS = 0x4000
+            };
+
+            char cutsceneName[40];
+            char soundName[40];
+            csl::math::Vector3 position;
+            csl::math::Quaternion rotation;
+            csl::math::Vector3 scale;
+            int unk2;
+            float speed;
+            csl::ut::Bitset<Flag> playFlags;
+
+            PlayInfo(const char* cutsceneName);
+
+            void SetTransform(csl::math::Transform& transform);
+            inline void SetCutsceneName(const char* name){
+                memcpy(cutsceneName, name, 40);
+            }
+            inline void SetSoundName(const char* name){
+                memcpy(soundName, name, 40);
+            }
         };
 
-        struct UnkStr1 {
-        public:
-            long long unk7;
-            char unk8;
-        };
+        struct CameraInfo {
+            int unk0;
+            float interpolateTime;
+            bool lookAtEnabled;
+            csl::math::Vector3 lookAtTarget;
 
-        enum class PlayFlag : unsigned int {
-            USE_SETUP_TRANSFORM, // uses the position, rotation and scale variables instead of the ones in the file
-            STOP_FADE_OUT,       // whetever the cutscene should end or it should be in a limbo
-            CANT_SKIP,           // whetever the cutscene is unskippable or not
-            UNK0,                // pausable?
-            UNK1,                // unknown
-            ENABLE_HUD,          // whetever the cockpit ui will show up
-            CAPPED_FPS = 0x4000
+            void SetLookAtTarget(csl::math::Vector3& target);
         };
 
         enum class PlayerFlag : unsigned char {
@@ -58,30 +63,21 @@ namespace app::evt {
             UNK0,           // unknown
         };
 
-        char cutsceneName[40];
-        char soundName[40];
-        csl::math::Vector3 position;
-        csl::math::Quaternion rotation;
-        csl::math::Vector3 scale;
+        PlayInfo playInfo;
+        hh::dv::DiEventManager::ScenePlaybackInfo::Info scenePlaybackInfo;
+        char unk0;
+        int unk1;
         int unk2;
-        float speed;
-        csl::ut::Bitset<PlayFlag> playFlags;
-        UnkStr unkStr;
+        heur::rfl::EventPlayTestParam::StartType playerStartType;
         hh::fnd::WorldPosition playerWorldPos;
         csl::ut::Bitset<PlayerFlag> playerFlags;
         char flags2;
-        int64_t unk3;
-        UnkStr1 unkStr1;
-        csl::math::Vector4 unk4;
+        int64_t unk4;
+        CameraInfo cameraInfo;
+
+        EventSetupData();
 
         void Setup(const char* cutsceneName);
-        inline void SetCutsceneName(const char* name){
-            strcpy(cutsceneName, name);
-        }
-        inline void SetSoundName(const char* name){
-            strcpy(soundName, name);
-        }
-        void SetTransform(csl::math::Transform& transform);
     };
 
     class EventScene : public hh::fnd::BaseObject, hh::dv::DvSceneControlListener {

@@ -1,6 +1,8 @@
 #pragma once
 
 namespace Cyan {
+    struct UpdateLightParam {};
+
     class Emitter;
     class Manager {
     public:
@@ -122,11 +124,11 @@ namespace Cyan {
         virtual void Render(Graphics::DeviceContainer& deviceContainer) = 0;
         virtual void PostRender(Graphics::DeviceContainer& deviceContainer) = 0;
         virtual bool IsReadyRender() const = 0;
-        virtual int UnkFunc23(void* unkParam1, int unkParam2, int unkParam3, int unkParam4, int unkParam5, void* unkParam6) = 0;
+        virtual int UnkFunc23(void* unkParam1, unsigned int sceneIdx, int unkParam3, int unkParam4, int unkParam5, void* unkParam6) = 0;
         virtual bool UnkFunc24(unsigned int unkParam1, int unkParam2, int unkParam3, int unkParam4, int unkParam5) = 0;
-        virtual bool SetViewProjection(unsigned int unkParam1, const float* viewMatrix, const float* projMatrix, float unkParam4, float unkParam5) = 0;
-        virtual void SetGammaCorrect(unsigned int unkParam1, bool enabled) = 0;
-        virtual void SetGammaCorrect2(unsigned int unkParam1, bool enabled) = 0;
+        virtual bool SetViewProjection(unsigned int cameraIdx, const float* viewMatrix, const float* projMatrix, float unkParam4, float unkParam5) = 0;
+        virtual void SetGammaCorrect(unsigned int sceneIdx, bool enabled) = 0;
+        virtual void SetGammaCorrect2(unsigned int sceneIdx, bool enabled) = 0;
         virtual void StopAll() = 0;
         virtual void Pause() = 0;
         virtual void Resume() = 0;
@@ -145,7 +147,7 @@ namespace Cyan {
         virtual void SetNotifyCallback(NotifyCallback* notifyCallback, void* userData) = 0;
         virtual void ResetNotifyCallback() = 0;
         virtual void Bind(Resource::EffectParam* effectParam) = 0;
-        virtual void SetTextureRequestResourceHandler(RequestResourceHandler<Resource::Texture>* handler, void* userData) = 0;
+        virtual void SetTextureRequestResourceHandler(RequestResourceHandler<Resource::TextureParam>* handler, void* userData) = 0;
         virtual void SetNodeAnimRequestResourceHandler(RequestResourceHandler<Resource::NodeAnim>* handler, void* userData) = 0;
         virtual void SetEffectRequestResourceHandler(RequestResourceHandler<Resource::Effect>* handler, void* userData) = 0;
         virtual void SetModelRequestResourceHandler(RequestResourceHandler<Resource::Model>* handler, void* userData) = 0;
@@ -157,7 +159,7 @@ namespace Cyan {
         virtual void UnkFunc55(void* handler, void* userData) = 0;
         virtual void UnkFunc56(void* handler, void* userData) = 0;
         virtual void UnkFunc57(void* handler, size_t unkParam2) = 0;
-        virtual void* UnkFunc58() const = 0;
+        virtual System::IAllocator* GetRenderAllocator() const = 0;
         virtual void UnkFunc59() = 0;
         virtual void UnkFunc60() = 0;
         virtual void UnkFunc61() = 0;
@@ -168,9 +170,16 @@ namespace Cyan {
 
     class ManagerImpl : public Manager {
     public:
-        struct UnkFuncStr{
-            void* func;
-            void* unkArray;
+        struct ResourceRequest{
+            void* handler;
+            void* userData;
+        };
+
+        struct Camera{
+            csl::math::Matrix44 viewMatrix;
+            csl::math::Matrix44 projMatrix;
+            csl::math::Matrix44 invProjMatrix;
+            float unk0[160];
         };
 
         unsigned int dword8;
@@ -210,7 +219,7 @@ namespace Cyan {
         System::RandomTable randomTable;
         EmissionGpuBase* emissionPrimitives[9];
         int64_t qword8f8;
-        hh::needle::ImplDX11::ShaderMaterialContainerDX11Impl* unkShaderMatContainer[2];
+        hh::needle::ImplDX11::ShaderMaterialContainerDX11Impl* computeShaderMatContainer[2];
         System::FreeListAllocator renderAllocator;
         System::FreeListAllocator systemAllocator;
         System::ArrayAllocator<16> tagAllocator;
@@ -223,14 +232,22 @@ namespace Cyan {
         uint64_t qword14B8;
         void* meshMemoryPtr;
         size_t meshMemorySize;
-        UnkFuncStr unkFuncStrs[11];
-        unsigned int numActiveUnkFuncStr;
+        ResourceRequest unkResourceRequest0;
+        ResourceRequest shaderRequest;
+        ResourceRequest computeShaderRequest;
+        ResourceRequest modelRequest;
+        ResourceRequest effectRequest;
+        ResourceRequest nodeAnimRequest;
+        ResourceRequest textureRequest;
+        ResourceRequest unkResourceRequest1;
+        ResourceRequest unkResourceRequest2[3];
+        unsigned int numActiveRequests;
         csl::math::Matrix34 cameraProjMatrix;
         csl::math::Vector3 cameraForward;
-        float cameraValues[1425];
+        Camera cameras[4];
         uint32_t dword2C00;
         uint32_t dword2C04;
-        UnkFuncStr unkFuncStr2c08;
+        ResourceRequest unkFuncStr2c08;
         csl::fnd::Mutex mutex2;
 
         struct Config {
@@ -275,11 +292,11 @@ namespace Cyan {
         virtual void Render(Graphics::DeviceContainer& deviceContainer) override;
         virtual void PostRender(Graphics::DeviceContainer& deviceContainer) override;
         virtual bool IsReadyRender() const override;
-        virtual int UnkFunc23(void* unkParam1, int unkParam2, int unkParam3, int unkParam4, int unkParam5, void* unkParam6) override;
+        virtual int UnkFunc23(void* unkParam1, unsigned int sceneIdx, int unkParam3, int unkParam4, int unkParam5, void* unkParam6) override;
         virtual bool UnkFunc24(unsigned int unkParam1, int unkParam2, int unkParam3, int unkParam4, int unkParam5) override;
-        virtual bool SetViewProjection(unsigned int unkParam1, const float* viewMatrix, const float* projMatrix, float unkParam4, float unkParam5) override;
-        virtual void SetGammaCorrect(unsigned int unkParam1, bool enabled) override;
-        virtual void SetGammaCorrect2(unsigned int unkParam1, bool enabled) override;
+        virtual bool SetViewProjection(unsigned int cameraIdx, const float* viewMatrix, const float* projMatrix, float unkParam4, float unkParam5) override;
+        virtual void SetGammaCorrect(unsigned int sceneIdx, bool enabled) override;
+        virtual void SetGammaCorrect2(unsigned int sceneIdx, bool enabled) override;
         virtual void StopAll() override;
         virtual void Pause() override;
         virtual void Resume() override;
@@ -298,7 +315,7 @@ namespace Cyan {
         virtual void SetNotifyCallback(NotifyCallback* notifyCallback, void* userData) override;
         virtual void ResetNotifyCallback() override;
         virtual void Bind(Resource::EffectParam* effectParam) override;
-        virtual void SetTextureRequestResourceHandler(RequestResourceHandler<Resource::Texture>* handler, void* userData) override;
+        virtual void SetTextureRequestResourceHandler(RequestResourceHandler<Resource::TextureParam>* handler, void* userData) override;
         virtual void SetNodeAnimRequestResourceHandler(RequestResourceHandler<Resource::NodeAnim>* handler, void* userData) override;
         virtual void SetEffectRequestResourceHandler(RequestResourceHandler<Resource::Effect>* handler, void* userData) override;
         virtual void SetModelRequestResourceHandler(RequestResourceHandler<Resource::Model>* handler, void* userData) override;
@@ -310,7 +327,7 @@ namespace Cyan {
         virtual void UnkFunc55(void* handler, void* userData) override;
         virtual void UnkFunc56(void* handler, void* userData) override;
         virtual void UnkFunc57(void* handler, size_t unkParam2) override;
-        virtual void* UnkFunc58() const override;
+        virtual System::IAllocator* GetRenderAllocator() const override;
         virtual void UnkFunc59() override;
         virtual void UnkFunc60() override;
         virtual void UnkFunc61() override;
@@ -320,6 +337,8 @@ namespace Cyan {
         virtual ~ManagerImpl();
 
         void UpdateEffect();
+        Element* CreateElement(const Resource::ElementParam* elementParam);
         Emitter* CreateEmitter(EffectImpl* effect, const Resource::EmitterParam* emitterParam, const InheritChildParam* inheritChildParam, int unkParam1);
+        bool UpdateLight(UpdateLightParam& param);
     };
 }

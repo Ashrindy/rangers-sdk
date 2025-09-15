@@ -26,5 +26,6 @@ namespace app::player {
         GOCOMPONENT_CLASS_DECLARATION(GOCPlayerEffect);
         void Setup(const SetupInfo& setupInfo);
         void AddEffectList(const hh::fnd::Reference<EffectList>& effectList);
+        PlayerEffect* GetEffect(unsigned int namehash) const;
     };
 }

@@ -1,6 +1,8 @@
 #pragma once
 
 namespace hh::needle {
+    class World;
+    
     class RenderUnit : public NeedleRefcountObject {
     public:
         struct Unk1 {
@@ -60,6 +62,7 @@ namespace hh::needle {
         void SetSceneName(const char* name);
         bool HasHigherPriority(const RenderUnit* other) const;
         SceneContextManager* GetSceneContextManager();
+        World* GetWorldByIdx(unsigned int idx);
 
         virtual void PushSceneParamContainer(SupportFX* supportFX);
         virtual void PopSceneParamContainer(SupportFX* supportFX);

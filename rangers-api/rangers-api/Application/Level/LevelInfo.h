@@ -17,6 +17,7 @@ namespace app::level {
         csl::ut::MoveArray<hh::fnd::Handle<hh::fnd::Messenger>> uiObjects;
         uint16_t unk20;
         uint8_t unk21;
+
         virtual void* GetRuntimeTypeInfo() const;
 		virtual void OnAddedToGame();
 		virtual void OnRemovedFromGame();
@@ -35,6 +36,8 @@ namespace app::level {
         unsigned int GetCyberStageIndex() const;
         unsigned int GetStageIndex() const;
         bool IsNonBossStage() const;
+        void CleanUIObjects();
+        void AddUIObject(hh::fnd::Handle<hh::game::GameObject>& obj);
 
         GAMESERVICE_CLASS_DECLARATION(LevelInfo)
     };

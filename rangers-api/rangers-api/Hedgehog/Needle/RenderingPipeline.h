@@ -143,7 +143,7 @@ namespace hh::needle {
 
         RenderingPipeline(csl::fnd::IAllocator* allocator, const char* name);
 
-        virtual uint64_t UnkFunc1();
+        virtual void UnkFunc1(PipelineInfo* pipelineInfo);
         virtual void UnkFunc2(PipelineInfo* pipelineInfo);
         virtual void UnkFunc3(PipelineInfo* pipelineInfo) {}
         virtual void RenderMatchingJobs(PipelineInfo* pipelineInfo, uint64_t mask, bool renderNonMatching); // mask bits seem to correspond to render passes, renderNonMatching inverts the mask
@@ -151,7 +151,7 @@ namespace hh::needle {
         virtual void Deinitialize();
         virtual void StartJobs(const RenderJobContext& context);
         virtual void StopJobs();
-        virtual uint64_t UnkFunc9() {}
+        virtual uint64_t UnkFunc9() { return 0; }
         virtual uint64_t UnkFunc10();
         virtual void InitializeJobs() {}
         virtual void DeinitializeJobs() {}

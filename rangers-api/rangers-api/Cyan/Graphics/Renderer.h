@@ -19,7 +19,7 @@ namespace Cyan::Graphics {
 
         ManagerImpl* managerImpl;
         Unk1 unk10[2];
-        unsigned int dword60;
+        bool gammaCorrect;
         uint64_t qword68;
         unsigned int dword70;
         uint8_t byte74;
@@ -29,9 +29,11 @@ namespace Cyan::Graphics {
 
         Renderer(ManagerImpl* managerImpl);
 
+        void SetGammaCorrect(bool enabled);
+
         virtual ~Renderer();
         virtual void Initialize(const DeviceContainer& deviceContainer);
-        virtual void UnkFunc2();
+        virtual void PrepareRender();
         virtual unsigned int Render(const DeviceContainer& deviceContainer, unsigned int unkParam1, unsigned int unkParam2, unsigned int unkParam3, unsigned int unkParam4, void* unkParam5); 
         virtual void* UnkFunc4(void* unkParam1);
         virtual void UnkFunc5(void* unkParam1);

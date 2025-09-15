@@ -3,7 +3,7 @@
 namespace hh::needle {
     class FxRenderTextureCamera : public FxCamera, public NeedleRefcountObject {
     public:
-        csl::math::Vector4 position;
+        csl::math::Vector3 position;
         csl::math::Matrix44 viewMatrix;
         csl::math::Matrix44 projMatrix;
 
@@ -22,7 +22,7 @@ namespace hh::needle {
     struct RenderTextureCreateArgs {
         enum Flag {
             UNK0 = 1,
-            UNK1 = 2, // decides some even/odd logic in setrenderdimensions... backbuffer?
+            RESOLVE = 2, // decides some even/odd logic in setrenderdimensions... backbuffer?
             UNK2 = 4,
             UNK3 = 8,
             COPIED = 0x10,
@@ -42,7 +42,7 @@ namespace hh::needle {
         RenderTexturePipeline* pipeline;
         const char* name;
         const char* sceneName;
-        bool unk6;
+        bool autoCreatePipeline;
     };
 
     class RenderTextureHandle : public RenderUnit {
@@ -97,5 +97,9 @@ namespace hh::needle {
         void ChangePipeline(RenderingPipeline* pipeline);
         bool IsFlagSet(RenderTextureCreateArgs::Flag flag) const;
         Texture* GetTexture(unsigned int id) const;
+        Texture* GetDepthStencilTexture() const;
+        unsigned int GetClearedTextureCount() const;
+        intrusive_ptr<RenderTarget>* GetRenderTarget(unsigned int idx) const;
+        void Resolve(RenderingDeviceContext* ctx);
     };
 }

@@ -18,6 +18,7 @@ namespace app::game {
 
         void SetState(unsigned int stateId);
 		virtual void* GetRuntimeTypeInfo() const override;
+		virtual bool fUnk3(hh::fnd::Message& message) override;
         virtual bool UnkFunc4() { return true; }
         virtual bool Initialize() {}
         virtual bool UnkFunc6(bool a2) {}
@@ -43,6 +44,8 @@ namespace app::game {
 
         GameModeExtension* GetExtension(unsigned int name) const;
         void AddExtension(GameModeExtension* extension);
+
+        void SendMessageImm(hh::fnd::Message& message);
 
         GameMode(csl::fnd::IAllocator* allocator);
     };

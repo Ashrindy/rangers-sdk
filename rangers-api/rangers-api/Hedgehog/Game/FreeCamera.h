@@ -30,12 +30,14 @@ namespace hh::game {
         fnd::Reference<CameraComponent> cameraComponent;
         fnd::Reference<InputComponent> inputComponent;
         fnd::Reference<FreeCameraControllerBase> controller;
-        csl::ut::MoveArray<void*> unk8;
+        csl::ut::MoveArray<FreeCameraListener*> listeners;
         gfnd::ViewportData viewportData;
 
         FreeCamera(csl::fnd::IAllocator* allocator, const CreateInfo& createInfo);
         void Initialize(csl::fnd::IAllocator* allocator);
         bool HasCamera();
+        void AddListener(FreeCameraListener* listener);
+        void RemoveListener(FreeCameraListener* listener);
 		virtual void GameServiceRemovedCallback(GameService* gameService) override;
 		virtual void PostGameUpdateCallback(GameManager* gameManager, const fnd::SUpdateInfo& updateInfo) override;
 
@@ -83,7 +85,7 @@ namespace hh::game {
         virtual uint64_t UnkFunc6() = 0;
         virtual uint64_t UnkFunc7() = 0;
         virtual uint64_t UnkFunc8() = 0;
-        virtual uint64_t UnkFunc9() = 0;
+        virtual void OnUpdate(const fnd::SUpdateInfo& updateInfo) = 0;
         virtual uint64_t UnkFunc10() = 0;
         virtual uint64_t UnkFunc11() = 0;
         virtual uint64_t UnkFunc12() = 0;
@@ -164,7 +166,7 @@ namespace hh::game {
         virtual uint64_t UnkFunc6() override;
         virtual uint64_t UnkFunc7() override {}
         virtual uint64_t UnkFunc8() override;
-        virtual uint64_t UnkFunc9() override;
+        virtual void OnUpdate(const fnd::SUpdateInfo& updateInfo) override;
         virtual uint64_t UnkFunc10() override;
         virtual uint64_t UnkFunc11() override;
         virtual uint64_t UnkFunc12() override;

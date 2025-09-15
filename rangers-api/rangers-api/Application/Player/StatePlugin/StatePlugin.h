@@ -12,6 +12,13 @@ namespace app::player {
         uint8_t unk2;
 
         StatePluginBase(csl::fnd::IAllocator* allocator) : hh::fnd::ReferencedObject{ allocator, true } {}
+
+        virtual unsigned int GetNameHash() const = 0;
+        virtual unsigned int UnkFunc() const { return 0; }
+        virtual void AddCallback() {}
+        virtual void RemoveCallback() {}
+        virtual void Update(hh::fnd::UpdatingPhase phase, const float deltaTime) {}
+        virtual bool ProcessMessage(hh::fnd::Message& message) { return false; }
     };
 
     template<typename Ctx>
@@ -21,5 +28,8 @@ namespace app::player {
         StatePlugin(csl::fnd::IAllocator* allocator) : StatePluginBase{ allocator } {}
     };
 
-    class PlayerStatePlugin : public StatePlugin<PlayerHsmContext> {};
+    class PlayerStatePlugin : public StatePlugin<PlayerHsmContext> {
+    public:
+        void SetGameCockpitVisibility(bool visible);
+    };
 }

@@ -13,6 +13,9 @@ namespace hh::animeff {
         virtual void Load(void* data, size_t size) override;
         virtual void Unload() override {}
 
+        Binding* GetBindings() const;
+        Binding* GetBinding(unsigned int idx) const;
+
         MANAGED_RESOURCE_CLASS_DECLARATION(ResParticleLocation);
     };
 }
