@@ -47,7 +47,7 @@ namespace app_cmn::game{
             bool createCheckIrregularController;
             hh::fnd::UpdatingPhase updatePhase;
             int updatePriority;
-            bool updateAync;
+            bool updateAsync;
         };
         
         enum class Flags : unsigned char {
