@@ -81,8 +81,8 @@ namespace hh::eff {
                 uint16_t word170;
                 csl::fnd::Mutex mutex;
 
-                virtual void* Alloc(size_t size, size_t alignment) override;
-                virtual void* Alloc2(size_t size, size_t alignment) override;
+                virtual void* Alloc(size_t size) override;
+                virtual void* Alloc(size_t size, const char* name, size_t alignment) override;
                 virtual void Free(void* ptr) override;
                 virtual void SetupMemory(void* ptr, size_t size) override {}
                 virtual void SetName(const char* name) override;

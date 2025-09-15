@@ -7,6 +7,14 @@ namespace hh::needle {
     class RenderUnit;
     class RenderTextureHandle;
     class RenderTextureCreateArgs;
+
+    class FxPerformanceCounter {
+    public:
+        virtual void BeginPerformanceCounter() {}
+        virtual void EndPerformanceCounter() {}
+        virtual void DrawPerformanceCounter() {}
+    };
+
     class SupportFX {
     public:
         struct FxViewport {
@@ -37,21 +45,18 @@ namespace hh::needle {
             float unk35;
         };
 
-        class SFXAllocator {
+        class SFXAllocator : public csl::fnd::IAllocator {
         public:
-            SupportFX* supportFx;
-            uint8_t unk2;
-            uint32_t unk2a[36];
-            csl::ut::MoveArray<void*> unk3;
-            csl::ut::MoveArray<void*> unk4;
-            csl::ut::MoveArray<void*> unk5;
-            uint64_t unk6;
-
-            SFXAllocator();
+            inline SFXAllocator() {}
             virtual ~SFXAllocator();
             
-            virtual void* Alloc(size_t in_size, size_t in_alignment);
-            virtual void Free(void* in_pMemory);
+            virtual void* Alloc(size_t in_size, size_t in_alignment) override;
+            virtual void Free(void* in_pMemory) override;
+
+            static SFXAllocator instance;
+            static inline SFXAllocator* GetInstance() {
+                return &RESOLVE_STATIC_VARIABLE(instance);
+            }
         };
     
         uint32_t vertexShaderCount;
@@ -103,7 +108,7 @@ namespace hh::needle {
         uint32_t unk18;
         uint32_t unk19;
         void* unk20;
-        void* unkVtbl1;
+        FxPerformanceCounter performanceCounter;
         uint64_t unk21;
         uint64_t unk22;
         int32_t unk23;
@@ -152,6 +157,7 @@ namespace hh::needle {
         VertexShader* GetVertexShader(void* data, size_t size);
         PixelShader* GetPixelShader(void* data, size_t size);
         ComputeShader* GetComputeShader(void* data, size_t size);
+        void DestroyRenderUnit(const char* name);
 
         void SetupLightField(LightFieldDescription& desc, const char* sceneName);
 

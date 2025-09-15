@@ -17,7 +17,7 @@ namespace Cyan{
         csl::math::Vector3 spreadVector; //stores
         int8_t gap4Cb[156];
         int32_t dword11C;
-        int8_t gap120[128]; //EmitParam
+        EmitParam emitParam;
         int64_t qword1A0[16];
         int64_t qword220;
         int64_t qword228;
@@ -51,6 +51,7 @@ namespace Cyan{
         void CalcTexcoord(float unk);
         void InitColor(System::Random* random);
         void CalcInitVelocity(csl::math::Vector3& unk0, csl::math::Vector3& unk1, csl::math::Vector3& unk2);
+        static void CalcSphericalVector(csl::math::Vector3* direction, Cyan::System::Random* random);
 
         virtual void Process(float unk);
         virtual void Update(float unk);

@@ -114,6 +114,7 @@ namespace Cyan {
 
         void SetDataBuffer(PerEffectData* data);
         void PrepareRender(Graphics::Renderer* renderer, const Graphics::DeviceContainer& deviceContainer);
+        float GetWorldScale() const;
 
         virtual void Start() override;
         virtual void Stop(bool unk) override; //bool prolly means "immediately"

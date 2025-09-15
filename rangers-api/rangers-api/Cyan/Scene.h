@@ -16,5 +16,6 @@ namespace Cyan {
         Scene(ManagerImpl* managerImpl);
 
         void PrepareRender(const Graphics::DeviceContainer& deviceContainer);
+        void SetGammaCorrect(bool enabled);
     };
 }

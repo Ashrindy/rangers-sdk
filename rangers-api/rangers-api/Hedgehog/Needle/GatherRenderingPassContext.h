@@ -74,7 +74,8 @@ namespace hh::needle {
             RenderingDevice* renderingDevice;
             Unk1 globalParameterSceneSettings[64];
             uint32_t totalGlobalParameterSize;
-            Unk4 unk2a[64];
+            int64_t transformParameterInfo[2];
+            Unk4 unk2a[63];
             SCullGroupSetting cullGroupSettings[32];
             uint8_t unk2b[32];
             uint8_t unk2c[32];
@@ -138,6 +139,11 @@ namespace hh::needle {
     };
 
     struct GatherRenderingPassContext {
+        struct SCullTransformParameterInfo {
+            int64_t unk0;
+            int64_t unk1;
+        };
+
         GatherRenderingPassContextImpl* implementation;
         CScratchMemoryContext memCtx;
         uint32_t unk2;
@@ -151,6 +157,7 @@ namespace hh::needle {
         void SetCullingGroupSetting(unsigned int index, const SCullGroupSetting& cullingGroupSetting);
         void SetDrawPassGroupSetting(unsigned int index, const SDrawPassSceneSetting& drawPassGroupSetting);
         void SetGlobalParameter(unsigned int index, const SGlobalParameterSceneSetting& globalParameterSceneSetting);
+        void SetCullTransformParameterInfo(unsigned int index, const SCullTransformParameterInfo& info);
         void SetLODLayerRanges(const float* ranges);
         void* GetParameterBuffer(size_t size);
         float* GetParameterFloatVector(size_t count, const float* vec);
