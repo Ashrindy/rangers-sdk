@@ -240,7 +240,8 @@ namespace Cyan {
         ResourceRequest nodeAnimRequest;
         ResourceRequest textureRequest;
         ResourceRequest unkResourceRequest1;
-        ResourceRequest unkResourceRequest2[3];
+        ResourceRequest lightRequest;
+        ResourceRequest unkResourceRequest2[2];
         unsigned int numActiveRequests;
         csl::math::Matrix34 cameraProjMatrix;
         csl::math::Vector3 cameraForward;

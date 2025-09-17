@@ -100035,6 +100035,11 @@ PUBLIC ?GetEulerRotationMatrix@Math@System@Cyan@@YA?AVMatrix34@math@csl@@AEBVVec
     mov rax, 0140fe70d0h
     jmp rax
 
+PUBLIC ?GetEmissionMatrix@Emitter@Cyan@@QEAAAEAVMatrix34@math@csl@@XZ
+?GetEmissionMatrix@Emitter@Cyan@@QEAAAEAVMatrix34@math@csl@@XZ:
+    mov rax, 0140fe7310h
+    jmp rax
+
 PUBLIC ?GetMatrix@Emitter@Cyan@@QEBA?AVMatrix34@math@csl@@XZ
 ?GetMatrix@Emitter@Cyan@@QEBA?AVMatrix34@math@csl@@XZ:
     mov rax, 0140fe7370h
@@ -100330,6 +100335,11 @@ PUBLIC ?CalcInitVelocity@Element@Cyan@@QEAAXAEAVVector3@math@csl@@00@Z
     mov rax, 0140ff3d40h
     jmp rax
 
+PUBLIC ?CalcInitVelocity@Element@Cyan@@QEAAXAEBVVector3@math@csl@@00@Z
+?CalcInitVelocity@Element@Cyan@@QEAAXAEBVVector3@math@csl@@00@Z:
+    mov rax, 0140ff3d40h
+    jmp rax
+
 PUBLIC ?CalcSphericalVector@Element@Cyan@@SAXPEAVVector3@math@csl@@PEAVRandom@System@2@@Z
 ?CalcSphericalVector@Element@Cyan@@SAXPEAVVector3@math@csl@@PEAVRandom@System@2@@Z:
     mov rax, 0140ff4200h
@@ -100347,6 +100357,11 @@ PUBLIC ?CalcTexcoordImpl@Element@Cyan@@QEAAXMPEBUTextureParam@Resource@2@PEAXPEA
 
 PUBLIC ?Create@AnimCtrl@Cyan@@CAPEAV12@PEAPEAV12@PEAPEAXIMPEBXH@Z
 ?Create@AnimCtrl@Cyan@@CAPEAV12@PEAPEAV12@PEAPEAXIMPEBXH@Z:
+    mov rax, 0140ff4a20h
+    jmp rax
+
+PUBLIC ?CreateAnimCtrl@Element@Cyan@@QEAA?AV?$MemObject@VAnimCtrl@Cyan@@@2@AEBV?$PtrData@UAnimationParam@Resource@Cyan@@@Resource@2@IMPEBXW4RandomSetType@CreateParam@AnimCtrl@2@@Z
+?CreateAnimCtrl@Element@Cyan@@QEAA?AV?$MemObject@VAnimCtrl@Cyan@@@2@AEBV?$PtrData@UAnimationParam@Resource@Cyan@@@Resource@2@IMPEBXW4RandomSetType@CreateParam@AnimCtrl@2@@Z:
     mov rax, 0140ff4a20h
     jmp rax
 
@@ -100395,6 +100410,21 @@ PUBLIC ?Update@FSM@System@Cyan@@QEAAXM@Z
     mov rax, 0140ff5a60h
     jmp rax
 
+PUBLIC ?CalcKeyValue@AnimCtrl@Cyan@@QEAAXMPEAUCurveStatus@12@@Z
+?CalcKeyValue@AnimCtrl@Cyan@@QEAAXMPEAUCurveStatus@12@@Z:
+    mov rax, 0140ff5b50h
+    jmp rax
+
+PUBLIC ??0AnimCtrl@Cyan@@AEAA@PEBUAnimationParam@Resource@1@AEBUCreateParam@01@@Z
+??0AnimCtrl@Cyan@@AEAA@PEBUAnimationParam@Resource@1@AEBUCreateParam@01@@Z:
+    mov rax, 0140ff6090h
+    jmp rax
+
+PUBLIC ?GetCurveNum@AnimCtrl@Cyan@@QEBAGXZ
+?GetCurveNum@AnimCtrl@Cyan@@QEBAGXZ:
+    mov rax, 0140ff60f0h
+    jmp rax
+
 PUBLIC ?GetKeyValue@AnimCtrl@Cyan@@AEAAMPEBUCurveStatus@12@H@Z
 ?GetKeyValue@AnimCtrl@Cyan@@AEAAMPEBUCurveStatus@12@H@Z:
     mov rax, 0140ff6100h
@@ -100408,6 +100438,21 @@ PUBLIC ?GetValue@AnimCtrl@Cyan@@AEBAIH@Z
 PUBLIC ?GetValues@AnimCtrl@Cyan@@AEBAIPEAMH@Z
 ?GetValues@AnimCtrl@Cyan@@AEBAIPEAMH@Z:
     mov rax, 0140ff6290h
+    jmp rax
+
+PUBLIC ?InitAnimation@AnimCtrl@Cyan@@QEAAXAEBUCreateParam@12@@Z
+?InitAnimation@AnimCtrl@Cyan@@QEAAXAEBUCreateParam@12@@Z:
+    mov rax, 0140ff6380h
+    jmp rax
+
+PUBLIC ?Interpolation@AnimCtrl@Cyan@@QEAAXPEBUCurveStatus@12@HHMM@Z
+?Interpolation@AnimCtrl@Cyan@@QEAAXPEBUCurveStatus@12@HHMM@Z:
+    mov rax, 0140ff6b00h
+    jmp rax
+
+PUBLIC ?Interpolation@AnimCtrl@Cyan@@QEAAPEAXPEBUCurveStatus@12@HHMM@Z
+?Interpolation@AnimCtrl@Cyan@@QEAAPEAXPEBUCurveStatus@12@HHMM@Z:
+    mov rax, 0140ff6b00h
     jmp rax
 
 PUBLIC ?Update@AnimCtrl@Cyan@@AEAAXM@Z
@@ -100665,6 +100710,31 @@ PUBLIC ??_DParticle@Elements@Cyan@@QEAAXXZ
     mov rax, 0141002d50h
     jmp rax
 
+PUBLIC ?CalcField@Particle@Elements@Cyan@@QEAAXMPEAVVector3@math@csl@@0@Z
+?CalcField@Particle@Elements@Cyan@@QEAAXMPEAVVector3@math@csl@@0@Z:
+    mov rax, 01410035b0h
+    jmp rax
+
+PUBLIC ?CalcFieldRandom@Particle@Elements@Cyan@@QEAAXPEAUFieldArgs@23@AEBVVector3@math@csl@@1AEBVMatrix34@67@_N@Z
+?CalcFieldRandom@Particle@Elements@Cyan@@QEAAXPEAUFieldArgs@23@AEBVVector3@math@csl@@1AEBVMatrix34@67@_N@Z:
+    mov rax, 0141004300h
+    jmp rax
+
+PUBLIC ?CalcFieldSpin2@Particle@Elements@Cyan@@QEAAXPEAUFieldArgs@23@AEAVVector3@math@csl@@@Z
+?CalcFieldSpin2@Particle@Elements@Cyan@@QEAAXPEAUFieldArgs@23@AEAVVector3@math@csl@@@Z:
+    mov rax, 0141004970h
+    jmp rax
+
+PUBLIC ?CalcFieldSpin@Particle@Elements@Cyan@@QEAAXPEAUFieldArgs@23@AEAVVector3@math@csl@@@Z
+?CalcFieldSpin@Particle@Elements@Cyan@@QEAAXPEAUFieldArgs@23@AEAVVector3@math@csl@@@Z:
+    mov rax, 0141004c40h
+    jmp rax
+
+PUBLIC ?CalcFieldVortex@Particle@Elements@Cyan@@QEAAXPEAUFieldArgs@23@AEAVVector3@math@csl@@@Z
+?CalcFieldVortex@Particle@Elements@Cyan@@QEAAXPEAUFieldArgs@23@AEAVVector3@math@csl@@@Z:
+    mov rax, 0141004dc0h
+    jmp rax
+
 PUBLIC ?InitColor@Element@Cyan@@QEAAXPEAVRandom@System@2@@Z
 ?InitColor@Element@Cyan@@QEAAXPEAVRandom@System@2@@Z:
     mov rax, 0141005af0h
@@ -100672,6 +100742,11 @@ PUBLIC ?InitColor@Element@Cyan@@QEAAXPEAVRandom@System@2@@Z
 
 PUBLIC ?UnkFunc2@Particle@Elements@Cyan@@UEAAHXZ
 ?UnkFunc2@Particle@Elements@Cyan@@UEAAHXZ:
+    mov rax, 01410067b0h
+    jmp rax
+
+PUBLIC ?InitParameter@Particle@Elements@Cyan@@UEAAXXZ
+?InitParameter@Particle@Elements@Cyan@@UEAAXXZ:
     mov rax, 01410067b0h
     jmp rax
 
@@ -100683,6 +100758,11 @@ PUBLIC ?UnkFunc1@Particle@Elements@Cyan@@UEAAXXZ
 PUBLIC ?Process@Particle@Elements@Cyan@@UEAAXM@Z
 ?Process@Particle@Elements@Cyan@@UEAAXM@Z:
     mov rax, 0141007ac0h
+    jmp rax
+
+PUBLIC ?Rotation2VecY@Particle@Elements@Cyan@@QEAAXAEBVVector3@math@csl@@PEAV456@@Z
+?Rotation2VecY@Particle@Elements@Cyan@@QEAAXAEBVVector3@math@csl@@PEAV456@@Z:
+    mov rax, 0141007fc0h
     jmp rax
 
 PUBLIC ?PrepareRender@Particle@Elements@Cyan@@UEAAXPEAVRenderer@Graphics@3@PEAX@Z
@@ -105815,6 +105895,11 @@ PUBLIC ?c_str@VariableString@ut@csl@@QEBAPEBDXZ
     mov rax, 0141133fe0h
     jmp rax
 
+PUBLIC ?Vector3Cross@math@csl@@YA?AVVector3@12@AEBV312@0@Z
+?Vector3Cross@math@csl@@YA?AVVector3@12@AEBV312@0@Z:
+    mov rax, 0141134140h
+    jmp rax
+
 PUBLIC ?Vector3Distance@math@csl@@YAMVVector3@12@0@Z
 ?Vector3Distance@math@csl@@YAMVVector3@12@0@Z:
     mov rax, 0141134180h
@@ -105858,6 +105943,16 @@ PUBLIC ?RotateVector@Quaternion@math@csl@@SA?AVVector4@23@AEBV123@AEBV423@@Z
 PUBLIC ?Vector3Rotate@math@csl@@YA?AVVector3@12@AEBVQuaternion@12@AEBV312@@Z
 ?Vector3Rotate@math@csl@@YA?AVVector3@12@AEBVQuaternion@12@AEBV312@@Z:
     mov rax, 0141134500h
+    jmp rax
+
+PUBLIC ?Vector3Scale@math@csl@@YA?AVVector3@12@AEBV312@M@Z
+?Vector3Scale@math@csl@@YA?AVVector3@12@AEBV312@M@Z:
+    mov rax, 01411347b0h
+    jmp rax
+
+PUBLIC ?Vector3Sub@math@csl@@YA?AVVector3@12@AEBV312@0@Z
+?Vector3Sub@math@csl@@YA?AVVector3@12@AEBV312@0@Z:
+    mov rax, 0141134a10h
     jmp rax
 
 PUBLIC ?SetIDName@EventSetupData@evt@app@@SAXPEADPEBD_J@Z
@@ -109547,6 +109642,11 @@ PUBLIC ?EmitElement@EmissionBase@Cyan@@UEAA_JPEBUEmitterParam@Resource@2@@Z
 
 PUBLIC ?EmitElement@EmissionBase@Cyan@@UEAA_NPEBUEmitterParam@Resource@2@@Z
 ?EmitElement@EmissionBase@Cyan@@UEAA_NPEBUEmitterParam@Resource@2@@Z:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?InitParameter@Element@Cyan@@UEAAXXZ
+?InitParameter@Element@Cyan@@UEAAXXZ:
     mov rax, 014118f6e0h
     jmp rax
 
@@ -180043,6 +180143,11 @@ PUBLIC ?OnUpdate@WaitingState@Emitter@Cyan@@UEAAXPEAVFSMContext@System@3@@Z
 PUBLIC ?OnUpdate@WaitingState@Emitter@Cyan@@UEAAXAEAUStateInfo@FSMState@System@3@@Z
 ?OnUpdate@WaitingState@Emitter@Cyan@@UEAAXAEAUStateInfo@FSMState@System@3@@Z:
     mov rax, 0153c75b30h
+    jmp rax
+
+PUBLIC ?SetTime@AnimCtrl@Cyan@@QEAAXM@Z
+?SetTime@AnimCtrl@Cyan@@QEAAXM@Z:
+    mov rax, 0153cf35f0h
     jmp rax
 
 PUBLIC ?Create@StageTop@states@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z

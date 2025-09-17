@@ -1,6 +1,8 @@
 #pragma once
 
 namespace Cyan{
+    class HistoricalStripe;
+
     class Element {
     public:
         int64_t qword8;
@@ -13,26 +15,34 @@ namespace Cyan{
         float dword40;
         float dword44;
         int32_t dword48;
-        int8_t gap4C[36];
+        int32_t dword4C;
+        csl::math::Vector3 position0;
+        csl::math::Vector3 position1;
         csl::math::Vector3 spreadVector; //stores
-        int8_t gap4Cb[156];
-        int32_t dword11C;
+        int8_t gap4Cb[80];
+        float fps;
+        int8_t gap4Cbb[20];
+        float directionJitter; //unsure
+        int8_t gap4Cbbb[48];
+        short word11C;
+        char word11E; // 0x01 init children
         EmitParam emitParam;
-        int64_t qword1A0[16];
-        int64_t qword220;
-        int64_t qword228;
-        int64_t qword230[4];
-        int64_t qword250[4];
-        int64_t qword270[4];
-        int64_t qword290[2];
-        int64_t qword2A0[2];
-        int8_t gap2B0[448];
-        int64_t qword460;
-        int8_t gap468[8];
+        AnimCtrl* childrenAnim[16];
+        AnimCtrl* qword220;
+        AnimCtrl* qword228;
+        AnimCtrl* unkColorAnim0[4];
+        AnimCtrl* unkColorAnim1[4];
+        AnimCtrl* unkColorAnim2[4];
+        AnimCtrl* modifierAnim[5][8];
+        int64_t qword290[20];
+        AnimCtrl* patternAnim[4];
         AnimCtrl* animationControl;
         float textureUvScale[2]; //unsure, when used, it's multiplied by worldScale
         int64_t qword480;
-        int8_t gap488[680];
+        int8_t gap488[648];
+        HistoricalStripe* historicalStripe;
+        int relatedToUpdateLight;
+        int8_t gap488b[20];
         int64_t qword730;
         int32_t dword738;
         int32_t dword73C;
@@ -50,8 +60,15 @@ namespace Cyan{
         );
         void CalcTexcoord(float unk);
         void InitColor(System::Random* random);
-        void CalcInitVelocity(csl::math::Vector3& unk0, csl::math::Vector3& unk1, csl::math::Vector3& unk2);
+        void CalcInitVelocity(const csl::math::Vector3& accelaration, const csl::math::Vector3& velocity, const csl::math::Vector3& accelarationNormal);
         static void CalcSphericalVector(csl::math::Vector3* direction, Cyan::System::Random* random);
+        MemObject<AnimCtrl> CreateAnimCtrl(
+            const Resource::PtrData<Resource::AnimationParam>& animParam,
+            unsigned int unk0,
+            float unk1,
+            const void* colorSet, //Cyan::ColorRandomSet*
+            AnimCtrl::CreateParam::RandomSetType type
+        );
 
         virtual void Process(float unk);
         virtual void Update(float unk);
@@ -59,7 +76,7 @@ namespace Cyan{
         virtual void UnkFunc1() {}
         virtual int GetHistoricalStripeBufferSize() const;
         virtual ~Element();
-        virtual int UnkFunc2() { return 0; }
+        virtual void InitParameter() {}
 
         Element(Emitter* emitter, const Resource::ElementParam* element);
     };

@@ -8,7 +8,14 @@ namespace Cyan::Elements{
         virtual void PrepareRender(Graphics::Renderer* renderer, void* effectObj) override; //Graphics::EffectObject* effectObj
         virtual void UnkFunc1() override;
         virtual int GetHistoricalStripeBufferSize() const override;
-        virtual int UnkFunc2() override;
+        virtual void InitParameter() override;
+
+        void CalcField(float time, csl::math::Vector3* unk0, csl::math::Vector3* unk1);
+        void CalcFieldVortex(FieldArgs* args, csl::math::Vector3& out);
+        void CalcFieldSpin(FieldArgs* args, csl::math::Vector3& out);
+        void CalcFieldSpin2(FieldArgs* args, csl::math::Vector3& out);
+        void CalcFieldRandom(FieldArgs* args, const csl::math::Vector3& spreadVector, const csl::math::Vector3& spreadVectorNorm, const csl::math::Matrix34& emissionMatrix, bool unk0);
+        void Rotation2VecY(const csl::math::Vector3& rotation, csl::math::Vector3* out);
 
         Particle(Emitter* emitter, const Resource::ElementParam* element, const EmitParam* emitParam);
     };  
