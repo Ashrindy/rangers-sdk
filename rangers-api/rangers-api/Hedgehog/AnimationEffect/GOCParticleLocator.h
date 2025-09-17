@@ -77,6 +77,9 @@ namespace hh::animeff {
         void AddListener(ParticleLocatorListener* listener);
         void RemoveListener(ParticleLocatorListener* listener);
 
+        void AttachAnimator(anim::GOCAnimator* animator);
+        void DetachAnimator();
+
         GOCOMPONENT_CLASS_DECLARATION(GOCParticleLocator);
     };
 }

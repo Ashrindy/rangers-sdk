@@ -82,6 +82,7 @@ namespace app::gfx {
 		void StartLevel(const char* stageName);
 		void EndLevel();
 		hh::ut::KdTree* CreateKdTree(ResFxColFile2* resource);
+		void SetDvSceneCameraPosition(const csl::math::Vector3& position);
 
 		GAMESERVICE_CLASS_DECLARATION(FxColManager)
     };

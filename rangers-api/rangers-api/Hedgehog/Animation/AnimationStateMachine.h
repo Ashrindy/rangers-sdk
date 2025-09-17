@@ -2,10 +2,12 @@
 
 namespace hh::anim {
     class AnimationStateMachine;
+    struct AnimationStateInfo {};
+
     class AnimationStateListener {
     public:
         virtual ~AnimationStateListener() = default;
-        virtual void ASL_MaybeOnStateChange() {}
+        virtual void LoopOverflowCallback(AnimationStateMachine* stateMachine, int unk0, const AnimationStateInfo* stateInfo, int unk1) {}
     };
 
     class AnimationStateMachineListener {

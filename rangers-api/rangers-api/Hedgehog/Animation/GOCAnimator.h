@@ -27,7 +27,7 @@ namespace hh::anim {
         virtual void UnkFunc3() override;
         virtual uint64_t UnkFunc4() override;
         virtual void EventCallback(const anim::TriggerListener::Trigger& trigger) override;
-        virtual void ASL_MaybeOnStateChange() override;
+        virtual void LoopOverflowCallback(AnimationStateMachine* stateMachine, int unk0, const AnimationStateInfo* stateInfo, int unk1) override;
 
         void Setup(const SetupInfo& setupInfo);
         bool ChangeState(const char* stateName);

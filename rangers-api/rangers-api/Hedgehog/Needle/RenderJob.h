@@ -45,6 +45,6 @@ namespace hh::needle {
         virtual const char* GetName() = 0;
         virtual unsigned int GetClassSize() = 0;
         virtual unsigned int UnkFunc17();
-        virtual void SetUnk7(uint64_t newUnk7);
+        virtual void SetRenderMask(uint64_t bits);
     };
 }

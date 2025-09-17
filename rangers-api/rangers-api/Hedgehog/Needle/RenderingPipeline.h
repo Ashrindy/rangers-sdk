@@ -39,7 +39,7 @@ namespace hh::needle {
         PipelineInfo(const PipelineInfo& other);
         PipelineInfo& operator=(const PipelineInfo& other);
 
-        virtual uint64_t UnkFunc1();
+        virtual ~PipelineInfo();
 
         void SetDrawPassInfo(const DrawPassInfo& drawPassInfo);
         const DrawPassInfo& GetDrawPassInfo() const;
