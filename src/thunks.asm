@@ -100060,6 +100060,11 @@ PUBLIC ?Matrix34Inverse@math@csl@@YA_NAEBVMatrix34@12@PEAV312@@Z
     mov rax, 0140fe8ab0h
     jmp rax
 
+PUBLIC ?IsEnableEmit@Emitter@Cyan@@QEBA_NXZ
+?IsEnableEmit@Emitter@Cyan@@QEBA_NXZ:
+    mov rax, 0140fe8b70h
+    jmp rax
+
 PUBLIC ?OnEnter@AliveState@Emitter@Cyan@@UEAAXPEAVFSMContext@System@3@@Z
 ?OnEnter@AliveState@Emitter@Cyan@@UEAAXPEAVFSMContext@System@3@@Z:
     mov rax, 0140fe8d70h
@@ -100365,6 +100370,11 @@ PUBLIC ?CreateAnimCtrl@Element@Cyan@@QEAA?AV?$MemObject@VAnimCtrl@Cyan@@@2@AEBV?
     mov rax, 0140ff4a20h
     jmp rax
 
+PUBLIC ?EmitChild@Element@Cyan@@QEAAXXZ
+?EmitChild@Element@Cyan@@QEAAXXZ:
+    mov rax, 0140ff4b40h
+    jmp rax
+
 PUBLIC ?GetHistoricalStripeBufferSize@Element@Cyan@@UEBAHXZ
 ?GetHistoricalStripeBufferSize@Element@Cyan@@UEBAHXZ:
     mov rax, 0140ff5290h
@@ -100388,6 +100398,11 @@ PUBLIC ?Update@Element@Cyan@@UEAAXM@Z
 PUBLIC ?Update@Particle@Elements@Cyan@@UEAAXM@Z
 ?Update@Particle@Elements@Cyan@@UEAAXM@Z:
     mov rax, 0140ff55c0h
+    jmp rax
+
+PUBLIC ?UpdatePattern@Element@Cyan@@QEAAXMPEBUTextureParam@Resource@2@IPEAM1@Z
+?UpdatePattern@Element@Cyan@@QEAAXMPEBUTextureParam@Resource@2@IPEAM1@Z:
+    mov rax, 0140ff5660h
     jmp rax
 
 PUBLIC ??0FSM@System@Cyan@@QEAA@XZ
@@ -100740,6 +100755,11 @@ PUBLIC ?InitColor@Element@Cyan@@QEAAXPEAVRandom@System@2@@Z
     mov rax, 0141005af0h
     jmp rax
 
+PUBLIC ?InitDirection@Particle@Elements@Cyan@@QEAAXPEAVRandom@System@3@@Z
+?InitDirection@Particle@Elements@Cyan@@QEAAXPEAVRandom@System@3@@Z:
+    mov rax, 01410062a0h
+    jmp rax
+
 PUBLIC ?UnkFunc2@Particle@Elements@Cyan@@UEAAHXZ
 ?UnkFunc2@Particle@Elements@Cyan@@UEAAHXZ:
     mov rax, 01410067b0h
@@ -100748,6 +100768,11 @@ PUBLIC ?UnkFunc2@Particle@Elements@Cyan@@UEAAHXZ
 PUBLIC ?InitParameter@Particle@Elements@Cyan@@UEAAXXZ
 ?InitParameter@Particle@Elements@Cyan@@UEAAXXZ:
     mov rax, 01410067b0h
+    jmp rax
+
+PUBLIC ?InitScale@Particle@Elements@Cyan@@QEAAXPEAVRandom@System@3@@Z
+?InitScale@Particle@Elements@Cyan@@QEAAXPEAVRandom@System@3@@Z:
+    mov rax, 0141006db0h
     jmp rax
 
 PUBLIC ?UnkFunc1@Particle@Elements@Cyan@@UEAAXXZ
@@ -106048,6 +106073,11 @@ PUBLIC ?Matrix34ToEulerAngleZXY@math@csl@@YAXAEBVMatrix34@12@PEAVVector3@12@@Z
 PUBLIC ?SetColumn@Matrix34@math@csl@@QEAAXHAEBVVector3@23@@Z
 ?SetColumn@Matrix34@math@csl@@QEAAXHAEBVVector3@23@@Z:
     mov rax, 0141136330h
+    jmp rax
+
+PUBLIC ?SetRow@Matrix34@math@csl@@QEAAXHAEBVVector3@23@@Z
+?SetRow@Matrix34@math@csl@@QEAAXHAEBVVector3@23@@Z:
+    mov rax, 0141136380h
     jmp rax
 
 PUBLIC ?SetTransVector@Matrix34@math@csl@@QEAAXAEBVVector3@23@@Z

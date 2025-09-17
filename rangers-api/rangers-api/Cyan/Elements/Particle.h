@@ -10,6 +10,8 @@ namespace Cyan::Elements{
         virtual int GetHistoricalStripeBufferSize() const override;
         virtual void InitParameter() override;
 
+        void InitDirection(System::Random* random);
+        void InitScale(System::Random* random);
         void CalcField(float time, csl::math::Vector3* unk0, csl::math::Vector3* unk1);
         void CalcFieldVortex(FieldArgs* args, csl::math::Vector3& out);
         void CalcFieldSpin(FieldArgs* args, csl::math::Vector3& out);

@@ -19,7 +19,10 @@ namespace Cyan{
         csl::math::Vector3 position0;
         csl::math::Vector3 position1;
         csl::math::Vector3 spreadVector; //stores
-        int8_t gap4Cb[80];
+        csl::math::Vector3 unkVec;
+        int8_t gap4Cb[40];
+        float emitterSize[3];
+        float emitterScale[3];
         float fps;
         int8_t gap4Cbb[20];
         float directionJitter; //unsure
@@ -29,12 +32,12 @@ namespace Cyan{
         EmitParam emitParam;
         AnimCtrl* childrenAnim[16];
         AnimCtrl* qword220;
-        AnimCtrl* qword228;
+        AnimCtrl* scaleAnim;
         AnimCtrl* unkColorAnim0[4];
         AnimCtrl* unkColorAnim1[4];
         AnimCtrl* unkColorAnim2[4];
         AnimCtrl* modifierAnim[5][8];
-        int64_t qword290[20];
+        int64_t qword290[18];
         AnimCtrl* patternAnim[4];
         AnimCtrl* animationControl;
         float textureUvScale[2]; //unsure, when used, it's multiplied by worldScale
@@ -49,6 +52,7 @@ namespace Cyan{
         int64_t qword740;
         int64_t qword748;
 
+        void UpdatePattern(float unk0, const Resource::TextureParam* textureParam, unsigned int unk1, float* unk2, float* unk3);
         void CalcTexcoordImpl(
             float arg0,
             const Resource::TextureParam* texParam,
@@ -69,6 +73,8 @@ namespace Cyan{
             const void* colorSet, //Cyan::ColorRandomSet*
             AnimCtrl::CreateParam::RandomSetType type
         );
+        void InitElement();
+        void EmitChild();
 
         virtual void Process(float unk);
         virtual void Update(float unk);

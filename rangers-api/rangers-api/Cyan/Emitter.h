@@ -149,8 +149,12 @@ namespace Cyan {
         float spread;
         float startAngle; //randomized, multiplied by Random::GetFloat
         float endAngle; //randomized, multiplied by Random::GetFloat
-        float emitSpeed2[4];
-        int64_t unk18a02;
+        float sizeX;
+		float sizeXJitter;
+		float sizeY;
+		float sizeYJitter;
+		float sizeZ;
+		float sizeZJitter;
         uint8_t gap6C8b[136];
         uint64_t qword838;
         uint64_t qword840;
@@ -217,6 +221,7 @@ namespace Cyan {
         void CalcInheritMatrix(const csl::math::Matrix34& poseMatrix, unsigned int flags, float inheritRate, csl::math::Matrix34* outMatrix, csl::math::Vector3* outTranslation) const;
         void EntryElement(Element* element);
         csl::math::Matrix34& GetEmissionMatrix();
+        bool IsEnableEmit() const;
 
         virtual void Process(float unk) override;
         virtual uint64_t UnkFunc2(float unkParam1) override;

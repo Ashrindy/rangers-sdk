@@ -27809,6 +27809,7 @@
 140fe7430,?InitEmitter@Emitter@Cyan@@UEAAX_N@Z,1
 140fe8290,?UnkFunc4@Emitter@Cyan@@UEAAXPEAX@Z,1
 140fe8ab0,?Matrix34Inverse@math@csl@@YA_NAEBVMatrix34@12@PEAV312@@Z,1
+140fe8b70,?IsEnableEmit@Emitter@Cyan@@QEBA_NXZ,1
 140fe8d70,?OnEnter@AliveState@Emitter@Cyan@@UEAAXPEAVFSMContext@System@3@@Z,1
 140fe8d70,?OnEnter@AliveState@Emitter@Cyan@@UEAAXAEAUStateInfo@FSMState@System@3@@Z,1
 140fe8d80,?OnEnter@DeadState@Emitter@Cyan@@UEAAXPEAVFSMContext@System@3@@Z,1
@@ -27873,11 +27874,13 @@
 140ff4640,?CalcTexcoordImpl@Element@Cyan@@QEAAXMPEBUTextureParam@Resource@2@PEAXPEAM22I@Z,1
 140ff4a20,?Create@AnimCtrl@Cyan@@CAPEAV12@PEAPEAV12@PEAPEAXIMPEBXH@Z,1
 140ff4a20,?CreateAnimCtrl@Element@Cyan@@QEAA?AV?$MemObject@VAnimCtrl@Cyan@@@2@AEBV?$PtrData@UAnimationParam@Resource@Cyan@@@Resource@2@IMPEBXW4RandomSetType@CreateParam@AnimCtrl@2@@Z,1
+140ff4b40,?EmitChild@Element@Cyan@@QEAAXXZ,1
 140ff5290,?GetHistoricalStripeBufferSize@Element@Cyan@@UEBAHXZ,1
 140ff5290,?GetHistoricalStripeBufferSize@Particle@Elements@Cyan@@UEBAHXZ,1
 140ff55a0,?Process@Element@Cyan@@UEAAXM@Z,1
 140ff55c0,?Update@Element@Cyan@@UEAAXM@Z,1
 140ff55c0,?Update@Particle@Elements@Cyan@@UEAAXM@Z,1
+140ff5660,?UpdatePattern@Element@Cyan@@QEAAXMPEBUTextureParam@Resource@2@IPEAM1@Z,1
 140ff59a0,??0FSM@System@Cyan@@QEAA@XZ,1
 140ff59d0,??_DFSM@System@Cyan@@QEAAXXZ,1
 140ff5a50,?TransitState@FSMContext@System@Cyan@@QEAAXPEAVFSMState@23@_N@Z,1
@@ -27962,8 +27965,10 @@
 141004c40,?CalcFieldSpin@Particle@Elements@Cyan@@QEAAXPEAUFieldArgs@23@AEAVVector3@math@csl@@@Z,1
 141004dc0,?CalcFieldVortex@Particle@Elements@Cyan@@QEAAXPEAUFieldArgs@23@AEAVVector3@math@csl@@@Z,1
 141005af0,?InitColor@Element@Cyan@@QEAAXPEAVRandom@System@2@@Z,1
+1410062a0,?InitDirection@Particle@Elements@Cyan@@QEAAXPEAVRandom@System@3@@Z,1
 1410067b0,?UnkFunc2@Particle@Elements@Cyan@@UEAAHXZ,1
 1410067b0,?InitParameter@Particle@Elements@Cyan@@UEAAXXZ,1
+141006db0,?InitScale@Particle@Elements@Cyan@@QEAAXPEAVRandom@System@3@@Z,1
 1410073e0,?UnkFunc1@Particle@Elements@Cyan@@UEAAXXZ,1
 141007ac0,?Process@Particle@Elements@Cyan@@UEAAXM@Z,1
 141007fc0,?Rotation2VecY@Particle@Elements@Cyan@@QEAAXAEBVVector3@math@csl@@PEAV456@@Z,1
@@ -29343,6 +29348,7 @@
 141136090,?Matrix34Scaling@math@csl@@YA?AVMatrix34@12@MMM@Z,1
 1411360e0,?Matrix34ToEulerAngleZXY@math@csl@@YAXAEBVMatrix34@12@PEAVVector3@12@@Z,1
 141136330,?SetColumn@Matrix34@math@csl@@QEAAXHAEBVVector3@23@@Z,1
+141136380,?SetRow@Matrix34@math@csl@@QEAAXHAEBVVector3@23@@Z,1
 1411363d0,?SetTransVector@Matrix34@math@csl@@QEAAXAEBVVector3@23@@Z,1
 1411368d0,?QuaternionsCloserThan@math@csl@@YA_NAEBVQuaternion@12@0M@Z,1
 141136960,?QuaternionRotationAxis@math@csl@@YA?AVQuaternion@12@AEBVVector3@12@00@Z,1

@@ -26,6 +26,7 @@ namespace csl::math {
 		Vector3 GetRow(int idx) const;
 		Vector3 GetColumn(int idx) const;
 		void SetTransVector(const Vector3& transVector);
+		void SetRow(int idx, const Vector3& value);
 		void SetColumn(int idx, const Vector3& value);
 		bool operator==(const Matrix34& other) const;
 	};
