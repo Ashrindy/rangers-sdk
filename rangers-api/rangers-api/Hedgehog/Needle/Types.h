@@ -54,16 +54,29 @@ namespace hh::needle {
     };
 
     enum class FillMode {
-
-    };
+        SOLID,
+        WIREFRAME 
+    }; // values guessed
 
     enum class BlendMode : uint32_t {
         ZERO,
         ONE,
+        SRC_ALPHA,
+        DEST_ALPHA,
+        INV_SRC_ALPHA,
+        INV_DEST_ALPHA,
+        DEST_COLOR,
+        SRC_COLOR,
+        INV_DEST_COLOR,
+        INV_SRC_COLOR
     };
 
     enum class BlendOp : uint32_t {
         ADD,
+        SUB,
+        REV_SUB,
+        MAX,
+        MIN
     };
 
     enum class ComparisonFunc {

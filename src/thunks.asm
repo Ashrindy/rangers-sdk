@@ -78605,6 +78605,26 @@ PUBLIC ?GetSpeed@SimpleAnimationState@GOCAnimationSimple@anim@hh@@QEBAMXZ
     mov rax, 0140b78e00h
     jmp rax
 
+PUBLIC ?UnkFunc0@DefaultWorld@needle@hh@@UEAAXXZ
+?UnkFunc0@DefaultWorld@needle@hh@@UEAAXXZ:
+    mov rax, 0140b78e10h
+    jmp rax
+
+PUBLIC ?UnkFunc1@DefaultWorld@needle@hh@@UEAAPEAXXZ
+?UnkFunc1@DefaultWorld@needle@hh@@UEAAPEAXXZ:
+    mov rax, 0140b78e10h
+    jmp rax
+
+PUBLIC ?GetReferWorld@DefaultWorld@needle@hh@@UEAAPEAVEntryWorldLink@23@XZ
+?GetReferWorld@DefaultWorld@needle@hh@@UEAAPEAVEntryWorldLink@23@XZ:
+    mov rax, 0140b78e10h
+    jmp rax
+
+PUBLIC ?GetReferWorld1@DefaultWorld@needle@hh@@UEAAPEAVEntryWorldLink@23@XZ
+?GetReferWorld1@DefaultWorld@needle@hh@@UEAAPEAVEntryWorldLink@23@XZ:
+    mov rax, 0140b78e10h
+    jmp rax
+
 PUBLIC ?GetGUID@DvNodeBase@dv@hh@@QEAAPEADXZ
 ?GetGUID@DvNodeBase@dv@hh@@QEAAPEADXZ:
     mov rax, 0140b78e20h
@@ -82077,6 +82097,11 @@ PUBLIC ?ResolveName@ResourceNameResolver@fnd@hh@@UEAAPEADPEBDPEAUResourceTypeInf
 
 PUBLIC ?RNR_UnkFunc1@FilePathResolver@fnd@hh@@UEAAPEBDPEBD@Z
 ?RNR_UnkFunc1@FilePathResolver@fnd@hh@@UEAAPEBDPEBD@Z:
+    mov rax, 0140bde6c0h
+    jmp rax
+
+PUBLIC ??2NeedleObject@needle@hh@@SAPEAX_KPEAX@Z
+??2NeedleObject@needle@hh@@SAPEAX_KPEAX@Z:
     mov rax, 0140bde6c0h
     jmp rax
 
@@ -103060,6 +103085,16 @@ PUBLIC ?Create@NeedleBlob@needle@hh@@SAPEAV123@_K@Z
     mov rax, 01410c3600h
     jmp rax
 
+PUBLIC ?AddEntry@EntryLink@needle@hh@@QEAAXPEAV123@@Z
+?AddEntry@EntryLink@needle@hh@@QEAAXPEAV123@@Z:
+    mov rax, 01410c3830h
+    jmp rax
+
+PUBLIC ?LinkNext@EntryLink@needle@hh@@QEAAXPEAV123@@Z
+?LinkNext@EntryLink@needle@hh@@QEAAXPEAV123@@Z:
+    mov rax, 01410c3830h
+    jmp rax
+
 PUBLIC ?Unlink@EntryLink@needle@hh@@QEAAXXZ
 ?Unlink@EntryLink@needle@hh@@QEAAXXZ:
     mov rax, 01410c3850h
@@ -103388,6 +103423,21 @@ PUBLIC ?SetupInitialize@GatherRenderingPassContextImpl@needle@hh@@QEAAXPEAVRende
 PUBLIC ??_DWorld@needle@hh@@QEAAXXZ
 ??_DWorld@needle@hh@@QEAAXXZ:
     mov rax, 01410d4f90h
+    jmp rax
+
+PUBLIC ?UnkFunc3@DefaultWorld@needle@hh@@UEAAXXZ
+?UnkFunc3@DefaultWorld@needle@hh@@UEAAXXZ:
+    mov rax, 01410d5400h
+    jmp rax
+
+PUBLIC ?Remove@DefaultWorld@needle@hh@@UEAA_NPEAVModelInstance@23@@Z
+?Remove@DefaultWorld@needle@hh@@UEAA_NPEAVModelInstance@23@@Z:
+    mov rax, 01410d5400h
+    jmp rax
+
+PUBLIC ?UnkFunc5@DefaultWorld@needle@hh@@UEAAXXZ
+?UnkFunc5@DefaultWorld@needle@hh@@UEAAXXZ:
+    mov rax, 01410d54b0h
     jmp rax
 
 PUBLIC ?GetMeshResource@Model@needle@hh@@QEBAPEAVMeshResource@23@I@Z
@@ -109817,6 +109867,31 @@ PUBLIC ?GetNameHash@SceneContext@needle@hh@@UEAAIXZ
 
 PUBLIC ?GetName@SceneContext@needle@hh@@UEAAPEBDXZ
 ?GetName@SceneContext@needle@hh@@UEAAPEBDXZ:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?GetReferWorld@World@needle@hh@@UEAAPEAVEntryWorldLink@23@XZ
+?GetReferWorld@World@needle@hh@@UEAAPEAVEntryWorldLink@23@XZ:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?GetReferWorld1@World@needle@hh@@UEAAPEAVEntryWorldLink@23@XZ
+?GetReferWorld1@World@needle@hh@@UEAAPEAVEntryWorldLink@23@XZ:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?AddModelInstanceNode@World@needle@hh@@UEAAXPEAVModelInstance@23@PEAVEntryWorldLink@23@_NI_K@Z
+?AddModelInstanceNode@World@needle@hh@@UEAAXPEAVModelInstance@23@PEAVEntryWorldLink@23@_NI_K@Z:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?Remove@World@needle@hh@@UEAA_NPEAVModelInstance@23@@Z
+?Remove@World@needle@hh@@UEAA_NPEAVModelInstance@23@@Z:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?DestroyEntry@World@needle@hh@@UEAAXPEAVEntryWorldLink@23@@Z
+?DestroyEntry@World@needle@hh@@UEAAXPEAVEntryWorldLink@23@@Z:
     mov rax, 014118f6e0h
     jmp rax
 
@@ -181395,6 +181470,16 @@ PUBLIC ?CreateTexture@Impl@ProbeBVH@needle@hh@@QEAAXPEAVSupportFXAll@34@@Z
     mov rax, 0154cc55a0h
     jmp rax
 
+PUBLIC ??0SceneContextManagerNeedle@needle@hh@@QEAA@PEBDPEAVSupportFXAll@12@@Z
+??0SceneContextManagerNeedle@needle@hh@@QEAA@PEBDPEAVSupportFXAll@12@@Z:
+    mov rax, 0154cff840h
+    jmp rax
+
+PUBLIC ??_DSceneContextManagerNeedle@needle@hh@@QEAAXXZ
+??_DSceneContextManagerNeedle@needle@hh@@QEAAXXZ:
+    mov rax, 0154d0a110h
+    jmp rax
+
 PUBLIC ??0SCDebugPrimitive@needle@hh@@QEAA@XZ
 ??0SCDebugPrimitive@needle@hh@@QEAA@XZ:
     mov rax, 0154d10510h
@@ -181515,6 +181600,26 @@ PUBLIC ?AllocLargePoolMemoryPage@CScratchMemoryContext@needle@hh@@SAII@Z
     mov rax, 01552a3470h
     jmp rax
 
+PUBLIC ?Initialize@EntryLink@needle@hh@@QEAAXXZ
+?Initialize@EntryLink@needle@hh@@QEAAXXZ:
+    mov rax, 01552af3a0h
+    jmp rax
+
+PUBLIC ?Initialize@EntryWorldLink@needle@hh@@QEAAXXZ
+?Initialize@EntryWorldLink@needle@hh@@QEAAXXZ:
+    mov rax, 01552b2860h
+    jmp rax
+
+PUBLIC ?Initialize@EntryTreeLink@needle@hh@@QEAAXXZ
+?Initialize@EntryTreeLink@needle@hh@@QEAAXXZ:
+    mov rax, 01552b2860h
+    jmp rax
+
+PUBLIC ?Unlink@EntryTreeLink@needle@hh@@QEAAXXZ
+?Unlink@EntryTreeLink@needle@hh@@QEAAXXZ:
+    mov rax, 01552c3060h
+    jmp rax
+
 PUBLIC ??_DParameterValueObject@needle@hh@@QEAAXXZ
 ??_DParameterValueObject@needle@hh@@QEAAXXZ:
     mov rax, 01552de240h
@@ -181558,6 +181663,41 @@ PUBLIC ?QueryResource@?$TNeedleRefcountResource@$0DAFDEFFCEIFDEFEN@VNeedleRefcou
 PUBLIC ??0GatherRenderingPassContext@needle@hh@@QEAA@I@Z
 ??0GatherRenderingPassContext@needle@hh@@QEAA@I@Z:
     mov rax, 0155381740h
+    jmp rax
+
+PUBLIC ??_DDefaultWorld@needle@hh@@QEAAXXZ
+??_DDefaultWorld@needle@hh@@QEAAXXZ:
+    mov rax, 0155385a80h
+    jmp rax
+
+PUBLIC ?AddModelInstance@DefaultWorld@needle@hh@@UEAAXPEAVModelInstance@23@PEAX_NH_J@Z
+?AddModelInstance@DefaultWorld@needle@hh@@UEAAXPEAVModelInstance@23@PEAX_NH_J@Z:
+    mov rax, 01553865c0h
+    jmp rax
+
+PUBLIC ?AddModelInstanceNode@DefaultWorld@needle@hh@@UEAAXPEAVModelInstance@23@PEAVEntryWorldLink@23@_NI_K@Z
+?AddModelInstanceNode@DefaultWorld@needle@hh@@UEAAXPEAVModelInstance@23@PEAVEntryWorldLink@23@_NI_K@Z:
+    mov rax, 01553865c0h
+    jmp rax
+
+PUBLIC ?ClearChild@World@needle@hh@@QEAAXPEAVEntryWorldLink@23@@Z
+?ClearChild@World@needle@hh@@QEAAXPEAVEntryWorldLink@23@@Z:
+    mov rax, 01553979f0h
+    jmp rax
+
+PUBLIC ?CreateDefaultWorld@needle@hh@@YAPEAVDefaultWorld@12@I@Z
+?CreateDefaultWorld@needle@hh@@YAPEAVDefaultWorld@12@I@Z:
+    mov rax, 01553a1520h
+    jmp rax
+
+PUBLIC ?UnkFunc4@DefaultWorld@needle@hh@@UEAAXXZ
+?UnkFunc4@DefaultWorld@needle@hh@@UEAAXXZ:
+    mov rax, 01553a4bb0h
+    jmp rax
+
+PUBLIC ?DestroyEntry@DefaultWorld@needle@hh@@UEAAXPEAVEntryWorldLink@23@@Z
+?DestroyEntry@DefaultWorld@needle@hh@@UEAAXPEAVEntryWorldLink@23@@Z:
+    mov rax, 01553a4bb0h
     jmp rax
 
 PUBLIC ??_DGOCVisualUserModel@gocs@heur@@QEAAXXZ

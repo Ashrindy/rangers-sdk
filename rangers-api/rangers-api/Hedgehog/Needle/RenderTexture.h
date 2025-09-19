@@ -71,7 +71,7 @@ namespace hh::needle {
         intrusive_ptr<Texture> renderTargetTexture3;
         unsigned int width;
         unsigned int height;
-        csl::math::Vector4 unk112;
+        csl::math::Vector4 clearColor;
         unsigned int clearedTextureCount;
         RenderTextureCreateArgs::Flag flags;
         FxRenderTextureCamera* camera;
