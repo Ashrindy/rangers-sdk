@@ -18,10 +18,18 @@ namespace app::trr {
                 static int CreateLight(hh::gfx::GOCPointLight* gocPointLight, LightInstance& lightInstance, hh::fnd::HFrame* hFrame, const char* instanceName);
             };
 
-            csl::ut::MoveArray<void*> unk1;
-            csl::ut::MoveArray<void*> unk2;
+            struct PCModelInstance {
+                const char* name;
+                csl::ut::MoveArray<csl::geom::Aabb> aabbs; //unsure
+                hh::gfx::GOCVisualModel* goc;
+                char unk1;
+            };
+
+            csl::ut::MoveArray<hh::gfx::GOCVisualModel*> models;
+            csl::ut::MoveArray<PCModelInstance> pcModelInstances;
             csl::ut::MoveArray<LightInstance> lightInstances;
-            uint64_t unk4;
+            uint32_t unk4; //handles?
+            uint32_t unk5; //handles?
             bool enabled;
         };
 

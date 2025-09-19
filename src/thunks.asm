@@ -75040,11 +75040,6 @@ PUBLIC ?UnkFunc5@TerrainLoaderDynamic@trr@app@@UEAA_NXZ
     mov rax, 0140a08880h
     jmp rax
 
-PUBLIC ?UnkFunc4@TerrainLoaderDynamic@trr@app@@UEAA_NXZ
-?UnkFunc4@TerrainLoaderDynamic@trr@app@@UEAA_NXZ:
-    mov rax, 0140a08890h
-    jmp rax
-
 PUBLIC ?UnkFunc7@TerrainLoaderDynamic@trr@app@@UEAAXXZ
 ?UnkFunc7@TerrainLoaderDynamic@trr@app@@UEAAXXZ:
     mov rax, 0140a08fc0h
@@ -75198,6 +75193,11 @@ PUBLIC ?GetTypeInfo@ResSvCol2@app@@SAPEBUResourceTypeInfo@fnd@hh@@XZ
 PUBLIC ?GetSectorID@TerrainManager@trr@app@@SAHPEBD@Z
 ?GetSectorID@TerrainManager@trr@app@@SAHPEBD@Z:
     mov rax, 0140a0c7c0h
+    jmp rax
+
+PUBLIC ?StepHSM@TerrainVisualCreator@trr@app@@QEAAXM@Z
+?StepHSM@TerrainVisualCreator@trr@app@@QEAAXM@Z:
+    mov rax, 0140a10740h
     jmp rax
 
 PUBLIC ?Create@CreateGrassModelInstance@State@TerrainVisualCreator@trr@app@@CAPEAV12345@PEAVIAllocator@fnd@csl@@@Z
@@ -171138,6 +171138,11 @@ PUBLIC ??0TerrainLoaderDynamic@trr@app@@QEAA@PEAVIAllocator@fnd@csl@@PEAVStageIn
 PUBLIC ?UnkFunc6@TerrainLoaderDynamic@trr@app@@UEAA_NXZ
 ?UnkFunc6@TerrainLoaderDynamic@trr@app@@UEAA_NXZ:
     mov rax, 014c2d0f70h
+    jmp rax
+
+PUBLIC ?UnkFunc4@TerrainLoaderDynamic@trr@app@@UEAA_NXZ
+?UnkFunc4@TerrainLoaderDynamic@trr@app@@UEAA_NXZ:
+    mov rax, 014c2e4b40h
     jmp rax
 
 PUBLIC ?UnkFunc2@TerrainLoaderDynamic@trr@app@@UEAAXXZ

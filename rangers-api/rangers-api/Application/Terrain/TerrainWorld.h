@@ -9,7 +9,7 @@ namespace app::trr {
         
         virtual unsigned int GetNameHash() const;
         virtual void UnkFunc2() {}
-        virtual void UnkFunc3() {}
+        virtual void Deload() {}
         virtual void Initialize() {}
         virtual void Deinitialize() {}
         virtual void UnkFunc6() {}

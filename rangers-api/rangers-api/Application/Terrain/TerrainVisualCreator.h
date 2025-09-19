@@ -26,6 +26,9 @@ namespace app::trr {
 
             class CreatePointcloudModelInstance : public hh::ut::StateBase<TerrainVisualCreator> {
             public:
+                csl::ut::MoveArray<void*> resources;
+                unsigned int currentResourceIndex;
+
                 virtual void Enter(TerrainVisualCreator& context, int previousState) override;
                 virtual bool Step(TerrainVisualCreator& context, float deltaTime) override;
             };
@@ -91,7 +94,7 @@ namespace app::trr {
         typedef void UnkCB(hh::game::GameObject* gameObject, void* unkParam1);
 
         TerrainVisualObject* object;
-        hh::ut::HsmBase hh__ut__hsmbase20;
+        hh::ut::HsmBase hsm;
         hh::fnd::Reference<hh::ut::HsmBase> phh__ut__hsmbase90;
         TerrainVisualResourceBinder* resourceBinder;
         UnkCB* cb1;
@@ -105,6 +108,8 @@ namespace app::trr {
         csl::ut::String* currentLoading1; //uses as a buffer to set what level it's loading at the moment
         uint64_t qwordE8;
         csl::fnd::IAllocator* qwordF0;
+
+        void StepHSM(float deltaTime);
 
         CREATE_FUNC(TerrainVisualCreator, TerrainVisualObject* object, TerrainVisualResourceBinder* resourceBinder, UnkCB* cb1Param);
     };

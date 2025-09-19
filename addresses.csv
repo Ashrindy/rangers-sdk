@@ -20977,7 +20977,6 @@
 140a08850,j_?UnkFunc6@TerrainLoaderDynamic@trr@app@@UEAA_NXZ,1
 140a08880,?UnkFunc5@TerrainLoaderDynamic@trr@app@@UEAA_NXZ,1
 140a08890,j_?UnkFunc4@TerrainLoaderDynamic@trr@app@@UEAA_NXZ,1
-140a08890,?UnkFunc4@TerrainLoaderDynamic@trr@app@@UEAA_NXZ,1
 140a088a0,j_?UnkFunc2@TerrainLoaderDynamic@trr@app@@UEAAXXZ,1
 140a08950,j_?UnkFunc1@TerrainLoaderDynamic@trr@app@@UEAAXXZ,1
 140a08fa0,j_?UnkFunc3@TerrainLoaderDynamic@trr@app@@UEAAXXZ,1
@@ -21029,6 +21028,7 @@
 140a0c7c0,?GetSectorID@TerrainManager@trr@app@@SAHPEBD@Z,1
 140a0d570,j_??0TerrainVisualCreator@trr@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,1
 140a0d7a0,j_??_DTerrainVisualCreator@trr@app@@QEAAXXZ,1
+140a10740,?StepHSM@TerrainVisualCreator@trr@app@@QEAAXM@Z,1
 140a10970,j_??_DCreateModelInstance@State@TerrainVisualCreator@trr@app@@QEAAXXZ,1
 140a10970,j_??_DCreateTerrainModelInstance@State@TerrainVisualCreator@trr@app@@QEAAXXZ,1
 140a10970,j_??_DCreatePointcloudModelInstance@State@TerrainVisualCreator@trr@app@@QEAAXXZ,1
@@ -88481,6 +88481,7 @@
 14c2cdec0,??0TerrainLoaderDynamic@trr@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,1
 14c2cdec0,??0TerrainLoaderDynamic@trr@app@@QEAA@PEAVIAllocator@fnd@csl@@PEAVStageInfo@level@2@@Z,1
 14c2d0f70,?UnkFunc6@TerrainLoaderDynamic@trr@app@@UEAA_NXZ,1
+14c2e4b40,?UnkFunc4@TerrainLoaderDynamic@trr@app@@UEAA_NXZ,1
 14c2f2fb0,?UnkFunc2@TerrainLoaderDynamic@trr@app@@UEAAXXZ,1
 14c2f7e40,?UnkFunc1@TerrainLoaderDynamic@trr@app@@UEAAXXZ,1
 14c2ffb90,?UnkFunc3@TerrainLoaderDynamic@trr@app@@UEAAXXZ,1
