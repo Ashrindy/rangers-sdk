@@ -1,24 +1,7 @@
 #pragma once
 
 namespace hh::needle {
-    class EntryWorldLink;
-
-    class World : public NeedleRefcountObject {
-    public:
-        EntryWorldLink worldLink;
-        int nodeCount;
-        EntryLink entryLink1;
-
-        virtual EntryWorldLink* GetReferWorld() = 0;
-        virtual EntryWorldLink* GetReferWorld1() = 0;
-        virtual void AddModelInstanceNode(ModelInstance* instance, EntryWorldLink* worldLink, bool unk1, unsigned int unk2, uint64_t resourceId) = 0;
-        virtual bool Remove(ModelInstance* instance) = 0;
-        virtual void DestroyEntry(EntryWorldLink* link) = 0;
-        virtual void UnkFunc5() = 0;
-
-        void ClearChild(EntryWorldLink* link);
-        inline void ClearAll() { ClearChild(worldLink); }
-    };
+    class World;
 
     class EntryWorldLink {
     public:
@@ -38,6 +21,23 @@ namespace hh::needle {
             treeLink.Unlink();
             link.Unlink();
         }
+    };
+
+    class World : public NeedleRefcountObject {
+    public:
+        EntryWorldLink worldLink;
+        int nodeCount;
+        EntryLink entryLink1;
+
+        virtual EntryWorldLink* GetReferWorld() = 0;
+        virtual EntryWorldLink* GetReferWorld1() = 0;
+        virtual void AddModelInstanceNode(ModelInstance* instance, EntryWorldLink* worldLink, bool unk1, unsigned int unk2, uint64_t resourceId) = 0;
+        virtual bool Remove(ModelInstance* instance) = 0;
+        virtual void DestroyEntry(EntryWorldLink* link) = 0;
+        virtual void UnkFunc5() = 0;
+
+        void ClearChild(EntryWorldLink* link);
+        inline void ClearAll() { ClearChild(&worldLink); }
     };
 
     class DefaultWorld : public World {
