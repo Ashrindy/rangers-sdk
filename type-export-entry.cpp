@@ -282,3 +282,5 @@ template class app::game::ConditionArgumentFixed<int>;
 template class app::game::ConditionArgumentFixed<float>;
 
 template class hh::fnd::Reference<app::ui::UIMainMenuContext>;
+
+template class hh::needle::AnimBlender<hh::needle::AnimTexSrtControl>;
