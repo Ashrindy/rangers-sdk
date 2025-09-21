@@ -14,8 +14,8 @@ namespace hh::needle {
         virtual void UnkFunc19() override;
         virtual void UnkFunc20() override;
         virtual void UnkFunc21() override;
-        virtual void UnkFunc23() {}
-        virtual void UnkFunc24() {}
-        virtual void SetupDefaultDeferredRenderingPipeline();
+        virtual void InitializeModelJobs(RenderingPipeline* pipeline) {}
+        virtual void InitializeJobs0(RenderingPipeline* pipeline) {}
+        virtual void InitializeJobs1(RenderingPipeline* pipeline);
     };
 }

@@ -4,23 +4,23 @@ namespace hh::needle {
     class PBRModelInstanceRenderer;
     class RenderingPipelineRangers : public CaptureRenderingPipeline {
     public:
-        uint64_t qword118;
-        uint64_t qword120;
-        uint64_t qword128;
-        uint64_t qword130;
+        RenderTarget* mainRenderTarget;
+        DepthStencil* mainDepthStencil;
+        Texture* renderTargetView;
+        Texture* depthStencilView;
         uint64_t qword138;
-        uint64_t qword140;
-        uint64_t qword148;
+        RenderTarget* depthStencilRenderTarget;
+        Texture* depthStencilRenderTargetView;
         uint64_t qword150;
         csl::ut::MoveArray<void*> qword158;
         MaterialIDRenderer* matIdRenderer;
         CyberNoiseMaskRender* cyberNoiseMaskRender0;
         CyberNoiseMaskRender* cyberNoiseMaskRender1;
         CyberNPCModelRender* cyberNPCModelRender;
-        uint64_t qword198;
-        uint64_t qword1A0;
-        uint64_t qword1A8;
-        uint64_t qword1B0;
+        DepthStencil* depthStencil0;
+        Texture* depthStencil0View;
+        DepthStencil* depthStencil1;
+        Texture* depthStencil1View;
 
         RenderingPipelineRangers(csl::fnd::IAllocator* allocator, PBRModelInstanceRenderer* renderer);
 

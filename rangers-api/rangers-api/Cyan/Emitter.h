@@ -77,7 +77,8 @@ namespace Cyan {
         csl::math::Matrix34 inheritMatrix;
         csl::math::Matrix34 invInheritMatrix;
         csl::math::Matrix34 emissionMatrix;
-        uint8_t gap64bbb[252];
+        csl::math::Matrix34 invEmissionMatrix;
+        uint8_t gap64bbb[188];
         csl::math::Matrix34 worldMatrix;
         csl::math::Vector3 position;
         csl::math::Vector3 scale;
@@ -96,7 +97,9 @@ namespace Cyan {
         uint64_t qword3B8;
         csl::math::Vector4 csl__math__vector43C0;
         uint32_t dword3D0;
-        uint8_t gap3D4[160];
+        uint8_t gap3D4[96];
+        Resource::EmitterParam::CullMode cullMode;
+        uint8_t gap3D4b[60];
         uint32_t dword474;
         TextureInfo textureInfos[4];
         uint8_t gap4B8[176];
@@ -125,24 +128,33 @@ namespace Cyan {
         DeadState deadState;
         uint8_t gap6C8[88];
         csl::math::Vector3 inheritPosition;
-        uint8_t gap6C8bb[12];
+        float fps;
+        uint8_t gap6C8bb[8];
         float frequency;
-        unsigned int subDivisionCount;
+        float subDivisionCount;
         uint8_t gap6C8bbb[12];
         float emitCount;
-        float emitSpeed[3]; 
-        float unkShapeRelated[3]; //used to calculate spread and spherical vector, if != 0 -> spherical
+        float accelarationMultiplier; 
+        float accelarationNormalMultiplier; 
+        float initialSpeed; 
+        float velocityMultiplier; 
+        float shapeRadius; 
+        float velocityScale;
         float emitSize;
-        int gap6C10;
+        bool useEmitVector;
         csl::math::Position emitVector;
-        float unk4b;
-        float unk4c;
+        float emitVectorJitter;
+        float directionJitter;
         csl::math::Position randomPosition;
         float spread;
-        float baseAngle; //randomized, multiplied by Random::GetFloat
-        float spreadAngle; //randomized, multiplied by Random::GetFloat
-        float emitSpeed2[4];
-        int64_t unk18a02;
+        float startAngle; //randomized, multiplied by Random::GetFloat
+        float endAngle; //randomized, multiplied by Random::GetFloat
+        float sizeX;
+		float sizeXJitter;
+		float sizeY;
+		float sizeYJitter;
+		float sizeZ;
+		float sizeZJitter;
         uint8_t gap6C8b[136];
         uint64_t qword838;
         uint64_t qword840;
@@ -208,6 +220,8 @@ namespace Cyan {
         void CalcPoseMatrix(csl::math::Matrix34* outMatrix) const;
         void CalcInheritMatrix(const csl::math::Matrix34& poseMatrix, unsigned int flags, float inheritRate, csl::math::Matrix34* outMatrix, csl::math::Vector3* outTranslation) const;
         void EntryElement(Element* element);
+        csl::math::Matrix34& GetEmissionMatrix();
+        bool IsEnableEmit() const;
 
         virtual void Process(float unk) override;
         virtual uint64_t UnkFunc2(float unkParam1) override;

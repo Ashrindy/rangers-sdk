@@ -216,6 +216,12 @@ namespace hh::game
 			return static_cast<T*>(GetComponent(T::GetClass()));
 		}
 
+		GOComponent* GetComponent(unsigned int nameHash, const GOComponentClass* componentClass);
+		template<typename T>
+		T* GetComponent(unsigned int nameHash) {
+			return static_cast<T*>(GetComponent(nameHash, T::GetClass()));
+		}
+
 		void SetProperty(unsigned int id, fnd::PropertyValue value);
 		void AddListener(GameObjectListener* listener);
 		void RemoveListener(GameObjectListener* listener);

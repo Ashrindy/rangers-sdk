@@ -26,6 +26,7 @@ namespace csl::math {
 		Vector3 GetRow(int idx) const;
 		Vector3 GetColumn(int idx) const;
 		void SetTransVector(const Vector3& transVector);
+		void SetRow(int idx, const Vector3& value);
 		void SetColumn(int idx, const Vector3& value);
 		bool operator==(const Matrix34& other) const;
 	};
@@ -151,6 +152,8 @@ namespace csl::math {
 	Vector3 Vector3NormalBetween(const Vector3& x, const Vector3& y);
 	Vector3 Vector3Rotate(const Quaternion& rotation, const Vector3& vec);
 	Vector3 Vector3MulAdd(const Vector3 x, const Vector3 y, float scale);
+	Vector3 Vector3Sub(const Vector3& lhs, const Vector3& rhs);
+	Vector3 Vector3Scale(const Vector3& vec, float scalar);
 	float Vector3Distance(const Vector3& x, const Vector3& y);
 	float Vector3DistanceSq(const Vector3& x, const Vector3& y);
 	float Vector3DistanceNormalized(const Vector3& x, const Vector3& y);

@@ -3,6 +3,18 @@
 namespace hh::gfx {
     class RenderManager : public gfnd::RenderManagerBase {
     public:
+        struct SModelCreationInfo {
+            // Check GOCVisualModelImpl::Setup
+            needle::Texture* giTexture{ nullptr };
+            needle::Texture* giOcclusionTexture{ nullptr };
+            needle::Texture* unk327{ nullptr }; // suspected
+            needle::MeshResource* meshResource{ nullptr };
+            int64_t unk328{ 0 };
+            csl::ut::StringMap<bool> attributes;
+
+            inline SModelCreationInfo(csl::fnd::IAllocator* allocator) : attributes{ allocator } {}
+        };
+
         class Impl : public fnd::ReferencedObject {
         public:
             // Returns camera info based on viewportdata. id = viewport id
@@ -50,21 +62,10 @@ namespace hh::gfx {
             static Impl* Create(csl::fnd::IAllocator* allocator);
             Impl(csl::fnd::IAllocator* allocator, RenderManager* renderManager);
             bool Setup(const SetupInfo& setupInfo);
+            void SetupPBRModelCreationInfo(hh::needle::PBRModelCreationInfo& pbrInfo, const hh::gfx::RenderManager::SModelCreationInfo& modelInfo) const;
         };
 
         Impl* implementation;
-
-        struct SModelCreationInfo {
-            // Check GOCVisualModelImpl::Setup
-            needle::Texture* giTexture{ nullptr };
-            needle::Texture* giOcclusionTexture{ nullptr };
-            needle::Texture* unk327{ nullptr }; // suspected
-            needle::MeshResource* meshResource{ nullptr };
-            int64_t unk328{ 0 };
-            csl::ut::StringMap<bool> attributes;
-
-            inline SModelCreationInfo(csl::fnd::IAllocator* allocator) : attributes{ allocator } {}
-        };
 
         static RenderManager* instance;
 

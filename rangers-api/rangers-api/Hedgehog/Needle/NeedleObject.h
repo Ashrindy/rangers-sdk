@@ -10,6 +10,7 @@ namespace hh::needle {
         static void* AllocateObjectMemory(size_t size, size_t alignment);
         static void FreeObjectMemory(void* ptr);
 		void* operator new(size_t count);
+		void* operator new(size_t count, void* ptr);
 		void operator delete(void* ptr) noexcept;
     };
 }

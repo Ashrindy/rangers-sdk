@@ -31,7 +31,7 @@ namespace hh::gfx {
     public:
         fnd::Handle<game::GOComponent> model;
         fnd::Reference<ResAnimTexSrt> resource;
-        uint64_t unk3;
+        needle::AnimTexSrtControl* control;
         float fps;
 
         virtual void Initialize(TexSrtDesc& description) override;
