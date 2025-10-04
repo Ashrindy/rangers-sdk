@@ -106,6 +106,7 @@ namespace rangerssdk::ucsl {
 #include "cslib/csl/fnd/Function.h"
 #include "cslib/csl/fnd/ThreadSleep.h"
 #include "cslib/csl/fnd/Thread.h"
+#include "cslib/csl/fnd/Tick.h"
 
 #include <LinearMath/btDefaultMotionState.h>
 #include <BulletCollision/CollisionShapes/btSphereShape.h>
@@ -509,6 +510,7 @@ namespace rangerssdk::ucsl {
 #include "Hedgehog/Framework/AppModule.h"
 #include "Hedgehog/Framework/Application.h"
 #include "Hedgehog/Framework/SaveManagerInterface.h"
+#include "Hedgehog/Framework/SyncTimer.h"
 
 #include "Hedgehog/Cri/CriMana.h"
 
@@ -1012,7 +1014,9 @@ namespace rangerssdk::ucsl {
 #include "Application/Event/EventPlayer.h"
 #include "Application/Event/EventPreviewHelper.h"
 
+#include "Application/Event/EventEnvironmentCameraInterpolate.h"
 #include "Application/Event/EventEnvironmentPause.h"
+#include "Application/Event/EventEnvironmentInvisibleObjects.h"
 
 #include "Application/Player/CharacterId.h"
 #include "Application/Player/PlayerCounterTimer.h"

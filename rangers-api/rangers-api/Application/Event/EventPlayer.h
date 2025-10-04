@@ -22,10 +22,14 @@ namespace app::evt {
                 USE_SETUP_TRANSFORM, // uses the position, rotation and scale variables instead of the ones in the file
                 NO_UNLOAD,
                 CANT_SKIP,           // whetever the cutscene is unskippable or not
-                UNK0,                // pausable?
-                UNK1,                // unknown
+                PAUSABLE,
+                PAUSE_ENEMIES,
                 ENABLE_HUD,          // whetever the cockpit ui will show up
-                CAPPED_FPS = 0x4000
+                PROGRESS_TIME,
+                CAN_SAVE,
+                UNK3,
+                UNK4, // related to spawn
+                CAPPED_FPS = 14
             };
 
             char cutsceneName[40];
@@ -33,7 +37,7 @@ namespace app::evt {
             csl::math::Vector3 position;
             csl::math::Quaternion rotation;
             csl::math::Vector3 scale;
-            int unk2;
+            bool suspendWorld;
             float speed;
             csl::ut::Bitset<Flag> playFlags;
 
@@ -57,10 +61,18 @@ namespace app::evt {
             void SetLookAtTarget(csl::math::Vector3& target);
         };
 
-        enum class PlayerFlag : unsigned char {
+        enum class PlayerPositionFlag : unsigned char {
             USE_POSITION,   // set the player position from world position
             USE_ROTATION,   // set the player rotation from world position
             UNK0,           // unknown
+        };
+
+        enum class PlayerFlag : unsigned char {
+            UNK0,
+            VISIBLE0,
+            VISIBLE1,
+            VISIBLE2,
+            VISIBLE3
         };
 
         PlayInfo playInfo;
@@ -70,8 +82,8 @@ namespace app::evt {
         int unk2;
         heur::rfl::EventPlayTestParam::StartType playerStartType;
         hh::fnd::WorldPosition playerWorldPos;
+        csl::ut::Bitset<PlayerPositionFlag> playerPositionFlags;
         csl::ut::Bitset<PlayerFlag> playerFlags;
-        char flags2;
         int64_t unk4;
         CameraInfo cameraInfo;
 

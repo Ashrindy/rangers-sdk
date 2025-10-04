@@ -26515,6 +26515,36 @@ PUBLIC ??_GEventEnvironmentCameraInterpolate@evt@app@@QEAAXXZ
     mov rax, 0140145c90h
     jmp rax
 
+PUBLIC ??_DEventEnvironmentCameraInterpolate@evt@app@@QEAAXXZ
+??_DEventEnvironmentCameraInterpolate@evt@app@@QEAAXXZ:
+    mov rax, 0140145c90h
+    jmp rax
+
+PUBLIC ?GetID@EventEnvironmentCameraInterpolate@evt@app@@UEBA_JXZ
+?GetID@EventEnvironmentCameraInterpolate@evt@app@@UEBA_JXZ:
+    mov rax, 0140145e70h
+    jmp rax
+
+PUBLIC ?RemoveCallback@EventEnvironmentCameraInterpolate@evt@app@@UEAAXXZ
+?RemoveCallback@EventEnvironmentCameraInterpolate@evt@app@@UEAAXXZ:
+    mov rax, 0140145e80h
+    jmp rax
+
+PUBLIC ?AddCallback@EventEnvironmentCameraInterpolate@evt@app@@UEAAXXZ
+?AddCallback@EventEnvironmentCameraInterpolate@evt@app@@UEAAXXZ:
+    mov rax, 0140145f00h
+    jmp rax
+
+PUBLIC ?EE_UnkFunc5@EventEnvironmentCameraInterpolate@evt@app@@UEAAXXZ
+?EE_UnkFunc5@EventEnvironmentCameraInterpolate@evt@app@@UEAAXXZ:
+    mov rax, 0140145f10h
+    jmp rax
+
+PUBLIC ?EE_UnkFunc4@EventEnvironmentCameraInterpolate@evt@app@@UEAAXXZ
+?EE_UnkFunc4@EventEnvironmentCameraInterpolate@evt@app@@UEAAXXZ:
+    mov rax, 0140146060h
+    jmp rax
+
 PUBLIC ??_GEventEnvironmentCameraLookAt@evt@app@@QEAAXXZ
 ??_GEventEnvironmentCameraLookAt@evt@app@@QEAAXXZ:
     mov rax, 01401463b0h
@@ -26533,6 +26563,51 @@ PUBLIC ??_GEventEnvironmentFps@evt@app@@QEAAXXZ
 PUBLIC ??_DEventEnvironmentGedit@evt@app@@QEAAXXZ
 ??_DEventEnvironmentGedit@evt@app@@QEAAXXZ:
     mov rax, 0140146e20h
+    jmp rax
+
+PUBLIC ??0EventEnvironmentInvisibleObjects@evt@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z
+??0EventEnvironmentInvisibleObjects@evt@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 01401474e0h
+    jmp rax
+
+PUBLIC ?AddObject@EventEnvironmentInvisibleObjects@evt@app@@QEAAXAEAV?$Handle@VGameObject@game@hh@@V?$HandleManager@VMessenger@fnd@hh@@@fnd@3@@fnd@hh@@@Z
+?AddObject@EventEnvironmentInvisibleObjects@evt@app@@QEAAXAEAV?$Handle@VGameObject@game@hh@@V?$HandleManager@VMessenger@fnd@hh@@@fnd@3@@fnd@hh@@@Z:
+    mov rax, 01401475f0h
+    jmp rax
+
+PUBLIC ?EE_UnkFunc6@EventEnvironmentInvisibleObjects@evt@app@@UEAAXXZ
+?EE_UnkFunc6@EventEnvironmentInvisibleObjects@evt@app@@UEAAXXZ:
+    mov rax, 0140147600h
+    jmp rax
+
+PUBLIC ?EE_UnkFunc13@EventEnvironmentInvisibleObjects@evt@app@@UEAAXXZ
+?EE_UnkFunc13@EventEnvironmentInvisibleObjects@evt@app@@UEAAXXZ:
+    mov rax, 0140147600h
+    jmp rax
+
+PUBLIC ?GetID@EventEnvironmentInvisibleObjects@evt@app@@UEBA_JXZ
+?GetID@EventEnvironmentInvisibleObjects@evt@app@@UEBA_JXZ:
+    mov rax, 0140147800h
+    jmp rax
+
+PUBLIC ?AddCallback@EventEnvironmentInvisibleObjects@evt@app@@UEAAXXZ
+?AddCallback@EventEnvironmentInvisibleObjects@evt@app@@UEAAXXZ:
+    mov rax, 0140147830h
+    jmp rax
+
+PUBLIC ?EE_UnkFunc11@EventEnvironmentInvisibleObjects@evt@app@@UEAAXXZ
+?EE_UnkFunc11@EventEnvironmentInvisibleObjects@evt@app@@UEAAXXZ:
+    mov rax, 0140147840h
+    jmp rax
+
+PUBLIC ?EE_UnkFunc10@EventEnvironmentInvisibleObjects@evt@app@@UEAAXXZ
+?EE_UnkFunc10@EventEnvironmentInvisibleObjects@evt@app@@UEAAXXZ:
+    mov rax, 01401478b0h
+    jmp rax
+
+PUBLIC ?EE_UnkFunc15@EventEnvironmentInvisibleObjects@evt@app@@UEAAXXZ
+?EE_UnkFunc15@EventEnvironmentInvisibleObjects@evt@app@@UEAAXXZ:
+    mov rax, 0140147930h
     jmp rax
 
 PUBLIC ??_GEventEnvironmentPause@evt@app@@QEAAXXZ
@@ -87960,6 +88035,11 @@ PUBLIC ??0FrameworkOptions@fw@hh@@QEAA@XZ
     mov rax, 0140d64110h
     jmp rax
 
+PUBLIC ?Sync@SyncTimer@fw@hh@@QEAAX_N@Z
+?Sync@SyncTimer@fw@hh@@QEAAX_N@Z:
+    mov rax, 0140d64c70h
+    jmp rax
+
 PUBLIC ??_DWindowD3D11@fw@hh@@QEAAXXZ
 ??_DWindowD3D11@fw@hh@@QEAAXXZ:
     mov rax, 0140d670b0h
@@ -93802,11 +93882,6 @@ PUBLIC ??_DObjAlbatrossGroupInfo@app@@QEAAXXZ
 
 PUBLIC ??_DObjEventStageResolver@evt@app@@QEAAXXZ
 ??_DObjEventStageResolver@evt@app@@QEAAXXZ:
-    mov rax, 0140ecd2a0h
-    jmp rax
-
-PUBLIC ??_DEventEnvironmentCameraInterpolate@evt@app@@QEAAXXZ
-??_DEventEnvironmentCameraInterpolate@evt@app@@QEAAXXZ:
     mov rax, 0140ecd2a0h
     jmp rax
 
@@ -106665,6 +106740,11 @@ PUBLIC ?Transform@Aabb@geom@csl@@SA?AV123@AEBVMatrix34@math@3@AEBV123@@Z
     mov rax, 0141138850h
     jmp rax
 
+PUBLIC ?ThreadSleep@fnd@csl@@YAXH@Z
+?ThreadSleep@fnd@csl@@YAXH@Z:
+    mov rax, 014113af50h
+    jmp rax
+
 PUBLIC ?Intersection@math@csl@@YA_NAEBVSphere@geom@2@AEBVObb@42@@Z
 ?Intersection@math@csl@@YA_NAEBVSphere@geom@2@AEBVObb@42@@Z:
     mov rax, 014113bb40h
@@ -106698,6 +106778,21 @@ PUBLIC ?DistanceSq@Obb@geom@csl@@QEBAMAEBVVector3@math@3@PEAV453@@Z
 PUBLIC ?Set@Obb@geom@csl@@QEAAXAEBVVector3@math@3@0AEBVQuaternion@53@@Z
 ?Set@Obb@geom@csl@@QEAAXAEBVVector3@math@3@0AEBVQuaternion@53@@Z:
     mov rax, 014113c010h
+    jmp rax
+
+PUBLIC ?Sample@Tick@fnd@csl@@QEAAXXZ
+?Sample@Tick@fnd@csl@@QEAAXXZ:
+    mov rax, 014113c400h
+    jmp rax
+
+PUBLIC ?ToMicroseconds@Tick@fnd@csl@@QEBA_JXZ
+?ToMicroseconds@Tick@fnd@csl@@QEBA_JXZ:
+    mov rax, 014113c460h
+    jmp rax
+
+PUBLIC ?ToMiliseconds@Tick@fnd@csl@@QEBA_JXZ
+?ToMiliseconds@Tick@fnd@csl@@QEBA_JXZ:
+    mov rax, 014113c490h
     jmp rax
 
 PUBLIC ?ProjectOnNormal@Plane@math@csl@@QEBA?AVVector3@23@AEBV423@PEAM@Z
@@ -144170,6 +144265,11 @@ PUBLIC ?instance@SyncTimer@hh@@0PEAV12@EA
     mov rax, 0143d90b20h
     jmp rax
 
+PUBLIC ?instance@?$Singleton@VSyncTimer@fw@hh@@@fnd@csl@@2PEAVSyncTimer@fw@hh@@EA
+?instance@?$Singleton@VSyncTimer@fw@hh@@@fnd@csl@@2PEAVSyncTimer@fw@hh@@EA:
+    mov rax, 0143d90b20h
+    jmp rax
+
 PUBLIC ?instance@?$Singleton@VGameObjectSystem@game@hh@@@fnd@csl@@2PEAVGameObjectSystem@game@hh@@EA
 ?instance@?$Singleton@VGameObjectSystem@game@hh@@@fnd@csl@@2PEAVGameObjectSystem@game@hh@@EA:
     mov rax, 0143d90b30h
@@ -164210,6 +164310,11 @@ PUBLIC ??0EventEnvironmentCameraInterpolate@evt@app@@QEAA@PEAVIAllocator@fnd@csl
     mov rax, 0146c82000h
     jmp rax
 
+PUBLIC ?EE_UnkFunc14@EventEnvironmentCameraInterpolate@evt@app@@UEAAHXZ
+?EE_UnkFunc14@EventEnvironmentCameraInterpolate@evt@app@@UEAAHXZ:
+    mov rax, 0146c83ea0h
+    jmp rax
+
 PUBLIC ??0EventEnvironmentCameraLookAt@evt@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z
 ??0EventEnvironmentCameraLookAt@evt@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 0146c9f270h
@@ -164223,6 +164328,11 @@ PUBLIC ??0EventEnvironmentGedit@evt@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z
 PUBLIC ??_GEventEnvironmentGedit@evt@app@@QEAAXXZ
 ??_GEventEnvironmentGedit@evt@app@@QEAAXXZ:
     mov rax, 0146cea180h
+    jmp rax
+
+PUBLIC ??_DEventEnvironmentInvisibleObjects@evt@app@@QEAAXXZ
+??_DEventEnvironmentInvisibleObjects@evt@app@@QEAAXXZ:
+    mov rax, 0146cfbd30h
     jmp rax
 
 PUBLIC ??0EventEnvironmentPause@evt@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z
@@ -178188,6 +178298,21 @@ PUBLIC ?UnkFunc3@FrameworkWin32@fw@hh@@UEAAXXZ
 PUBLIC ?Parse@FrameworkOptions@fw@hh@@QEAAXHPEBQEBD@Z
 ?Parse@FrameworkOptions@fw@hh@@QEAAXHPEBQEBD@Z:
     mov rax, 01506e3750h
+    jmp rax
+
+PUBLIC ?SetFPS@SyncTimer@hh@@QEAAXM@Z
+?SetFPS@SyncTimer@hh@@QEAAXM@Z:
+    mov rax, 01507203c0h
+    jmp rax
+
+PUBLIC ?SetFPS@SyncTimer@fw@hh@@QEAAXM@Z
+?SetFPS@SyncTimer@fw@hh@@QEAAXM@Z:
+    mov rax, 01507203c0h
+    jmp rax
+
+PUBLIC ?Init@SyncTimer@fw@hh@@QEAAPEAV123@XZ
+?Init@SyncTimer@fw@hh@@QEAAPEAV123@XZ:
+    mov rax, 015072b710h
     jmp rax
 
 PUBLIC ??0WindowD3D11@fw@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
