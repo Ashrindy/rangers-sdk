@@ -80350,6 +80350,11 @@ PUBLIC ??_GGOCUIEffect@gocs@heur@@QEAAXXZ
     mov rax, 0140ba6f00h
     jmp rax
 
+PUBLIC ??_DGOCUIEffect@ui@hh@@QEAAXXZ
+??_DGOCUIEffect@ui@hh@@QEAAXXZ:
+    mov rax, 0140ba6f00h
+    jmp rax
+
 PUBLIC ?Create@GOCUIEffect@gocs@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z
 ?Create@GOCUIEffect@gocs@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 0140ba72b0h
@@ -80360,9 +80365,34 @@ PUBLIC ?Create@GOCUIEffect@gocs@heur@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z
     mov rax, 0140ba72b0h
     jmp rax
 
+PUBLIC ?Create@GOCUIEffect@ui@hh@@CAPEAVGOComponent@game@3@PEAVIAllocator@fnd@csl@@@Z
+?Create@GOCUIEffect@ui@hh@@CAPEAVGOComponent@game@3@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 0140ba72b0h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@GOCUIEffect@ui@hh@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@GOCUIEffect@ui@hh@@UEBAPEAXXZ:
+    mov rax, 0140ba7440h
+    jmp rax
+
+PUBLIC ?Setup@GOCUIEffect@ui@hh@@QEAAXAEAUDescription@123@@Z
+?Setup@GOCUIEffect@ui@hh@@QEAAXAEAUDescription@123@@Z:
+    mov rax, 0140ba7700h
+    jmp rax
+
 PUBLIC ?GetClass@GOCUIEffect@gocs@heur@@SAPEBVGOComponentClass@game@hh@@XZ
 ?GetClass@GOCUIEffect@gocs@heur@@SAPEBVGOComponentClass@game@hh@@XZ:
     mov rax, 0140ba7710h
+    jmp rax
+
+PUBLIC ?GetClass@GOCUIEffect@ui@hh@@SAPEBVGOComponentClass@game@3@XZ
+?GetClass@GOCUIEffect@ui@hh@@SAPEBVGOComponentClass@game@3@XZ:
+    mov rax, 0140ba7710h
+    jmp rax
+
+PUBLIC ?UpdateAsync@GOCUIEffect@ui@hh@@UEAAXW4UpdatingPhase@fnd@3@AEBUSUpdateInfo@53@PEAX@Z
+?UpdateAsync@GOCUIEffect@ui@hh@@UEAAXW4UpdatingPhase@fnd@3@AEBUSUpdateInfo@53@PEAX@Z:
+    mov rax, 0140ba7720h
     jmp rax
 
 PUBLIC ?SetTexture@SurfRideTextureDataMIRAGE@surfride@ui@hh@@QEAAXIPEAVTexture@needle@4@@Z
@@ -142795,6 +142825,11 @@ PUBLIC ?componentClass@GOCUIEffect@gocs@heur@@0VGOComponentClass@game@hh@@B
     mov rax, 0143ce6a30h
     jmp rax
 
+PUBLIC ?componentClass@GOCUIEffect@ui@hh@@0VGOComponentClass@game@3@B
+?componentClass@GOCUIEffect@ui@hh@@0VGOComponentClass@game@3@B:
+    mov rax, 0143ce6a30h
+    jmp rax
+
 PUBLIC ?gameObjectClass@SurfRideViewerObject@gameobjects@heur@@0VGameObjectClass@game@hh@@B
 ?gameObjectClass@SurfRideViewerObject@gameobjects@heur@@0VGameObjectClass@game@hh@@B:
     mov rax, 0143ce6bd0h
@@ -173448,6 +173483,11 @@ PUBLIC ?DoSomethingWithUnk7@UIElement@ui@hh@@UEAAXAEBUUnk1@123@@Z
 PUBLIC ?SetAsyncUpdatesEnabled@UIElement@ui@hh@@QEAAX_N@Z
 ?SetAsyncUpdatesEnabled@UIElement@ui@hh@@QEAAX_N@Z:
     mov rax, 014d993270h
+    jmp rax
+
+PUBLIC ?OnGOCEvent@GOCUIEffect@ui@hh@@UEAAXW4GOCEvent@GOComponent@game@3@AEAVGameObject@63@PEAX@Z
+?OnGOCEvent@GOCUIEffect@ui@hh@@UEAAXW4GOCEvent@GOComponent@game@3@AEAVGameObject@63@PEAX@Z:
+    mov rax, 014d999570h
     jmp rax
 
 PUBLIC ??0SurfRideTextureDataMIRAGE@surfride@ui@hh@@AEAA@IPEAVIAllocator@fnd@csl@@@Z

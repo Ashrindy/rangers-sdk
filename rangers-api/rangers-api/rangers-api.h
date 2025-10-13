@@ -839,6 +839,7 @@ namespace rangerssdk::ucsl {
 #include "Hedgehog/UI/CastTextContainer.h"
 #include "Hedgehog/UI/GOCUICollider.h"
 #include "Hedgehog/UI/GOCUIComposition.h"
+#include "Hedgehog/UI/GOCUIEffect.h"
 #include "Hedgehog/UI/UIObject.h"
 #include "Hedgehog/UI/UIElement.h"
 #include "Hedgehog/UI/UIElementSearchIndex.h"
