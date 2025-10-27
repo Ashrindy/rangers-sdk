@@ -77895,6 +77895,11 @@ PUBLIC ?GetChallengeDataAccessor@SaveInterface@save@app@@QEAA?AVChallengeDataAc@
     mov rax, 0140b02fd0h
     jmp rax
 
+PUBLIC ?GetSaveHeaderData@SaveInterface@save@app@@QEAAAEAUHeaderData@23@E@Z
+?GetSaveHeaderData@SaveInterface@save@app@@QEAAAEAUHeaderData@23@E@Z:
+    mov rax, 0140b03250h
+    jmp rax
+
 PUBLIC ??_DSaveManager@save@app@@QEAAXXZ
 ??_DSaveManager@save@app@@QEAAXXZ:
     mov rax, 0140b05450h
@@ -88225,8 +88230,8 @@ PUBLIC ??_DSaveManagerInterface@fw@hh@@QEAAXXZ
     mov rax, 0140d6b820h
     jmp rax
 
-PUBLIC ?UIEL_UnkFunc1@UserInfoEventListener@user@fnd@hh@@UEAAXXZ
-?UIEL_UnkFunc1@UserInfoEventListener@user@fnd@hh@@UEAAXXZ:
+PUBLIC ?UIEL_UnkFunc1@SaveManagerInterface@fw@hh@@UEAAXXZ
+?UIEL_UnkFunc1@SaveManagerInterface@fw@hh@@UEAAXXZ:
     mov rax, 0140d6c750h
     jmp rax
 
@@ -110337,6 +110342,11 @@ PUBLIC ?GetResult@?$IMirageAnim@HUAnimTexSrtResult@needle@hh@@@needle@hh@@UEAA_N
 
 PUBLIC ?GetResult@?$IMirageAnim@HUAnimTexSrtResult@needle@hh@@@needle@hh@@UEAA_NPEAHPEAUAnimTexSrtResult@23@@Z
 ?GetResult@?$IMirageAnim@HUAnimTexSrtResult@needle@hh@@@needle@hh@@UEAA_NPEAHPEAUAnimTexSrtResult@23@@Z:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?UIEL_UnkFunc1@UserInfoEventListener@user@fnd@hh@@UEAAXXZ
+?UIEL_UnkFunc1@UserInfoEventListener@user@fnd@hh@@UEAAXXZ:
     mov rax, 014118f6e0h
     jmp rax
 
@@ -172513,6 +172523,11 @@ PUBLIC ?GetGameDataAccessor@SaveInterface@save@app@@QEAA?AVGameDataAc@23@XZ
 PUBLIC ?GetOptionAccessor@SaveInterface@save@app@@QEAA?AVOptionAc@23@XZ
 ?GetOptionAccessor@SaveInterface@save@app@@QEAA?AVOptionAc@23@XZ:
     mov rax, 014cefce70h
+    jmp rax
+
+PUBLIC ?Initialize@SaveInterface@save@app@@QEAAXXZ
+?Initialize@SaveInterface@save@app@@QEAAXXZ:
+    mov rax, 014cf18df0h
     jmp rax
 
 PUBLIC ?GetGameDataAccessor@SaveManager@save@app@@QEAA?AVGameDataAc@23@XZ

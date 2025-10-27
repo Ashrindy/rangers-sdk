@@ -171,6 +171,7 @@ namespace app::save {
         OptionControlsAc GetOptionControlsAc();
         OptionGamePlayAc GetOptionGamePlayAc();
         OptionGraphicsAc GetOptionGraphicsAc();
+        HeaderData::AppVersion GetAppVersion() const;
     };
 
     class PlayLogAc : public SaveDataAccessor<PlayLogData> {

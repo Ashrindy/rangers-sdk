@@ -21706,7 +21706,9 @@
 140b02e90,?GetArcadeDataAccessor@SaveInterface@save@app@@QEAA?AVArcadeDataAc@23@XZ,1
 140b02fd0,?GetChallengeDataAccessor@SaveInterface@save@app@@QEAA?AVChallengeDataAc@23@XZ,1
 140b03110,j_?GetGameDataAccessor@SaveInterface@save@app@@QEAA?AVGameDataAc@23@XZ,1
+140b03250,?GetSaveHeaderData@SaveInterface@save@app@@QEAAAEAUHeaderData@23@E@Z,1
 140b03350,j_?GetOptionAccessor@SaveInterface@save@app@@QEAA?AVOptionAc@23@XZ,1
+140b04dd0,j_?Initialize@SaveInterface@save@app@@QEAAXXZ,1
 140b05450,??_DSaveManager@save@app@@QEAAXXZ,1
 140b05730,?AddListener@SaveManager@save@app@@QEAAXPEAVSaveManagerListener@23@@Z,1
 140b05970,?PostStepCallback@SaveManager@save@app@@UEAAXPEAVGameManager@game@hh@@AEBUGameStepInfo@56@@Z,1
@@ -24967,7 +24969,7 @@
 140d6b320,j_??0SaveManagerInterface@fw@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z,1
 140d6b510,j_??_DSaveManagerInterface@fw@hh@@QEAAXXZ,0
 140d6b820,??_DSaveManagerInterface@fw@hh@@QEAAXXZ,1
-140d6c750,?UIEL_UnkFunc1@UserInfoEventListener@user@fnd@hh@@UEAAXXZ,1
+140d6c750,?UIEL_UnkFunc1@SaveManagerInterface@fw@hh@@UEAAXXZ,1
 140d6d120,j_??0LocalHeap@heap@fw@hh@@QEAA@PEAX_K@Z,1
 140d6d1e0,??_D?$FreeListHeapTemplate@VMutex@fnd@csl@@@fnd@csl@@QEAAXXZ,1
 140d6d260,j_?Alloc@?$FreeListHeapTemplate@VMutex@fnd@csl@@@fnd@csl@@EEAAPEAX_K0@Z,1
@@ -30275,6 +30277,7 @@
 14118f6e0,?UnkFunc0@?$IMirageAnim@HUAnimTexSrtResult@needle@hh@@@needle@hh@@UEAAPEAX_JPEAUAnimTexSrtResult@23@@Z,1
 14118f6e0,?GetResult@?$IMirageAnim@HUAnimTexSrtResult@needle@hh@@@needle@hh@@UEAA_NHPEAUAnimTexSrtResult@23@@Z,1
 14118f6e0,?GetResult@?$IMirageAnim@HUAnimTexSrtResult@needle@hh@@@needle@hh@@UEAA_NPEAHPEAUAnimTexSrtResult@23@@Z,1
+14118f6e0,?UIEL_UnkFunc1@UserInfoEventListener@user@fnd@hh@@UEAAXXZ,1
 14118f720,?IsValidToWrite@SConstantData@SParameterBuffer@ImplDX11@needle@hh@@QEAA_NPEAXI@Z,1
 141190870,??_Dlogic_error@std@@QEAAXXZ,0
 141190870,??_Dbad_typeid@std@@QEAAXXZ,0
@@ -88802,6 +88805,7 @@
 14cef1850,?AddUserElement@SaveInterface@save@app@@QEAAPEAVUserElement@23@AEBUUserId@fnd@hh@@@Z,1
 14cefc6d0,?GetGameDataAccessor@SaveInterface@save@app@@QEAA?AVGameDataAc@23@XZ,1
 14cefce70,?GetOptionAccessor@SaveInterface@save@app@@QEAA?AVOptionAc@23@XZ,1
+14cf18df0,?Initialize@SaveInterface@save@app@@QEAAXXZ,1
 14cf79f10,?GetGameDataAccessor@SaveManager@save@app@@QEAA?AVGameDataAc@23@XZ,1
 14cf7a4a0,?GetOptionAccessor@SaveManager@save@app@@QEAA?AVOptionAc@23@XZ,1
 14cf7f1d0,?OnAddedToGame@SaveManager@save@app@@UEAAXXZ,1

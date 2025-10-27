@@ -33,12 +33,15 @@ namespace app::save {
 
         SaveInterface(csl::fnd::IAllocator* allocator);
 
+        void Initialize();
+
         UserElement* AddUserElement(const hh::fnd::UserId& userId);
 
         GameDataAc GetGameDataAccessor();
         ArcadeDataAc GetArcadeDataAccessor();
         OptionAc GetOptionAccessor();
         ChallengeDataAc GetChallengeDataAccessor();
+        csl::ut::MoveArray<HeaderData>& GetSaveHeaderData(bool isExtra);
     };
 
     GameDataAc GetGameDataAccessor(hh::game::GameManager* gameManager);
