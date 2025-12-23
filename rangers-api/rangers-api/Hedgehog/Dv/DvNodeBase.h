@@ -19,7 +19,8 @@ namespace hh::dv{
             MODEL,
             MODEL_MOTION = 10,
             MODEL_NODE,
-            ELEMENT
+            ELEMENT,
+            STAGE = 13
         };
 
         enum class Flags : uint32_t {

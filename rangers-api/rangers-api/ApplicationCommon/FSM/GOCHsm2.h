@@ -42,6 +42,9 @@ namespace app_cmn::fsm {
 
         int GetBottomStateId();
         bool UnkFunc0(int a2);
+        inline hh::ut::HsmBase& GetHsm() {
+            return hsm;
+        }
 
         GOCOMPONENT_CLASS_DECLARATION(GOCHsm2)
     };

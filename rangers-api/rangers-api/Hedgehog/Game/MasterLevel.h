@@ -41,6 +41,7 @@ namespace hh::game {
         void LoadLevel(const char* name);
         Unk1 LoadLevel(const char* name, const Level::LoadInfo& loadInfo);
         Unk1 UnloadLevel(const char* name);
+        void SetLevelResourceAllocator(const char* levelName, csl::fnd::IAllocator* allocator);
 
         inline void AddLevel(Level* level) {
             levels.push_back(level);

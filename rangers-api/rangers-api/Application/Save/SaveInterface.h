@@ -55,4 +55,5 @@ namespace app::save {
     ExtraCharacterAc GetExtraCharacterAccessor(hh::game::GameObject* gameObject, unsigned int idx);
     CharacterAc GetCharacterAccessor(hh::game::GameManager* gameManager, unsigned int idx);
     CharacterAc GetCharacterAccessor(hh::game::GameObject* gameObject, unsigned int idx);
+    bool IsBirthdayEnabled(hh::game::GameManager* gameManager);
 }

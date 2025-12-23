@@ -21,7 +21,7 @@ namespace hh::fnd {
         csl::ut::MoveArray<void*> unk3;
         csl::ut::MoveArray<void*> unk4;
         Unk3 unk5;
-        csl::fnd::IAllocator* otherAllocator;
+        csl::fnd::IAllocator* resourceAllocator;
         csl::ut::VariableString unk6;
         csl::ut::MoveArray<void*> unk7;
         uint16_t unk8;

@@ -34,9 +34,7 @@ namespace app::evt {
 
             char cutsceneName[40];
             char soundName[40];
-            csl::math::Vector3 position;
-            csl::math::Quaternion rotation;
-            csl::math::Vector3 scale;
+            csl::math::Transform transform;
             bool suspendWorld;
             float speed;
             csl::ut::Bitset<Flag> playFlags;
@@ -53,12 +51,20 @@ namespace app::evt {
         };
 
         struct CameraInfo {
-            int unk0;
-            float interpolateTime;
+            float interpolateTimeOnStart;
+            float interpolateTimeOnFinish;
             bool lookAtEnabled;
             csl::math::Vector3 lookAtTarget;
 
             void SetLookAtTarget(csl::math::Vector3& target);
+        };
+
+        struct ScenePlaybackInfo {
+            hh::dv::DiEventManager::ScenePlaybackInfo::Info scenePlaybackInfo;
+            bool usePage;
+
+            void SetPageIndex(int pageIdx);
+            void SetPage(const char* page);
         };
 
         enum class PlayerPositionFlag : unsigned char {
@@ -68,7 +74,7 @@ namespace app::evt {
         };
 
         enum class PlayerFlag : unsigned char {
-            UNK0,
+            UNK0, // ObjEvent !playerAfterIdle
             VISIBLE0,
             VISIBLE1,
             VISIBLE2,
@@ -76,8 +82,7 @@ namespace app::evt {
         };
 
         PlayInfo playInfo;
-        hh::dv::DiEventManager::ScenePlaybackInfo::Info scenePlaybackInfo;
-        char unk0;
+        ScenePlaybackInfo scenePlaybackInfo;
         int unk1;
         int unk2;
         heur::rfl::EventPlayTestParam::StartType playerStartType;

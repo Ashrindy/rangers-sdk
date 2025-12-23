@@ -22,6 +22,7 @@ namespace app::game{
         virtual void ARML_UnkFunc1(int unkParam1) override;
 
         void Fade(float length);
+        void FadeOut(float length, const char* name); // Name goes unused though
 
         GAMESERVICE_CLASS_DECLARATION(ScreenFadeManager)
     };

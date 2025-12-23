@@ -19,13 +19,14 @@ namespace hh::needle {
     
     MaterialparamSetting* GetMaterialparamSetting(int index);
 
+    class AnimMaterialControl;
     class AnimTexSrtControl;
 
     class PBRModelInstance : public ModelInstance {
     public:
         int64_t unk3;
         int64_t unk4;
-        int64_t unk5;
+        AnimBlender<AnimMaterialControl>* matBlender;
         int64_t unk6;
         AnimBlender<AnimTexSrtControl>* texSrtBlender;
         int64_t unk8;
@@ -50,5 +51,6 @@ namespace hh::needle {
         static ParameterValueObject* CreateGlobalParamContainer();
         static PBRModelInstance* Create(Model* model, const PBRModelCreationInfo& info, const PBRModelInstanceRenderer* renderer);
         void SetTexSrtBlender(AnimBlender<AnimTexSrtControl>* blender);
+        void SetMaterialBlender(AnimBlender<AnimMaterialControl>* blender);
     };
 }

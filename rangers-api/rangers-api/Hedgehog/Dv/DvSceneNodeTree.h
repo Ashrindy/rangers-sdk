@@ -8,7 +8,7 @@ namespace hh::dv{
         DvSceneControl* parent;
         int diEventManagerDWORDC0;
 
-        void FindNodeByType(DvNodeBase::NodeType type, DvNodeBase** result);
+        void FindNodesByType(DvNodeBase::NodeType type, csl::ut::MoveArray<DvNodeBase*>* result);
         DvNodeBase* FindNodeByGUID(char* guid, DvNodeBase* startNode);
         DvNodeBase* FindNodeByGUID(char* guid);
         DvNodeBase* GetMainNode() const;

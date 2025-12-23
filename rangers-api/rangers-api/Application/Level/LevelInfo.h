@@ -38,6 +38,7 @@ namespace app::level {
         bool IsNonBossStage() const;
         void CleanUIObjects();
         void AddUIObject(hh::fnd::Handle<hh::game::GameObject>& obj);
+        void SetStageName(const char* stageName, const char* unkName);
 
         GAMESERVICE_CLASS_DECLARATION(LevelInfo)
     };

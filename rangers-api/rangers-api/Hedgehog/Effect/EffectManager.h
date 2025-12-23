@@ -120,7 +120,7 @@ namespace hh::eff {
             uint32_t unk4;
             float unk5;
             uint8_t gap68[16];
-            float dword78;
+            float localLightIntensityScale;
             ResourceListener resourceListener1;
             ResourceListener resourceListener2;
             csl::ut::MoveArray<void*> unkA0;

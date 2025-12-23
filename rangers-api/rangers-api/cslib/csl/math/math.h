@@ -96,6 +96,7 @@ namespace csl::geom {
 		bool Intersect(const Aabb& aabb) const;
 		math::Vector3 Extent() const;
 		float DistanceSq(const math::Vector3& point, math::Vector3* distanceByAxis) const;
+		static Aabb FromPoints(const math::Vector3* points, unsigned int pointCount);
 
 #ifdef NO_EIGEN_MATH
 		inline void AddPoint(const csl::math::Vector3& point);

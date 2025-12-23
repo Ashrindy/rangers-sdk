@@ -33,6 +33,6 @@ namespace hh::ut {
         void Step(float deltaTime);
         void Update(fnd::UpdatingPhase phase, float deltaTime);
         void UpdateAsync(fnd::UpdatingPhase phase, float deltaTime);
-        void ProcessMessage(const hh::fnd::Message& message);
+        bool ProcessMessage(const hh::fnd::Message& message);
     };
 }

@@ -20,29 +20,29 @@ namespace app::game {
 		virtual void* GetRuntimeTypeInfo() const override;
 		virtual bool fUnk3(hh::fnd::Message& message) override;
         virtual bool UnkFunc4() { return true; }
-        virtual bool Initialize() {}
-        virtual bool UnkFunc6(bool a2) {}
-        virtual bool UnkFunc7() {}
-        virtual bool UnkFunc8() {}
-        virtual bool UnkFunc9() {}
-        virtual bool UnkFunc10() {}
-        virtual bool UnkFunc11() {}
-        virtual bool Shutdown() {}
-        virtual bool UnkFunc13() {}
+        virtual void Initialize() {}
+        virtual void UnkFunc6(bool a2) {}
+        virtual void UnkFunc7() {}
+        virtual void UnkFunc8() {}
+        virtual void UnkFunc9() {}
+        virtual void UnkFunc10() {}
+        virtual void UnkFunc11() {}
+        virtual int Shutdown();
+        virtual void UnkFunc13() {}
 
         hh::game::GameService* GetService(hh::game::GameServiceClass* gameServiceClass) const;
         template<typename T>
         T* GetService() const {
-            return (T*)GetService(T::GetClass());
+            return (T*)GetService((hh::game::GameServiceClass*)T::GetClass());
         }
-        void AddService(hh::game::GameServiceClass* gameServiceClass);
-        template<typename T>
-        void AddService() {
-            GetService(T::GetClass());
-        }
+        void AddServices(const hh::game::GameServiceClass** gameServiceClass);
         void RegisterService(hh::game::GameService* gameService);
 
         GameModeExtension* GetExtension(unsigned int name) const;
+        template<typename T>
+        inline T* GetExtension() const {
+            return (T*)GetExtension(csl::ut::HashString(T::name));
+        }
         void AddExtension(GameModeExtension* extension);
 
         void SendMessageImm(hh::fnd::Message& message);
