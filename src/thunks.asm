@@ -78970,6 +78970,11 @@ PUBLIC ?UnkFunc2@?$MirageAnimController@HUAnimTexPatResult@needle@hh@@@needle@hh
     mov rax, 0140b1b010h
     jmp rax
 
+PUBLIC ?UnkFunc2@?$MirageAnimController@VNameIDRef@needle@hh@@UAnimVisResult@23@@needle@hh@@UEAAHXZ
+?UnkFunc2@?$MirageAnimController@VNameIDRef@needle@hh@@UAnimVisResult@23@@needle@hh@@UEAAHXZ:
+    mov rax, 0140b1b010h
+    jmp rax
+
 PUBLIC ?GetDependRefcountObject@NeedleRefcountObject@needle@hh@@UEAAPEAV123@XZ
 ?GetDependRefcountObject@NeedleRefcountObject@needle@hh@@UEAAPEAV123@XZ:
     mov rax, 0140b1b010h
@@ -85270,6 +85275,11 @@ PUBLIC ?GetTypeInfo@ResAnimVis@resources@heur@@SAPEBUResourceTypeInfo@fnd@hh@@XZ
     mov rax, 0140cfb2f0h
     jmp rax
 
+PUBLIC ?GetTypeInfo@ResAnimVis@gfx@hh@@SAPEBUResourceTypeInfo@fnd@3@XZ
+?GetTypeInfo@ResAnimVis@gfx@hh@@SAPEBUResourceTypeInfo@fnd@3@XZ:
+    mov rax, 0140cfb2f0h
+    jmp rax
+
 PUBLIC ?GetTypeInfo@ResMaterial@gfx@hh@@SAPEBUResourceTypeInfo@fnd@3@XZ
 ?GetTypeInfo@ResMaterial@gfx@hh@@SAPEBUResourceTypeInfo@fnd@3@XZ:
     mov rax, 0140cfb4d0h
@@ -86365,6 +86375,11 @@ PUBLIC ?UnkFunc2@?$AnimBlender@VAnimTexPatControl@needle@hh@@@needle@hh@@UEAAHXZ
     mov rax, 0140d15bf0h
     jmp rax
 
+PUBLIC ?UnkFunc2@?$AnimBlender@VAnimVisControl@needle@hh@@@needle@hh@@UEAAHXZ
+?UnkFunc2@?$AnimBlender@VAnimVisControl@needle@hh@@@needle@hh@@UEAAHXZ:
+    mov rax, 0140d15bf0h
+    jmp rax
+
 PUBLIC ?UnkFunc17@RenderJob@needle@hh@@UEAAIXZ
 ?UnkFunc17@RenderJob@needle@hh@@UEAAIXZ:
     mov rax, 0140d15bf0h
@@ -86725,6 +86740,11 @@ PUBLIC ?UnkFunc1@?$AnimBlender@VAnimTexPatControl@needle@hh@@@needle@hh@@UEAAPEA
     mov rax, 0140d1ecb0h
     jmp rax
 
+PUBLIC ?UnkFunc1@?$AnimBlender@VAnimVisControl@needle@hh@@@needle@hh@@UEAAPEAXXZ
+?UnkFunc1@?$AnimBlender@VAnimVisControl@needle@hh@@@needle@hh@@UEAAPEAXXZ:
+    mov rax, 0140d1ecb0h
+    jmp rax
+
 PUBLIC ?UnkFunc3@MatAnimBlenderHH@gfx@hh@@UEAAXXZ
 ?UnkFunc3@MatAnimBlenderHH@gfx@hh@@UEAAXXZ:
     mov rax, 0140d1ed10h
@@ -86748,6 +86768,11 @@ PUBLIC ?UnkFunc3@TexPatBlenderHH@gfx@hh@@UEAAXXZ
 PUBLIC ?GetResult@?$IMirageAnim@HUAnimTexPatResult@needle@hh@@@needle@hh@@UEAA_NPEAHPEAUAnimTexPatResult@23@@Z
 ?GetResult@?$IMirageAnim@HUAnimTexPatResult@needle@hh@@@needle@hh@@UEAA_NPEAHPEAUAnimTexPatResult@23@@Z:
     mov rax, 0140d1ed10h
+    jmp rax
+
+PUBLIC ??0TexPatBlenderHH@gfx@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
+??0TexPatBlenderHH@gfx@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 0140d1ed20h
     jmp rax
 
 PUBLIC ??0Unk1@PostEffectRenderJob@needle@hh@@QEAA@XZ
@@ -86830,9 +86855,19 @@ PUBLIC ??0VisAnimBlenderHH@gfx@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
     mov rax, 0140d1f9d0h
     jmp rax
 
+PUBLIC ??_D?$AnimBlender@VAnimVisControl@needle@hh@@@needle@hh@@QEAAXXZ
+??_D?$AnimBlender@VAnimVisControl@needle@hh@@@needle@hh@@QEAAXXZ:
+    mov rax, 0140d1faf0h
+    jmp rax
+
 PUBLIC ??_DVisAnimBlenderHH@gfx@hh@@QEAAXXZ
 ??_DVisAnimBlenderHH@gfx@hh@@QEAAXXZ:
     mov rax, 0140d1fba0h
+    jmp rax
+
+PUBLIC ??_DVisAnimControl@gfx@hh@@QEAAXXZ
+??_DVisAnimControl@gfx@hh@@QEAAXXZ:
+    mov rax, 0140d1fcc0h
     jmp rax
 
 PUBLIC ?Deinitialize@VisAnimBlenderHH@gfx@hh@@UEAAXXZ
@@ -86843,6 +86878,11 @@ PUBLIC ?Deinitialize@VisAnimBlenderHH@gfx@hh@@UEAAXXZ
 PUBLIC ?CreateControl@VisAnimBlenderHH@gfx@hh@@UEAAPEAVVisAnimControlBase@23@AEBUVisAnimDesc@23@@Z
 ?CreateControl@VisAnimBlenderHH@gfx@hh@@UEAAPEAVVisAnimControlBase@23@AEBUVisAnimDesc@23@@Z:
     mov rax, 0140d1fd50h
+    jmp rax
+
+PUBLIC ?GetResult@?$AnimBlender@VAnimVisControl@needle@hh@@@needle@hh@@UEAA_NPEAVNameIDRef@23@PEAUAnimVisResult@23@@Z
+?GetResult@?$AnimBlender@VAnimVisControl@needle@hh@@@needle@hh@@UEAA_NPEAVNameIDRef@23@PEAUAnimVisResult@23@@Z:
+    mov rax, 0140d1fe50h
     jmp rax
 
 PUBLIC ?Initialize@VisAnimBlenderHH@gfx@hh@@UEAAXAEAUVisAnimBlenderDesc@23@@Z
@@ -87025,6 +87065,11 @@ PUBLIC ?Deinitialize@TexPatControlHH@gfx@hh@@UEAAXXZ
     mov rax, 0140d31620h
     jmp rax
 
+PUBLIC ?Deinitialize@VisAnimControlHH@gfx@hh@@UEAAXXZ
+?Deinitialize@VisAnimControlHH@gfx@hh@@UEAAXXZ:
+    mov rax, 0140d31620h
+    jmp rax
+
 PUBLIC ?GetEndLocalTime@TexSrtControlHH@gfx@hh@@UEBAMXZ
 ?GetEndLocalTime@TexSrtControlHH@gfx@hh@@UEBAMXZ:
     mov rax, 0140d316b0h
@@ -87037,6 +87082,11 @@ PUBLIC ?GetEndLocalTime@MatAnimControlHH@gfx@hh@@UEBAMXZ
 
 PUBLIC ?GetEndLocalTime@TexPatControlHH@gfx@hh@@UEBAMXZ
 ?GetEndLocalTime@TexPatControlHH@gfx@hh@@UEBAMXZ:
+    mov rax, 0140d316b0h
+    jmp rax
+
+PUBLIC ?GetEndLocalTime@VisAnimControlHH@gfx@hh@@UEBAMXZ
+?GetEndLocalTime@VisAnimControlHH@gfx@hh@@UEBAMXZ:
     mov rax, 0140d316b0h
     jmp rax
 
@@ -87055,6 +87105,11 @@ PUBLIC ?GetUnk5@TexPatControlHH@gfx@hh@@UEBAMXZ
     mov rax, 0140d31730h
     jmp rax
 
+PUBLIC ?GetUnk5@VisAnimControlHH@gfx@hh@@UEBAMXZ
+?GetUnk5@VisAnimControlHH@gfx@hh@@UEBAMXZ:
+    mov rax, 0140d31730h
+    jmp rax
+
 PUBLIC ?GetSpeed@TexSrtControlHH@gfx@hh@@UEBAMXZ
 ?GetSpeed@TexSrtControlHH@gfx@hh@@UEBAMXZ:
     mov rax, 0140d31750h
@@ -87067,6 +87122,11 @@ PUBLIC ?GetSpeed@MatAnimControlHH@gfx@hh@@UEBAMXZ
 
 PUBLIC ?GetSpeed@TexPatControlHH@gfx@hh@@UEBAMXZ
 ?GetSpeed@TexPatControlHH@gfx@hh@@UEBAMXZ:
+    mov rax, 0140d31750h
+    jmp rax
+
+PUBLIC ?GetSpeed@VisAnimControlHH@gfx@hh@@UEBAMXZ
+?GetSpeed@VisAnimControlHH@gfx@hh@@UEBAMXZ:
     mov rax, 0140d31750h
     jmp rax
 
@@ -87085,6 +87145,11 @@ PUBLIC ?GetLocalTime@TexPatControlHH@gfx@hh@@UEBAMXZ
     mov rax, 0140d31770h
     jmp rax
 
+PUBLIC ?GetLocalTime@VisAnimControlHH@gfx@hh@@UEBAMXZ
+?GetLocalTime@VisAnimControlHH@gfx@hh@@UEBAMXZ:
+    mov rax, 0140d31770h
+    jmp rax
+
 PUBLIC ?SetSpeed@TexSrtControlHH@gfx@hh@@UEAAXM@Z
 ?SetSpeed@TexSrtControlHH@gfx@hh@@UEAAXM@Z:
     mov rax, 0140d31970h
@@ -87100,6 +87165,11 @@ PUBLIC ?SetSpeed@TexPatControlHH@gfx@hh@@UEAAXM@Z
     mov rax, 0140d31970h
     jmp rax
 
+PUBLIC ?SetSpeed@VisAnimControlHH@gfx@hh@@UEAAXM@Z
+?SetSpeed@VisAnimControlHH@gfx@hh@@UEAAXM@Z:
+    mov rax, 0140d31970h
+    jmp rax
+
 PUBLIC ?SetLocalTime@TexSrtControlHH@gfx@hh@@UEAAXM@Z
 ?SetLocalTime@TexSrtControlHH@gfx@hh@@UEAAXM@Z:
     mov rax, 0140d31990h
@@ -87112,6 +87182,11 @@ PUBLIC ?SetLocalTime@MatAnimControlHH@gfx@hh@@UEAAXM@Z
 
 PUBLIC ?SetLocalTime@TexPatControlHH@gfx@hh@@UEAAXM@Z
 ?SetLocalTime@TexPatControlHH@gfx@hh@@UEAAXM@Z:
+    mov rax, 0140d31990h
+    jmp rax
+
+PUBLIC ?SetLocalTime@VisAnimControlHH@gfx@hh@@UEAAXM@Z
+?SetLocalTime@VisAnimControlHH@gfx@hh@@UEAAXM@Z:
     mov rax, 0140d31990h
     jmp rax
 
@@ -87133,6 +87208,26 @@ PUBLIC ??_DTexSrtControlHH@gfx@hh@@QEAAXXZ
 PUBLIC ?Initialize@TexSrtControlHH@gfx@hh@@UEAAXAEAUTexSrtDesc@23@@Z
 ?Initialize@TexSrtControlHH@gfx@hh@@UEAAXAEAUTexSrtDesc@23@@Z:
     mov rax, 0140d32150h
+    jmp rax
+
+PUBLIC ??0VisAnimControlHH@gfx@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
+??0VisAnimControlHH@gfx@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 0140d322e0h
+    jmp rax
+
+PUBLIC ??_DVisAnimControlHH@gfx@hh@@QEAAXXZ
+??_DVisAnimControlHH@gfx@hh@@QEAAXXZ:
+    mov rax, 0140d32350h
+    jmp rax
+
+PUBLIC ?UnkFunc13@VisAnimControlHH@gfx@hh@@UEAAXXZ
+?UnkFunc13@VisAnimControlHH@gfx@hh@@UEAAXXZ:
+    mov rax, 0140d323d0h
+    jmp rax
+
+PUBLIC ?Initialize@VisAnimControlHH@gfx@hh@@UEAAXAEAUVisAnimDesc@23@@Z
+?Initialize@VisAnimControlHH@gfx@hh@@UEAAXAEAUVisAnimDesc@23@@Z:
+    mov rax, 0140d32490h
     jmp rax
 
 PUBLIC ?GetInfo@ContainerControl@gindows@@UEAAPEAXXZ
@@ -106015,6 +106110,11 @@ PUBLIC ?CalcPatternChangeAnimation@needle@hh@@YAHPEBUAnimation@PtAnimationResour
     mov rax, 014111c670h
     jmp rax
 
+PUBLIC ?CalcVisibilityNodeAnimation@needle@hh@@YAXPEBUAnimation@VisibilityAnimationResource@12@MPEA_N@Z
+?CalcVisibilityNodeAnimation@needle@hh@@YAXPEBUAnimation@VisibilityAnimationResource@12@MPEA_N@Z:
+    mov rax, 014111c920h
+    jmp rax
+
 PUBLIC ?ResolveMirageResourceBinary@needle@hh@@YA_NPEAX@Z
 ?ResolveMirageResourceBinary@needle@hh@@YA_NPEAX@Z:
     mov rax, 014111ca20h
@@ -106047,6 +106147,11 @@ PUBLIC ??_D?$MirageAnimController@HUAnimTexSrtResult@needle@hh@@@needle@hh@@QEAA
 
 PUBLIC ??_D?$MirageAnimController@HUAnimMaterialResult@needle@hh@@@needle@hh@@QEAAXXZ
 ??_D?$MirageAnimController@HUAnimMaterialResult@needle@hh@@@needle@hh@@QEAAXXZ:
+    mov rax, 014111e5b0h
+    jmp rax
+
+PUBLIC ??_D?$MirageAnimController@VNameIDRef@needle@hh@@UAnimVisResult@23@@needle@hh@@QEAAXXZ
+??_D?$MirageAnimController@VNameIDRef@needle@hh@@UAnimVisResult@23@@needle@hh@@QEAAXXZ:
     mov rax, 014111e5b0h
     jmp rax
 
@@ -106100,6 +106205,11 @@ PUBLIC ?UnkFunc1@?$MirageAnimController@HUAnimTexPatResult@needle@hh@@@needle@hh
     mov rax, 014111ebb0h
     jmp rax
 
+PUBLIC ?UnkFunc1@?$MirageAnimController@VNameIDRef@needle@hh@@UAnimVisResult@23@@needle@hh@@UEAAPEAXXZ
+?UnkFunc1@?$MirageAnimController@VNameIDRef@needle@hh@@UAnimVisResult@23@@needle@hh@@UEAAPEAXXZ:
+    mov rax, 014111ebb0h
+    jmp rax
+
 PUBLIC ?GetResult@AnimTexPatControl@needle@hh@@UEAA_NPEAHPEAUAnimTexPatResult@23@@Z
 ?GetResult@AnimTexPatControl@needle@hh@@UEAA_NPEAHPEAUAnimTexPatResult@23@@Z:
     mov rax, 014111f0a0h
@@ -106140,6 +106250,21 @@ PUBLIC ?GetResult@AnimTexSrtControl@needle@hh@@UEAA_NPEAHPEAUAnimTexSrtResult@23
     mov rax, 014111f920h
     jmp rax
 
+PUBLIC ??_DAnimVisControl@needle@hh@@QEAAXXZ
+??_DAnimVisControl@needle@hh@@QEAAXXZ:
+    mov rax, 014111fae0h
+    jmp rax
+
+PUBLIC ?Create@AnimVisControl@needle@hh@@SAPEAV123@AEAV?$intrusive_ptr@VVisibilityAnimationResource@needle@hh@@USRefCountAddReleaseNeedleObject@23@$00@23@@Z
+?Create@AnimVisControl@needle@hh@@SAPEAV123@AEAV?$intrusive_ptr@VVisibilityAnimationResource@needle@hh@@USRefCountAddReleaseNeedleObject@23@$00@23@@Z:
+    mov rax, 014111fd40h
+    jmp rax
+
+PUBLIC ?GetResult@AnimVisControl@needle@hh@@UEAA_NPEAVNameIDRef@23@PEAUAnimVisResult@23@@Z
+?GetResult@AnimVisControl@needle@hh@@UEAA_NPEAVNameIDRef@23@PEAUAnimVisResult@23@@Z:
+    mov rax, 014111ff00h
+    jmp rax
+
 PUBLIC ?LoadMaterialAnimation@needle@hh@@YAPEAVMaterialAnimationResource@12@PEAVRenderingDevice@12@PEBX@Z
 ?LoadMaterialAnimation@needle@hh@@YAPEAVMaterialAnimationResource@12@PEAVRenderingDevice@12@PEBX@Z:
     mov rax, 0141121620h
@@ -106153,6 +106278,11 @@ PUBLIC ?LoadPatternChangeAnimation@needle@hh@@YAPEAVPtAnimationResource@12@PEAVR
 PUBLIC ?LoadTexcoordAnimation@needle@hh@@YAPEAVTexcoordAnimationResource@12@PEAVRenderingDevice@12@PEBX@Z
 ?LoadTexcoordAnimation@needle@hh@@YAPEAVTexcoordAnimationResource@12@PEAVRenderingDevice@12@PEBX@Z:
     mov rax, 0141122230h
+    jmp rax
+
+PUBLIC ?LoadVisibilityAnimation@needle@hh@@YAPEAVVisibilityAnimationResource@12@PEAVRenderingDevice@12@PEBX@Z
+?LoadVisibilityAnimation@needle@hh@@YAPEAVVisibilityAnimationResource@12@PEAVRenderingDevice@12@PEBX@Z:
+    mov rax, 0141122850h
     jmp rax
 
 PUBLIC ?QueryResource@PtAnimationResource@needle@hh@@UEAAPEAX_K@Z
@@ -106173,6 +106303,16 @@ PUBLIC ?QueryResource@TexcoordAnimationResource@needle@hh@@UEAAPEAX_K@Z
 PUBLIC ?QueryResource@TexcoordAnimationResource@needle@hh@@UEBAPEBX_K@Z
 ?QueryResource@TexcoordAnimationResource@needle@hh@@UEBAPEBX_K@Z:
     mov rax, 0141122c50h
+    jmp rax
+
+PUBLIC ?QueryResource@VisibilityAnimationResource@needle@hh@@UEAAPEAX_K@Z
+?QueryResource@VisibilityAnimationResource@needle@hh@@UEAAPEAX_K@Z:
+    mov rax, 0141122c90h
+    jmp rax
+
+PUBLIC ?QueryResource@VisibilityAnimationResource@needle@hh@@UEBAPEBX_K@Z
+?QueryResource@VisibilityAnimationResource@needle@hh@@UEBAPEBX_K@Z:
+    mov rax, 0141122c90h
     jmp rax
 
 PUBLIC ?QueryResource@MaterialAnimationResource@needle@hh@@UEAAPEAX_K@Z
@@ -111187,6 +111327,11 @@ PUBLIC ?UnkFunc1@?$IMirageAnim@HUAnimMaterialResult@needle@hh@@@needle@hh@@UEAAP
 
 PUBLIC ?UnkFunc2@?$IMirageAnim@HUAnimMaterialResult@needle@hh@@@needle@hh@@UEAAHXZ
 ?UnkFunc2@?$IMirageAnim@HUAnimMaterialResult@needle@hh@@@needle@hh@@UEAAHXZ:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?GetResult@?$IMirageAnim@VNameIDRef@needle@hh@@UAnimVisResult@23@@needle@hh@@UEAA_NPEAVNameIDRef@23@PEAUAnimVisResult@23@@Z
+?GetResult@?$IMirageAnim@VNameIDRef@needle@hh@@UAnimVisResult@23@@needle@hh@@UEAA_NPEAVNameIDRef@23@PEAUAnimVisResult@23@@Z:
     mov rax, 014118f6e0h
     jmp rax
 
@@ -124902,6 +125047,11 @@ PUBLIC ?classId@ResAnimTexSrt@resources@heur@@0PEBXEB
 
 PUBLIC ?typeInfo@ResAnimVis@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
 ?typeInfo@ResAnimVis@resources@heur@@0UResourceTypeInfo@fnd@hh@@B:
+    mov rax, 01415f62f0h
+    jmp rax
+
+PUBLIC ?typeInfo@ResAnimVis@gfx@hh@@0UResourceTypeInfo@fnd@3@B
+?typeInfo@ResAnimVis@gfx@hh@@0UResourceTypeInfo@fnd@3@B:
     mov rax, 01415f62f0h
     jmp rax
 
@@ -170655,6 +170805,11 @@ PUBLIC ?Unload@ResAnimMaterial@gfx@hh@@UEAAXXZ
     mov rax, 014f37bef0h
     jmp rax
 
+PUBLIC ?Unload@ResAnimVis@gfx@hh@@UEAAXXZ
+?Unload@ResAnimVis@gfx@hh@@UEAAXXZ:
+    mov rax, 014f37bef0h
+    jmp rax
+
 PUBLIC ?Create@ResAnimMaterial@resources@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z
 ?Create@ResAnimMaterial@resources@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 014f389c40h
@@ -170740,9 +170895,29 @@ PUBLIC ?Create@ResAnimVis@resources@heur@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z
     mov rax, 014f3d4930h
     jmp rax
 
+PUBLIC ?Create@ResAnimVis@gfx@hh@@CAPEAVManagedResource@fnd@3@PEAVIAllocator@5csl@@@Z
+?Create@ResAnimVis@gfx@hh@@CAPEAVManagedResource@fnd@3@PEAVIAllocator@5csl@@@Z:
+    mov rax, 014f3d4930h
+    jmp rax
+
 PUBLIC ??_GResAnimVis@resources@heur@@QEAAXXZ
 ??_GResAnimVis@resources@heur@@QEAAXXZ:
     mov rax, 014f3d5a30h
+    jmp rax
+
+PUBLIC ??_DResAnimVis@gfx@hh@@QEAAXXZ
+??_DResAnimVis@gfx@hh@@QEAAXXZ:
+    mov rax, 014f3d5a30h
+    jmp rax
+
+PUBLIC ?Load@ResAnimVis@gfx@hh@@UEAAXPEAX_K@Z
+?Load@ResAnimVis@gfx@hh@@UEAAXPEAX_K@Z:
+    mov rax, 014f3d6990h
+    jmp rax
+
+PUBLIC ?Reload@ResAnimVis@gfx@hh@@UEAAXPEAX_K@Z
+?Reload@ResAnimVis@gfx@hh@@UEAAXPEAX_K@Z:
+    mov rax, 014f3d6990h
     jmp rax
 
 PUBLIC ?Create@ResMaterial@gfx@hh@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z
@@ -170970,6 +171145,11 @@ PUBLIC ?SetMatAnimBlender@GOCVisualModel@gfx@hh@@QEAAPEAVMatAnimBlender@23@AEAUM
     mov rax, 014f5415c0h
     jmp rax
 
+PUBLIC ?SetTexPatBlender@GOCVisualModel@gfx@hh@@QEAAPEAVTexPatBlender@23@AEAUTexPatBlenderDesc@23@@Z
+?SetTexPatBlender@GOCVisualModel@gfx@hh@@QEAAPEAVTexPatBlender@23@AEAUTexPatBlenderDesc@23@@Z:
+    mov rax, 014f5575d0h
+    jmp rax
+
 PUBLIC ?Create@GOCVisualModel@gfx@hh@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z
 ?Create@GOCVisualModel@gfx@hh@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 014f5aad20h
@@ -170988,6 +171168,11 @@ PUBLIC ?SetMasterPoseComponent@GOCVisualModel@gfx@hh@@QEAAXPEAV123@@Z
 PUBLIC ?SetMatAnimBlender@GOCVisualModel@gfx@hh@@AEAAXPEAVMatAnimBlender@23@@Z
 ?SetMatAnimBlender@GOCVisualModel@gfx@hh@@AEAAXPEAVMatAnimBlender@23@@Z:
     mov rax, 014f5c0300h
+    jmp rax
+
+PUBLIC ?SetTexPatBlender@GOCVisualModel@gfx@hh@@AEAAXPEAVTexPatBlender@23@@Z
+?SetTexPatBlender@GOCVisualModel@gfx@hh@@AEAAXPEAVTexPatBlender@23@@Z:
+    mov rax, 014f5c0ce0h
     jmp rax
 
 PUBLIC ?Setup@GOCVisualModel@gfx@hh@@QEAAXAEBUGOCVisualModelDescription@23@@Z
@@ -171755,6 +171940,11 @@ PUBLIC ?GetEndFrame@TexPatControlHH@gfx@hh@@UEBAMXZ
     mov rax, 014fd88580h
     jmp rax
 
+PUBLIC ?GetEndFrame@VisAnimControlHH@gfx@hh@@UEBAMXZ
+?GetEndFrame@VisAnimControlHH@gfx@hh@@UEBAMXZ:
+    mov rax, 014fd88580h
+    jmp rax
+
 PUBLIC ?GetFrame@TexSrtControlHH@gfx@hh@@UEBAMXZ
 ?GetFrame@TexSrtControlHH@gfx@hh@@UEBAMXZ:
     mov rax, 014fd89f80h
@@ -171767,6 +171957,11 @@ PUBLIC ?GetFrame@MatAnimControlHH@gfx@hh@@UEBAMXZ
 
 PUBLIC ?GetFrame@TexPatControlHH@gfx@hh@@UEBAMXZ
 ?GetFrame@TexPatControlHH@gfx@hh@@UEBAMXZ:
+    mov rax, 014fd89f80h
+    jmp rax
+
+PUBLIC ?GetFrame@VisAnimControlHH@gfx@hh@@UEBAMXZ
+?GetFrame@VisAnimControlHH@gfx@hh@@UEBAMXZ:
     mov rax, 014fd89f80h
     jmp rax
 
@@ -171790,6 +171985,11 @@ PUBLIC ?SetFrame@TexPatControlHH@gfx@hh@@UEAAXM@Z
     mov rax, 014fd949a0h
     jmp rax
 
+PUBLIC ?SetFrame@VisAnimControlHH@gfx@hh@@UEAAXM@Z
+?SetFrame@VisAnimControlHH@gfx@hh@@UEAAXM@Z:
+    mov rax, 014fd949a0h
+    jmp rax
+
 PUBLIC ?SetUnk5@TexSrtControlHH@gfx@hh@@UEAAXM@Z
 ?SetUnk5@TexSrtControlHH@gfx@hh@@UEAAXM@Z:
     mov rax, 014fd966b0h
@@ -171802,6 +172002,11 @@ PUBLIC ?SetUnk5@MatAnimControlHH@gfx@hh@@UEAAXM@Z
 
 PUBLIC ?SetUnk5@TexPatControlHH@gfx@hh@@UEAAXM@Z
 ?SetUnk5@TexPatControlHH@gfx@hh@@UEAAXM@Z:
+    mov rax, 014fd966b0h
+    jmp rax
+
+PUBLIC ?SetUnk5@VisAnimControlHH@gfx@hh@@UEAAXM@Z
+?SetUnk5@VisAnimControlHH@gfx@hh@@UEAAXM@Z:
     mov rax, 014fd966b0h
     jmp rax
 
@@ -176720,6 +176925,16 @@ PUBLIC ?SetShadowReceiveFlag@PBRModelInstance@needle@hh@@AEAAX_N@Z
     mov rax, 0153ee60c0h
     jmp rax
 
+PUBLIC ?SetTexPatBlender@PBRModelInstance@needle@hh@@QEAAXPEAV?$AnimBlender@VAnimTexPatControl@needle@hh@@@23@@Z
+?SetTexPatBlender@PBRModelInstance@needle@hh@@QEAAXPEAV?$AnimBlender@VAnimTexPatControl@needle@hh@@@23@@Z:
+    mov rax, 0153ee7850h
+    jmp rax
+
+PUBLIC ?SetVisibilityBlender@PBRModelInstance@needle@hh@@QEAAXPEAV?$AnimBlender@VAnimVisControl@needle@hh@@@23@@Z
+?SetVisibilityBlender@PBRModelInstance@needle@hh@@QEAAXPEAV?$AnimBlender@VAnimVisControl@needle@hh@@@23@@Z:
+    mov rax, 0153eee540h
+    jmp rax
+
 PUBLIC ?UnkFunc9@PBRModelInstance@needle@hh@@UEAAXXZ
 ?UnkFunc9@PBRModelInstance@needle@hh@@UEAAXXZ:
     mov rax, 0153ef0860h
@@ -178198,6 +178413,11 @@ PUBLIC ??_DPtAnimationResource@needle@hh@@QEAAXXZ
 PUBLIC ??_DTexcoordAnimationResource@needle@hh@@QEAAXXZ
 ??_DTexcoordAnimationResource@needle@hh@@QEAAXXZ:
     mov rax, 0155a51d90h
+    jmp rax
+
+PUBLIC ??_DVisibilityAnimationResource@needle@hh@@QEAAXXZ
+??_DVisibilityAnimationResource@needle@hh@@QEAAXXZ:
+    mov rax, 0155a59cb0h
     jmp rax
 
 PUBLIC ??0Project@SurfRide@@QEAA@XZ

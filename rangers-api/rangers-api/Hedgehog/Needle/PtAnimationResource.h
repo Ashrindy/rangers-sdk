@@ -47,6 +47,7 @@ namespace hh::needle {
 
     class AnimTexPatControl : public MirageAnimController<int, AnimTexPatResult> {
     public:
+        typedef int ID;
         typedef AnimTexPatResult Result;
 
         struct Description {

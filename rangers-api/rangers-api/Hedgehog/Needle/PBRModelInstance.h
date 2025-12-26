@@ -22,15 +22,16 @@ namespace hh::needle {
     class AnimMaterialControl;
     class AnimTexSrtControl;
     class AnimTexPatControl;
+    class AnimVisControl;
 
     class PBRModelInstance : public ModelInstance {
     public:
         int64_t unk3;
         int64_t unk4;
         AnimBlender<AnimMaterialControl>* matBlender;
-        int64_t unk6;
+        AnimBlender<AnimTexPatControl>* texPatBlender;
         AnimBlender<AnimTexSrtControl>* texSrtBlender;
-        int64_t unk8;
+        AnimBlender<AnimVisControl>* visBlender;
         int64_t unk9;
         int64_t unk10;
         char unk11[0x30];
@@ -54,5 +55,6 @@ namespace hh::needle {
         void SetTexSrtBlender(AnimBlender<AnimTexSrtControl>* blender);
         void SetMaterialBlender(AnimBlender<AnimMaterialControl>* blender);
         void SetTexPatBlender(AnimBlender<AnimTexPatControl>* blender);
+        void SetVisibilityBlender(AnimBlender<AnimVisControl>* blender);
     };
 }

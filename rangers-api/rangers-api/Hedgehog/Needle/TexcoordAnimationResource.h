@@ -64,6 +64,7 @@ namespace hh::needle {
 
     class AnimTexSrtControl : public MirageAnimController<int, AnimTexSrtResult> {
     public:
+        typedef int ID;
         typedef AnimTexSrtResult Result;
 
         unsigned int animationCount;
