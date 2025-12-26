@@ -21,6 +21,7 @@ namespace hh::needle {
 
     class AnimMaterialControl;
     class AnimTexSrtControl;
+    class AnimTexPatControl;
 
     class PBRModelInstance : public ModelInstance {
     public:
@@ -52,5 +53,6 @@ namespace hh::needle {
         static PBRModelInstance* Create(Model* model, const PBRModelCreationInfo& info, const PBRModelInstanceRenderer* renderer);
         void SetTexSrtBlender(AnimBlender<AnimTexSrtControl>* blender);
         void SetMaterialBlender(AnimBlender<AnimMaterialControl>* blender);
+        void SetTexPatBlender(AnimBlender<AnimTexPatControl>* blender);
     };
 }
