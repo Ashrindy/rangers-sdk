@@ -106085,6 +106085,46 @@ PUBLIC ?UnkFunc1@AnimController@needle@hh@@UEAAXM@Z
     mov rax, 0141114210h
     jmp rax
 
+PUBLIC ??_DAnimCameraControl@needle@hh@@QEAAXXZ
+??_DAnimCameraControl@needle@hh@@QEAAXXZ:
+    mov rax, 01411142e0h
+    jmp rax
+
+PUBLIC ?Create@AnimCameraControl@needle@hh@@SAPEAV123@AEAV?$intrusive_ptr@VCameraMotionResource@needle@hh@@USRefCountAddReleaseNeedleObject@23@$00@23@I@Z
+?Create@AnimCameraControl@needle@hh@@SAPEAV123@AEAV?$intrusive_ptr@VCameraMotionResource@needle@hh@@USRefCountAddReleaseNeedleObject@23@$00@23@I@Z:
+    mov rax, 0141114a70h
+    jmp rax
+
+PUBLIC ?UnkFunc1@AnimCameraControl@needle@hh@@UEAAPEAXPEAX0@Z
+?UnkFunc1@AnimCameraControl@needle@hh@@UEAAPEAXPEAX0@Z:
+    mov rax, 0141114b80h
+    jmp rax
+
+PUBLIC ?GetResult@AnimCameraControl@needle@hh@@UEAAXPEAUViewParameter@23@PEAUProjParameter@23@@Z
+?GetResult@AnimCameraControl@needle@hh@@UEAAXPEAUViewParameter@23@PEAUProjParameter@23@@Z:
+    mov rax, 0141114b80h
+    jmp rax
+
+PUBLIC ?UnkFunc0@AnimCameraControl@needle@hh@@UEAAPEAXPEAVVector4@math@csl@@0@Z
+?UnkFunc0@AnimCameraControl@needle@hh@@UEAAPEAXPEAVVector4@math@csl@@0@Z:
+    mov rax, 0141114e00h
+    jmp rax
+
+PUBLIC ?GetResult@AnimCameraControl@needle@hh@@UEAA?AVMatrix44@math@csl@@PEAVMatrix34@56@@Z
+?GetResult@AnimCameraControl@needle@hh@@UEAA?AVMatrix44@math@csl@@PEAVMatrix34@56@@Z:
+    mov rax, 0141114e00h
+    jmp rax
+
+PUBLIC ?GetResult@AnimCameraControl@needle@hh@@UEAAAEAVMatrix44@math@csl@@PEAVMatrix34@56@PEAV456@@Z
+?GetResult@AnimCameraControl@needle@hh@@UEAAAEAVMatrix44@math@csl@@PEAVMatrix34@56@PEAV456@@Z:
+    mov rax, 0141114e00h
+    jmp rax
+
+PUBLIC ?GetResult@AnimCameraControl@needle@hh@@UEAAXPEAVMatrix34@math@csl@@PEAVMatrix44@56@@Z
+?GetResult@AnimCameraControl@needle@hh@@UEAAXPEAVMatrix34@math@csl@@PEAVMatrix44@56@@Z:
+    mov rax, 0141114e00h
+    jmp rax
+
 PUBLIC ?ExecuteChunk@needle@hh@@YAXAEAUSCheckexec@12@PEBUParameterInfo@MaterialChunkBuilder@12@IPEAX_N@Z
 ?ExecuteChunk@needle@hh@@YAXAEAUSCheckexec@12@PEBUParameterInfo@MaterialChunkBuilder@12@IPEAX_N@Z:
     mov rax, 0141115760h
@@ -106093,6 +106133,16 @@ PUBLIC ?ExecuteChunk@needle@hh@@YAXAEAUSCheckexec@12@PEBUParameterInfo@MaterialC
 PUBLIC ?GetMirageMaterialTextureNameType@needle@hh@@YAPEAVCNameIDObject@12@XZ
 ?GetMirageMaterialTextureNameType@needle@hh@@YAPEAVCNameIDObject@12@XZ:
     mov rax, 01411191a0h
+    jmp rax
+
+PUBLIC ?LoadCameraMotion@needle@hh@@YAPEAVCameraMotionResource@12@PEBX@Z
+?LoadCameraMotion@needle@hh@@YAPEAVCameraMotionResource@12@PEBX@Z:
+    mov rax, 0141119bf0h
+    jmp rax
+
+PUBLIC ?CalcCameraAnimation@needle@hh@@YAXPEBVCameraMotionResource@12@IMPEAUViewParameter@12@PEAUProjParameter@12@@Z
+?CalcCameraAnimation@needle@hh@@YAXPEBVCameraMotionResource@12@IMPEAUViewParameter@12@PEAUProjParameter@12@@Z:
+    mov rax, 014111b3d0h
     jmp rax
 
 PUBLIC ?CalcMaterialAnimation@needle@hh@@YAHPEBVMaterialAnimationResource@12@MPEAUMaterialColorData@12@@Z
@@ -106265,6 +106315,11 @@ PUBLIC ?GetResult@AnimVisControl@needle@hh@@UEAA_NPEAVNameIDRef@23@PEAUAnimVisRe
     mov rax, 014111ff00h
     jmp rax
 
+PUBLIC ?LoadCameraMotion@needle@hh@@YAPEAVCameraMotionResource@12@PEAVRenderingDevice@12@PEBX@Z
+?LoadCameraMotion@needle@hh@@YAPEAVCameraMotionResource@12@PEAVRenderingDevice@12@PEBX@Z:
+    mov rax, 0141120550h
+    jmp rax
+
 PUBLIC ?LoadMaterialAnimation@needle@hh@@YAPEAVMaterialAnimationResource@12@PEAVRenderingDevice@12@PEBX@Z
 ?LoadMaterialAnimation@needle@hh@@YAPEAVMaterialAnimationResource@12@PEAVRenderingDevice@12@PEBX@Z:
     mov rax, 0141121620h
@@ -106303,6 +106358,16 @@ PUBLIC ?QueryResource@TexcoordAnimationResource@needle@hh@@UEAAPEAX_K@Z
 PUBLIC ?QueryResource@TexcoordAnimationResource@needle@hh@@UEBAPEBX_K@Z
 ?QueryResource@TexcoordAnimationResource@needle@hh@@UEBAPEBX_K@Z:
     mov rax, 0141122c50h
+    jmp rax
+
+PUBLIC ?QueryResource@CameraMotionResource@needle@hh@@UEAAPEAX_K@Z
+?QueryResource@CameraMotionResource@needle@hh@@UEAAPEAX_K@Z:
+    mov rax, 0141122c70h
+    jmp rax
+
+PUBLIC ?QueryResource@CameraMotionResource@needle@hh@@UEBAPEBX_K@Z
+?QueryResource@CameraMotionResource@needle@hh@@UEBAPEBX_K@Z:
+    mov rax, 0141122c70h
     jmp rax
 
 PUBLIC ?QueryResource@VisibilityAnimationResource@needle@hh@@UEAAPEAX_K@Z
@@ -178365,6 +178430,11 @@ PUBLIC ?LoadMirageMaterial2@needle@hh@@YA_NPEAVRenderingDevice@12@PEBXPEAPEAVMat
     mov rax, 01559ad740h
     jmp rax
 
+PUBLIC ?FixScale@CameraMotionResource@needle@hh@@QEAAXM@Z
+?FixScale@CameraMotionResource@needle@hh@@QEAAXM@Z:
+    mov rax, 01559ddb90h
+    jmp rax
+
 PUBLIC ??_DAnimMaterialControl@needle@hh@@QEAAXXZ
 ??_DAnimMaterialControl@needle@hh@@QEAAXXZ:
     mov rax, 0155a0cfb0h
@@ -178398,6 +178468,11 @@ PUBLIC ?Create@AnimTexPatControl@needle@hh@@SAPEAV123@AEAV?$intrusive_ptr@VPtAni
 PUBLIC ?Create@AnimTexPatControl@needle@hh@@SAPEAV123@AEAUDescription@123@@Z
 ?Create@AnimTexPatControl@needle@hh@@SAPEAV123@AEAUDescription@123@@Z:
     mov rax, 0155a3b9f0h
+    jmp rax
+
+PUBLIC ??_DCameraMotionResource@needle@hh@@QEAAXXZ
+??_DCameraMotionResource@needle@hh@@QEAAXXZ:
+    mov rax, 0155a3c2e0h
     jmp rax
 
 PUBLIC ??_DMaterialAnimationResource@needle@hh@@QEAAXXZ

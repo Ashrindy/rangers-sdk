@@ -304,6 +304,7 @@ namespace rangerssdk::ucsl {
 #include "Hedgehog/Needle/TexcoordAnimationResource.h"
 #include "Hedgehog/Needle/PtAnimationResource.h"
 #include "Hedgehog/Needle/VisibilityAnimationResource.h"
+#include "Hedgehog/Needle/CameraMotionResource.h"
 #include "Hedgehog/Needle/RenderingCommandList.h"
 #include "Hedgehog/Needle/DisplaySwapDevice.h"
 #include "Hedgehog/Needle/ShaderListInfo.h"

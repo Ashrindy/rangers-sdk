@@ -29475,10 +29475,19 @@
 1411141e0,?SetSpeed@AnimController@needle@hh@@QEAAXM@Z,1
 141114200,?SetLocalTime@AnimController@needle@hh@@QEAAXM@Z,1
 141114210,?UnkFunc1@AnimController@needle@hh@@UEAAXM@Z,1
+1411142e0,??_DAnimCameraControl@needle@hh@@QEAAXXZ,1
+141114a70,?Create@AnimCameraControl@needle@hh@@SAPEAV123@AEAV?$intrusive_ptr@VCameraMotionResource@needle@hh@@USRefCountAddReleaseNeedleObject@23@$00@23@I@Z,1
+141114b80,?UnkFunc1@AnimCameraControl@needle@hh@@UEAAPEAXPEAX0@Z,1
+141114b80,?GetResult@AnimCameraControl@needle@hh@@UEAAXPEAUViewParameter@23@PEAUProjParameter@23@@Z,1
+141114e00,?UnkFunc0@AnimCameraControl@needle@hh@@UEAAPEAXPEAVVector4@math@csl@@0@Z,1
+141114e00,?GetResult@AnimCameraControl@needle@hh@@UEAA?AVMatrix44@math@csl@@PEAVMatrix34@56@@Z,1
+141114e00,?GetResult@AnimCameraControl@needle@hh@@UEAAAEAVMatrix44@math@csl@@PEAVMatrix34@56@PEAV456@@Z,1
+141114e00,?GetResult@AnimCameraControl@needle@hh@@UEAAXPEAVMatrix34@math@csl@@PEAVMatrix44@56@@Z,1
 1411151a0,j_?BuildMaterialResourceFromResolvedMemoryImage@needle@hh@@YAXPEAVRenderingDevice@12@PEBXPEAPEAVMaterialResource@12@_N@Z,1
 141115760,?ExecuteChunk@needle@hh@@YAXAEAUSCheckexec@12@PEBUParameterInfo@MaterialChunkBuilder@12@IPEAX_N@Z,1
 1411184c0,j_?Traverse@MaterialChunkBuilder@needle@hh@@SAXPEAXAEAU123@@Z,1
 1411191a0,?GetMirageMaterialTextureNameType@needle@hh@@YAPEAVCNameIDObject@12@XZ,1
+141119bf0,?LoadCameraMotion@needle@hh@@YAPEAVCameraMotionResource@12@PEBX@Z,1
 141119d10,j_?LoadMaterialAnimation@needle@hh@@YAPEAVMaterialAnimationResource@12@PEAVRenderingDevice@12@PEBX@Z,1
 141119f10,j_?LoadMirageMaterial2@needle@hh@@YA_NPEAVRenderingDevice@12@PEBXPEAPEAVMaterialResource@12@@Z,1
 14111a1c0,j_?LoadPatternChangeAnimation@needle@hh@@YAPEAVPtAnimationResource@12@PEAVRenderingDevice@12@PEBX@Z,1
@@ -29486,6 +29495,8 @@
 14111a1e0,j_?LoadVisibilityAnimation@needle@hh@@YAPEAVVisibilityAnimationResource@12@PEAVRenderingDevice@12@PEBX@Z,1
 14111a210,j_?ResolveMirageResourceBinary@needle@hh@@YA_NPEAX@Z,1
 14111a390,j_?UnResolveMirageResourceBinary@needle@hh@@YA_NPEAX@Z,1
+14111adb0,j_?FixScale@CameraMotionResource@needle@hh@@QEAAXM@Z,1
+14111b3d0,?CalcCameraAnimation@needle@hh@@YAXPEBVCameraMotionResource@12@IMPEAUViewParameter@12@PEAUProjParameter@12@@Z,1
 14111c3d0,?CalcMaterialAnimation@needle@hh@@YAHPEBVMaterialAnimationResource@12@MPEAUMaterialColorData@12@@Z,1
 14111c670,?CalcPatternChangeAnimation@needle@hh@@YAIPEBUAnimation@PtAnimationResource@12@M@Z,1
 14111c670,?CalcPatternChangeAnimation@needle@hh@@YAHPEBUAnimation@PtAnimationResource@12@M@Z,1
@@ -29527,10 +29538,12 @@
 14111fae0,??_DAnimVisControl@needle@hh@@QEAAXXZ,1
 14111fd40,?Create@AnimVisControl@needle@hh@@SAPEAV123@AEAV?$intrusive_ptr@VVisibilityAnimationResource@needle@hh@@USRefCountAddReleaseNeedleObject@23@$00@23@@Z,1
 14111ff00,?GetResult@AnimVisControl@needle@hh@@UEAA_NPEAVNameIDRef@23@PEAUAnimVisResult@23@@Z,1
+141120090,j_??_DCameraMotionResource@needle@hh@@QEAAXXZ,1
 1411201d0,j_??_DMaterialAnimationResource@needle@hh@@QEAAXXZ,1
 1411202e0,j_??_DPtAnimationResource@needle@hh@@QEAAXXZ,1
 1411203b0,j_??_DTexcoordAnimationResource@needle@hh@@QEAAXXZ,1
 141120490,j_??_DVisibilityAnimationResource@needle@hh@@QEAAXXZ,1
+141120550,?LoadCameraMotion@needle@hh@@YAPEAVCameraMotionResource@12@PEAVRenderingDevice@12@PEBX@Z,1
 141121620,?LoadMaterialAnimation@needle@hh@@YAPEAVMaterialAnimationResource@12@PEAVRenderingDevice@12@PEBX@Z,1
 141121d00,?LoadPatternChangeAnimation@needle@hh@@YAPEAVPtAnimationResource@12@PEAVRenderingDevice@12@PEBX@Z,1
 141122230,?LoadTexcoordAnimation@needle@hh@@YAPEAVTexcoordAnimationResource@12@PEAVRenderingDevice@12@PEBX@Z,1
@@ -29539,6 +29552,8 @@
 141122c30,?QueryResource@PtAnimationResource@needle@hh@@UEBAPEBX_K@Z,1
 141122c50,?QueryResource@TexcoordAnimationResource@needle@hh@@UEAAPEAX_K@Z,1
 141122c50,?QueryResource@TexcoordAnimationResource@needle@hh@@UEBAPEBX_K@Z,1
+141122c70,?QueryResource@CameraMotionResource@needle@hh@@UEAAPEAX_K@Z,1
+141122c70,?QueryResource@CameraMotionResource@needle@hh@@UEBAPEBX_K@Z,1
 141122c90,?QueryResource@VisibilityAnimationResource@needle@hh@@UEAAPEAX_K@Z,1
 141122c90,?QueryResource@VisibilityAnimationResource@needle@hh@@UEBAPEBX_K@Z,1
 141122cb0,?QueryResource@MaterialAnimationResource@needle@hh@@UEAAPEAX_K@Z,1
@@ -41998,6 +42013,8 @@
 143a1a190,??_7RenderingDeviceContextDX11@ImplDX11@needle@hh@@6B@,1
 143a1a618,??_7DisplaySwapDeviceDX11@ImplDX11@needle@hh@@6B@,1
 143a1b938,??_7AnimController@needle@hh@@6B@,1
+143a1bc30,??_7AnimCameraControl@needle@hh@@6B@,1
+143a1bc58,??_7AnimCameraControl@needle@hh@@6BNeedleRefcountObject@12@@,1
 143a1cd18,??_7?$MirageAnimController@HUAnimTexSrtResult@needle@hh@@@needle@hh@@6B@,1
 143a1cd18,??_7?$MirageAnimController@HUAnimMaterialResult@needle@hh@@@needle@hh@@6B@,1
 143a1cd18,??_7?$MirageAnimController@VNameIDRef@needle@hh@@UAnimVisResult@23@@needle@hh@@6B@,1
@@ -42009,6 +42026,7 @@
 143a1ed60,??_7VisibilityAnimationResource@needle@hh@@6B@,1
 143a1eda0,??_7TexcoordAnimationResource@needle@hh@@6B@,1
 143a1ede0,??_7PtAnimationResource@needle@hh@@6B@,1
+143a1eea0,??_7CameraMotionResource@needle@hh@@6B@,1
 143a20ec0,??_7Project@SurfRide@@6B@,1
 143a211b0,??_7Scene@SurfRide@@6B@,1
 143a214a0,??_7Layer@SurfRide@@6B@,1
@@ -90165,6 +90183,7 @@
 15597df30,?BuildMaterialResourceFromResolvedMemoryImage@needle@hh@@YAXPEAVRenderingDevice@12@PEBXPEAPEAVMaterialResource@12@_N@Z,1
 1559a7090,?Traverse@MaterialChunkBuilder@needle@hh@@SAXPEAXAEAU123@@Z,1
 1559ad740,?LoadMirageMaterial2@needle@hh@@YA_NPEAVRenderingDevice@12@PEBXPEAPEAVMaterialResource@12@@Z,1
+1559ddb90,?FixScale@CameraMotionResource@needle@hh@@QEAAXM@Z,1
 155a0cfb0,??_DAnimMaterialControl@needle@hh@@QEAAXXZ,1
 155a11aa0,?Create@AnimMaterialControl@needle@hh@@SAPEAV123@AEAV?$intrusive_ptr@VMaterialAnimationResource@needle@hh@@USRefCountAddReleaseNeedleObject@23@$00@23@@Z,1
 155a21b50,?Unbind@AnimMaterialControl@needle@hh@@UEAAXXZ,1
@@ -90172,6 +90191,7 @@
 155a2f510,?Bind@AnimTexPatControl@needle@hh@@UEAAXAEAV?$intrusive_ptr@VMeshResource@needle@hh@@USRefCountAddReleaseNeedleObject@23@$00@23@@Z,1
 155a3b9f0,?Create@AnimTexPatControl@needle@hh@@SAPEAV123@AEAV?$intrusive_ptr@VPtAnimationResource@needle@hh@@USRefCountAddReleaseNeedleObject@23@$00@23@@Z,1
 155a3b9f0,?Create@AnimTexPatControl@needle@hh@@SAPEAV123@AEAUDescription@123@@Z,1
+155a3c2e0,??_DCameraMotionResource@needle@hh@@QEAAXXZ,1
 155a49ec0,??_DMaterialAnimationResource@needle@hh@@QEAAXXZ,1
 155a4f180,??_DPtAnimationResource@needle@hh@@QEAAXXZ,1
 155a51d90,??_DTexcoordAnimationResource@needle@hh@@QEAAXXZ,1
