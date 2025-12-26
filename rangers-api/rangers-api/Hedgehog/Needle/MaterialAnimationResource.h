@@ -104,6 +104,7 @@ namespace hh::needle {
 
     class AnimMaterialControl : public MirageAnimController<int, AnimMaterialResult> {
     public:
+        typedef int ID;
         typedef AnimMaterialResult Result;
 
         int flags;
