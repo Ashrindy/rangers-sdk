@@ -12566,7 +12566,6 @@
 14024acb0,j_??_GAuraEffectManager@gfx@app@@QEAAXXZ,0
 14024acb0,j_??_DAuraEffectManager@gfx@app@@QEAAXXZ,0
 14024ada0,j_??_DAuraRenderable@AuraEffectManager@gfx@app@@QEAAXXZ,1
-14024ae60,?PostStepCallback@GameStepListener@game@hh@@UEAAXPEAVGameManager@23@AEBUGameStepInfo@23@@Z,1
 14024ae60,?PostStepCallback@AuraEffectManager@gfx@app@@UEAAXPEAVGameManager@game@hh@@AEBUGameStepInfo@56@@Z,1
 14024afa0,?GetRuntimeTypeInfo@AuraEffectManager@gfx@app@@UEBAPEAXXZ,1
 14024b080,j_?OnAddedToGame@AuraEffectManager@gfx@app@@UEAAXXZ,1

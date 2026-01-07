@@ -36655,11 +36655,6 @@ PUBLIC ?GetClass@GOCVisualGeometryInstance@gfx@app@@SAPEBVGOComponentClass@game@
     mov rax, 014024ac90h
     jmp rax
 
-PUBLIC ?PostStepCallback@GameStepListener@game@hh@@UEAAXPEAVGameManager@23@AEBUGameStepInfo@23@@Z
-?PostStepCallback@GameStepListener@game@hh@@UEAAXPEAVGameManager@23@AEBUGameStepInfo@23@@Z:
-    mov rax, 014024ae60h
-    jmp rax
-
 PUBLIC ?PostStepCallback@AuraEffectManager@gfx@app@@UEAAXPEAVGameManager@game@hh@@AEBUGameStepInfo@56@@Z
 ?PostStepCallback@AuraEffectManager@gfx@app@@UEAAXPEAVGameManager@game@hh@@AEBUGameStepInfo@56@@Z:
     mov rax, 014024ae60h
