@@ -1,14 +1,31 @@
 #pragma once
 
 namespace app{
-    class BossGiantContext : public BossBaseContext {
+    class BossGiantContext : public BossBaseContext, public game::GOCFootListener {
     public:
-        int x;
+        int32_t qword3E0;
+        int32_t qword3E4;
+        int32_t dword3E8;
+        int64_t qword3F0;
+        int64_t qword3F8;
+        int32_t dword400;
+        int16_t word404;
+        int64_t qword408;
+        int64_t qword410;
+        hh::fnd::Reference<hh::fnd::HFrame> qword418;
+        int32_t qword420;
+        int64_t dword428;
+        csl::ut::InplaceMoveArray<int64_t, 2> qword430;
+        int64_t qword458;
+        int32_t qword468;
+        int32_t qword46C;
+        int32_t dword470;
 
         virtual uint64_t PPL_UnkFunc0() override;
         virtual int8_t TPHL_UnkFunc0() override { return 0; }
         virtual void PreDealDamage(MsgDamage& message, int damageIn, int& damageOut) override;
         virtual void DamageDealt(MsgDamage& message, int damage, bool stunned, bool staggered) override;
+        virtual void GFL_UnkFunc0(int64_t a2, int a3) override;
 
         virtual void Update(hh::fnd::UpdatingPhase phase, hh::fnd::SUpdateInfo& updateInfo) override;
         virtual void SetGameObject(hh::game::GameManager* gameManager, hh::game::GameObject* gameObject) override;
@@ -21,5 +38,7 @@ namespace app{
         virtual void KillBoss() override;
         virtual int64_t BBCtx_UnkFunc13() override;
         virtual const char* GetBossStateName(int stateIdx) override;
+
+        BossGiantContext(csl::fnd::IAllocator* allocator);
     };
 }

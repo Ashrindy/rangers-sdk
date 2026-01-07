@@ -25,9 +25,9 @@ namespace app{
 
         app_cmn::rfl::GOCRflParameter* gocRfl;
         GOCTargetPositionHelper* gocTargetPositionHelper;
-        fnd::HFrameContainer* hFrameContainer;
-        gfx::MultiNodeContainer* multiNodeContainer;
-        physics::ColliderContainer* colliderContainer;
+        hh::fnd::Reference<fnd::HFrameContainer> hFrameContainer;
+        hh::fnd::Reference<gfx::MultiNodeContainer> multiNodeContainer;
+        hh::fnd::Reference<physics::ColliderContainer> colliderContainer;
         csl::ut::MoveArray<int64_t> qword60;
         csl::ut::MoveArray<int64_t> qword80;
         csl::ut::MoveArray<int64_t> qwordA0;
@@ -47,15 +47,14 @@ namespace app{
         csl::math::Vector3 lastHitPosition;
         csl::math::Vector4 csl__math__vector4220;
         csl::math::Vector4 relatedToLastHit;
-        csl::math::Vector4 qword240;
-        csl::math::Vector4 qword250;
+        hh::fnd::WorldPosition qword240;
         app_cmn::camera::CameraController* currentCamera;
         csl::ut::MoveArray<hh::fnd::Handle<hh::game::GameObject>> qword268; //giganto has HeroSagePoint here
         csl::ut::MoveArray<hh::fnd::Handle<hh::game::GameObject>> qword288;
         csl::ut::MoveArray<hh::fnd::Handle<hh::game::GameObject>> qword2A8;
         csl::ut::MoveArray<int64_t> qword2C8;
         csl::ut::MoveArray<hh::fnd::Handle<hh::game::GameObject>> qword2E8; //giganto has ObjBossClosedArea here
-        csl::ut::MoveArray<gfx::ModelAnimationPlayer*> modelAnimationPlayers;
+        csl::ut::MoveArray<hh::fnd::Reference<gfx::ModelAnimationPlayer>> modelAnimationPlayers;
         csl::ut::Bitset<Flags> flags;
         int currentPhase; 
         int dword334; 
@@ -64,7 +63,7 @@ namespace app{
         csl::ut::MoveArray<int64_t> states;
         hh::fnd::WorldPosition hh__fnd__worldposition380;
         int16_t word3A0; //prolly flags
-        csl::ut::MoveArray<int64_t> qword3A8;
+        csl::ut::InplaceMoveArray<int64_t, 2> qword3A8;
         
         virtual uint64_t PPL_UnkFunc0() override;
         virtual int8_t TPHL_UnkFunc0() override { return 0; }
@@ -88,9 +87,10 @@ namespace app{
         virtual const char* GetBossStateName(int stateIdx);
 
         void AddCameraController(app_cmn::camera::CameraController* cam, int unk);
-        void AddModelAnimationPlayer(hh::gfx::GOCVisualModel* gocVisualModel);
+        gfx::ModelAnimationPlayer* AddModelAnimationPlayer(hh::gfx::GOCVisualModel* gocVisualModel);
         app_cmn::fsm::GOCHsm2* GetGOCHsm2();
         app_cmn::rfl::GOCRflParameter* GetGOCRflParameter();
+        void AddNode(hh::gfx::GOCVisualModel* model, const char* name);
 
         BossBaseContext(csl::fnd::IAllocator* allocator);
     };

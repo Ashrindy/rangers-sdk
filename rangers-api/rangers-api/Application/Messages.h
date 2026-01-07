@@ -154,4 +154,11 @@ namespace app {
 
         MsgFishingChangeCameraMode() : fnd::AppMessage<MsgFishingChangeCameraMode>{ hh::fnd::MessageID::FISHING_CHANGE_CAMERA_MODE } {}
     };
+
+    class MsgRaiseRings : public fnd::AppMessage<MsgRaiseRings> {
+    public:
+        int ringAmount;
+
+        MsgRaiseRings() : fnd::AppMessage<MsgRaiseRings>{ hh::fnd::MessageID::RAISE_RINGS } {}
+    };
 }

@@ -1051,6 +1051,7 @@ namespace rangerssdk::ucsl {
 #include "Application/Player/StatePlugin/StatePluginCyberStart.h"
 #include "Application/Player/StatePlugin/StatePluginBossBattle.h"
 #include "Application/Player/StatePlugin/StatePluginEffect.h"
+#include "Application/Player/StatePlugin/StatePluginCyloop.h"
 #include "Application/Player/HomingTargetInfo.h"
 #include "Application/Player/GravityController.h"
 #include "Application/Player/GOCPlayerHsm.h"
@@ -1155,13 +1156,17 @@ namespace rangerssdk::ucsl {
 #include "Application/Game/Script.h"
 #include "Application/Game/ObjectWorldService.h"
 #include "Application/Game/GravityManager.h"
+#include "Application/Game/GOCFoot.h"
 
 #include "Application/ScriptSequence.h"
 #include "Application/ScriptSequenceManager.h"
 
+#include "Application/Animation/AnimatorTriggerListener.h"
+
 #include "Application/Game/GOCScript.h"
 #include "Application/Game/ReactiveService.h"
 #include "Application/Game/GOCBossActionSelect.h"
+#include "Application/Game/GOCBossAnimatorTriggerHelper.h"
 
 #include "Application/UI/AppUITextInterface.h"
 #include "Application/UI/UIMusicSelect.h"

@@ -12,7 +12,7 @@ namespace app_cmn::fsm {
         hh::ut::HsmBase hsm;
         int currentStateIdx;
         int bottomStateIdx;
-        bool unk103;
+        bool unk103; // probably flags as char? 4th bit possibly being BOTTOM_STATE_DIRTY @ 0x140B7F230 (SetBottomStateId)
         uint32_t unk104;
         csl::ut::InplaceMoveArray<void*, 1> unk105;
         app_cmn::fsm::GOCHsmContext* hsmContext;
@@ -40,8 +40,9 @@ namespace app_cmn::fsm {
 		virtual void OnGOCEvent(GOCEvent event, hh::game::GameObject& ownerGameObject, void* data) override;
         void Setup(Description& desc);
 
+        int GetBottomStateIdx() const;
         int GetBottomStateId();
-        bool UnkFunc0(int a2);
+        bool SetBottomStateId(int id);
         inline hh::ut::HsmBase& GetHsm() {
             return hsm;
         }
