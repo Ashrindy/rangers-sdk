@@ -15,6 +15,8 @@ namespace app::game{
 		virtual void UpdateAsync(hh::fnd::UpdatingPhase phase, const hh::fnd::SUpdateInfo& updateInfo, void* unkParam) override;
         virtual void OnGOCEvent(GOCEvent event, hh::game::GameObject& ownerGameObject, void* data) override;
 
+        csl::math::Transform GetObjectTransform() const;
+
         GOCOMPONENT_CLASS_DECLARATION(GOCBossMoveableRange)
     };
 }

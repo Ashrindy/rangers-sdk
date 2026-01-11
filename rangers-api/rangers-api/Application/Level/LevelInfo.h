@@ -42,4 +42,6 @@ namespace app::level {
 
         GAMESERVICE_CLASS_DECLARATION(LevelInfo)
     };
+
+    csl::math::Vector3 GetPlayerPosition(const hh::game::GameObject* gameObject);
 }

@@ -3,10 +3,10 @@
 namespace app{
     class BossGiantContext : public BossBaseContext, public game::GOCFootListener {
     public:
-        int32_t qword3E0;
+        int32_t giantFlags;
         int32_t qword3E4;
-        int32_t dword3E8;
-        int64_t qword3F0;
+        game::GOCBossActionSelect* bossActionSelect;
+        int64_t bossPillar;
         int64_t qword3F8;
         int32_t dword400;
         int16_t word404;
@@ -15,7 +15,7 @@ namespace app{
         hh::fnd::Reference<hh::fnd::HFrame> qword418;
         int32_t qword420;
         int64_t dword428;
-        csl::ut::InplaceMoveArray<int64_t, 2> qword430;
+        csl::ut::InplaceMoveArray<hh::physics::GOCMeshCollider*, 2> meshColliders;
         int64_t qword458;
         int32_t qword468;
         int32_t qword46C;
@@ -36,8 +36,11 @@ namespace app{
         virtual int64_t SetCurrentPhase(int currentPhase) override;
         virtual int64_t EndFight(char a2, bool shouldClearIsland) override;
         virtual void KillBoss() override;
-        virtual int64_t BBCtx_UnkFunc13() override;
+        virtual bool KillPlayer() override;
         virtual const char* GetBossStateName(int stateIdx) override;
+
+        heur::rfl::BossGiantPhaseParam* GetPhaseParam(unsigned int phase) const;
+        heur::rfl::BossGiantPhaseParam* GetCurrentPhaseParam() const;
 
         BossGiantContext(csl::fnd::IAllocator* allocator);
     };

@@ -55,10 +55,18 @@ namespace app_cmn::fsm {
     public:
         inline GOCStateBase(csl::fnd::IAllocator* allocator) : hh::ut::StateBase<T>{ allocator } {}
 
-        virtual bool GSB_UnkFunc0(T& context) { return false; }
-        virtual bool GSB_UnkFunc1(T& context) { return false; }
-        virtual bool GSB_UnkFunc2(T& context) { return false; }
-        virtual void GSB_UnkFunc3(T& context, int64_t a3, int64_t a4, char a5) {}
-        virtual bool GSB_UnkFunc4(T& context) { return false; }
+        virtual bool DoInit() override { return StateInit(*(T*)this->context); }
+        virtual void DoEnter(int previousStateId) override { StateEnter(*(T*)this->context, previousStateId); }
+        virtual void DoLeave(int nextStateId) override { StateLeave(*(T*)this->context, nextStateId); }
+        virtual bool DoStep(float deltaTime) override { return StateStep(*(T*)this->context, deltaTime); }
+        virtual bool DoUpdate(hh::fnd::UpdatingPhase phase, float deltaTime) override { return StateUpdate(*(T*)this->context, phase, deltaTime); }
+        virtual bool DoUpdateAsync(hh::fnd::UpdatingPhase phase, float deltaTime) override { return StateUpdateAsync(*(T*)this->context, phase, deltaTime); }
+
+        virtual bool StateStep(T& context, float deltaTime) { return false; }
+        virtual bool StateUpdate(T& context, hh::fnd::UpdatingPhase phase, float deltaTime) { return false; }
+        virtual bool StateUpdateAsync(T& context, hh::fnd::UpdatingPhase phase, float deltaTime) { return false; }
+        virtual bool StateInit(T& context) { return false; }
+        virtual void StateEnter(T& context, int previousStateId) {}
+        virtual void StateLeave(T& context, int nextStateId) {}
     };
 }

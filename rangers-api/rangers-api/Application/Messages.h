@@ -161,4 +161,9 @@ namespace app {
 
         MsgRaiseRings() : fnd::AppMessage<MsgRaiseRings>{ hh::fnd::MessageID::RAISE_RINGS } {}
     };
+
+    class MsgEndBossEvent : public fnd::AppMessage<MsgEndBossEvent> {
+    public:
+        MsgEndBossEvent() : fnd::AppMessage<MsgEndBossEvent>{ hh::fnd::MessageID::END_BOSS_EVENT } {}
+    };
 }

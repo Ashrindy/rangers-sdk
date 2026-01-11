@@ -1157,6 +1157,9 @@ namespace rangerssdk::ucsl {
 #include "Application/Game/ObjectWorldService.h"
 #include "Application/Game/GravityManager.h"
 #include "Application/Game/GOCFoot.h"
+#include "Application/Game/RotatePivotFoot.h"
+
+#include "Application/Enemy/GOCEnemyPosture.h"
 
 #include "Application/ScriptSequence.h"
 #include "Application/ScriptSequenceManager.h"
