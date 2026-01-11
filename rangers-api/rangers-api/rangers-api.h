@@ -1322,6 +1322,7 @@ namespace rangerssdk::ucsl {
 #include "Application/ObjFishingRod.h"
 #include "Application/ObjFishingBig.h"
 #include "Application/ObjStartPosition.h"
+#include "Application/ObjThornBall.h"
 
 namespace rangerssdk::ucsl {
     inline csl::fnd::IAllocator* AllocatorSystem::get_allocator() { return hh::fnd::MemoryRouter::GetModuleAllocator(); }

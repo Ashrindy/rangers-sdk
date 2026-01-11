@@ -46680,9 +46680,29 @@ PUBLIC ??0ObjThornBall@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z
     mov rax, 01404afed0h
     jmp rax
 
+PUBLIC ??0ObjThornBall@app@@QEAA@PEAVIAllocator@fnd@csl@@H@Z
+??0ObjThornBall@app@@QEAA@PEAVIAllocator@fnd@csl@@H@Z:
+    mov rax, 01404afed0h
+    jmp rax
+
+PUBLIC ??0ObjThornBall@app@@QEAA@PEAVIAllocator@fnd@csl@@W4Type@01@@Z
+??0ObjThornBall@app@@QEAA@PEAVIAllocator@fnd@csl@@W4Type@01@@Z:
+    mov rax, 01404afed0h
+    jmp rax
+
 PUBLIC ??0ObjThornBallInfo@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z
 ??0ObjThornBallInfo@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 01404b0050h
+    jmp rax
+
+PUBLIC ??0ObjThornBallInfo@app@@AEAA@PEAVIAllocator@fnd@csl@@@Z
+??0ObjThornBallInfo@app@@AEAA@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 01404b0050h
+    jmp rax
+
+PUBLIC ??_DObjThornBall@app@@QEAAXXZ
+??_DObjThornBall@app@@QEAAXXZ:
+    mov rax, 01404b0090h
     jmp rax
 
 PUBLIC ??_GObjThornBallInfo@app@@QEAAXXZ
@@ -46693,6 +46713,31 @@ PUBLIC ??_GObjThornBallInfo@app@@QEAAXXZ
 PUBLIC ??_GObjWeightInfo@app@@QEAAXXZ
 ??_GObjWeightInfo@app@@QEAAXXZ:
     mov rax, 01404b0110h
+    jmp rax
+
+PUBLIC ??_DObjThornBallInfo@app@@QEAAXXZ
+??_DObjThornBallInfo@app@@QEAAXXZ:
+    mov rax, 01404b0110h
+    jmp rax
+
+PUBLIC ?AddCallback@ObjThornBall@app@@UEAAXPEAVGameManager@game@hh@@@Z
+?AddCallback@ObjThornBall@app@@UEAAXPEAVGameManager@game@hh@@@Z:
+    mov rax, 01404b0180h
+    jmp rax
+
+PUBLIC ?GetInfoName@ObjThornBallInfo@app@@UEAAPEBDXZ
+?GetInfoName@ObjThornBallInfo@app@@UEAAPEBDXZ:
+    mov rax, 01404b0de0h
+    jmp rax
+
+PUBLIC ?Initialize@ObjThornBallInfo@app@@UEAAXPEAVGameManager@game@hh@@@Z
+?Initialize@ObjThornBallInfo@app@@UEAAXPEAVGameManager@game@hh@@@Z:
+    mov rax, 01404b0df0h
+    jmp rax
+
+PUBLIC ?ProcessMessage@ObjThornBall@app@@UEAA_NAEAVMessage@fnd@hh@@@Z
+?ProcessMessage@ObjThornBall@app@@UEAA_NAEAVMessage@fnd@hh@@@Z:
+    mov rax, 01404b12d0h
     jmp rax
 
 PUBLIC ??0ObjThornCylinder@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z
@@ -139405,11 +139450,6 @@ PUBLIC ?gameObjectClass@ObjTerrainPathCylinder@app@@0VGameObjectClass@game@hh@@B
     mov rax, 0143cc0050h
     jmp rax
 
-PUBLIC ?gameObjectClass@ObjThornBall@app@@0VGameObjectClass@game@hh@@B
-?gameObjectClass@ObjThornBall@app@@0VGameObjectClass@game@hh@@B:
-    mov rax, 0143cc0110h
-    jmp rax
-
 PUBLIC ?gameObjectClass@ObjThornCylinder@app@@0VGameObjectClass@game@hh@@B
 ?gameObjectClass@ObjThornCylinder@app@@0VGameObjectClass@game@hh@@B:
     mov rax, 0143cc01d0h
@@ -141888,11 +141928,6 @@ PUBLIC ?objInfoClass@ObjSpringEggInfo@app@@0VObjInfoClass@game@hh@@B
 PUBLIC ?objInfoClass@ObjSpringPoleInfo@app@@0VObjInfoClass@game@hh@@B
 ?objInfoClass@ObjSpringPoleInfo@app@@0VObjInfoClass@game@hh@@B:
     mov rax, 0143cca8c8h
-    jmp rax
-
-PUBLIC ?objInfoClass@ObjThornBallInfo@app@@0VObjInfoClass@game@hh@@B
-?objInfoClass@ObjThornBallInfo@app@@0VObjInfoClass@game@hh@@B:
-    mov rax, 0143cca8f8h
     jmp rax
 
 PUBLIC ?objInfoClass@ObjThornCylinderInfo@app@@0VObjInfoClass@game@hh@@B
