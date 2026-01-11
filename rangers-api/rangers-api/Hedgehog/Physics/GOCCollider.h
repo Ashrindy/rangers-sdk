@@ -54,13 +54,15 @@ namespace hh::physics {
         ColliShapeParameters parameters;
     };
 
-    class GOCCollider;
+    class MsgTriggerEnter;
+    class MsgTriggerLeave;
+    class MsgTriggerStay;
     class GOCColliderListener {
     public:
         virtual ~GOCColliderListener() = default;
-        virtual void GOCCL_UnkFunc1(GOCCollider* collider) {}
-        virtual void GOCCL_UnkFunc2(GOCCollider* collider) {}
-        virtual void GOCCL_UnkFunc3(GOCCollider* collider) {}
+        virtual void OnEnter(hh::physics::MsgTriggerEnter& msg) {}
+        virtual void OnStay(hh::physics::MsgTriggerStay& msg) {}
+        virtual void OnLeave(hh::physics::MsgTriggerLeave& msg) {}
     };
 
     class GOCCollider : public game::GOComponent, public fnd::HFrame::Listener {
@@ -83,7 +85,7 @@ namespace hh::physics {
             csl::ut::Bitset<Flag> flags;
             uint16_t filterCategory;
             csl::ut::Bitset<OverlapFlag> overlapFlags;
-            uint32_t unk4;
+            uint32_t filterFlags;
             uint32_t unk5;
             uint32_t unk6;
             uint32_t unk7;
@@ -115,11 +117,11 @@ namespace hh::physics {
         uint8_t filterCategory;
         csl::ut::Bitset<Flag> flags;
         csl::ut::Bitset<OverlapFlag> overlapFlags;
-        uint32_t unk106;
+        uint32_t filterFlags;
         uint32_t unk106b;
         uint32_t unk107;
         PhysicsWorld* physicsWorld;
-        csl::ut::InplaceMoveArray<void*, 1> unk109; // incorrect, the inner obj here is actually 2 floats
+        csl::ut::InplaceMoveArray<GOCColliderListener*, 1> listeners;
         csl::ut::MoveArray<void*> unk110;
         uint64_t unk111;
         float unk112;
@@ -139,7 +141,11 @@ namespace hh::physics {
         void RemoveListener(GOCColliderListener* listener);
         void SetEnabled(bool enabled);
         void SetFrame(fnd::HFrame* frame);
+        void SetPosition(const csl::math::Vector3& position);
         void SetRotation(const csl::math::Quaternion& rotation);
+        void SendEnterMessage(GOCCollider* actor);
+        void SendStayMessage(GOCCollider* actor);
+        void SendLeaveMessage(GOCCollider* actor);
 
 #ifndef NO_EIGEN_MATH
         inline csl::math::Matrix34 GetWorldTransform() const {

@@ -18,8 +18,8 @@ namespace app {
 
 		virtual bool ProcessMessage(hh::fnd::Message& message) override;
 		virtual void AddCallback(hh::game::GameManager* gameManager) override;
-        virtual void VL_UnkFunc1() override;
-        virtual void VL_UnkFunc3() override;
+        virtual void OnEnter(hh::physics::MsgTriggerEnter& msg) override;
+        virtual void OnLeave(hh::physics::MsgTriggerLeave& msg) override;
 
         GAMEOBJECT_CLASS_DECLARATION_INLINE_GET_CLASS(ObjCameraVolume)
     };

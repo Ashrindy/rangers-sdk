@@ -74,6 +74,7 @@ namespace hh::physics {
         bool RayCastAllHits(const csl::math::Vector3& from, const csl::math::Vector3& to, uint32_t filterMask, csl::ut::MoveArray<PhysicsQueryResult>& result);
         void SetDeltaTime(float deltaTime);
         void Setup(Description& desc);
+        void AddToQueue(const EventQueue::QueueEntryDesc& desc);
         
         inline static const hh::game::GameServiceClass* GetClass();
     };

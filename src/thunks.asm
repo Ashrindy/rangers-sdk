@@ -510,6 +510,11 @@ PUBLIC ?UnkFunc0@BossActionPluginBase@game@app@@UEAA_JXZ
     mov rax, 014008d680h
     jmp rax
 
+PUBLIC ?UnkFunc1@?$AppMessage@VMsgUIBossLifeGaugeDisappear@ui@app@@@fnd@app@@UEAAIXZ
+?UnkFunc1@?$AppMessage@VMsgUIBossLifeGaugeDisappear@ui@app@@@fnd@app@@UEAAIXZ:
+    mov rax, 014008d680h
+    jmp rax
+
 PUBLIC ?EE_UnkFunc2@EventEnvironment@evt@app@@UEAA_NXZ
 ?EE_UnkFunc2@EventEnvironment@evt@app@@UEAA_NXZ:
     mov rax, 014008d680h
@@ -28635,6 +28640,11 @@ PUBLIC ?GOCCL_UnkFunc3@CollisionListener@GOCEventCollision@game@app@@UEAAXPEAVGO
     mov rax, 0140180670h
     jmp rax
 
+PUBLIC ?OnLeave@CollisionListener@GOCEventCollision@game@app@@UEAAXAEAVMsgTriggerLeave@physics@hh@@@Z
+?OnLeave@CollisionListener@GOCEventCollision@game@app@@UEAAXAEAVMsgTriggerLeave@physics@hh@@@Z:
+    mov rax, 0140180670h
+    jmp rax
+
 PUBLIC ?UpdateConfig@GOCEventCollision@game@app@@QEAAXXZ
 ?UpdateConfig@GOCEventCollision@game@app@@QEAAXXZ:
     mov rax, 0140180740h
@@ -32500,9 +32510,14 @@ PUBLIC ?CreateAsyncHandler@?$AppMessage@VMsgUIBossLifeGaugeAppear@ui@app@@@fnd@a
     mov rax, 01401d6bd0h
     jmp rax
 
+PUBLIC ?CreateAsyncHandler@?$AppMessage@VMsgUIBossLifeGaugeDisappear@ui@app@@@fnd@app@@UEAAPEAVMessageAsyncHandler@2hh@@PEAVIAllocator@2csl@@@Z
+?CreateAsyncHandler@?$AppMessage@VMsgUIBossLifeGaugeDisappear@ui@app@@@fnd@app@@UEAAPEAVMessageAsyncHandler@2hh@@PEAVIAllocator@2csl@@@Z:
+    mov rax, 01401d6c80h
+    jmp rax
+
 PUBLIC ?CreateAsyncHandler@?$AppMessage@VMsgUIBossLifeGaugeVisibility@ui@app@@@fnd@app@@UEAAPEAVMessageAsyncHandler@2hh@@PEAVIAllocator@2csl@@@Z
 ?CreateAsyncHandler@?$AppMessage@VMsgUIBossLifeGaugeVisibility@ui@app@@@fnd@app@@UEAAPEAVMessageAsyncHandler@2hh@@PEAVIAllocator@2csl@@@Z:
-    mov rax, 01401d6c80h
+    mov rax, 01401d6d20h
     jmp rax
 
 PUBLIC ?Create@Build@State@GameModeHacking@game@app@@CAPEAV12345@PEAVIAllocator@fnd@csl@@@Z
@@ -60990,6 +61005,11 @@ PUBLIC ?GOCCL_UnkFunc2@VolumeTrigger@app@@UEAAXPEAVGOCCollider@physics@hh@@@Z
     mov rax, 01407c3be0h
     jmp rax
 
+PUBLIC ?OnStay@VolumeTrigger@app@@UEAAXAEAVMsgTriggerStay@physics@hh@@@Z
+?OnStay@VolumeTrigger@app@@UEAAXAEAVMsgTriggerStay@physics@hh@@@Z:
+    mov rax, 01407c3be0h
+    jmp rax
+
 PUBLIC ?UpdateConfig@VolumeTrigger@app@@QEAAXAEBUVolumeTriggerSpawner@rfl@2@@Z
 ?UpdateConfig@VolumeTrigger@app@@QEAAXAEBUVolumeTriggerSpawner@rfl@2@@Z:
     mov rax, 01407c3c60h
@@ -83660,6 +83680,16 @@ PUBLIC ?CallRender@RenderJob@needle@hh@@UEAAXPEAVPipelineInfo@23@@Z
     mov rax, 0140beac40h
     jmp rax
 
+PUBLIC ?AddToQueue@PhysicsWorld@physics@hh@@QEAAXAEAUQueueEntry@EventQueue@23@@Z
+?AddToQueue@PhysicsWorld@physics@hh@@QEAAXAEAUQueueEntry@EventQueue@23@@Z:
+    mov rax, 0140beb150h
+    jmp rax
+
+PUBLIC ?AddToQueue@PhysicsWorld@physics@hh@@QEAAXAEBUQueueEntryDesc@EventQueue@23@@Z
+?AddToQueue@PhysicsWorld@physics@hh@@QEAAXAEBUQueueEntryDesc@EventQueue@23@@Z:
+    mov rax, 0140beb150h
+    jmp rax
+
 PUBLIC ?RayCastAllHits@PhysicsWorld@physics@hh@@QEAA_NAEBVVector3@math@csl@@0IAEAV?$MoveArray@UPhysicsQueryResult@physics@hh@@@ut@6@@Z
 ?RayCastAllHits@PhysicsWorld@physics@hh@@QEAA_NAEBVVector3@math@csl@@0IAEAV?$MoveArray@UPhysicsQueryResult@physics@hh@@@ut@6@@Z:
     mov rax, 0140beb2d0h
@@ -84085,6 +84115,11 @@ PUBLIC ?OnGOCEvent@GOCCollider@physics@hh@@UEAAXW4GOCEvent@GOComponent@game@3@AE
     mov rax, 0140c0e230h
     jmp rax
 
+PUBLIC ?SendStayMessage@GOCCollider@physics@hh@@QEAAXPEAV123@@Z
+?SendStayMessage@GOCCollider@physics@hh@@QEAAXPEAV123@@Z:
+    mov rax, 0140c0e650h
+    jmp rax
+
 PUBLIC ?GetClass@GOCCollider@physics@hh@@SAPEBVGOComponentClass@game@3@XZ
 ?GetClass@GOCCollider@physics@hh@@SAPEBVGOComponentClass@game@3@XZ:
     mov rax, 0140c0ec20h
@@ -84228,6 +84263,16 @@ PUBLIC ?GetNumResources@DynamicResourceContainer@fnd@hh@@UEBAHXZ
 PUBLIC ?GetClass@GOCCollisionCache@gocs@heur@@SAPEBVGOComponentClass@game@hh@@XZ
 ?GetClass@GOCCollisionCache@gocs@heur@@SAPEBVGOComponentClass@game@hh@@XZ:
     mov rax, 0140c139c0h
+    jmp rax
+
+PUBLIC ?AddToQueue@EventQueue@physics@hh@@QEAAXAEAUQueueEntry@123@@Z
+?AddToQueue@EventQueue@physics@hh@@QEAAXAEAUQueueEntry@123@@Z:
+    mov rax, 0140c15c00h
+    jmp rax
+
+PUBLIC ?AddToQueue@EventQueue@physics@hh@@QEAAXAEBUQueueEntryDesc@123@@Z
+?AddToQueue@EventQueue@physics@hh@@QEAAXAEBUQueueEntryDesc@123@@Z:
+    mov rax, 0140c15c00h
     jmp rax
 
 PUBLIC ??_DResolver@EffectManager@eff@hh@@QEAAXXZ
@@ -167220,6 +167265,16 @@ PUBLIC ?GOCCL_UnkFunc2@CollisionListener@GOCEventCollision@game@app@@UEAAXPEAVGO
     mov rax, 014721c980h
     jmp rax
 
+PUBLIC ?OnEnter@CollisionListener@GOCEventCollision@game@app@@UEAAXAEAVMsgTriggerEnter@physics@hh@@@Z
+?OnEnter@CollisionListener@GOCEventCollision@game@app@@UEAAXAEAVMsgTriggerEnter@physics@hh@@@Z:
+    mov rax, 014721c980h
+    jmp rax
+
+PUBLIC ?OnStay@CollisionListener@GOCEventCollision@game@app@@UEAAXAEAVMsgTriggerStay@physics@hh@@@Z
+?OnStay@CollisionListener@GOCEventCollision@game@app@@UEAAXAEAVMsgTriggerStay@physics@hh@@@Z:
+    mov rax, 014721c980h
+    jmp rax
+
 PUBLIC ?OnGOCEvent@GOCEventCollision@game@app@@UEAAXW4GOCEvent@GOComponent@2hh@@AEAVGameObject@26@PEAX@Z
 ?OnGOCEvent@GOCEventCollision@game@app@@UEAAXW4GOCEvent@GOComponent@2hh@@AEAVGameObject@26@PEAX@Z:
     mov rax, 014721cfb0h
@@ -170290,6 +170345,11 @@ PUBLIC ?VL_UnkFunc1@ObjCameraVolume@app@@UEAAXXZ
     mov rax, 0148dde190h
     jmp rax
 
+PUBLIC ?OnEnter@ObjCameraVolume@app@@UEAAXAEAVMsgTriggerEnter@physics@hh@@@Z
+?OnEnter@ObjCameraVolume@app@@UEAAXAEAVMsgTriggerEnter@physics@hh@@@Z:
+    mov rax, 0148dde190h
+    jmp rax
+
 PUBLIC ?VL_UnkFunc3@VolumeListener@app@@UEAAXXZ
 ?VL_UnkFunc3@VolumeListener@app@@UEAAXXZ:
     mov rax, 0148deb300h
@@ -170297,6 +170357,16 @@ PUBLIC ?VL_UnkFunc3@VolumeListener@app@@UEAAXXZ
 
 PUBLIC ?VL_UnkFunc3@ObjCameraVolume@app@@UEAAXXZ
 ?VL_UnkFunc3@ObjCameraVolume@app@@UEAAXXZ:
+    mov rax, 0148deb300h
+    jmp rax
+
+PUBLIC ?OnLeave@ObjCameraVolume@app@@UEAAXAEAVMsgTriggerLeave@physics@hh@@@Z
+?OnLeave@ObjCameraVolume@app@@UEAAXAEAVMsgTriggerLeave@physics@hh@@@Z:
+    mov rax, 0148deb300h
+    jmp rax
+
+PUBLIC ?OnStay@VolumeListener@app@@UEAAXAEAVMsgTriggerStay@physics@hh@@@Z
+?OnStay@VolumeListener@app@@UEAAXAEAVMsgTriggerStay@physics@hh@@@Z:
     mov rax, 0148deb300h
     jmp rax
 
@@ -172140,8 +172210,18 @@ PUBLIC ?GOCCL_UnkFunc1@VolumeTrigger@app@@UEAAXPEAVGOCCollider@physics@hh@@@Z
     mov rax, 014a4d54b0h
     jmp rax
 
+PUBLIC ?OnEnter@VolumeTrigger@app@@UEAAXAEAVMsgTriggerEnter@physics@hh@@@Z
+?OnEnter@VolumeTrigger@app@@UEAAXAEAVMsgTriggerEnter@physics@hh@@@Z:
+    mov rax, 014a4d54b0h
+    jmp rax
+
 PUBLIC ?GOCCL_UnkFunc3@VolumeTrigger@app@@UEAAXPEAVGOCCollider@physics@hh@@@Z
 ?GOCCL_UnkFunc3@VolumeTrigger@app@@UEAAXPEAVGOCCollider@physics@hh@@@Z:
+    mov rax, 014a4d5580h
+    jmp rax
+
+PUBLIC ?OnLeave@VolumeTrigger@app@@UEAAXAEAVMsgTriggerLeave@physics@hh@@@Z
+?OnLeave@VolumeTrigger@app@@UEAAXAEAVMsgTriggerLeave@physics@hh@@@Z:
     mov rax, 014a4d5580h
     jmp rax
 
@@ -177090,6 +177170,21 @@ PUBLIC ??_DGOCBoxCollider@gocs@heur@@QEAAXXZ
     mov rax, 014e681080h
     jmp rax
 
+PUBLIC ?SendEnterMessage@GOCCollider@physics@hh@@QEAAXPEAV123@@Z
+?SendEnterMessage@GOCCollider@physics@hh@@QEAAXPEAV123@@Z:
+    mov rax, 014e683cd0h
+    jmp rax
+
+PUBLIC ?SendLeaveMessage@GOCCollider@physics@hh@@QEAAXPEAV123@@Z
+?SendLeaveMessage@GOCCollider@physics@hh@@QEAAXPEAV123@@Z:
+    mov rax, 014e695c60h
+    jmp rax
+
+PUBLIC ?RemoveListener@GOCCollider@physics@hh@@QEAAXPEAVGOCColliderListener@23@@Z
+?RemoveListener@GOCCollider@physics@hh@@QEAAXPEAVGOCColliderListener@23@@Z:
+    mov rax, 014e696df0h
+    jmp rax
+
 PUBLIC ?SetEnabled@GOCCollider@physics@hh@@QEAAX_N@Z
 ?SetEnabled@GOCCollider@physics@hh@@QEAAX_N@Z:
     mov rax, 014e6a4cf0h
@@ -177118,6 +177213,16 @@ PUBLIC ?SetRotation@SetupInfo@GOCCollider@physics@hh@@QEAAXVQuaternion@math@csl@
 PUBLIC ?SetScale@GOCCollider@physics@hh@@UEAAXAEBVVector3@math@csl@@@Z
 ?SetScale@GOCCollider@physics@hh@@UEAAXAEBVVector3@math@csl@@@Z:
     mov rax, 014e6d7060h
+    jmp rax
+
+PUBLIC ?SetScale@SetupInfo@GOCCollider@physics@hh@@QEAAXVVector3@math@csl@@@Z
+?SetScale@SetupInfo@GOCCollider@physics@hh@@QEAAXVVector3@math@csl@@@Z:
+    mov rax, 014e6d8660h
+    jmp rax
+
+PUBLIC ?SetPosition@GOCCollider@physics@hh@@QEAAXAEBVVector3@math@csl@@@Z
+?SetPosition@GOCCollider@physics@hh@@QEAAXAEBVVector3@math@csl@@@Z:
+    mov rax, 014e6e5f30h
     jmp rax
 
 PUBLIC ?Setup@GOCCollider@physics@hh@@QEAAXAEBUSetupInfo@123@@Z
