@@ -1,6 +1,8 @@
 #pragma once
 
 namespace hh::dv{
+    class DvNodeCamera;
+
     class DvSceneNodeTree : public fnd::ReferencedObject{
     public:
         DvNodeBase* mainNode;
@@ -9,9 +11,11 @@ namespace hh::dv{
         int diEventManagerDWORDC0;
 
         void FindNodesByType(DvNodeBase::NodeType type, csl::ut::MoveArray<DvNodeBase*>* result);
+        void GetChildren(DvNodeBase::NodeType type, DvNodeBase* parent, csl::ut::MoveArray<DvNodeBase*>* result);
         DvNodeBase* FindNodeByGUID(char* guid, DvNodeBase* startNode);
         DvNodeBase* FindNodeByGUID(char* guid);
         DvNodeBase* GetMainNode() const;
+        DvNodeCamera* GetMainCameraNode() const;
         bool GetViewportDataByFrame(int currentFrame, hh::gfnd::ViewportData* returnValue);
         void InitializeClasses();
         void InitializeMainNode();

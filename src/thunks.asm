@@ -22920,16 +22920,6 @@ PUBLIC ??_DEnemyGaniganiContext@app@@QEAAXXZ
     mov rax, 014011d860h
     jmp rax
 
-PUBLIC ??_DPlayerBlackboardService@player@app@@QEAAXXZ
-??_DPlayerBlackboardService@player@app@@QEAAXXZ:
-    mov rax, 014011d860h
-    jmp rax
-
-PUBLIC ??_DGOCPlayerEyesight@player@app@@QEAAXXZ
-??_DGOCPlayerEyesight@player@app@@QEAAXXZ:
-    mov rax, 014011d860h
-    jmp rax
-
 PUBLIC ??_DStatePluginInWater@player@app@@QEAAXXZ
 ??_DStatePluginInWater@player@app@@QEAAXXZ:
     mov rax, 014011d860h
@@ -25850,6 +25840,11 @@ PUBLIC ?UnkFunc5@DvPageConditionQTE@dv@app@@UEAA_NXZ
     mov rax, 0140131210h
     jmp rax
 
+PUBLIC ?ShouldSkip@DvPageConditionQTE@dv@app@@UEAA_NAEAUPageInfo@2hh@@@Z
+?ShouldSkip@DvPageConditionQTE@dv@app@@UEAA_NAEAUPageInfo@2hh@@@Z:
+    mov rax, 0140131210h
+    jmp rax
+
 PUBLIC ?Setup@DvPageConditionQTE@dv@app@@UEAAXPEAX@Z
 ?Setup@DvPageConditionQTE@dv@app@@UEAAXPEAX@Z:
     mov rax, 0140131270h
@@ -28608,11 +28603,6 @@ PUBLIC ?GetClass@GOCEventActivate@game@app@@SAPEBVGOComponentClass@2hh@@XZ
 PUBLIC ??_DCollisionListener@GOCEventCollision@game@app@@QEAAXXZ
 ??_DCollisionListener@GOCEventCollision@game@app@@QEAAXXZ:
     mov rax, 0140180330h
-    jmp rax
-
-PUBLIC ??_DGOCColliderListener@physics@hh@@QEAAXXZ
-??_DGOCColliderListener@physics@hh@@QEAAXXZ:
-    mov rax, 0140180360h
     jmp rax
 
 PUBLIC ?Create@GOCEventCollision@game@app@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z
@@ -37155,6 +37145,11 @@ PUBLIC ?AddNode@MultiNodeContainer@gfx@app@@QEAAXPEAVGOCVisualModel@2hh@@PEBD@Z
     mov rax, 01402596f0h
     jmp rax
 
+PUBLIC ?GetNode@MultiNodeContainer@gfx@app@@QEBAPEAVModelNodeContainer@23@AEAI@Z
+?GetNode@MultiNodeContainer@gfx@app@@QEBAPEAVModelNodeContainer@23@AEAI@Z:
+    mov rax, 01402597e0h
+    jmp rax
+
 PUBLIC ?GetNode@MultiNodeContainer@gfx@app@@QEBAPEAVModelNodeContainer@23@PEAVGOCVisualModel@2hh@@@Z
 ?GetNode@MultiNodeContainer@gfx@app@@QEBAPEAVModelNodeContainer@23@PEAVGOCVisualModel@2hh@@@Z:
     mov rax, 0140259870h
@@ -37178,6 +37173,11 @@ PUBLIC ?GetNode@ModelNodeContainer@gfx@app@@QEBA?AV?$Reference@VModelNodeHFrame@
 PUBLIC ?GetNode@ModelNodeContainer@gfx@app@@QEBAPEAVModelNodeHFrame@2hh@@PEBD@Z
 ?GetNode@ModelNodeContainer@gfx@app@@QEBAPEAVModelNodeHFrame@2hh@@PEBD@Z:
     mov rax, 01402599d0h
+    jmp rax
+
+PUBLIC ?GetNode@MultiNodeContainer@gfx@app@@QEBAPEAVModelNodeHFrame@2hh@@AEAIPEBD@Z
+?GetNode@MultiNodeContainer@gfx@app@@QEBAPEAVModelNodeHFrame@2hh@@AEAIPEBD@Z:
+    mov rax, 0140259a90h
     jmp rax
 
 PUBLIC ?SetVisualModel@ModelNodeContainer@gfx@app@@QEAAXPEAVGOCVisualModel@2hh@@@Z
@@ -54325,6 +54325,11 @@ PUBLIC ??_GMiniBossChargerMuzzleContext@app@@QEAAXXZ
     mov rax, 0140638fc0h
     jmp rax
 
+PUBLIC ?SetOwner@PlayerEyesightComponent@player@app@@QEAAXPEAVGameObject@game@hh@@@Z
+?SetOwner@PlayerEyesightComponent@player@app@@QEAAXPEAVGameObject@game@hh@@@Z:
+    mov rax, 0140639590h
+    jmp rax
+
 PUBLIC ??_DDiffuseLaser@MiniBossChargerMuzzleState@app@@QEAAXXZ
 ??_DDiffuseLaser@MiniBossChargerMuzzleState@app@@QEAAXXZ:
     mov rax, 0140639850h
@@ -65125,6 +65130,11 @@ PUBLIC ??_GGOCCapsuleColliderQuery@physics@app@@QEAAXXZ
     mov rax, 014087a8d0h
     jmp rax
 
+PUBLIC ??_DGOCCapsuleColliderQuery@physics@app@@QEAAXXZ
+??_DGOCCapsuleColliderQuery@physics@app@@QEAAXXZ:
+    mov rax, 014087a8d0h
+    jmp rax
+
 PUBLIC ?Create@GOCCapsuleColliderQuery@physics@app@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z
 ?Create@GOCCapsuleColliderQuery@physics@app@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 014087a950h
@@ -65133,6 +65143,26 @@ PUBLIC ?Create@GOCCapsuleColliderQuery@physics@app@@CAPEAV123@PEAVIAllocator@fnd
 PUBLIC ?Create@GOCCapsuleColliderQuery@physics@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z
 ?Create@GOCCapsuleColliderQuery@physics@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 014087a950h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@GOCCapsuleColliderQuery@physics@app@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@GOCCapsuleColliderQuery@physics@app@@UEBAPEAXXZ:
+    mov rax, 014087a9d0h
+    jmp rax
+
+PUBLIC ?UnkFunc101@GOCCapsuleColliderQuery@physics@app@@UEAA_NPEAX0@Z
+?UnkFunc101@GOCCapsuleColliderQuery@physics@app@@UEAA_NPEAX0@Z:
+    mov rax, 014087a9e0h
+    jmp rax
+
+PUBLIC ?Setup@GOCCapsuleColliderQuery@physics@app@@QEAAXAEBUDescription@123@@Z
+?Setup@GOCCapsuleColliderQuery@physics@app@@QEAAXAEBUDescription@123@@Z:
+    mov rax, 014087aae0h
+    jmp rax
+
+PUBLIC ?GetClass@GOCCapsuleColliderQuery@physics@app@@SAPEBVGOComponentClass@game@hh@@XZ
+?GetClass@GOCCapsuleColliderQuery@physics@app@@SAPEBVGOComponentClass@game@hh@@XZ:
+    mov rax, 014087ab20h
     jmp rax
 
 PUBLIC ??_DGOCColliderQuery@physics@app@@QEAAXXZ
@@ -65175,6 +65205,11 @@ PUBLIC ?SetPosition@GOCColliderQuery@physics@app@@QEAAXAEAVVector3@math@csl@@@Z
     mov rax, 014087b970h
     jmp rax
 
+PUBLIC ?GetClass@GOCColliderQuery@physics@app@@SAPEBVGOComponentClass@game@hh@@XZ
+?GetClass@GOCColliderQuery@physics@app@@SAPEBVGOComponentClass@game@hh@@XZ:
+    mov rax, 014087baa0h
+    jmp rax
+
 PUBLIC ?Create@GOCMoveSphereColliderQuery@physics@app@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z
 ?Create@GOCMoveSphereColliderQuery@physics@app@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 014087bb40h
@@ -65205,6 +65240,11 @@ PUBLIC ?SetRadius@GOCMoveSphereColliderQuery@physics@app@@QEAAXM@Z
     mov rax, 014087bdc0h
     jmp rax
 
+PUBLIC ?Setup@GOCMoveSphereColliderQuery@physics@app@@QEAAXAEBUDescription@123@@Z
+?Setup@GOCMoveSphereColliderQuery@physics@app@@QEAAXAEBUDescription@123@@Z:
+    mov rax, 014087bdd0h
+    jmp rax
+
 PUBLIC ?GetClass@GOCMoveSphereColliderQuery@physics@app@@SAPEBVGOComponentClass@game@hh@@XZ
 ?GetClass@GOCMoveSphereColliderQuery@physics@app@@SAPEBVGOComponentClass@game@hh@@XZ:
     mov rax, 014087be00h
@@ -65212,6 +65252,11 @@ PUBLIC ?GetClass@GOCMoveSphereColliderQuery@physics@app@@SAPEBVGOComponentClass@
 
 PUBLIC ??_GGOCSphereColliderQuery@physics@app@@QEAAXXZ
 ??_GGOCSphereColliderQuery@physics@app@@QEAAXXZ:
+    mov rax, 014087be20h
+    jmp rax
+
+PUBLIC ??_DGOCSphereColliderQuery@physics@app@@QEAAXXZ
+??_DGOCSphereColliderQuery@physics@app@@QEAAXXZ:
     mov rax, 014087be20h
     jmp rax
 
@@ -65223,6 +65268,26 @@ PUBLIC ?Create@GOCSphereColliderQuery@physics@app@@CAPEAV123@PEAVIAllocator@fnd@
 PUBLIC ?Create@GOCSphereColliderQuery@physics@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z
 ?Create@GOCSphereColliderQuery@physics@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 014087bea0h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@GOCSphereColliderQuery@physics@app@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@GOCSphereColliderQuery@physics@app@@UEBAPEAXXZ:
+    mov rax, 014087bf20h
+    jmp rax
+
+PUBLIC ?UnkFunc101@GOCSphereColliderQuery@physics@app@@UEAA_NPEAX0@Z
+?UnkFunc101@GOCSphereColliderQuery@physics@app@@UEAA_NPEAX0@Z:
+    mov rax, 014087bf30h
+    jmp rax
+
+PUBLIC ?Setup@GOCSphereColliderQuery@physics@app@@QEAAXAEBUDescription@123@@Z
+?Setup@GOCSphereColliderQuery@physics@app@@QEAAXAEBUDescription@123@@Z:
+    mov rax, 014087bfa0h
+    jmp rax
+
+PUBLIC ?GetClass@GOCSphereColliderQuery@physics@app@@SAPEBVGOComponentClass@game@hh@@XZ
+?GetClass@GOCSphereColliderQuery@physics@app@@SAPEBVGOComponentClass@game@hh@@XZ:
+    mov rax, 014087bfd0h
     jmp rax
 
 PUBLIC ?CreateAsyncHandler@?$AppMessage@VMsgColliderQueryEnter@physics@app@@@fnd@app@@UEAAPEAVMessageAsyncHandler@2hh@@PEAVIAllocator@2csl@@@Z
@@ -65438,6 +65503,16 @@ PUBLIC ??_DBlackboardItem@player@app@@QEAAXXZ
 PUBLIC ?GetNameHash@BlackboardItem@player@app@@UEBAIXZ
 ?GetNameHash@BlackboardItem@player@app@@UEBAIXZ:
     mov rax, 01408852b0h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@PlayerBlackboardService@player@app@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@PlayerBlackboardService@player@app@@UEBAPEAXXZ:
+    mov rax, 01408854c0h
+    jmp rax
+
+PUBLIC ?OnRemovedFromGame@PlayerBlackboardService@player@app@@UEAAXXZ
+?OnRemovedFromGame@PlayerBlackboardService@player@app@@UEAAXXZ:
+    mov rax, 01408854d0h
     jmp rax
 
 PUBLIC ?Create@PlayerBlackboardService@player@app@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z
@@ -66160,6 +66235,11 @@ PUBLIC ?GetEffect@EffectList@player@app@@QEBAPEAVPlayerEffect@23@I@Z
     mov rax, 01408a25f0h
     jmp rax
 
+PUBLIC ?AddComponent@GOCPlayerEyesight@player@app@@QEAAXPEAVPlayerEyesightComponent@23@@Z
+?AddComponent@GOCPlayerEyesight@player@app@@QEAAXPEAVPlayerEyesightComponent@23@@Z:
+    mov rax, 01408a28d0h
+    jmp rax
+
 PUBLIC ?Create@GOCPlayerEyesight@player@app@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z
 ?Create@GOCPlayerEyesight@player@app@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 01408a2940h
@@ -66170,14 +66250,79 @@ PUBLIC ?Create@GOCPlayerEyesight@player@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@
     mov rax, 01408a2940h
     jmp rax
 
+PUBLIC ?GetRuntimeTypeInfo@GOCPlayerEyesight@player@app@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@GOCPlayerEyesight@player@app@@UEBAPEAXXZ:
+    mov rax, 01408a2a60h
+    jmp rax
+
+PUBLIC ?OnGOCEvent@GOCPlayerEyesight@player@app@@UEAAXW4GOCEvent@GOComponent@game@hh@@AEAVGameObject@67@PEAX@Z
+?OnGOCEvent@GOCPlayerEyesight@player@app@@UEAAXW4GOCEvent@GOComponent@game@hh@@AEAVGameObject@67@PEAX@Z:
+    mov rax, 01408a2a70h
+    jmp rax
+
 PUBLIC ?GetClass@GOCPlayerEyesight@player@app@@SAPEBVGOComponentClass@game@hh@@XZ
 ?GetClass@GOCPlayerEyesight@player@app@@SAPEBVGOComponentClass@game@hh@@XZ:
     mov rax, 01408a2b80h
     jmp rax
 
+PUBLIC ?UpdateAsync@GOCPlayerEyesight@player@app@@UEAAXW4UpdatingPhase@fnd@hh@@AEBUSUpdateInfo@56@PEAX@Z
+?UpdateAsync@GOCPlayerEyesight@player@app@@UEAAXW4UpdatingPhase@fnd@hh@@AEBUSUpdateInfo@56@PEAX@Z:
+    mov rax, 01408a2b90h
+    jmp rax
+
+PUBLIC ?UnkFunc1@HomingEyesight@player@app@@UEAAXXZ
+?UnkFunc1@HomingEyesight@player@app@@UEAAXXZ:
+    mov rax, 01408a5610h
+    jmp rax
+
 PUBLIC ?CreateAsyncHandler@?$AppMessage@VMsgGetCyloopPoint@app@@@fnd@app@@UEAAPEAVMessageAsyncHandler@2hh@@PEAVIAllocator@2csl@@@Z
 ?CreateAsyncHandler@?$AppMessage@VMsgGetCyloopPoint@app@@@fnd@app@@UEAAPEAVMessageAsyncHandler@2hh@@PEAVIAllocator@2csl@@@Z:
     mov rax, 01408a57a0h
+    jmp rax
+
+PUBLIC ?GetTargetDataByTarget@HomingEyesight@player@app@@QEAAPEAVTargetData@123@PEAVGOCCollider@physics@hh@@@Z
+?GetTargetDataByTarget@HomingEyesight@player@app@@QEAAPEAVTargetData@123@PEAVGOCCollider@physics@hh@@@Z:
+    mov rax, 01408a68c0h
+    jmp rax
+
+PUBLIC ?UnkFunc0@HomingEyesight@player@app@@UEAAXXZ
+?UnkFunc0@HomingEyesight@player@app@@UEAAXXZ:
+    mov rax, 01408a6b00h
+    jmp rax
+
+PUBLIC ?GetNameHash@HomingEyesight@player@app@@UEAAIXZ
+?GetNameHash@HomingEyesight@player@app@@UEAAIXZ:
+    mov rax, 01408a6b00h
+    jmp rax
+
+PUBLIC ?OnRemoved@HomingEyesight@player@app@@UEAAXXZ
+?OnRemoved@HomingEyesight@player@app@@UEAAXXZ:
+    mov rax, 01408a79a0h
+    jmp rax
+
+PUBLIC ?UnkFunc2@HomingEyesight@player@app@@UEAAXXZ
+?UnkFunc2@HomingEyesight@player@app@@UEAAXXZ:
+    mov rax, 01408a8fc0h
+    jmp rax
+
+PUBLIC ?UnkFunc3@HomingEyesight@player@app@@UEAAXXZ
+?UnkFunc3@HomingEyesight@player@app@@UEAAXXZ:
+    mov rax, 01408a9380h
+    jmp rax
+
+PUBLIC ??_DPlayerEyesightComponent@player@app@@QEAAXXZ
+??_DPlayerEyesightComponent@player@app@@QEAAXXZ:
+    mov rax, 01408a9bf0h
+    jmp rax
+
+PUBLIC ?OnStay@PlayerEyesightComponent@player@app@@UEAAXAEAVMsgTriggerStay@physics@hh@@@Z
+?OnStay@PlayerEyesightComponent@player@app@@UEAAXAEAVMsgTriggerStay@physics@hh@@@Z:
+    mov rax, 01408a9d20h
+    jmp rax
+
+PUBLIC ??0HomingTargetInfo@player@app@@QEAA@PEAVGOCCollider@physics@hh@@@Z
+??0HomingTargetInfo@player@app@@QEAA@PEAVGOCCollider@physics@hh@@@Z:
+    mov rax, 01408aa510h
     jmp rax
 
 PUBLIC ?SetUnk1@HomingTargetInfo@player@app@@QEAAXAEBVVector3@math@csl@@0M@Z
@@ -76845,6 +76990,16 @@ PUBLIC ?GetRuntimeTypeInfo@TextManager@text@app@@UEBAPEAXXZ
     mov rax, 0140a15bc0h
     jmp rax
 
+PUBLIC ?GetSpeakerAttributeValue@TextManager@text@app@@QEAAPEBDPEBD@Z
+?GetSpeakerAttributeValue@TextManager@text@app@@QEAAPEBDPEBD@Z:
+    mov rax, 0140a15bd0h
+    jmp rax
+
+PUBLIC ?GetSpokenToAttributeValue@TextManager@text@app@@QEAAPEBDPEBD@Z
+?GetSpokenToAttributeValue@TextManager@text@app@@QEAAPEBDPEBD@Z:
+    mov rax, 0140a15c20h
+    jmp rax
+
 PUBLIC ?SPL_UnkFunc1@FxColManager@gfx@app@@UEAAXXZ
 ?SPL_UnkFunc1@FxColManager@gfx@app@@UEAAXXZ:
     mov rax, 0140a15fa0h
@@ -79305,18 +79460,33 @@ PUBLIC ?GetClass@SaveManager@save@app@@SAPEBVGameServiceClass@game@hh@@XZ
     mov rax, 0140b08590h
     jmp rax
 
-PUBLIC ??_DSavePermission@save@app@@QEAAXXZ
-??_DSavePermission@save@app@@QEAAXXZ:
-    mov rax, 0140b08590h
-    jmp rax
-
 PUBLIC ??0SavePermission@save@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z
 ??0SavePermission@save@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 0140b085a0h
     jmp rax
 
+PUBLIC ??0SavePermission@save@app@@QEAA@PEAVIAllocator@fnd@csl@@HH@Z
+??0SavePermission@save@app@@QEAA@PEAVIAllocator@fnd@csl@@HH@Z:
+    mov rax, 0140b085a0h
+    jmp rax
+
+PUBLIC ??0SavePermission@save@app@@QEAA@PEAVIAllocator@fnd@csl@@PEAVGameManager@game@hh@@D@Z
+??0SavePermission@save@app@@QEAA@PEAVIAllocator@fnd@csl@@PEAVGameManager@game@hh@@D@Z:
+    mov rax, 0140b085a0h
+    jmp rax
+
+PUBLIC ??0SavePermission@save@app@@QEAA@PEAVIAllocator@fnd@csl@@PEAVGameManager@game@hh@@D_N@Z
+??0SavePermission@save@app@@QEAA@PEAVIAllocator@fnd@csl@@PEAVGameManager@game@hh@@D_N@Z:
+    mov rax, 0140b085a0h
+    jmp rax
+
 PUBLIC ??_GSavePermission@save@app@@QEAAXXZ
 ??_GSavePermission@save@app@@QEAAXXZ:
+    mov rax, 0140b08620h
+    jmp rax
+
+PUBLIC ??_DSavePermission@save@app@@QEAAXXZ
+??_DSavePermission@save@app@@QEAAXXZ:
     mov rax, 0140b08620h
     jmp rax
 
@@ -79353,6 +79523,11 @@ PUBLIC ?GetExtraCharacterAccessor@save@app@@YA?AVExtraCharacterAc@12@PEAVGameObj
 PUBLIC ?GetExtraFlagAccessor@save@app@@YA?AVExtraFlagAc@12@PEAVGameManager@game@hh@@@Z
 ?GetExtraFlagAccessor@save@app@@YA?AVExtraFlagAc@12@PEAVGameManager@game@hh@@@Z:
     mov rax, 0140b0e2c0h
+    jmp rax
+
+PUBLIC ?Create@SavePermission@save@app@@SAPEAV123@PEAVGameObject@game@hh@@@Z
+?Create@SavePermission@save@app@@SAPEAV123@PEAVGameObject@game@hh@@@Z:
+    mov rax, 0140b0e650h
     jmp rax
 
 PUBLIC ?GetCharacterAccessor@save@app@@YA?AVCharacterAc@12@PEAVGameObject@game@hh@@I@Z
@@ -82545,6 +82720,11 @@ PUBLIC ??0ConverseDataCollection@text@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
     mov rax, 0140bcc1e0h
     jmp rax
 
+PUBLIC ??_DConverseDataCollection@text@hh@@QEAAXXZ
+??_DConverseDataCollection@text@hh@@QEAAXXZ:
+    mov rax, 0140bcc240h
+    jmp rax
+
 PUBLIC ?GetRuntimeTypeInfo@SoundSystemCri@snd@hh@@UEBAPEAXXZ
 ?GetRuntimeTypeInfo@SoundSystemCri@snd@hh@@UEBAPEAXXZ:
     mov rax, 0140bccc90h
@@ -84015,9 +84195,139 @@ PUBLIC ?PVCL_UnkFunc3@PhysicsPickedObjectViewer@physics@hh@@UEAAXXZ
     mov rax, 0140c00a30h
     jmp rax
 
+PUBLIC ??_DBtAllocator@physics@hh@@QEAAXXZ
+??_DBtAllocator@physics@hh@@QEAAXXZ:
+    mov rax, 0140c06ae0h
+    jmp rax
+
+PUBLIC ?Alloc@BtAllocator@physics@hh@@UEAAPEAX_K0@Z
+?Alloc@BtAllocator@physics@hh@@UEAAPEAX_K0@Z:
+    mov rax, 0140c06f60h
+    jmp rax
+
+PUBLIC ?PM_UnkFunc10@ResPhysicsMeshBullet@physics@hh@@UEAA_J_J@Z
+?PM_UnkFunc10@ResPhysicsMeshBullet@physics@hh@@UEAA_J_J@Z:
+    mov rax, 0140c07060h
+    jmp rax
+
+PUBLIC ?PM_UnkFunc2@ResPhysicsMeshBullet@physics@hh@@UEAA_NHH_J@Z
+?PM_UnkFunc2@ResPhysicsMeshBullet@physics@hh@@UEAA_NHH_J@Z:
+    mov rax, 0140c07190h
+    jmp rax
+
+PUBLIC ?PM_UnkFunc1@ResPhysicsMeshBullet@physics@hh@@UEAA_NH_J0@Z
+?PM_UnkFunc1@ResPhysicsMeshBullet@physics@hh@@UEAA_NH_J0@Z:
+    mov rax, 0140c07250h
+    jmp rax
+
+PUBLIC ?Free@BtAllocator@physics@hh@@UEAAXPEAX@Z
+?Free@BtAllocator@physics@hh@@UEAAXPEAX@Z:
+    mov rax, 0140c07700h
+    jmp rax
+
+PUBLIC ?PM_UnkFunc3@ResPhysicsMeshBullet@physics@hh@@UEAA_NH_J0@Z
+?PM_UnkFunc3@ResPhysicsMeshBullet@physics@hh@@UEAA_NH_J0@Z:
+    mov rax, 0140c07790h
+    jmp rax
+
+PUBLIC ?GetDimensionsAndWorldPosition@ResPhysicsMeshBullet@physics@hh@@UEAA_NHAEAUDimensions@ResPhysicsMesh@23@PEAUWorldPosition@fnd@3@@Z
+?GetDimensionsAndWorldPosition@ResPhysicsMeshBullet@physics@hh@@UEAA_NHAEAUDimensions@ResPhysicsMesh@23@PEAUWorldPosition@fnd@3@@Z:
+    mov rax, 0140c07790h
+    jmp rax
+
+PUBLIC ?PM_UnkFunc0@ResPhysicsMeshBullet@physics@hh@@UEAA_N_J0@Z
+?PM_UnkFunc0@ResPhysicsMeshBullet@physics@hh@@UEAA_N_J0@Z:
+    mov rax, 0140c07b10h
+    jmp rax
+
+PUBLIC ?GetMeshInfo@ResPhysicsMeshBullet@physics@hh@@UEAA_NAEAV?$MoveArray@UMeshInfo@ResPhysicsMesh@physics@hh@@@ut@csl@@PEAVIAllocator@fnd@6@@Z
+?GetMeshInfo@ResPhysicsMeshBullet@physics@hh@@UEAA_NAEAV?$MoveArray@UMeshInfo@ResPhysicsMesh@physics@hh@@@ut@csl@@PEAVIAllocator@fnd@6@@Z:
+    mov rax, 0140c07b10h
+    jmp rax
+
+PUBLIC ?GetMeshInfo@ResPhysicsMeshBullet@physics@hh@@UEAA_NAEAV?$MoveArray@PEAUMeshInfo@ResPhysicsMesh@physics@hh@@@ut@csl@@PEAVIAllocator@fnd@6@@Z
+?GetMeshInfo@ResPhysicsMeshBullet@physics@hh@@UEAA_NAEAV?$MoveArray@PEAUMeshInfo@ResPhysicsMesh@physics@hh@@@ut@csl@@PEAVIAllocator@fnd@6@@Z:
+    mov rax, 0140c07b10h
+    jmp rax
+
+PUBLIC ?PM_UnkFunc7@ResPhysicsMeshBullet@physics@hh@@UEAA_JH@Z
+?PM_UnkFunc7@ResPhysicsMeshBullet@physics@hh@@UEAA_JH@Z:
+    mov rax, 0140c09050h
+    jmp rax
+
+PUBLIC ?GetUnk@ResPhysicsMeshBullet@physics@hh@@UEAAHII@Z
+?GetUnk@ResPhysicsMeshBullet@physics@hh@@UEAAHII@Z:
+    mov rax, 0140c09050h
+    jmp rax
+
+PUBLIC ?PM_UnkFunc6@ResPhysicsMeshBullet@physics@hh@@UEAA_JH@Z
+?PM_UnkFunc6@ResPhysicsMeshBullet@physics@hh@@UEAA_JH@Z:
+    mov rax, 0140c090d0h
+    jmp rax
+
+PUBLIC ?GetUnk@ResPhysicsMeshBullet@physics@hh@@UEAAHH@Z
+?GetUnk@ResPhysicsMeshBullet@physics@hh@@UEAAHH@Z:
+    mov rax, 0140c090d0h
+    jmp rax
+
 PUBLIC ?GetTypeInfo@ResPhysicsMesh@resources@heur@@SAPEBUResourceTypeInfo@fnd@hh@@XZ
 ?GetTypeInfo@ResPhysicsMesh@resources@heur@@SAPEBUResourceTypeInfo@fnd@hh@@XZ:
     mov rax, 0140c09500h
+    jmp rax
+
+PUBLIC ?GetTypeInfo@ResPhysicsMeshBullet@physics@hh@@SAPEBUResourceTypeInfo@fnd@3@XZ
+?GetTypeInfo@ResPhysicsMeshBullet@physics@hh@@SAPEBUResourceTypeInfo@fnd@3@XZ:
+    mov rax, 0140c09500h
+    jmp rax
+
+PUBLIC ?PM_UnkFunc5@ResPhysicsMeshBullet@physics@hh@@UEAA_NHH@Z
+?PM_UnkFunc5@ResPhysicsMeshBullet@physics@hh@@UEAA_NHH@Z:
+    mov rax, 0140c09510h
+    jmp rax
+
+PUBLIC ?GetFaceType@ResPhysicsMeshBullet@physics@hh@@UEAAHII@Z
+?GetFaceType@ResPhysicsMeshBullet@physics@hh@@UEAAHII@Z:
+    mov rax, 0140c09510h
+    jmp rax
+
+PUBLIC ?PM_UnkFunc4@ResPhysicsMeshBullet@physics@hh@@UEAA_JH@Z
+?PM_UnkFunc4@ResPhysicsMeshBullet@physics@hh@@UEAA_JH@Z:
+    mov rax, 0140c09620h
+    jmp rax
+
+PUBLIC ?GetFaceType@ResPhysicsMeshBullet@physics@hh@@UEAAHH@Z
+?GetFaceType@ResPhysicsMeshBullet@physics@hh@@UEAAHH@Z:
+    mov rax, 0140c09620h
+    jmp rax
+
+PUBLIC ?PM_UnkFunc8@ResPhysicsMeshBullet@physics@hh@@UEAA_NXZ
+?PM_UnkFunc8@ResPhysicsMeshBullet@physics@hh@@UEAA_NXZ:
+    mov rax, 0140c0a340h
+    jmp rax
+
+PUBLIC ?IsConvex@ResPhysicsMeshBullet@physics@hh@@UEBA_NXZ
+?IsConvex@ResPhysicsMeshBullet@physics@hh@@UEBA_NXZ:
+    mov rax, 0140c0a340h
+    jmp rax
+
+PUBLIC ?PM_UnkFunc9@ResPhysicsMeshBullet@physics@hh@@UEAA_NH@Z
+?PM_UnkFunc9@ResPhysicsMeshBullet@physics@hh@@UEAA_NH@Z:
+    mov rax, 0140c0a370h
+    jmp rax
+
+PUBLIC ?IsConvex@ResPhysicsMeshBullet@physics@hh@@UEBA_NH@Z
+?IsConvex@ResPhysicsMeshBullet@physics@hh@@UEBA_NH@Z:
+    mov rax, 0140c0a370h
+    jmp rax
+
+PUBLIC ?Load@ResPhysicsMeshBullet@physics@hh@@UEAAXPEAX_K@Z
+?Load@ResPhysicsMeshBullet@physics@hh@@UEAAXPEAX_K@Z:
+    mov rax, 0140c0a410h
+    jmp rax
+
+PUBLIC ?PM_UnkFunc12@ResPhysicsMeshBullet@physics@hh@@UEAA_J_J@Z
+?PM_UnkFunc12@ResPhysicsMeshBullet@physics@hh@@UEAA_J_J@Z:
+    mov rax, 0140c0a7f0h
     jmp rax
 
 PUBLIC ?UnkFunc16@OcclusionCullingViewJob@needle@hh@@UEAAIXZ
@@ -89955,6 +90265,11 @@ PUBLIC ??_D?$FreeListHeapTemplate@VMutex@fnd@csl@@@fnd@csl@@QEAAXXZ
     mov rax, 0140d6d1e0h
     jmp rax
 
+PUBLIC ??_DMemoryRouterAllocator@fnd@hh@@QEAAXXZ
+??_DMemoryRouterAllocator@fnd@hh@@QEAAXXZ:
+    mov rax, 0140d6d230h
+    jmp rax
+
 PUBLIC ?AllocBottom@?$FreeListHeapTemplate@VMutex@fnd@csl@@@fnd@csl@@EEAAPEAX_K0@Z
 ?AllocBottom@?$FreeListHeapTemplate@VMutex@fnd@csl@@@fnd@csl@@EEAAPEAX_K0@Z:
     mov rax, 0140d6d2c0h
@@ -91150,6 +91465,11 @@ PUBLIC ?FindNodesByType@DvSceneNodeTree@dv@hh@@QEAAXW4NodeType@DvNodeBase@23@PEA
     mov rax, 0140d973b0h
     jmp rax
 
+PUBLIC ?GetChildren@DvSceneNodeTree@dv@hh@@QEAAXW4NodeType@DvNodeBase@23@PEAV523@PEAV?$MoveArray@PEAVDvNodeBase@dv@hh@@@ut@csl@@@Z
+?GetChildren@DvSceneNodeTree@dv@hh@@QEAAXW4NodeType@DvNodeBase@23@PEAV523@PEAV?$MoveArray@PEAVDvNodeBase@dv@hh@@@ut@csl@@@Z:
+    mov rax, 0140d973c0h
+    jmp rax
+
 PUBLIC ??0DvNodeCharacter@dv@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
 ??0DvNodeCharacter@dv@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 0140d975c0h
@@ -91265,6 +91585,11 @@ PUBLIC ?GetStart@DvPage@dv@hh@@UEAAHXZ
     mov rax, 0140d991b0h
     jmp rax
 
+PUBLIC ?ShouldTransition@DvPage@dv@hh@@QEAA_NAEAUPageInfo@23@AEAH@Z
+?ShouldTransition@DvPage@dv@hh@@QEAA_NAEAUPageInfo@23@AEAH@Z:
+    mov rax, 0140d992d0h
+    jmp rax
+
 PUBLIC ??0DvPageConditionBase@dv@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
 ??0DvPageConditionBase@dv@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 0140d99370h
@@ -91277,6 +91602,11 @@ PUBLIC ??_DDvPageConditionBase@dv@hh@@QEAAXXZ
 
 PUBLIC ?UnkFunc5@DvPageConditionEnd@dv@hh@@UEAA_NXZ
 ?UnkFunc5@DvPageConditionEnd@dv@hh@@UEAA_NXZ:
+    mov rax, 0140d993e0h
+    jmp rax
+
+PUBLIC ?ShouldSkip@DvPageConditionEnd@dv@hh@@UEAA_NAEAUPageInfo@23@@Z
+?ShouldSkip@DvPageConditionEnd@dv@hh@@UEAA_NAEAUPageInfo@23@@Z:
     mov rax, 0140d993e0h
     jmp rax
 
@@ -91342,6 +91672,16 @@ PUBLIC ?OnCutsceneEnd@DvSceneControlListener@dv@hh@@UEAAXXZ
 
 PUBLIC ?OnCutsceneEnd@DiEventManager@dv@hh@@UEAAXXZ
 ?OnCutsceneEnd@DiEventManager@dv@hh@@UEAAXXZ:
+    mov rax, 0140d9a4a0h
+    jmp rax
+
+PUBLIC ?OnCutsceneEnd@DvSceneControlListener@dv@hh@@UEAAXAEAUOnCutsceneEndInfo@123@@Z
+?OnCutsceneEnd@DvSceneControlListener@dv@hh@@UEAAXAEAUOnCutsceneEndInfo@123@@Z:
+    mov rax, 0140d9a4a0h
+    jmp rax
+
+PUBLIC ?OnCutsceneEnd@DiEventManager@dv@hh@@UEAAXAEAUOnCutsceneEndInfo@DvSceneControlListener@23@@Z
+?OnCutsceneEnd@DiEventManager@dv@hh@@UEAAXAEAUOnCutsceneEndInfo@DvSceneControlListener@23@@Z:
     mov rax, 0140d9a4a0h
     jmp rax
 
@@ -91978,6 +92318,11 @@ PUBLIC ?Create@DvPageConditionEnd@dv@hh@@SAPEAVDvPageConditionBase@23@PEAVDvPage
 PUBLIC ??0DvPageTransition@dv@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
 ??0DvPageTransition@dv@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 0140d9fe90h
+    jmp rax
+
+PUBLIC ?ShouldTransition@DvPageTransition@dv@hh@@QEAA_NAEAUPageInfo@23@@Z
+?ShouldTransition@DvPageTransition@dv@hh@@QEAA_NAEAUPageInfo@23@@Z:
+    mov rax, 0140da01a0h
     jmp rax
 
 PUBLIC ??0DvResourceBase@dv@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
@@ -92820,6 +93165,16 @@ PUBLIC ??_DDvElementPointLight@dv@hh@@QEAAXXZ
     mov rax, 0140da47c0h
     jmp rax
 
+PUBLIC ??_DSpotlightObject@DvElementSpotlight@dv@hh@@QEAAXXZ
+??_DSpotlightObject@DvElementSpotlight@dv@hh@@QEAAXXZ:
+    mov rax, 0140da4820h
+    jmp rax
+
+PUBLIC ?AddCallback@SpotlightObject@DvElementSpotlight@dv@hh@@UEAAXPEAVGameManager@game@4@@Z
+?AddCallback@SpotlightObject@DvElementSpotlight@dv@hh@@UEAAXPEAVGameManager@game@4@@Z:
+    mov rax, 0140da4890h
+    jmp rax
+
 PUBLIC ?SetData@DvElementPointLight@dv@hh@@UEAAXPEAX@Z
 ?SetData@DvElementPointLight@dv@hh@@UEAAXPEAX@Z:
     mov rax, 0140da4a80h
@@ -92908,6 +93263,11 @@ PUBLIC ?RemoveCallback@DvElementPointLight@dv@hh@@UEAAPEAXXZ
 PUBLIC ?RemoveCallback@DvElementPointLight@dv@hh@@UEAAXXZ
 ?RemoveCallback@DvElementPointLight@dv@hh@@UEAAXXZ:
     mov rax, 0140da4fb0h
+    jmp rax
+
+PUBLIC ?Create@SpotlightObject@DvElementSpotlight@dv@hh@@CAPEAVGameObject@game@4@PEAVIAllocator@fnd@csl@@@Z
+?Create@SpotlightObject@DvElementSpotlight@dv@hh@@CAPEAVGameObject@game@4@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 0140da5190h
     jmp rax
 
 PUBLIC ??0DvElementVertexAnimationTexture@dv@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
@@ -95405,13 +95765,18 @@ PUBLIC ??_DMessenger@fnd@hh@@QEAAXXZ
     mov rax, 0140ec95d0h
     jmp rax
 
-PUBLIC ?ReceiveMessage@Messenger@fnd@hh@@UEAA_NAEAVMessage@23@@Z
-?ReceiveMessage@Messenger@fnd@hh@@UEAA_NAEAVMessage@23@@Z:
+PUBLIC ?ReceiveMessage@DiEventManager@dv@hh@@UEAA_NAEAVMessage@fnd@3@@Z
+?ReceiveMessage@DiEventManager@dv@hh@@UEAA_NAEAVMessage@fnd@3@@Z:
     mov rax, 0140ec9650h
     jmp rax
 
-PUBLIC ?ReceiveMessage@DiEventManager@dv@hh@@UEAA_NAEAVMessage@fnd@3@@Z
-?ReceiveMessage@DiEventManager@dv@hh@@UEAA_NAEAVMessage@fnd@3@@Z:
+PUBLIC ?ReceiveMessage@PlayerBlackboardService@player@app@@UEAA_NAEAVMessage@fnd@hh@@@Z
+?ReceiveMessage@PlayerBlackboardService@player@app@@UEAA_NAEAVMessage@fnd@hh@@@Z:
+    mov rax, 0140ec9650h
+    jmp rax
+
+PUBLIC ?ReceiveMessage@Messenger@fnd@hh@@UEAA_NAEAVMessage@23@@Z
+?ReceiveMessage@Messenger@fnd@hh@@UEAA_NAEAVMessage@23@@Z:
     mov rax, 0140ec9650h
     jmp rax
 
@@ -95430,8 +95795,18 @@ PUBLIC ?Alloc@IAllocator@fnd@csl@@UEAAPEAX_K0@Z
     mov rax, 0140ec98c0h
     jmp rax
 
+PUBLIC ?Alloc@IAllocator@memory@ucsl@@UEAAPEAX_K0@Z
+?Alloc@IAllocator@memory@ucsl@@UEAAPEAX_K0@Z:
+    mov rax, 0140ec98c0h
+    jmp rax
+
 PUBLIC ?Free@IAllocator@fnd@csl@@UEAAXPEAX@Z
 ?Free@IAllocator@fnd@csl@@UEAAXPEAX@Z:
+    mov rax, 0140ec99b0h
+    jmp rax
+
+PUBLIC ?Free@IAllocator@memory@ucsl@@UEAAXPEAX@Z
+?Free@IAllocator@memory@ucsl@@UEAAXPEAX@Z:
     mov rax, 0140ec99b0h
     jmp rax
 
@@ -102360,6 +102735,21 @@ PUBLIC ??0Element@Cyan@@QEAA@PEAVEmitter@1@PEBUElementParam@Resource@1@@Z
     mov rax, 0140ff3820h
     jmp rax
 
+PUBLIC ??0FieldAnim@Cyan@@QEAA@XZ
+??0FieldAnim@Cyan@@QEAA@XZ:
+    mov rax, 0140ff39f0h
+    jmp rax
+
+PUBLIC ??0_Texcoord@Cyan@@QEAA@XZ
+??0_Texcoord@Cyan@@QEAA@XZ:
+    mov rax, 0140ff3a40h
+    jmp rax
+
+PUBLIC ??0_Texcoord@Element@Cyan@@QEAA@XZ
+??0_Texcoord@Element@Cyan@@QEAA@XZ:
+    mov rax, 0140ff3a40h
+    jmp rax
+
 PUBLIC ??_DElement@Cyan@@QEAAXXZ
 ??_DElement@Cyan@@QEAAXXZ:
     mov rax, 0140ff3ab0h
@@ -102387,6 +102777,16 @@ PUBLIC ?CalcTexcoord@Element@Cyan@@QEAAXM@Z
 
 PUBLIC ?CalcTexcoordImpl@Element@Cyan@@QEAAXMPEBUTextureParam@Resource@2@PEAXPEAM22I@Z
 ?CalcTexcoordImpl@Element@Cyan@@QEAAXMPEBUTextureParam@Resource@2@PEAXPEAM22I@Z:
+    mov rax, 0140ff4640h
+    jmp rax
+
+PUBLIC ?CalcTexcoordImpl@Element@Cyan@@QEAAXMPEBUTextureParam@Resource@2@PEAV_Texcoord@12@PEAM22I@Z
+?CalcTexcoordImpl@Element@Cyan@@QEAAXMPEBUTextureParam@Resource@2@PEAV_Texcoord@12@PEAM22I@Z:
+    mov rax, 0140ff4640h
+    jmp rax
+
+PUBLIC ?CalcTexcoordImpl@Element@Cyan@@QEAAXMPEBUTextureParam@Resource@2@PEAV_Texcoord@12@PEAUMatrix23@2@PEAM3I@Z
+?CalcTexcoordImpl@Element@Cyan@@QEAAXMPEBUTextureParam@Resource@2@PEAV_Texcoord@12@PEAUMatrix23@2@PEAM3I@Z:
     mov rax, 0140ff4640h
     jmp rax
 
@@ -102748,6 +103148,36 @@ PUBLIC ??0EmissionGpuPrimitive@Cyan@@QEAA@PEAVManager@1@PEBD@Z
 PUBLIC ?UnkFunc0@EmissionGpuPrimitive@Cyan@@UEAA_JXZ
 ?UnkFunc0@EmissionGpuPrimitive@Cyan@@UEAA_JXZ:
     mov rax, 01410024f0h
+    jmp rax
+
+PUBLIC ??_DCyanModelCreationInfoCreator@Graphics@Cyan@@QEAAXXZ
+??_DCyanModelCreationInfoCreator@Graphics@Cyan@@QEAAXXZ:
+    mov rax, 01410025b0h
+    jmp rax
+
+PUBLIC ??_DMeshRendererNeedle@Graphics@Cyan@@QEAAXXZ
+??_DMeshRendererNeedle@Graphics@Cyan@@QEAAXXZ:
+    mov rax, 0141002600h
+    jmp rax
+
+PUBLIC ??_DModelCreationInfoCreator@needle@hh@@QEAAXXZ
+??_DModelCreationInfoCreator@needle@hh@@QEAAXXZ:
+    mov rax, 0141002670h
+    jmp rax
+
+PUBLIC ?Create@MeshRendererNeedle@Graphics@Cyan@@SAPEAV123@PEAVIAllocator@System@3@@Z
+?Create@MeshRendererNeedle@Graphics@Cyan@@SAPEAV123@PEAVIAllocator@System@3@@Z:
+    mov rax, 01410026c0h
+    jmp rax
+
+PUBLIC ?CreateGlobalparamContainer@MeshRendererNeedle@Graphics@Cyan@@UEBAPEAVParameterValueObject@needle@hh@@I@Z
+?CreateGlobalparamContainer@MeshRendererNeedle@Graphics@Cyan@@UEBAPEAVParameterValueObject@needle@hh@@I@Z:
+    mov rax, 0141002760h
+    jmp rax
+
+PUBLIC ?SetupGatherRenderingPassContext@MeshRendererNeedle@Graphics@Cyan@@UEBAXIPEAUGatherRenderingPassContext@needle@hh@@@Z
+?SetupGatherRenderingPassContext@MeshRendererNeedle@Graphics@Cyan@@UEBAXIPEAUGatherRenderingPassContext@needle@hh@@@Z:
+    mov rax, 0141002950h
     jmp rax
 
 PUBLIC ??0Particle@Elements@Cyan@@QEAA@PEAVEmitter@2@PEBUElementParam@Resource@2@@Z
@@ -105185,6 +105615,11 @@ PUBLIC ?SetTextureSampler@ParameterValueObjectContainer@needle@hh@@QEAAXIPEAVTex
     mov rax, 01410c4c40h
     jmp rax
 
+PUBLIC ?Setup@SRenderHint@needle@hh@@QEAAXPEBVMaterialResource@23@@Z
+?Setup@SRenderHint@needle@hh@@QEAAXPEBVMaterialResource@23@@Z:
+    mov rax, 01410c4d60h
+    jmp rax
+
 PUBLIC ?GetNeedleSStr@MeshResource@needle@hh@@UEAAPEAUNeedleSStr@23@XZ
 ?GetNeedleSStr@MeshResource@needle@hh@@UEAAPEAUNeedleSStr@23@XZ:
     mov rax, 01410c57e0h
@@ -105435,6 +105870,16 @@ PUBLIC ??_DGatherRenderingPassContext@needle@hh@@QEAAXXZ
     mov rax, 01410cdef0h
     jmp rax
 
+PUBLIC ?GetMaterialParameterPriorityName@needle@hh@@YAPEAVCNameIDObject@12@XZ
+?GetMaterialParameterPriorityName@needle@hh@@YAPEAVCNameIDObject@12@XZ:
+    mov rax, 01410d1d60h
+    jmp rax
+
+PUBLIC ?GetMaterialParameterGatherRenderingPassType@needle@hh@@YAPEAVCNameIDObject@12@XZ
+?GetMaterialParameterGatherRenderingPassType@needle@hh@@YAPEAVCNameIDObject@12@XZ:
+    mov rax, 01410d1d80h
+    jmp rax
+
 PUBLIC ?GetParameterBuffer@GatherRenderingPassContext@needle@hh@@QEAAPEAX_K@Z
 ?GetParameterBuffer@GatherRenderingPassContext@needle@hh@@QEAAPEAX_K@Z:
     mov rax, 01410d1d90h
@@ -105505,6 +105950,11 @@ PUBLIC ?GetMeshResource@Model@needle@hh@@QEBAPEAVMeshResource@23@I@Z
     mov rax, 01410d6ac0h
     jmp rax
 
+PUBLIC ?Setup@ModelCreationInfoCreator@needle@hh@@QEAAXPEAVMeshResource@23@AEBUShaderMaterialParameterSetting@23@_J@Z
+?Setup@ModelCreationInfoCreator@needle@hh@@QEAAXPEAVMeshResource@23@AEBUShaderMaterialParameterSetting@23@_J@Z:
+    mov rax, 01410db5b0h
+    jmp rax
+
 PUBLIC ??_DModelInstanceRenderer@needle@hh@@QEAAXXZ
 ??_DModelInstanceRenderer@needle@hh@@QEAAXXZ:
     mov rax, 01410dc7e0h
@@ -105518,6 +105968,11 @@ PUBLIC ?BeginRender@ModelInstanceRenderer@needle@hh@@UEBAXPEAVRenderingDeviceCon
 PUBLIC ?EndRender@ModelInstanceRenderer@needle@hh@@UEBAXPEAVRenderingDeviceContext@23@@Z
 ?EndRender@ModelInstanceRenderer@needle@hh@@UEBAXPEAVRenderingDeviceContext@23@@Z:
     mov rax, 01410dd600h
+    jmp rax
+
+PUBLIC ?GenerateMeshRenderHint@ModelInstanceRenderer@needle@hh@@UEBAXPEBUSceneRenderPassID@23@AEBUSRenderHint@23@1PEAU523@I@Z
+?GenerateMeshRenderHint@ModelInstanceRenderer@needle@hh@@UEBAXPEBUSceneRenderPassID@23@AEBUSRenderHint@23@1PEAU523@I@Z:
+    mov rax, 01410dd630h
     jmp rax
 
 PUBLIC ?UnkFunc3@ModelInstanceRenderer@needle@hh@@UEAAX_J000@Z
@@ -105543,6 +105998,11 @@ PUBLIC ?RenderMesh@ModelInstanceRenderer@needle@hh@@UEBAXPEAVRenderingDeviceCont
 PUBLIC ?Setup@MeshDrawSettingInfoArray@needle@hh@@QEAAXPEBVModelInstanceRenderer@23@AEBUModelCreationInfo@23@I@Z
 ?Setup@MeshDrawSettingInfoArray@needle@hh@@QEAAXPEBVModelInstanceRenderer@23@AEBUModelCreationInfo@23@I@Z:
     mov rax, 01410dddc0h
+    jmp rax
+
+PUBLIC ?SetupMeshDrawSettingInfoArray@ModelInstanceRenderer@needle@hh@@UEBAXAEBUModelCreationInfo@23@AEAVMeshDrawSettingInfoArray@23@@Z
+?SetupMeshDrawSettingInfoArray@ModelInstanceRenderer@needle@hh@@UEBAXAEBUModelCreationInfo@23@AEAVMeshDrawSettingInfoArray@23@@Z:
+    mov rax, 01410de3a0h
     jmp rax
 
 PUBLIC ??_DBuffer@needle@hh@@QEAAXXZ
@@ -112330,6 +112790,31 @@ PUBLIC ?Init@EnemyPostureManager@enemy@app@@UEAAXXZ
     mov rax, 014118f6e0h
     jmp rax
 
+PUBLIC ?UnkFunc0@PlayerEyesightComponent@player@app@@UEAAXXZ
+?UnkFunc0@PlayerEyesightComponent@player@app@@UEAAXXZ:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?UnkFunc2@PlayerEyesightComponent@player@app@@UEAAXXZ
+?UnkFunc2@PlayerEyesightComponent@player@app@@UEAAXXZ:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?UnkFunc3@PlayerEyesightComponent@player@app@@UEAAXXZ
+?UnkFunc3@PlayerEyesightComponent@player@app@@UEAAXXZ:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?GetNameHash@PlayerEyesightComponent@player@app@@UEAAIXZ
+?GetNameHash@PlayerEyesightComponent@player@app@@UEAAIXZ:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?UnkFunc1@PlayerEyesightComponent@player@app@@UEAAXXZ
+?UnkFunc1@PlayerEyesightComponent@player@app@@UEAAXXZ:
+    mov rax, 014118f6e0h
+    jmp rax
+
 PUBLIC ?IsValidToWrite@SConstantData@SParameterBuffer@ImplDX11@needle@hh@@QEAA_NPEAXI@Z
 ?IsValidToWrite@SConstantData@SParameterBuffer@ImplDX11@needle@hh@@QEAA_NPEAXI@Z:
     mov rax, 014118f720h
@@ -112383,11 +112868,6 @@ PUBLIC ?UnkFunc3@DefaultDynamicResolutionController@gfx@hh@@UEBAMXZ
 PUBLIC ?GetResolutionRatio@DefaultDynamicResolutionController@gfx@hh@@UEBAMXZ
 ?GetResolutionRatio@DefaultDynamicResolutionController@gfx@hh@@UEBAMXZ:
     mov rax, 01411e90f0h
-    jmp rax
-
-PUBLIC ?SetDynamicResolutionSettings@DynamicResolutionController@gfx@hh@@UEAAXAEBUFxDynamicResolutionParameter@needle@3@@Z
-?SetDynamicResolutionSettings@DynamicResolutionController@gfx@hh@@UEAAXAEBUFxDynamicResolutionParameter@needle@3@@Z:
-    mov rax, 01411e9100h
     jmp rax
 
 PUBLIC ?CalculateDynamicResolution@DefaultDynamicResolutionController@gfx@hh@@QEAAXAEAUResolutionInfo@DynamicResolutionController@23@AEAY03UViewportDimensions@gfnd@3@M_N@Z
@@ -125237,6 +125717,11 @@ PUBLIC ?classId@ResScene@resources@heur@@0PEBXEB
 
 PUBLIC ?typeInfo@ResPhysicsMesh@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
 ?typeInfo@ResPhysicsMesh@resources@heur@@0UResourceTypeInfo@fnd@hh@@B:
+    mov rax, 01415b9270h
+    jmp rax
+
+PUBLIC ?typeInfo@ResPhysicsMeshBullet@physics@hh@@0UResourceTypeInfo@fnd@3@B
+?typeInfo@ResPhysicsMeshBullet@physics@hh@@0UResourceTypeInfo@fnd@3@B:
     mov rax, 01415b9270h
     jmp rax
 
@@ -144290,6 +144775,26 @@ PUBLIC ?componentClass@GOCCharacterController2@physics@app@@0VGOComponentClass@g
     mov rax, 0143cdc9b0h
     jmp rax
 
+PUBLIC ?componentClass@GOCCapsuleColliderQuery@physics@app@@0VGOComponentClass@game@hh@@B
+?componentClass@GOCCapsuleColliderQuery@physics@app@@0VGOComponentClass@game@hh@@B:
+    mov rax, 0143cdca00h
+    jmp rax
+
+PUBLIC ?componentClass@GOCColliderQuery@physics@app@@0VGOComponentClass@game@hh@@B
+?componentClass@GOCColliderQuery@physics@app@@0VGOComponentClass@game@hh@@B:
+    mov rax, 0143cdca50h
+    jmp rax
+
+PUBLIC ?componentClass@GOCMoveSphereColliderQuery@physics@app@@0VGOComponentClass@game@hh@@B
+?componentClass@GOCMoveSphereColliderQuery@physics@app@@0VGOComponentClass@game@hh@@B:
+    mov rax, 0143cdcaa0h
+    jmp rax
+
+PUBLIC ?componentClass@GOCSphereColliderQuery@physics@app@@0VGOComponentClass@game@hh@@B
+?componentClass@GOCSphereColliderQuery@physics@app@@0VGOComponentClass@game@hh@@B:
+    mov rax, 0143cdcaf0h
+    jmp rax
+
 PUBLIC ?playerVisualClass@VisualAmy@player@app@@0UPlayerVisualClass@23@B
 ?playerVisualClass@VisualAmy@player@app@@0UPlayerVisualClass@23@B:
     mov rax, 0143cdcb40h
@@ -146218,6 +146723,11 @@ PUBLIC ?gameObjectClass@DvStandardCharacter@dv@hh@@0VGameObjectClass@game@3@B
 PUBLIC ?elementBaseCreateFuncs@DvNodeElement@dv@hh@@2PAPEAPEBXA
 ?elementBaseCreateFuncs@DvNodeElement@dv@hh@@2PAPEAPEBXA:
     mov rax, 0143cefeb0h
+    jmp rax
+
+PUBLIC ?gameObjectClass@SpotlightObject@DvElementSpotlight@dv@hh@@0VGameObjectClass@game@4@B
+?gameObjectClass@SpotlightObject@DvElementSpotlight@dv@hh@@0VGameObjectClass@game@4@B:
+    mov rax, 0143cf0030h
     jmp rax
 
 PUBLIC ?gameObjectClass@SpotlightModelObject@gameobjects@heur@@0VGameObjectClass@game@hh@@B
@@ -163430,6 +163940,16 @@ PUBLIC ?gameServiceClass@SoundManagerCri@snd@hh@@0VGameServiceClass@game@3@B
     mov rax, 0143dc3b88h
     jmp rax
 
+PUBLIC ?instance@BtAllocator@physics@hh@@2PEAV123@EA
+?instance@BtAllocator@physics@hh@@2PEAV123@EA:
+    mov rax, 0143dc3d88h
+    jmp rax
+
+PUBLIC ?instance@BtAllocator@physics@hh@@2V123@A
+?instance@BtAllocator@physics@hh@@2V123@A:
+    mov rax, 0143dc3d88h
+    jmp rax
+
 PUBLIC ?gameServiceClass@PathManager@path@hh@@0VGameServiceClass@game@3@B
 ?gameServiceClass@PathManager@path@hh@@0VGameServiceClass@game@3@B:
     mov rax, 0143dc4390h
@@ -166537,6 +167057,11 @@ PUBLIC ?DSCL_UnkFunc7@EventPlayer@evt@app@@UEAAXXZ
 
 PUBLIC ?OnCutsceneEnd@EventPlayer@evt@app@@UEAAXXZ
 ?OnCutsceneEnd@EventPlayer@evt@app@@UEAAXXZ:
+    mov rax, 0146b454c0h
+    jmp rax
+
+PUBLIC ?OnCutsceneEnd@EventPlayer@evt@app@@UEAAXAEAUOnCutsceneEndInfo@DvSceneControlListener@dv@hh@@@Z
+?OnCutsceneEnd@EventPlayer@evt@app@@UEAAXAEAUOnCutsceneEndInfo@DvSceneControlListener@dv@hh@@@Z:
     mov rax, 0146b454c0h
     jmp rax
 
@@ -172460,16 +172985,6 @@ PUBLIC ??0GOCColliderQuery@physics@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z
     mov rax, 014a88a340h
     jmp rax
 
-PUBLIC ??_DGOCCapsuleColliderQuery@physics@app@@QEAAXXZ
-??_DGOCCapsuleColliderQuery@physics@app@@QEAAXXZ:
-    mov rax, 014a88a550h
-    jmp rax
-
-PUBLIC ??_DGOCSphereColliderQuery@physics@app@@QEAAXXZ
-??_DGOCSphereColliderQuery@physics@app@@QEAAXXZ:
-    mov rax, 014a88a550h
-    jmp rax
-
 PUBLIC ?OnGOCEvent@GOCColliderQuery@physics@app@@UEAAXW4GOCEvent@GOComponent@game@hh@@AEAVGameObject@67@PEAX@Z
 ?OnGOCEvent@GOCColliderQuery@physics@app@@UEAAXW4GOCEvent@GOComponent@game@hh@@AEAVGameObject@67@PEAX@Z:
     mov rax, 014a892ef0h
@@ -172478,6 +172993,11 @@ PUBLIC ?OnGOCEvent@GOCColliderQuery@physics@app@@UEAAXW4GOCEvent@GOComponent@gam
 PUBLIC ?SetFrame@GOCColliderQuery@physics@app@@QEAAXPEAVHFrame@fnd@hh@@@Z
 ?SetFrame@GOCColliderQuery@physics@app@@QEAAXPEAVHFrame@fnd@hh@@@Z:
     mov rax, 014a8931c0h
+    jmp rax
+
+PUBLIC ?Setup@GOCColliderQuery@physics@app@@QEAAXAEBUDescription@123@@Z
+?Setup@GOCColliderQuery@physics@app@@QEAAXAEBUDescription@123@@Z:
+    mov rax, 014a895b00h
     jmp rax
 
 PUBLIC ??_DGOCMoveSphereColliderQuery@physics@app@@QEAAXXZ
@@ -172643,6 +173163,16 @@ PUBLIC ??0BlackboardItem@player@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z
 PUBLIC ??_GPlayerBlackboardService@player@app@@QEAAXXZ
 ??_GPlayerBlackboardService@player@app@@QEAAXXZ:
     mov rax, 014aa7b0a0h
+    jmp rax
+
+PUBLIC ??_DPlayerBlackboardService@player@app@@QEAAXXZ
+??_DPlayerBlackboardService@player@app@@QEAAXXZ:
+    mov rax, 014aa7b0a0h
+    jmp rax
+
+PUBLIC ?ProcessMessage@PlayerBlackboardService@player@app@@UEAA_NAEAVMessage@fnd@hh@@@Z
+?ProcessMessage@PlayerBlackboardService@player@app@@UEAA_NAEAVMessage@fnd@hh@@@Z:
+    mov rax, 014aa7e200h
     jmp rax
 
 PUBLIC ??0BlackboardSpeed@player@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z
@@ -172945,6 +173475,11 @@ PUBLIC ??_GGOCPlayerEyesight@player@app@@QEAAXXZ
     mov rax, 014ada0f70h
     jmp rax
 
+PUBLIC ??_DGOCPlayerEyesight@player@app@@QEAAXXZ
+??_DGOCPlayerEyesight@player@app@@QEAAXXZ:
+    mov rax, 014ada0f70h
+    jmp rax
+
 PUBLIC ??0HomingEyesight@player@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z
 ??0HomingEyesight@player@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 014ada6b80h
@@ -172955,8 +173490,18 @@ PUBLIC ??0TargetData@HomingEyesight@player@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z
     mov rax, 014ada96d0h
     jmp rax
 
+PUBLIC ??0TargetData@HomingEyesight@player@app@@QEAA@PEAVIAllocator@fnd@csl@@PEAVGOCCollider@physics@hh@@@Z
+??0TargetData@HomingEyesight@player@app@@QEAA@PEAVIAllocator@fnd@csl@@PEAVGOCCollider@physics@hh@@@Z:
+    mov rax, 014ada96d0h
+    jmp rax
+
 PUBLIC ??_GHomingEyesight@player@app@@QEAAXXZ
 ??_GHomingEyesight@player@app@@QEAAXXZ:
+    mov rax, 014adbb280h
+    jmp rax
+
+PUBLIC ??_DHomingEyesight@player@app@@QEAAXXZ
+??_DHomingEyesight@player@app@@QEAAXXZ:
     mov rax, 014adbb280h
     jmp rax
 
@@ -172973,6 +173518,36 @@ PUBLIC ??_GPostureDiving@player@app@@QEAAXXZ
 PUBLIC ??_GUIAccelComboContext@ui@app@@QEAAXXZ
 ??_GUIAccelComboContext@ui@app@@QEAAXXZ:
     mov rax, 014adc12b0h
+    jmp rax
+
+PUBLIC ??_DTargetData@HomingEyesight@player@app@@QEAAXXZ
+??_DTargetData@HomingEyesight@player@app@@QEAAXXZ:
+    mov rax, 014adc12b0h
+    jmp rax
+
+PUBLIC ?OnAdded@HomingEyesight@player@app@@UEAAXXZ
+?OnAdded@HomingEyesight@player@app@@UEAAXXZ:
+    mov rax, 014addaca0h
+    jmp rax
+
+PUBLIC ?UnkFunc5@HomingEyesight@player@app@@UEAAXXZ
+?UnkFunc5@HomingEyesight@player@app@@UEAAXXZ:
+    mov rax, 014ade1930h
+    jmp rax
+
+PUBLIC ?Setup@HomingEyesight@player@app@@QEAAXAEBUDescription@123@@Z
+?Setup@HomingEyesight@player@app@@QEAAXAEBUDescription@123@@Z:
+    mov rax, 014adecda0h
+    jmp rax
+
+PUBLIC ??0PlayerEyesightComponent@player@app@@QEAA@PEAVIAllocator@fnd@csl@@D@Z
+??0PlayerEyesightComponent@player@app@@QEAA@PEAVIAllocator@fnd@csl@@D@Z:
+    mov rax, 014adf4f90h
+    jmp rax
+
+PUBLIC ?SetCollider@PlayerEyesightComponent@player@app@@QEAAXPEAVGOCCollider@physics@hh@@@Z
+?SetCollider@PlayerEyesightComponent@player@app@@QEAAXPEAVGOCCollider@physics@hh@@@Z:
+    mov rax, 014ae0f5b0h
     jmp rax
 
 PUBLIC ??0Unk2@PlayerInformation@level@app@@QEAA@XZ
@@ -175205,6 +175780,11 @@ PUBLIC ?Initialize@SaveInterface@save@app@@QEAAXXZ
     mov rax, 014cf18df0h
     jmp rax
 
+PUBLIC ?SetSavePermission@SaveManager@save@app@@QEAAXD_N@Z
+?SetSavePermission@SaveManager@save@app@@QEAAXD_N@Z:
+    mov rax, 014cf6bbf0h
+    jmp rax
+
 PUBLIC ?GetGameDataAccessor@SaveManager@save@app@@QEAA?AVGameDataAc@23@XZ
 ?GetGameDataAccessor@SaveManager@save@app@@QEAA?AVGameDataAc@23@XZ:
     mov rax, 014cf79f10h
@@ -177123,6 +177703,31 @@ PUBLIC ?Create@PhysicsWorldBullet@physics@hh@@CAPEAV123@PEAVIAllocator@fnd@csl@@
 PUBLIC ?Create@ResPhysicsMesh@resources@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z
 ?Create@ResPhysicsMesh@resources@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 014e5f94f0h
+    jmp rax
+
+PUBLIC ?Create@ResPhysicsMeshBullet@physics@hh@@CAPEAVManagedResource@fnd@3@PEAVIAllocator@5csl@@@Z
+?Create@ResPhysicsMeshBullet@physics@hh@@CAPEAVManagedResource@fnd@3@PEAVIAllocator@5csl@@@Z:
+    mov rax, 014e5f94f0h
+    jmp rax
+
+PUBLIC ??_DResPhysicsMeshBullet@physics@hh@@QEAAXXZ
+??_DResPhysicsMeshBullet@physics@hh@@QEAAXXZ:
+    mov rax, 014e60e3b0h
+    jmp rax
+
+PUBLIC ?PM_UnkFunc11@ResPhysicsMeshBullet@physics@hh@@UEAA_J_J@Z
+?PM_UnkFunc11@ResPhysicsMeshBullet@physics@hh@@UEAA_J_J@Z:
+    mov rax, 014e61eda0h
+    jmp rax
+
+PUBLIC ?Unload@ResPhysicsMeshBullet@physics@hh@@UEAAXXZ
+?Unload@ResPhysicsMeshBullet@physics@hh@@UEAAXXZ:
+    mov rax, 014e620f70h
+    jmp rax
+
+PUBLIC ?GetInstance@BtAllocator@physics@hh@@SAPEAV123@XZ
+?GetInstance@BtAllocator@physics@hh@@SAPEAV123@XZ:
+    mov rax, 014e626100h
     jmp rax
 
 PUBLIC ?Create@MaterialDataList@ResHeightField@physics@hh@@SAPEAV1234@PEAVIAllocator@fnd@csl@@@Z
@@ -181705,6 +182310,11 @@ PUBLIC ?InitializeClasses@DvSceneNodeTree@dv@hh@@QEAAXXZ
     mov rax, 0150ba98d0h
     jmp rax
 
+PUBLIC ?GetMainCameraNode@DvSceneNodeTree@dv@hh@@QEBAPEAVDvNodeCamera@23@XZ
+?GetMainCameraNode@DvSceneNodeTree@dv@hh@@QEBAPEAVDvNodeCamera@23@XZ:
+    mov rax, 0150bee140h
+    jmp rax
+
 PUBLIC ?InitializeMainNode@DvSceneNodeTree@dv@hh@@QEAAXXZ
 ?InitializeMainNode@DvSceneNodeTree@dv@hh@@QEAAXXZ:
     mov rax, 0150c11010h
@@ -184055,6 +184665,16 @@ PUBLIC ?UnkFunc2@EmissionGpuPrimitive@Cyan@@UEAA_JXZ
     mov rax, 0153e34300h
     jmp rax
 
+PUBLIC ?CreateModel@MeshRendererNeedle@Graphics@Cyan@@UEBAPEAXPEAVMeshResource@needle@hh@@PEAVRenderingDevice@56@AEBUModelOption@Resource@3@@Z
+?CreateModel@MeshRendererNeedle@Graphics@Cyan@@UEBAPEAXPEAVMeshResource@needle@hh@@PEAVRenderingDevice@56@AEBUModelOption@Resource@3@@Z:
+    mov rax, 0153e3a460h
+    jmp rax
+
+PUBLIC ?SetupMaterialPass@CyanModelCreationInfoCreator@Graphics@Cyan@@UEBAXPEBVMaterialResource@needle@hh@@PEAVCNameIDObject@56@PEBUMaterialResourcePassSetupInfo@56@PEAUMaterialResourcePassMeasureInfo@56@@Z
+?SetupMaterialPass@CyanModelCreationInfoCreator@Graphics@Cyan@@UEBAXPEBVMaterialResource@needle@hh@@PEAVCNameIDObject@56@PEBUMaterialResourcePassSetupInfo@56@PEAUMaterialResourcePassMeasureInfo@56@@Z:
+    mov rax, 0153e3c420h
+    jmp rax
+
 PUBLIC ?Create@PBRModelInstance@needle@hh@@SAPEAV123@PEAVModel@23@AEBUPBRModelCreationInfo@23@PEBVPBRModelInstanceRenderer@23@@Z
 ?Create@PBRModelInstance@needle@hh@@SAPEAV123@PEAVModel@23@AEBUPBRModelCreationInfo@23@PEBVPBRModelInstanceRenderer@23@@Z:
     mov rax, 0153e9d420h
@@ -185300,6 +185920,11 @@ PUBLIC ??_DGOCVisualUserModel@gocs@heur@@QEAAXXZ
     mov rax, 01553b3740h
     jmp rax
 
+PUBLIC ?SetupMaterialPass@ModelCreationInfoCreator@needle@hh@@UEBAXPEBVMaterialResource@23@PEAVCNameIDObject@23@PEBUMaterialResourcePassSetupInfo@23@PEAUMaterialResourcePassMeasureInfo@23@@Z
+?SetupMaterialPass@ModelCreationInfoCreator@needle@hh@@UEBAXPEBVMaterialResource@23@PEAVCNameIDObject@23@PEBUMaterialResourcePassSetupInfo@23@PEAUMaterialResourcePassMeasureInfo@23@@Z:
+    mov rax, 01554265c0h
+    jmp rax
+
 PUBLIC ??0ModelInstanceRenderer@needle@hh@@QEAA@XZ
 ??0ModelInstanceRenderer@needle@hh@@QEAA@XZ:
     mov rax, 0155446d10h
@@ -185308,6 +185933,11 @@ PUBLIC ??0ModelInstanceRenderer@needle@hh@@QEAA@XZ
 PUBLIC ??_DModelCacheContainer@ModelInstanceRenderer@needle@hh@@QEAAXXZ
 ??_DModelCacheContainer@ModelInstanceRenderer@needle@hh@@QEAAXXZ:
     mov rax, 015544e4f0h
+    jmp rax
+
+PUBLIC ?CreateModelInside@ModelInstanceRenderer@needle@hh@@QEAAXPEAVRenderingDevice@23@AEBUModelCreationInfo@23@_J@Z
+?CreateModelInside@ModelInstanceRenderer@needle@hh@@QEAAXPEAVRenderingDevice@23@AEBUModelCreationInfo@23@_J@Z:
+    mov rax, 01554515a0h
     jmp rax
 
 PUBLIC ?SetParameterAlphaThreshold@MaterialChunkBuilder@needle@hh@@QEAAXM@Z
@@ -185972,6 +186602,11 @@ PUBLIC ??0DefaultDynamicResolutionController@gfx@hh@@QEAA@PEAVIAllocator@fnd@csl
 
 PUBLIC ?SetDynamicResolutionSettings@DynamicResolutionController@gfx@hh@@UEAAXAEBUDynamicResolutionSettings@123@@Z
 ?SetDynamicResolutionSettings@DynamicResolutionController@gfx@hh@@UEAAXAEBUDynamicResolutionSettings@123@@Z:
+    mov rax, 01560492c0h
+    jmp rax
+
+PUBLIC ?SetDynamicResolutionSettings@DynamicResolutionController@gfx@hh@@UEAAXAEBUFxDynamicResolutionParameter@needle@3@@Z
+?SetDynamicResolutionSettings@DynamicResolutionController@gfx@hh@@UEAAXAEBUFxDynamicResolutionParameter@needle@3@@Z:
     mov rax, 01560492c0h
     jmp rax
 end

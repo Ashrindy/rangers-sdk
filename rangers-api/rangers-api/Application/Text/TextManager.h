@@ -23,6 +23,9 @@ namespace app::text {
         virtual void EVL_UnkFunc2(int unkParam1, int unkParam2, int& unkParam3) override;
         virtual void ARML_UnkFunc1(int unkParam1) override;
 
+        const char* GetSpeakerAttributeValue(const char* translationName);
+        const char* GetSpokenToAttributeValue(const char* translationName);
+
         GAMESERVICE_CLASS_DECLARATION(TextManager)
     };
 }

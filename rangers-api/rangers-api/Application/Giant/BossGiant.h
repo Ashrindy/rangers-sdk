@@ -165,20 +165,22 @@ namespace app{
 
         class BattlePhaseParent : public BattlePhaseParentBase, public game::BossActionSelectListener, public BossEventListener {
         public:
-            int64_t unk0;
-            int64_t unk1;
+            hh::fnd::Reference<BossGiantContext> bossContext;
+            hh::fnd::Reference<hh::gfx::ModelNodeHFrame> headHFrame;
             int unk2;
-            float unk2b;
-            int64_t unk3;
+            float tutorialTimer;
+            float pillarTimer;
+            int32_t unk3b;
             int unk4;
             csl::math::Vector4 unk5;
-            int64_t unk6;
-            short flags;
+            void* posture; // enemy::BossPostureBattle
+            short flags; // 0x02 - tutorial timer; 0x10 - pillar timer
             int64_t unk8;
             hh::fnd::Reference<hh::fnd::HFrame> unk9;
-            int unk10;
+            float unk10;
             csl::ut::VariableString unk11;
-            int64_t unk12;
+            int32_t unk12;
+            float unk12b;
 
             virtual bool ProcessMessage(BossGiantContext& context, const hh::fnd::Message& message) override;
             virtual bool StateStep(BossGiantContext& context, float deltaTime) override;

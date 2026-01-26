@@ -63,7 +63,7 @@ namespace hh::dv {
         virtual bool ReceiveMessage(hh::fnd::Message& message) override;
         virtual void OnAddedToGame() override;
         virtual void OnRemovedFromGame() override;
-        virtual void OnCutsceneEnd() override;
+        virtual void OnCutsceneEnd(OnCutsceneEndInfo& info) override;
 
         virtual void Setup(Description& desc);
         virtual bool UnkFunc1() { return false; }

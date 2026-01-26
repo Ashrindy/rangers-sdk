@@ -113,6 +113,9 @@ namespace rangerssdk::ucsl {
 #include <BulletCollision/CollisionShapes/btBoxShape.h>
 #include <BulletCollision/CollisionShapes/btCylinderShape.h>
 #include <BulletCollision/CollisionShapes/btCapsuleShape.h>
+#include <BulletCollision/CollisionShapes/btCompoundShape.h>
+#include <BulletCollision/CollisionShapes/btTriangleMeshShape.h>
+#include <BulletCollision/CollisionShapes/btTriangleIndexVertexArray.h>
 #include <BulletDynamics/Dynamics/btRigidBody.h>
 #include <BulletDynamics/Dynamics/btDiscreteDynamicsWorld.h>
 #include <BulletDynamics/ConstraintSolver/btGeneric6DofSpring2Constraint.h>
@@ -238,6 +241,7 @@ namespace rangerssdk::ucsl {
 
 #include "Hedgehog/Needle/Utility/Binhash.h"
 #include "Hedgehog/Needle/Utility/MathUt.h"
+#include "Hedgehog/Needle/Utility/PODArray.h"
 #include "Hedgehog/Needle/Types.h"
 #include "Hedgehog/Needle/Rectangle.h"
 #include "Hedgehog/Needle/Box.h"
@@ -697,7 +701,6 @@ namespace rangerssdk::ucsl {
 #include "Hedgehog/Physics/GOCBoxCollider.h"
 #include "Hedgehog/Physics/GOCCapsuleCollider.h"
 #include "Hedgehog/Physics/GOCCylinderCollider.h"
-#include "Hedgehog/Physics/GOCMeshCollider.h"
 #include "Hedgehog/Physics/PhysicsWorld.h"
 #include "Hedgehog/Physics/PhysicsWorldBullet.h"
 #include "Hedgehog/Physics/GOCCollisionQuery.h"
@@ -710,7 +713,9 @@ namespace rangerssdk::ucsl {
 #include "Hedgehog/Physics/PhysicsPickedObjectViewer.h"
 #include "Hedgehog/Physics/BulletPhysicsModule.h"
 #include "Hedgehog/Physics/Messages.h"
+#include "Hedgehog/Physics/Bullet/BtAllocator.h"
 #include "Hedgehog/Physics/ResPhysicsMesh.h"
+#include "Hedgehog/Physics/GOCMeshCollider.h"
 #include "Hedgehog/Physics/ResHeightField.h"
 #include "Hedgehog/Physics/GOCHeightFieldCollider.h"
 
@@ -1010,6 +1015,7 @@ namespace rangerssdk::ucsl {
 #include "Application/Save/SaveDataLockImpl.h"
 #include "Application/Save/SaveInterface.h"
 #include "Application/Save/SaveManager.h"
+#include "Application/Save/SavePermission.h"
 
 #include "Application/Camera/CameraBridge.h"
 #include "Application/Camera/CameraService.h"
@@ -1041,6 +1047,7 @@ namespace rangerssdk::ucsl {
 #include "Application/Player/PlayerHsmContext.h"
 #include "Application/Player/Blackboard/Blackboard.h"
 #include "Application/Player/Blackboard/GOCPlayerBlackboard.h"
+#include "Application/Player/Blackboard/PlayerBlackboardService.h"
 #include "Application/Player/StateParameter.h"
 #include "Application/Player/RelayedFlagsParameter.h"
 #include "Application/Player/PlayerStateParameter.h"
@@ -1061,6 +1068,7 @@ namespace rangerssdk::ucsl {
 #include "Application/Player/PlayerCollision.h"
 #include "Application/Player/PlayerController.h"
 #include "Application/Player/GOCPlayerCollider.h"
+#include "Application/Player/GOCPlayerEyesight.h"
 #include "Application/Player/ComponentCollector.h"
 #include "Application/Player/PlayerEffect.h"
 #include "Application/Player/EffectList.h"
@@ -1190,6 +1198,8 @@ namespace rangerssdk::ucsl {
 
 #include "Application/Physics/GOCColliderQuery.h"
 #include "Application/Physics/GOCMoveSphereColliderQuery.h"
+#include "Application/Physics/GOCCapsuleColliderQuery.h"
+#include "Application/Physics/GOCSphereColliderQuery.h"
 #include "Application/Physics/ColliderContainer.h"
 #include "Application/Physics/Messages.h"
 

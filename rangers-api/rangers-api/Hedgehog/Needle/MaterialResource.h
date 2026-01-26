@@ -175,4 +175,6 @@ namespace hh::needle {
     };
     void ExecuteChunk(SCheckexec& check, const MaterialChunkBuilder::ParameterInfo* parameterInfos, unsigned int parameterCount, void* data, bool unk);
     CNameIDObject* GetMirageMaterialTextureNameType();
+    CNameIDObject* GetMaterialParameterGatherRenderingPassType();
+    CNameIDObject* GetMaterialParameterPriorityName();
 }

@@ -15,8 +15,8 @@ namespace app::game{
         };
 
         short unk0;
-        short unk1; // priority?
-        int unk2;
+        short unk1;
+        int unk2; // priority?
         app::BossBaseContext* context;
 
         virtual int GetNameHash() const { return 0; }

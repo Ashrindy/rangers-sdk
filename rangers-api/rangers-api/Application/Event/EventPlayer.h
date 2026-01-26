@@ -171,6 +171,7 @@ namespace app::evt {
 
         EventSetupData& GetSetupData() const;
         hh::game::GameManager* GetGameManager() const;
+        app_cmn::camera::CameraParameter& GetCameraParameter() const;
     };
 
     class EventEnvironmentManager : public hh::fnd::BaseObject {
@@ -248,7 +249,7 @@ namespace app::evt {
         virtual bool DSCL_UnkFunc1(UnkFunc1Info& info, void** retElement) override;
         virtual bool DSCL_UnkFunc2(void* unk0, void* unk1) override;
         virtual bool DSCL_UnkFunc3() override;
-        virtual void OnCutsceneEnd() override;
+        virtual void OnCutsceneEnd(OnCutsceneEndInfo& info) override;
         virtual bool DSCL_UnkFunc13(void* unk0) override;
         virtual bool DSCL_UnkFunc14() override;
 

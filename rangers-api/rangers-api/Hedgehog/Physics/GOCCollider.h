@@ -73,6 +73,41 @@ namespace hh::physics {
             STAY //reacts to MsgColliderQueryStay
         };
 
+        enum class LayerType : int8_t {
+            NONE = 0,
+            SOLID = 1,
+            LIQUID = 2,
+            THROUGH = 3,
+            CAMERA = 4,
+            SOLID_ONEWAY = 5,
+            SOLID_THROUGH = 6,
+            SOLID_TINY = 7,
+            SOLID_DETAIL = 8,
+            LEAF = 9,
+            LAND = 10,
+            RAYBLOCK = 11,
+            EVENT = 12,
+            RESERVED13 = 13,
+            RESERVED14 = 14,
+            PLAYER = 15,
+            ENEMY = 16,
+            ENEMY_BODY = 17,
+            GIMMICK = 18,
+            DYNAMICS = 19,
+            RING = 20,
+            CHARACTER_CONTROL = 21,
+            PLAYER_ONLY = 22,
+            DYNAMICS_THROUGH = 23,
+            ENEMY_ONLY = 24,
+            SENSOR_PLAYER = 25,
+            SENSOR_RING = 26,
+            SENSOR_GIMMICK = 27,
+            SENSOR_LAND = 28,
+            SENSOR_ALL = 29,
+            RESERVED30 = 30,
+            RESERVED31 = 31,
+        };
+
         struct SetupInfo {
             enum class Flag : uint8_t {
                 HAS_POSITION,
@@ -83,9 +118,10 @@ namespace hh::physics {
             ColliShape::Type shapeType;
             uint8_t unk2;
             csl::ut::Bitset<Flag> flags;
-            uint16_t filterCategory;
+            char unk0;
+            LayerType layer;
             csl::ut::Bitset<OverlapFlag> overlapFlags;
-            uint32_t filterFlags;
+            uint32_t hitFlags;
             uint32_t unk5;
             uint32_t unk6;
             uint32_t unk7;
@@ -114,7 +150,7 @@ namespace hh::physics {
         csl::math::Vector3 scale;
         ColliShape::Type shapeType;
         uint8_t unk104b;
-        uint8_t filterCategory;
+        /*LayerType*/ char filterCategory;
         csl::ut::Bitset<Flag> flags;
         csl::ut::Bitset<OverlapFlag> overlapFlags;
         uint32_t filterFlags;
