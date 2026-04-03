@@ -6,14 +6,14 @@ namespace app{
         int32_t giantFlags;
         int32_t qword3E4;
         game::GOCBossActionSelect* bossActionSelect;
-        int64_t bossPillar;
+        game::GOCBossPillar* bossPillar;
         int64_t qword3F8;
-        int32_t dword400;
+        int32_t currentState;
         int16_t word404;
         int64_t qword408;
         int64_t qword410;
-        hh::fnd::Reference<hh::fnd::HFrame> qword418;
-        int32_t qword420;
+        hh::fnd::Reference<hh::fnd::HFrame> ringSpawnHFrame;
+        int32_t damageEffectStage;
         int64_t dword428;
         csl::ut::InplaceMoveArray<hh::physics::GOCMeshCollider*, 2> meshColliders;
         int64_t qword458;
@@ -30,7 +30,7 @@ namespace app{
         virtual void Update(hh::fnd::UpdatingPhase phase, hh::fnd::SUpdateInfo& updateInfo) override;
         virtual void SetGameObject(hh::game::GameManager* gameManager, hh::game::GameObject* gameObject) override;
         virtual void SetVisibility(bool visible, char a3) override;
-        virtual int64_t BBCtx_UnkFunc5() override;
+        virtual int64_t GetIdleStateID() override;
         virtual bool SetCurrentState(int stateIdx) override;
         virtual bool ExecuteState(int stateIdx) override;
         virtual int64_t SetCurrentPhase(int currentPhase) override;
@@ -39,8 +39,15 @@ namespace app{
         virtual bool KillPlayer() override;
         virtual const char* GetBossStateName(int stateIdx) override;
 
+        heur::rfl::BossGiantConfig* GetConfig() const;
         heur::rfl::BossGiantPhaseParam* GetPhaseParam(unsigned int phase) const;
         heur::rfl::BossGiantPhaseParam* GetCurrentPhaseParam() const;
+        bool UpdateDamageEffectStage();
+        void UpdateDamageEffect();
+        void UpdateRingSpawnHFrame();
+        void ExecuteState1(unsigned char unk0);
+        void SpawnRings(unsigned int ringAmount);
+        bool ShouldCounterInCyloop() const;
 
         BossGiantContext(csl::fnd::IAllocator* allocator);
     };

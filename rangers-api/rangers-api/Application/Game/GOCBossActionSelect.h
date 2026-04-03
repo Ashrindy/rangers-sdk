@@ -9,11 +9,6 @@ namespace app::game{
 
     class BossActionPluginBase : public hh::fnd::ReferencedObject{
     public:
-        struct StateInfo{
-            int stateId;
-            float timeSinceLastChange;
-        };
-
         short unk0;
         short unk1;
         int unk2; // priority?
@@ -35,7 +30,7 @@ namespace app::game{
         virtual bool UnkFunc12(int64_t a2, csl::ut::String& a3) { return false; }
         virtual void UnkFunc13(int64_t a2, int64_t a3) {}
         virtual void ExecuteState0(int stateIdx) {}
-        virtual void ExecuteState1(StateInfo& stateInfo) {}
+        virtual void ExecuteState1(int& state, unsigned char unk0) {}
 
         inline BossActionPluginBase(csl::fnd::IAllocator* allocator) : ReferencedObject{ allocator, true } {}
     };
@@ -57,7 +52,7 @@ namespace app::game{
         csl::ut::MoveArray<BossActionPluginListener*> listeners;
         T* context;
         csl::ut::MoveArray<hh::fnd::Reference<BossActionPluginBase>> plugins;
-        char unk1;
+        bool paused;
 
         BossActionPluginBase* GetPlugin(unsigned int nameHash) const {
             for (auto& plugin : plugins)
@@ -84,7 +79,7 @@ namespace app::game{
         virtual void BASL_UnkFunc0() {};
         virtual void BASL_UnkFunc1() {};
         virtual void BASL_UnkFunc2() {};
-        virtual void BASL_UnkFunc3() {};
+        virtual void ExecuteState1(int& state, unsigned char unk0) {};
         virtual void BASL_UnkFunc4() {};
         virtual void BASL_UnkFunc5() {};
     };
@@ -110,11 +105,11 @@ namespace app::game{
             bool finalUpdate;
         };
 
-        csl::ut::MoveArray<hh::ut::internal::StateImpl*> states;
+        csl::ut::MoveArray<BossActionSelectListener*> listeners;
         hh::fnd::Reference<app::BossBaseContext> context;
         BossActionPluginManager<app::BossBaseContext>* bossActionPluginMgr;
-        int unk0;
-        int unk1;
+        int currentState;
+        float timeSinceLastChange;
         float timeSinceLastAction;
         csl::ut::InplaceMoveArray<Unk0, 4> unk3;
         int flags;
@@ -129,6 +124,10 @@ namespace app::game{
         virtual void OnPluginRemoved(BossActionPluginBase* plugin) override;
 
         void Setup(Description& desc);
+
+        void AddListener(BossActionSelectListener* listener);
+        void RemoveListener(BossActionSelectListener* listener);
+        void ExecuteState1(unsigned char unk0);
 
         GOCOMPONENT_CLASS_DECLARATION(GOCBossActionSelect)
     };

@@ -222,6 +222,7 @@ namespace rangerssdk::ucsl {
 #include "Hedgehog/Resource/TagResourceContainer.h"
 #include "Hedgehog/Resource/Packfile.h"
 #include "Hedgehog/Resource/ResourceLoader.h"
+#include "Hedgehog/Resource/ResourceLoaderManager.h"
 #include "Hedgehog/Resource/ResourceManager.h"
 #include "Hedgehog/Resource/ResourceResolver.h"
 #include "Hedgehog/Resource/FilePathResolverUtil.h"
@@ -346,6 +347,7 @@ namespace rangerssdk::ucsl {
 #include "Hedgehog/Needle/PostEffectPipelineJob.h"
 #include "Hedgehog/Needle/PostEffectLitePipelineJob.h"
 #include "Hedgehog/Needle/RenderDebugScreenJob.h"
+#include "Hedgehog/Needle/CopyColor.h"
 #include "Hedgehog/Needle/CopyColorJob.h"
 #include "Hedgehog/Needle/OcclusionCullingViewJob.h"
 #include "Hedgehog/Needle/GatherDrawPassShadowMapJob.h"
@@ -670,6 +672,7 @@ namespace rangerssdk::ucsl {
 #include "Hedgehog/Graphics/ResMirageLightField.h"
 #include "Hedgehog/Graphics/ResProbe.h"
 #include "Hedgehog/Graphics/ResDecal.h"
+#include "Hedgehog/Graphics/ResDecalPointCloud.h"
 #include "Hedgehog/Graphics/ResVertexAnimationTexture.h"
 #include "Hedgehog/Graphics/ResPointcloud.h"
 #include "Hedgehog/Graphics/ResOcclusionCapsule.h"
@@ -986,6 +989,7 @@ namespace rangerssdk::ucsl {
 #include "ApplicationCommon/Game/GOCMotorConstant.h"
 #include "ApplicationCommon/Game/GOCMotorRotate.h"
 #include "ApplicationCommon/Game/GOCMotorOnPath.h"
+#include "ApplicationCommon/Game/GOCMotorSwing.h"
 #include "ApplicationCommon/Game/GOCMovement.h"
 
 #include "ApplicationCommon/Graphics/RenderTextureFreeCamera.h"
@@ -1021,8 +1025,12 @@ namespace rangerssdk::ucsl {
 #include "Application/Camera/CameraService.h"
 #include "Application/Camera/CameraBehavior.h"
 #include "Application/Camera/CameraBoom.h"
+#include "Application/Camera/CameraFixDirectionBehavior.h"
+#include "Application/Camera/CameraInterpolationBehavior.h"
 #include "Application/Camera/BossLockOnCamera.h"
 #include "Application/Camera/FishingCamera.h"
+#include "Application/Camera/FollowCamera.h"
+#include "Application/Camera/FocusFrameCamera.h"
 
 #include "Application/Event/EventPlayer.h"
 #include "Application/Event/EventPreviewHelper.h"
@@ -1114,6 +1122,8 @@ namespace rangerssdk::ucsl {
 #include "Application/Text/AppTextListener.h"
 #include "Application/Text/TextManager.h"
 
+#include "Application/EnemyManager.h"
+
 #include "Application/Messages.h"
 
 #include "Application/Game/Helpers.h"
@@ -1159,6 +1169,7 @@ namespace rangerssdk::ucsl {
 #include "Application/Game/GOCParamBlackboard.h"
 #include "Application/Game/GOCBossMoveableRange.h"
 #include "Application/Game/GOCBossCyloopColliderHelper.h"
+#include "Application/Game/GOCBossPillar.h"
 #include "Application/Game/Messages.h"
 #include "Application/Game/Posture.h"
 #include "Application/Game/Script.h"
@@ -1306,6 +1317,7 @@ namespace rangerssdk::ucsl {
 #include "Application/GOCTargetPositionHelper.h"
 #include "Application/GOCEnemyAttackSign.h"
 #include "Application/BossBaseContext.h"
+#include "Application/BossHowl.h"
 
 #include "Application/Giant/BossGiantContext.h"
 #include "Application/Giant/BossGiant.h"
@@ -1315,6 +1327,7 @@ namespace rangerssdk::ucsl {
 #include "Application/IslandObjInfo.h"
 #include "Application/ObjSwitchVolume.h"
 #include "Application/ObjCamera.h"
+#include "Application/ObjCameraFollow.h"
 #include "Application/ObjCameraVolume.h"
 #include "Application/ObjAirFloor.h"
 #include "Application/ObjAirWall.h"
@@ -1333,6 +1346,9 @@ namespace rangerssdk::ucsl {
 #include "Application/ObjFishingBig.h"
 #include "Application/ObjStartPosition.h"
 #include "Application/ObjThornBall.h"
+#include "Application/ObjParticleBase.h"
+#include "Application/ObjReactiveTest.h"
+#include "Application/ObjBlockObjectTest.h"
 
 namespace rangerssdk::ucsl {
     inline csl::fnd::IAllocator* AllocatorSystem::get_allocator() { return hh::fnd::MemoryRouter::GetModuleAllocator(); }

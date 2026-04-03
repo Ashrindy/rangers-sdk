@@ -21,19 +21,20 @@ namespace app{
 
     class BossEventListener {
     public:
-        virtual void BEL_UnkFunc0(int64_t a2) {}
-        virtual void BEL_UnkFunc1() {}
-        virtual bool BEL_UnkFunc2(int64_t a2) {}
-        virtual void BEL_UnkFunc3() {}
+        virtual bool HandleStunDamage(app::MsgDamage& msg, float damage) {}
+        virtual bool HandleStaggerDamage(app::MsgDamage& msg, float damage) {}
+        virtual bool HandleDamage(app::MsgDamage& msg, float damage) {}
+        virtual void HandleParry() {}
         virtual void BEL_UnkFunc4() {}
-        virtual void BEL_UnkFunc5() {}
+        virtual void HandlePlayerHit() {}
+        virtual void BEL_UnkFunc6() {}
     };
 
     class BossBaseContext : public app_cmn::fsm::GOCHsmContext, public PerceivePartsListener, public TargetPositionHelperListener, public game::HealthListener {
     public:
-        struct CameraUnk{
+        struct Camera{
             app_cmn::camera::CameraController* camera;
-            int unk0;
+            unsigned int idx; // used at 0x140360F74
             int unk1;
         };
 
@@ -44,6 +45,7 @@ namespace app{
 
         enum class Flags : int64_t{
             UNK0 = 0x8,
+            STUNNED = 0xC,
             CAMERA_TIMER_ACTIVE0 = 0x14,
             CAMERA_TIMER_ACTIVE1 = 0x15,
             VISIBILITY0 = 0x1D,
@@ -62,20 +64,20 @@ namespace app{
         csl::ut::MoveArray<int64_t> qwordC0;
         csl::ut::MoveArray<int64_t> qwordE0;
         csl::ut::MoveArray<int64_t> qword100;
-        csl::ut::MoveArray<CameraUnk> cameras;
+        csl::ut::MoveArray<Camera> cameraStack;
         heur::rfl::BossLockOnCameraParam cameraParams;
         float bossEventTime;
         float bossEventLength;
-        float bossEventRelated1;
-        float bossEventRelated2;
-        float cameraEventTimeRemaining;
-        float cameraEventTimeElapsed;
+        float cameraInterpolationTime1;
+        float cameraInterpolationTime0;
+        float cameraTimeRemaining;
+        float cameraTimeElapsed;
         csl::math::Transform startObjectBossTransform;
         float dword200;
         csl::math::Vector3 lastHitPosition;
         csl::math::Vector4 csl__math__vector4220;
         csl::math::Vector4 relatedToLastHit;
-        hh::fnd::WorldPosition qword240;
+        hh::fnd::WorldPosition playerWarpPosition;
         app_cmn::camera::CameraController* currentCamera;
         csl::ut::MoveArray<hh::fnd::Handle<hh::game::GameObject>> qword268; //giganto has HeroSagePoint here
         csl::ut::MoveArray<hh::fnd::Handle<hh::game::GameObject>> qword288;
@@ -87,9 +89,9 @@ namespace app{
         int currentPhase; 
         int dword334; 
         int dword338;
-        csl::ut::MoveArray<int64_t> qword340;
-        csl::ut::MoveArray<int64_t> states;
-        hh::fnd::WorldPosition hh__fnd__worldposition380;
+        csl::ut::MoveArray<hh::fnd::Handle<hh::game::GameObject>> qword340;
+        csl::ut::MoveArray<BossEventListener*> eventListeners;
+        hh::fnd::WorldPosition hh__fnd__worldposition380; // used in giganto's knockback state process message
         int16_t word3A0; //prolly flags
         csl::ut::InplaceMoveArray<int64_t, 2> qword3A8;
         
@@ -102,7 +104,7 @@ namespace app{
         virtual void SetVisibility(bool visible, char a3);
         virtual bool GetUnkFlag0();
         virtual void SetUnkFlag0(bool enabled);
-        virtual int64_t BBCtx_UnkFunc5() { return 0; }
+        virtual int64_t GetIdleStateID() { return 0; }
         virtual bool SetCurrentState(int stateIdx) { return 0; } //not sure
         virtual bool ExecuteState(int stateIdx);
         virtual int64_t SetCurrentPhase(int currentPhase);
@@ -121,6 +123,26 @@ namespace app{
         void AddNode(hh::gfx::GOCVisualModel* model, const char* name);
         void ShowBossLifeGauge(bool show, bool hide);
         void InitColliderActivity();
+        int ChangeCamera(int controllerId, bool overwriteCurrent, float interpolationTime, int unk0, int interpolationType);
+        void ChangeCamera(app_cmn::camera::CameraController* camController, float bossEventLength, float camInterpolationTime1, float camInterpolationTime0, float camTimeRemaining);
+        void ChangeToFollowCamera();
+        void AddCollider(hh::physics::GOCCollider* collider, int flags);
+        void GetHFramesByName(const char* name, csl::ut::MoveArray<hh::fnd::HFrame*>& out);
+        hh::gfx::ModelNodeHFrame* GetModelNodeHFrame(unsigned int& visualModelNameHash, const char* nodeName);
+        GOCTargetPositionHelper* GetTargetPositionHelper();
+        void AddEventListener(BossEventListener* listener);
+        void RemoveEventListener(BossEventListener* listener);
+        void SetCameraParameters(heur::rfl::BossLockOnCameraParam* cameraParams, bool includeEasing);
+        void SetCameraParameters(bool includeEasing);
+        void DisableBattleCollisions();
+        void GetCollidersByFlag(int flag, csl::ut::MoveArray<hh::physics::GOCCollider*>& out);
+        void ResetCamera();
+        void ResetVelocity();
+        bool DoesCameraExist(unsigned int idx);
+        void DestroyCamera(unsigned int idx);
+        void SetEnableColliders(bool enabled);
+        void SendMessageToPlayer(hh::fnd::Message& message);
+        heur::rfl::BossPhaseParam* GetBasePhaseParam(unsigned int phase) const;
 
         BossBaseContext(csl::fnd::IAllocator* allocator);
     };

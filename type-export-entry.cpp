@@ -1,5 +1,6 @@
 #define EXPORTING_TYPES
 #define RESOLVE_STATIC_VARIABLE(x) x
+#define _ALLOW_COMPILER_AND_STL_VERSION_MISMATCH
 
 #include "rangers-api/rangers-api/rangers-api.h"
 
@@ -284,3 +285,5 @@ template class app::game::ConditionArgumentFixed<float>;
 template class hh::fnd::Reference<app::ui::UIMainMenuContext>;
 
 template class hh::needle::AnimBlender<hh::needle::AnimTexSrtControl>;
+
+template class app::game::BossActionPluginManager<app::BossBaseContext>;

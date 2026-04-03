@@ -44,4 +44,6 @@ namespace app::level {
     };
 
     csl::math::Vector3 GetPlayerPosition(const hh::game::GameObject* gameObject);
+    bool TryGetPlayerNeckPosition(csl::math::Vector3& out, const hh::game::GameObject* gameObject);
+    void TransformRelativeToPlayer(csl::math::Vector3& pos, csl::math::Vector3& offset, float height, const hh::game::GameObject* gameObject);
 }

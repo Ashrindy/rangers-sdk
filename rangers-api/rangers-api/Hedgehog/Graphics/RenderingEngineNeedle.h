@@ -50,7 +50,7 @@ namespace hh::gfx {
         virtual void GetFXParameter(hh::needle::NeedleFxParameter* parameter) {}
         virtual void SetSceneConfig(hh::needle::NeedleFxSceneConfig* sceneConfig) {}
         virtual void GetSceneConfig(hh::needle::NeedleFxSceneConfig* sceneConfig) {}
-        virtual uint64_t CreateRenderTextureHandle(const needle::RenderTextureCreateArgs& createArgs, csl::fnd::IAllocator* allocator);
+        virtual needle::RenderTextureHandle* CreateRenderTextureHandle(const needle::RenderTextureCreateArgs& createArgs, csl::fnd::IAllocator* allocator);
         virtual uint64_t DestroyRenderTextureHandle(needle::RenderTextureHandle* handle);
         virtual void AddRenderableToRenderTextureHandle(needle::RenderTextureHandle* handle, gfnd::Renderable* renderable) {}
         virtual unsigned int UnkFunc18() { return 0; }

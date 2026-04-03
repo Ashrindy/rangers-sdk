@@ -34,6 +34,8 @@ namespace app::player{
 
     class HomingEyesight : public PlayerEyesightComponent {
     public:
+        static constexpr const char* name = "HomingEyesight";
+
         class TargetData : public hh::fnd::ReferencedObject {
         public:
             HomingTargetInfo info;
@@ -102,6 +104,11 @@ namespace app::player{
 		virtual void OnGOCEvent(GOCEvent event, hh::game::GameObject& ownerGameObject, void* data) override;
 
         void AddComponent(PlayerEyesightComponent* comp);
+        PlayerEyesightComponent* GetComponent(unsigned int nameHash);
+        template<typename T>
+        inline T* GetComponent() {
+            return static_cast<T*>(GetComponent(T::name));
+        }
 
         GOCOMPONENT_CLASS_DECLARATION(GOCPlayerEyesight)
     };

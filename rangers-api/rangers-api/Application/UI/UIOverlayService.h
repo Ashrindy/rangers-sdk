@@ -15,7 +15,7 @@ namespace app::ui {
         csl::fnd::Mutex mutex1;
         csl::fnd::Mutex mutex2;
         uint8_t unk100;
-        csl::ut::StringMap<void*> unk101;
+        csl::ut::StringMap<hh::fnd::Handle<hh::fnd::Messenger>> unk101;
         uint64_t lastQueuedJobId;
         uint32_t unk103;
         uint32_t unk103b;
