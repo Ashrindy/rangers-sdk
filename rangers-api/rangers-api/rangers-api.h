@@ -1204,6 +1204,7 @@ namespace rangerssdk::ucsl {
 #include "Application/UI/UIOpeningLogo.h"
 #include "Application/UI/UIResult.h"
 #include "Application/UI/UIGameCockpit.h"
+#include "Application/UI/UIBossLife.h"
 #include "Application/UI/GOCRenderTextureUI.h"
 #include "Application/UI/Messages.h"
 

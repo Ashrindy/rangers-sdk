@@ -9,6 +9,12 @@ namespace app::game{
 
     class BossActionPluginBase : public hh::fnd::ReferencedObject{
     public:
+        struct UnkStr0 {
+            int unk0;
+            int stateId;
+            int64_t unk1;
+        };
+
         short unk0;
         short unk1;
         int unk2; // priority?
@@ -17,18 +23,18 @@ namespace app::game{
         virtual int GetNameHash() const { return 0; }
         virtual int64_t UnkFunc0() { return 0; }
         virtual void OnAdded() {}
-        virtual void UnkFunc2() {}
-        virtual void UnkFunc3() {}
-        virtual bool UnkFunc4() { return false; }
+        virtual void OnRemoved() {}
+        virtual void Reset() {}
+        virtual bool IsInState() { return false; }
         virtual bool UnkFunc5() { return false; }
-        virtual bool UpdateState(int a2, float deltaTime) { return false; } //maybe some sort of update when state?
+        virtual bool UpdateState(hh::fnd::UpdatingPhase phase, float deltaTime) { return false; }
         virtual bool UnkFunc7() { return false; }
         virtual bool ProcessMessage(hh::fnd::Message& msg) { return false; }
         virtual bool UnkFunc9(int64_t a2) { return false; }
-        virtual bool UnkFunc10(csl::ut::MoveArray<int64_t>& a2) { return false; }
+        virtual bool UnkFunc10(csl::ut::MoveArray<UnkStr0>& a2) { return false; }
         virtual bool UnkFunc11(int64_t a2) { return false; }
-        virtual bool UnkFunc12(int64_t a2, csl::ut::String& a3) { return false; }
-        virtual void UnkFunc13(int64_t a2, int64_t a3) {}
+        virtual bool GetState(int64_t& id, csl::ut::String& name) { return false; }
+        virtual bool UnkFunc13(int64_t a2, int64_t a3) { return false;  }
         virtual void ExecuteState0(int stateIdx) {}
         virtual void ExecuteState1(int& state, unsigned char unk0) {}
 

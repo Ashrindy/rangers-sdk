@@ -83,7 +83,7 @@ namespace app{
         csl::ut::MoveArray<hh::fnd::Handle<hh::game::GameObject>> qword288;
         csl::ut::MoveArray<hh::fnd::Handle<hh::game::GameObject>> qword2A8;
         csl::ut::MoveArray<int64_t> qword2C8;
-        csl::ut::MoveArray<hh::fnd::Handle<hh::game::GameObject>> qword2E8; //giganto has ObjBossClosedArea here
+        csl::ut::MoveArray<hh::fnd::Handle<hh::game::GameObject>> bossEventListeners;
         csl::ut::MoveArray<hh::fnd::Reference<gfx::ModelAnimationPlayer>> modelAnimationPlayers;
         csl::ut::Bitset<Flags> flags;
         int currentPhase; 

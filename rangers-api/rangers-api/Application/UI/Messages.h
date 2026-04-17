@@ -47,7 +47,17 @@ namespace app::ui {
 
     class MsgUIBossLifeGaugeAppear : public fnd::AppMessage<MsgUIBossLifeGaugeAppear> {
     public:
-        char unk{ 0 };
+        enum class BOSS_TYPE : unsigned char {
+            NONE,
+            GIANT,
+            DRAGON,
+            KNIGHT,
+            RIFLE,
+            THE_END,
+            THE_END2
+        };
+
+        BOSS_TYPE bossType{ BOSS_TYPE::NONE };
         
         MsgUIBossLifeGaugeAppear() : fnd::AppMessage<MsgUIBossLifeGaugeAppear>{ hh::fnd::MessageID::UI_BOSS_LIFE_GAUGE_APPEAR } {}
     };

@@ -733,13 +733,15 @@ namespace app{
 
             DEFAULT_CREATE_FUNC(DebugAnimationTest);
         };
+   
+        static const char* GetStateNameById(int64_t& stateId);
     };
 
     namespace game{
         class BossActionPluginGiant01 : public BossActionPlugin<BossActionPluginGiant01> {
         public:
             GOCBossActionSelect* bossActionSelect;
-            int unk1;
+            int stateId;
             csl::ut::MoveArray<int64_t> unk2;
             float unk3Timer;
             float unk3bTimer;
@@ -751,14 +753,54 @@ namespace app{
 
             virtual int GetNameHash() const override;
             virtual void OnAdded() override;
-            virtual void UnkFunc2() override;
-            virtual void UnkFunc3() override;
-            virtual bool UpdateState(int a2, float deltaTime) override;
+            virtual int64_t UnkFunc0() override;
+            virtual void OnRemoved() override;
+            virtual void Reset() override;
+            virtual bool UpdateState(hh::fnd::UpdatingPhase phase, float deltaTime) override;
             virtual bool UnkFunc9(int64_t a2) override;
-            virtual bool UnkFunc10(csl::ut::MoveArray<int64_t>& a2) override;
+            virtual bool UnkFunc10(csl::ut::MoveArray<UnkStr0>& a2) override;
             virtual bool UnkFunc11(int64_t a2) override;
-            virtual bool UnkFunc12(int64_t a2, csl::ut::String& a3) override;
-            virtual void UnkFunc13(int64_t a2, int64_t a3) override;
+            virtual bool GetState(int64_t& id, csl::ut::String& name) override;
+            virtual bool UnkFunc13(int64_t a2, int64_t a3) override;
+            virtual void ExecuteState0(int stateIdx) override;
+            virtual void ExecuteState1(int& state, unsigned char unk0) override;
+        };
+
+        class BossActionPluginGiant01ImmAction : public BossActionPlugin<BossActionPluginGiant01ImmAction> {
+        public:
+            struct ImmediateAction {
+                int stateId;
+                float triggerHealth;
+                char unk1;
+            };
+
+            GOCBossActionSelect* bossActionSelect;
+            app_cmn::fsm::GOCHsm2* gocHsm;
+            int stateId;
+            csl::ut::MoveArray<int64_t> qword40;
+            int dword60;
+            float dword64;
+            float dword68;
+            float dword6C;
+            int curImmediateAction;
+            csl::ut::MoveArray<ImmediateAction> immediateActions;
+            short word98;
+
+            virtual int GetNameHash() const override;
+            virtual int64_t UnkFunc0() override;
+            virtual void OnAdded() override;
+            virtual void OnRemoved() override;
+            virtual void Reset() override;
+            virtual bool IsInState() override;
+            virtual bool UnkFunc5() override;
+            virtual bool UpdateState(hh::fnd::UpdatingPhase phase, float deltaTime) override;
+            virtual bool UnkFunc7() override;
+            virtual bool ProcessMessage(hh::fnd::Message& msg) override;
+            virtual bool UnkFunc9(int64_t a2) override;
+            virtual bool UnkFunc10(csl::ut::MoveArray<UnkStr0>& a2) override;
+            virtual bool UnkFunc11(int64_t a2) override;
+            virtual bool GetState(int64_t& id, csl::ut::String& name) override;
+            virtual bool UnkFunc13(int64_t a2, int64_t a3) override;
             virtual void ExecuteState0(int stateIdx) override;
             virtual void ExecuteState1(int& state, unsigned char unk0) override;
         };
