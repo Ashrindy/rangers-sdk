@@ -23,13 +23,13 @@ namespace hh::text {
 
         virtual void ResourceLoadedCallback(fnd::ManagedResource* resource) override;
         virtual void ResourceUnloadedCallback(fnd::ManagedResource* resource) override;
-        virtual void FCL_UnkFunc1(uint64_t unkParam1, uint64_t unkParam2, uint64_t unkParam3) override;
+        virtual void OnRegisteredFont(font::FontContainer* container, font::IFont* font, const char* name) override;
 
         static const ConverseData* Translate(const char* tag, int localeIdx);
         const ConverseData* GetTranslation(const char* tag, int localeIdx);
         static const ConverseData* GGetTranslation(const char* tag);
         const ConverseData* GetTranslation(const char* tag);
-        virtual void AddCallback() override;
+        virtual void AddCallback(hh::fw::Application* app) override;
         virtual void RemoveCallback() override;
 
         APPMODULE_CLASS_DECLARATION(TextAppModule)

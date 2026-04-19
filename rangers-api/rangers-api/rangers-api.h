@@ -497,15 +497,19 @@ namespace rangerssdk::ucsl {
 #include "Hedgehog/GraphicsFoundation/DrawSystem.h"
 #include "Hedgehog/GraphicsFoundation/DrawSystemNeedle.h"
 
+#include "Hedgehog/User/UserInfoEvent.h"
+#include "Hedgehog/User/UserService.h"
+
 #include "Hedgehog/Font/ResBitmapFont.h"
 #include "Hedgehog/Font/ResOpticalKerning.h"
 #include "Hedgehog/Font/ResScalableFontSet.h"
 #include "Hedgehog/Font/TextListener.h"
 #include "Hedgehog/Font/TextTagWriterFeedListener.h"
+#include "Hedgehog/Font/FontTexture.h"
+#include "Hedgehog/Font/IFont.h"
+#include "Hedgehog/Font/IFontRenderingEngine.h"
+#include "Hedgehog/Font/BitmapFont.h"
 #include "Hedgehog/Font/FontContainer.h"
-
-#include "Hedgehog/User/UserInfoEvent.h"
-#include "Hedgehog/User/UserService.h"
 
 // Hedgehog Framework
 #include "Hedgehog/Framework/FrameworkConfig.h"
@@ -522,6 +526,8 @@ namespace rangerssdk::ucsl {
 #include "Hedgehog/Framework/Application.h"
 #include "Hedgehog/Framework/SaveManagerInterface.h"
 #include "Hedgehog/Framework/SyncTimer.h"
+
+#include "Hedgehog/Font/ScalableFont.h"
 
 #include "Hedgehog/Cri/CriMana.h"
 

@@ -38619,11 +38619,6 @@ PUBLIC ?CreateAsyncHandler@?$AppMessage@VMsgBeginBossBattle@app@@@fnd@app@@UEAAP
 ?CreateAsyncHandler@?$AppMessage@VMsgBeginBossBattle@app@@@fnd@app@@UEAAPEAVMessageAsyncHandler@2hh@@PEAVIAllocator@2csl@@@Z:
     mov rax, 0140282100h
     jmp rax
-	
-PUBLIC ?UnkFunc1@?$AppMessage@VMsgBeginBossBattle@app@@@fnd@app@@UEAAIXZ
-?UnkFunc1@?$AppMessage@VMsgBeginBossBattle@app@@@fnd@app@@UEAAIXZ:
-    mov rax, 014008d680h
-    jmp rax
 
 PUBLIC ??_GBossDragonMegaLaser@app@@QEAAXXZ
 ??_GBossDragonMegaLaser@app@@QEAAXXZ:
@@ -83675,6 +83670,11 @@ PUBLIC ??_DViewer@dbg@hh@@QEAAXXZ
     mov rax, 0140ba9510h
     jmp rax
 
+PUBLIC ??_DIFont@font@hh@@QEAAXXZ
+??_DIFont@font@hh@@QEAAXXZ:
+    mov rax, 0140ba9510h
+    jmp rax
+
 PUBLIC ?SetDimensions@UIListViewItemBase@ui@hh@@QEAAXAEBUDimensions@23@@Z
 ?SetDimensions@UIListViewItemBase@ui@hh@@QEAAXAEBUDimensions@23@@Z:
     mov rax, 0140ba95c0h
@@ -84185,6 +84185,11 @@ PUBLIC ?FCL_UnkFunc1@TextAppModule@text@hh@@UEAAX_K00@Z
     mov rax, 0140bc7420h
     jmp rax
 
+PUBLIC ?OnRegisteredFont@TextAppModule@text@hh@@UEAAXPEAVFontContainer@font@3@PEAVIFont@53@PEBD@Z
+?OnRegisteredFont@TextAppModule@text@hh@@UEAAXPEAVFontContainer@font@3@PEAVIFont@53@PEBD@Z:
+    mov rax, 0140bc7420h
+    jmp rax
+
 PUBLIC ?UnkFunc1@TextAppModule@text@hh@@UEAAXXZ
 ?UnkFunc1@TextAppModule@text@hh@@UEAAXXZ:
     mov rax, 0140bc78c0h
@@ -84192,6 +84197,11 @@ PUBLIC ?UnkFunc1@TextAppModule@text@hh@@UEAAXXZ
 
 PUBLIC ?AddCallback@TextAppModule@text@hh@@UEAAXXZ
 ?AddCallback@TextAppModule@text@hh@@UEAAXXZ:
+    mov rax, 0140bc78c0h
+    jmp rax
+
+PUBLIC ?AddCallback@TextAppModule@text@hh@@UEAAXPEAVApplication@fw@3@@Z
+?AddCallback@TextAppModule@text@hh@@UEAAXPEAVApplication@fw@3@@Z:
     mov rax, 0140bc78c0h
     jmp rax
 
@@ -84355,23 +84365,23 @@ PUBLIC ?RegisterEntity@TagReplacer@text@hh@@AEAAXPEAVEntity@123@@Z
     mov rax, 0140bc9c90h
     jmp rax
 
-PUBLIC ?UnkFunc4@TagReplacer@text@hh@@UEAAPEAXPEAX@Z
-?UnkFunc4@TagReplacer@text@hh@@UEAAPEAXPEAX@Z:
-    mov rax, 0140bc9f00h
-    jmp rax
-
-PUBLIC ?UnkFunc4@TagReplaceable@text@hh@@UEAAPEAXPEAX@Z
-?UnkFunc4@TagReplaceable@text@hh@@UEAAPEAXPEAX@Z:
-    mov rax, 0140bc9f00h
-    jmp rax
-
 PUBLIC ?UnkFunc3@TagReplacer@text@hh@@UEAAIPEAX0@Z
 ?UnkFunc3@TagReplacer@text@hh@@UEAAIPEAX0@Z:
     mov rax, 0140bc9f10h
     jmp rax
 
+PUBLIC ?UnkFunc3@TagReplacer@text@hh@@UEAAIPEBDPEAX@Z
+?UnkFunc3@TagReplacer@text@hh@@UEAAIPEBDPEAX@Z:
+    mov rax, 0140bc9f10h
+    jmp rax
+
 PUBLIC ?UnkFunc5@TagReplacer@text@hh@@UEAA_NPEAX0@Z
 ?UnkFunc5@TagReplacer@text@hh@@UEAA_NPEAX0@Z:
+    mov rax, 0140bca0c0h
+    jmp rax
+
+PUBLIC ?UnkFunc5@TagReplacer@text@hh@@UEAA_NPEBDPEAX@Z
+?UnkFunc5@TagReplacer@text@hh@@UEAA_NPEBDPEAX@Z:
     mov rax, 0140bca0c0h
     jmp rax
 
@@ -84390,8 +84400,18 @@ PUBLIC ?UnkFunc3@TagReplaceable@text@hh@@UEAAIPEAX0@Z
     mov rax, 0140bca6c0h
     jmp rax
 
+PUBLIC ?UnkFunc3@TagReplaceable@text@hh@@UEAAIPEBDPEAX@Z
+?UnkFunc3@TagReplaceable@text@hh@@UEAAIPEBDPEAX@Z:
+    mov rax, 0140bca6c0h
+    jmp rax
+
 PUBLIC ?UnkFunc5@TagReplaceable@text@hh@@UEAA_NPEAX0@Z
 ?UnkFunc5@TagReplaceable@text@hh@@UEAA_NPEAX0@Z:
+    mov rax, 0140bca710h
+    jmp rax
+
+PUBLIC ?UnkFunc5@TagReplaceable@text@hh@@UEAA_NPEBDPEAX@Z
+?UnkFunc5@TagReplaceable@text@hh@@UEAA_NPEBDPEAX@Z:
     mov rax, 0140bca710h
     jmp rax
 
@@ -84413,6 +84433,21 @@ PUBLIC ?GetAttributeValue@Attributes@text@hh@@QEAA_NPEBDPEAPEBD@Z
 PUBLIC ?GetInputElement@VertexLayoutImpl@ImplDX11@needle@hh@@UEBA_KXZ
 ?GetInputElement@VertexLayoutImpl@ImplDX11@needle@hh@@UEBA_KXZ:
     mov rax, 0140bcac40h
+    jmp rax
+
+PUBLIC ?IsLoaded@ScalableFont@font@hh@@UEAA_NXZ
+?IsLoaded@ScalableFont@font@hh@@UEAA_NXZ:
+    mov rax, 0140bcad80h
+    jmp rax
+
+PUBLIC ?F_UnkFunc4@BitmapFont@font@hh@@UEAA_NXZ
+?F_UnkFunc4@BitmapFont@font@hh@@UEAA_NXZ:
+    mov rax, 0140bcad90h
+    jmp rax
+
+PUBLIC ?IsLoaded@BitmapFont@font@hh@@UEAA_NXZ
+?IsLoaded@BitmapFont@font@hh@@UEAA_NXZ:
+    mov rax, 0140bcad90h
     jmp rax
 
 PUBLIC ??0TextLanguageData@text@hh@@QEAA@PEAVIAllocator@fnd@csl@@PEBDH@Z
@@ -84455,6 +84490,16 @@ PUBLIC ??0VibrationObj@GOCVibration@game@hh@@QEAA@XZ
     mov rax, 0140bcbbb0h
     jmp rax
 
+PUBLIC ?UnkFunc4@TagReplaceable@text@hh@@UEAAPEAXPEAX@Z
+?UnkFunc4@TagReplaceable@text@hh@@UEAAPEAXPEAX@Z:
+    mov rax, 0140bcbd60h
+    jmp rax
+
+PUBLIC ?UnkFunc4@TagReplacer@text@hh@@UEAAPEAXPEAX@Z
+?UnkFunc4@TagReplacer@text@hh@@UEAAPEAXPEAX@Z:
+    mov rax, 0140bcbd60h
+    jmp rax
+
 PUBLIC ?UnkFunc7@TagReplacer@text@hh@@UEAAPEAXPEAX0@Z
 ?UnkFunc7@TagReplacer@text@hh@@UEAAPEAXPEAX0@Z:
     mov rax, 0140bcbd80h
@@ -84465,6 +84510,16 @@ PUBLIC ?UnkFunc7@TagReplaceable@text@hh@@UEAAPEAXPEAX0@Z
     mov rax, 0140bcbd80h
     jmp rax
 
+PUBLIC ?UnkFunc7@TagReplaceable@text@hh@@UEAAPEAXPEBDPEAX@Z
+?UnkFunc7@TagReplaceable@text@hh@@UEAAPEAXPEBDPEAX@Z:
+    mov rax, 0140bcbd80h
+    jmp rax
+
+PUBLIC ?UnkFunc7@TagReplacer@text@hh@@UEAAPEAXPEBDPEAX@Z
+?UnkFunc7@TagReplacer@text@hh@@UEAAPEAXPEBDPEAX@Z:
+    mov rax, 0140bcbd80h
+    jmp rax
+
 PUBLIC ?UnkFunc6@TagReplacer@text@hh@@UEAAPEAXPEAX00@Z
 ?UnkFunc6@TagReplacer@text@hh@@UEAAPEAXPEAX00@Z:
     mov rax, 0140bcbdc0h
@@ -84472,6 +84527,16 @@ PUBLIC ?UnkFunc6@TagReplacer@text@hh@@UEAAPEAXPEAX00@Z
 
 PUBLIC ?UnkFunc6@TagReplaceable@text@hh@@UEAAPEAXPEAX00@Z
 ?UnkFunc6@TagReplaceable@text@hh@@UEAAPEAXPEAX00@Z:
+    mov rax, 0140bcbdc0h
+    jmp rax
+
+PUBLIC ?UnkFunc6@TagReplaceable@text@hh@@UEAAPEAXPEA_WIPEAX@Z
+?UnkFunc6@TagReplaceable@text@hh@@UEAAPEAXPEA_WIPEAX@Z:
+    mov rax, 0140bcbdc0h
+    jmp rax
+
+PUBLIC ?UnkFunc6@TagReplacer@text@hh@@UEAAPEAXPEA_WIPEAX@Z
+?UnkFunc6@TagReplacer@text@hh@@UEAAPEAXPEA_WIPEAX@Z:
     mov rax, 0140bcbdc0h
     jmp rax
 
@@ -95940,6 +96005,11 @@ PUBLIC ?AddCallback@CriMana@cri@hh@@UEAAXXZ
     mov rax, 0140db7710h
     jmp rax
 
+PUBLIC ?AddCallback@CriMana@cri@hh@@UEAAXPEAVApplication@fw@3@@Z
+?AddCallback@CriMana@cri@hh@@UEAAXPEAVApplication@fw@3@@Z:
+    mov rax, 0140db7710h
+    jmp rax
+
 PUBLIC ?GetClass@CriMana@cri@hh@@SAPEBVAppModuleClass@fw@3@XZ
 ?GetClass@CriMana@cri@hh@@SAPEBVAppModuleClass@fw@3@XZ:
     mov rax, 0140db77a0h
@@ -97542,6 +97612,16 @@ PUBLIC ?UnkFunc3@AnimationControlPxd@anim@hh@@UEBAMXZ
 
 PUBLIC ?GetWeight@AnimationControlPxd@anim@hh@@UEBAMXZ
 ?GetWeight@AnimationControlPxd@anim@hh@@UEBAMXZ:
+    mov rax, 0140ebf0a0h
+    jmp rax
+
+PUBLIC ?FRE_UnkFunc6@FreeTypeFontRenderingEngine@font@hh@@UEAAMXZ
+?FRE_UnkFunc6@FreeTypeFontRenderingEngine@font@hh@@UEAAMXZ:
+    mov rax, 0140ebf0a0h
+    jmp rax
+
+PUBLIC ?GetScale@FreeTypeFontRenderingEngine@font@hh@@UEAAMXZ
+?GetScale@FreeTypeFontRenderingEngine@font@hh@@UEAAMXZ:
     mov rax, 0140ebf0a0h
     jmp rax
 
@@ -99970,6 +100050,41 @@ PUBLIC ?UnkFunc11@UserServiceSteam@fnd@hh@@UEAA_KXZ
     mov rax, 0140ed11a0h
     jmp rax
 
+PUBLIC ??_DIAllocator@fnd@csl@@QEAAXXZ
+??_DIAllocator@fnd@csl@@QEAAXXZ:
+    mov rax, 0140ed120ch
+    jmp rax
+
+PUBLIC ?Alloc@ScalableFontEngineAppModule@font@hh@@UEAAPEAX_K0@Z
+?Alloc@ScalableFontEngineAppModule@font@hh@@UEAAPEAX_K0@Z:
+    mov rax, 0140ed1330h
+    jmp rax
+
+PUBLIC ?Free@ScalableFontEngineAppModule@font@hh@@UEAAXPEAX@Z
+?Free@ScalableFontEngineAppModule@font@hh@@UEAAXPEAX@Z:
+    mov rax, 0140ed1390h
+    jmp rax
+
+PUBLIC ?RemoveCallback@ScalableFontEngineAppModule@font@hh@@UEAAXXZ
+?RemoveCallback@ScalableFontEngineAppModule@font@hh@@UEAAXXZ:
+    mov rax, 0140ed13e0h
+    jmp rax
+
+PUBLIC ?AddCallback@ScalableFontEngineAppModule@font@hh@@UEAAXPEAVApplication@fw@3@@Z
+?AddCallback@ScalableFontEngineAppModule@font@hh@@UEAAXPEAVApplication@fw@3@@Z:
+    mov rax, 0140ed1400h
+    jmp rax
+
+PUBLIC ?RegisterFont@ScalableFontEngineAppModule@font@hh@@QEAA_JPEAVScalableFont@23@@Z
+?RegisterFont@ScalableFontEngineAppModule@font@hh@@QEAA_JPEAVScalableFont@23@@Z:
+    mov rax, 0140ed1470h
+    jmp rax
+
+PUBLIC ?GetClass@ScalableFontEngineAppModule@font@hh@@SAPEBVAppModuleClass@fw@3@XZ
+?GetClass@ScalableFontEngineAppModule@font@hh@@SAPEBVAppModuleClass@fw@3@XZ:
+    mov rax, 0140ed1660h
+    jmp rax
+
 PUBLIC ?CreateDevice@GamepadSteam@hid@hh@@SAPEAV123@IPEAVIAllocator@fnd@csl@@@Z
 ?CreateDevice@GamepadSteam@hid@hh@@SAPEAV123@IPEAVIAllocator@fnd@csl@@@Z:
     mov rax, 0140ed2550h
@@ -101275,6 +101390,106 @@ PUBLIC ?GetViewerByName@ViewerManager@dbg@hh@@QEAAPEAVViewer@23@PEBD@Z
     mov rax, 0140ef9030h
     jmp rax
 
+PUBLIC ??0ScalableFont@font@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
+??0ScalableFont@font@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 0140efb040h
+    jmp rax
+
+PUBLIC ??_DScalableFont@font@hh@@QEAAXXZ
+??_DScalableFont@font@hh@@QEAAXXZ:
+    mov rax, 0140efb450h
+    jmp rax
+
+PUBLIC ?F_UnkFunc2@ScalableFont@font@hh@@UEAAXXZ
+?F_UnkFunc2@ScalableFont@font@hh@@UEAAXXZ:
+    mov rax, 0140efb7f0h
+    jmp rax
+
+PUBLIC ?F_UnkFunc1@ScalableFont@font@hh@@UEAAXXZ
+?F_UnkFunc1@ScalableFont@font@hh@@UEAAXXZ:
+    mov rax, 0140efb930h
+    jmp rax
+
+PUBLIC ?F_UnkFunc17@ScalableFont@font@hh@@UEAAXXZ
+?F_UnkFunc17@ScalableFont@font@hh@@UEAAXXZ:
+    mov rax, 0140efba70h
+    jmp rax
+
+PUBLIC ?GetGlyphMapData@ScalableFont@font@hh@@UEAA_NI_J@Z
+?GetGlyphMapData@ScalableFont@font@hh@@UEAA_NI_J@Z:
+    mov rax, 0140efbb50h
+    jmp rax
+
+PUBLIC ?F_UnkFunc11@ScalableFont@font@hh@@UEAAMXZ
+?F_UnkFunc11@ScalableFont@font@hh@@UEAAMXZ:
+    mov rax, 0140efbd20h
+    jmp rax
+
+PUBLIC ?F_UnkFunc12@ScalableFont@font@hh@@UEAAMH@Z
+?F_UnkFunc12@ScalableFont@font@hh@@UEAAMH@Z:
+    mov rax, 0140efbd20h
+    jmp rax
+
+PUBLIC ?F_UnkFunc13@ScalableFont@font@hh@@UEAAXM@Z
+?F_UnkFunc13@ScalableFont@font@hh@@UEAAXM@Z:
+    mov rax, 0140efbd60h
+    jmp rax
+
+PUBLIC ?GetFontSize@ScalableFont@font@hh@@UEAAHH@Z
+?GetFontSize@ScalableFont@font@hh@@UEAAHH@Z:
+    mov rax, 0140efbde0h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@ScalableFont@font@hh@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@ScalableFont@font@hh@@UEBAPEAXXZ:
+    mov rax, 0140efbe40h
+    jmp rax
+
+PUBLIC ?GetTexture@ScalableFont@font@hh@@UEAA_JHH@Z
+?GetTexture@ScalableFont@font@hh@@UEAA_JHH@Z:
+    mov rax, 0140efbe50h
+    jmp rax
+
+PUBLIC ?F_UnkFunc3@ScalableFont@font@hh@@UEAAXXZ
+?F_UnkFunc3@ScalableFont@font@hh@@UEAAXXZ:
+    mov rax, 0140efbe60h
+    jmp rax
+
+PUBLIC ?F_UnkFunc6@ScalableFont@font@hh@@UEAA_NG@Z
+?F_UnkFunc6@ScalableFont@font@hh@@UEAA_NG@Z:
+    mov rax, 0140efbfc0h
+    jmp rax
+
+PUBLIC ?IsCharacterSupported@ScalableFont@font@hh@@UEAA_NG@Z
+?IsCharacterSupported@ScalableFont@font@hh@@UEAA_NG@Z:
+    mov rax, 0140efbfc0h
+    jmp rax
+
+PUBLIC ?F_UnkFunc16@ScalableFont@font@hh@@UEAADXZ
+?F_UnkFunc16@ScalableFont@font@hh@@UEAADXZ:
+    mov rax, 0140efc440h
+    jmp rax
+
+PUBLIC ?GetGlyphMapData@ScalableFont@font@hh@@UEAA_NIG_J@Z
+?GetGlyphMapData@ScalableFont@font@hh@@UEAA_NIG_J@Z:
+    mov rax, 0140efc510h
+    jmp rax
+
+PUBLIC ?F_UnkFunc0@ScalableFont@font@hh@@UEAA_N_J00@Z
+?F_UnkFunc0@ScalableFont@font@hh@@UEAA_N_J00@Z:
+    mov rax, 0140efc590h
+    jmp rax
+
+PUBLIC ?GetKerningImpl@ScalableFont@font@hh@@UEAA_NIGG_J@Z
+?GetKerningImpl@ScalableFont@font@hh@@UEAA_NIGG_J@Z:
+    mov rax, 0140efc620h
+    jmp rax
+
+PUBLIC ?F_UnkFunc15@ScalableFont@font@hh@@UEAADXZ
+?F_UnkFunc15@ScalableFont@font@hh@@UEAADXZ:
+    mov rax, 0140efc670h
+    jmp rax
+
 PUBLIC ?RemoveFromCurrentContainer@Renderable@gfnd@hh@@QEAAXXZ
 ?RemoveFromCurrentContainer@Renderable@gfnd@hh@@QEAAXXZ:
     mov rax, 0140efcc50h
@@ -101345,6 +101560,26 @@ PUBLIC ?IsValid@BinaryFile@ut@hh@@QEBA_NXZ
     mov rax, 0140efe4a0h
     jmp rax
 
+PUBLIC ?Callback@FontContainerResourceListener@font@hh@@QEAAXPEAVManagedResource@fnd@3@_N@Z
+?Callback@FontContainerResourceListener@font@hh@@QEAAXPEAVManagedResource@fnd@3@_N@Z:
+    mov rax, 0140effb90h
+    jmp rax
+
+PUBLIC ?RegisterFont@FontContainer@font@hh@@QEAAXPEBDPEAVIFont@23@@Z
+?RegisterFont@FontContainer@font@hh@@QEAAXPEBDPEAVIFont@23@@Z:
+    mov rax, 0140efff40h
+    jmp rax
+
+PUBLIC ?ResourceLoadedCallback@FontContainerResourceListener@font@hh@@UEAAXPEAVManagedResource@fnd@3@@Z
+?ResourceLoadedCallback@FontContainerResourceListener@font@hh@@UEAAXPEAVManagedResource@fnd@3@@Z:
+    mov rax, 0140f00120h
+    jmp rax
+
+PUBLIC ?ResourceUnloadedCallback@FontContainerResourceListener@font@hh@@UEAAXPEAVManagedResource@fnd@3@@Z
+?ResourceUnloadedCallback@FontContainerResourceListener@font@hh@@UEAAXPEAVManagedResource@fnd@3@@Z:
+    mov rax, 0140f00130h
+    jmp rax
+
 PUBLIC ?GetExtensionByTypeInfo@ResourceTypeRegistry@fnd@hh@@QEAAPEBDPEBUResourceTypeInfo@23@@Z
 ?GetExtensionByTypeInfo@ResourceTypeRegistry@fnd@hh@@QEAAPEBDPEBUResourceTypeInfo@23@@Z:
     mov rax, 0140f022b0h
@@ -101368,6 +101603,121 @@ PUBLIC ??0Pointing@hid@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
 PUBLIC ?UnkFunc13@Pointing@hid@hh@@UEAA?AVVector2@math@csl@@XZ
 ?UnkFunc13@Pointing@hid@hh@@UEAA?AVVector2@math@csl@@XZ:
     mov rax, 0140f077c0h
+    jmp rax
+
+PUBLIC ?ClearResource@BitmapFont@font@hh@@QEAAXXZ
+?ClearResource@BitmapFont@font@hh@@QEAAXXZ:
+    mov rax, 0140f079a0h
+    jmp rax
+
+PUBLIC ?F_UnkFunc7@BitmapFont@font@hh@@UEAA_J_J0@Z
+?F_UnkFunc7@BitmapFont@font@hh@@UEAA_J_J0@Z:
+    mov rax, 0140f07ae0h
+    jmp rax
+
+PUBLIC ?GetGlyphMapData@BitmapFont@font@hh@@UEAA_NI_J@Z
+?GetGlyphMapData@BitmapFont@font@hh@@UEAA_NI_J@Z:
+    mov rax, 0140f07ae0h
+    jmp rax
+
+PUBLIC ?F_UnkFunc11@BitmapFont@font@hh@@UEAAMXZ
+?F_UnkFunc11@BitmapFont@font@hh@@UEAAMXZ:
+    mov rax, 0140f07af0h
+    jmp rax
+
+PUBLIC ?F_UnkFunc12@BitmapFont@font@hh@@UEAAMH@Z
+?F_UnkFunc12@BitmapFont@font@hh@@UEAAMH@Z:
+    mov rax, 0140f07af0h
+    jmp rax
+
+PUBLIC ?F_UnkFunc13@BitmapFont@font@hh@@UEAAXH@Z
+?F_UnkFunc13@BitmapFont@font@hh@@UEAAXH@Z:
+    mov rax, 0140f07b00h
+    jmp rax
+
+PUBLIC ?F_UnkFunc13@BitmapFont@font@hh@@UEAAXM@Z
+?F_UnkFunc13@BitmapFont@font@hh@@UEAAXM@Z:
+    mov rax, 0140f07b00h
+    jmp rax
+
+PUBLIC ?F_UnkFunc5@BitmapFont@font@hh@@UEAA_JXZ
+?F_UnkFunc5@BitmapFont@font@hh@@UEAA_JXZ:
+    mov rax, 0140f07b30h
+    jmp rax
+
+PUBLIC ?GetFontName@BitmapFont@font@hh@@UEAAPEBDXZ
+?GetFontName@BitmapFont@font@hh@@UEAAPEBDXZ:
+    mov rax, 0140f07b30h
+    jmp rax
+
+PUBLIC ?F_UnkFunc10@BitmapFont@font@hh@@UEAA_JH@Z
+?F_UnkFunc10@BitmapFont@font@hh@@UEAA_JH@Z:
+    mov rax, 0140f07b70h
+    jmp rax
+
+PUBLIC ?GetFontSize@BitmapFont@font@hh@@UEAAHH@Z
+?GetFontSize@BitmapFont@font@hh@@UEAAHH@Z:
+    mov rax, 0140f07b70h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@BitmapFont@font@hh@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@BitmapFont@font@hh@@UEBAPEAXXZ:
+    mov rax, 0140f07bd0h
+    jmp rax
+
+PUBLIC ?F_UnkFunc9@BitmapFont@font@hh@@UEAA_JHH@Z
+?F_UnkFunc9@BitmapFont@font@hh@@UEAA_JHH@Z:
+    mov rax, 0140f07be0h
+    jmp rax
+
+PUBLIC ?GetTexture@BitmapFont@font@hh@@UEAA_JHH@Z
+?GetTexture@BitmapFont@font@hh@@UEAA_JHH@Z:
+    mov rax, 0140f07be0h
+    jmp rax
+
+PUBLIC ?F_UnkFunc6@BitmapFont@font@hh@@UEAA_NG@Z
+?F_UnkFunc6@BitmapFont@font@hh@@UEAA_NG@Z:
+    mov rax, 0140f07c60h
+    jmp rax
+
+PUBLIC ?IsCharacterSupported@BitmapFont@font@hh@@UEAA_NG@Z
+?IsCharacterSupported@BitmapFont@font@hh@@UEAA_NG@Z:
+    mov rax, 0140f07c60h
+    jmp rax
+
+PUBLIC ?SetResource@BitmapFont@font@hh@@QEAA_NPEAVResBitmapFont@23@@Z
+?SetResource@BitmapFont@font@hh@@QEAA_NPEAVResBitmapFont@23@@Z:
+    mov rax, 0140f07cc0h
+    jmp rax
+
+PUBLIC ?F_UnkFunc8@BitmapFont@font@hh@@UEAA_NIG_J@Z
+?F_UnkFunc8@BitmapFont@font@hh@@UEAA_NIG_J@Z:
+    mov rax, 0140f08190h
+    jmp rax
+
+PUBLIC ?GetGlyphMapData@BitmapFont@font@hh@@UEAA_NIG_J@Z
+?GetGlyphMapData@BitmapFont@font@hh@@UEAA_NIG_J@Z:
+    mov rax, 0140f08190h
+    jmp rax
+
+PUBLIC ?F_UnkFunc0@BitmapFont@font@hh@@UEAA_N_J00@Z
+?F_UnkFunc0@BitmapFont@font@hh@@UEAA_N_J00@Z:
+    mov rax, 0140f08220h
+    jmp rax
+
+PUBLIC ?F_UnkFunc14@BitmapFont@font@hh@@UEAADIGG_J@Z
+?F_UnkFunc14@BitmapFont@font@hh@@UEAADIGG_J@Z:
+    mov rax, 0140f08270h
+    jmp rax
+
+PUBLIC ?GetKerningImpl@BitmapFont@font@hh@@UEAA_NIGG_J@Z
+?GetKerningImpl@BitmapFont@font@hh@@UEAA_NIGG_J@Z:
+    mov rax, 0140f08270h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@IFont@font@hh@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@IFont@font@hh@@UEBAPEAXXZ:
+    mov rax, 0140f097a0h
     jmp rax
 
 PUBLIC ?GetVibration@DeviceManager@hid@hh@@SAPEAVVibrationManager@23@XZ
@@ -103328,6 +103678,76 @@ PUBLIC ?StopSound@VibrationHapticPlayer@hid@hh@@UEAAXXZ
 PUBLIC ?Create@ManagedResource@fnd@hh@@SAPEAV123@PEAVIAllocator@2csl@@0PEBD1PEAX_KPEAUResourceTypeInfo@23@@Z
 ?Create@ManagedResource@fnd@hh@@SAPEAV123@PEAVIAllocator@2csl@@0PEBD1PEAX_KPEAUResourceTypeInfo@23@@Z:
     mov rax, 0140f49ed0h
+    jmp rax
+
+PUBLIC ??0FreeTypeFontRenderingEngine@font@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
+??0FreeTypeFontRenderingEngine@font@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 0140f4c000h
+    jmp rax
+
+PUBLIC ??_DFreeTypeFontRenderingEngine@font@hh@@QEAAXXZ
+??_DFreeTypeFontRenderingEngine@font@hh@@QEAAXXZ:
+    mov rax, 0140f4c0a0h
+    jmp rax
+
+PUBLIC ?FRE_UnkFunc7@FreeTypeFontRenderingEngine@font@hh@@UEAAMXZ
+?FRE_UnkFunc7@FreeTypeFontRenderingEngine@font@hh@@UEAAMXZ:
+    mov rax, 0140f4c130h
+    jmp rax
+
+PUBLIC ?GetAscenderScale@FreeTypeFontRenderingEngine@font@hh@@UEAAMXZ
+?GetAscenderScale@FreeTypeFontRenderingEngine@font@hh@@UEAAMXZ:
+    mov rax, 0140f4c130h
+    jmp rax
+
+PUBLIC ?FRE_UnkFunc8@FreeTypeFontRenderingEngine@font@hh@@UEAAMXZ
+?FRE_UnkFunc8@FreeTypeFontRenderingEngine@font@hh@@UEAAMXZ:
+    mov rax, 0140f4c140h
+    jmp rax
+
+PUBLIC ?GetDescenderScale@FreeTypeFontRenderingEngine@font@hh@@UEAAMXZ
+?GetDescenderScale@FreeTypeFontRenderingEngine@font@hh@@UEAAMXZ:
+    mov rax, 0140f4c140h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@FreeTypeFontRenderingEngine@font@hh@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@FreeTypeFontRenderingEngine@font@hh@@UEBAPEAXXZ:
+    mov rax, 0140f4c150h
+    jmp rax
+
+PUBLIC ?FRE_UnkFunc5@FreeTypeFontRenderingEngine@font@hh@@UEAA_NG@Z
+?FRE_UnkFunc5@FreeTypeFontRenderingEngine@font@hh@@UEAA_NG@Z:
+    mov rax, 0140f4c160h
+    jmp rax
+
+PUBLIC ?IsCharacterSupported@FreeTypeFontRenderingEngine@font@hh@@UEAA_NG@Z
+?IsCharacterSupported@FreeTypeFontRenderingEngine@font@hh@@UEAA_NG@Z:
+    mov rax, 0140f4c160h
+    jmp rax
+
+PUBLIC ?FRE_UnkFunc2@FreeTypeFontRenderingEngine@font@hh@@UEAAXM@Z
+?FRE_UnkFunc2@FreeTypeFontRenderingEngine@font@hh@@UEAAXM@Z:
+    mov rax, 0140f4c220h
+    jmp rax
+
+PUBLIC ?SetFontSize@FreeTypeFontRenderingEngine@font@hh@@UEAAXM@Z
+?SetFontSize@FreeTypeFontRenderingEngine@font@hh@@UEAAXM@Z:
+    mov rax, 0140f4c220h
+    jmp rax
+
+PUBLIC ?FRE_UnkFunc1@FreeTypeFontRenderingEngine@font@hh@@UEAAXD@Z
+?FRE_UnkFunc1@FreeTypeFontRenderingEngine@font@hh@@UEAAXD@Z:
+    mov rax, 0140f4c230h
+    jmp rax
+
+PUBLIC ?FRE_UnkFunc0@FreeTypeFontRenderingEngine@font@hh@@UEAA_N_J@Z
+?FRE_UnkFunc0@FreeTypeFontRenderingEngine@font@hh@@UEAA_N_J@Z:
+    mov rax, 0140f4c240h
+    jmp rax
+
+PUBLIC ?OpenFace@FreeTypeFontRenderingEngine@font@hh@@UEAA_N_J@Z
+?OpenFace@FreeTypeFontRenderingEngine@font@hh@@UEAA_N_J@Z:
+    mov rax, 0140f4c240h
     jmp rax
 
 PUBLIC ??0VibrationPlayer@hid@hh@@QEAA@PEAVIAllocator@fnd@csl@@PEAVVibrationWin32@12@PEBD@Z
@@ -114807,6 +115227,101 @@ PUBLIC ?BPSCB_UnkFunc1@BattlePhaseSpecialCounterBase@app@@UEAAXXZ
 
 PUBLIC ?GetAnimationStateName@BattlePhaseSpecialCounterBase@app@@UEAAPEBDXZ
 ?GetAnimationStateName@BattlePhaseSpecialCounterBase@app@@UEAAPEBDXZ:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?F_UnkFunc0@IFont@font@hh@@UEAA_N_J00@Z
+?F_UnkFunc0@IFont@font@hh@@UEAA_N_J00@Z:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?F_UnkFunc4@IFont@font@hh@@UEAA_NXZ
+?F_UnkFunc4@IFont@font@hh@@UEAA_NXZ:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?F_UnkFunc5@IFont@font@hh@@UEAA_JXZ
+?F_UnkFunc5@IFont@font@hh@@UEAA_JXZ:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?F_UnkFunc6@IFont@font@hh@@UEAA_NG@Z
+?F_UnkFunc6@IFont@font@hh@@UEAA_NG@Z:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?F_UnkFunc7@IFont@font@hh@@UEAA_J_J0@Z
+?F_UnkFunc7@IFont@font@hh@@UEAA_J_J0@Z:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?F_UnkFunc8@IFont@font@hh@@UEAA_NIG_J@Z
+?F_UnkFunc8@IFont@font@hh@@UEAA_NIG_J@Z:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?F_UnkFunc9@IFont@font@hh@@UEAA_JHH@Z
+?F_UnkFunc9@IFont@font@hh@@UEAA_JHH@Z:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?F_UnkFunc10@IFont@font@hh@@UEAA_JH@Z
+?F_UnkFunc10@IFont@font@hh@@UEAA_JH@Z:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?F_UnkFunc11@IFont@font@hh@@UEAAMXZ
+?F_UnkFunc11@IFont@font@hh@@UEAAMXZ:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?F_UnkFunc12@IFont@font@hh@@UEAAMH@Z
+?F_UnkFunc12@IFont@font@hh@@UEAAMH@Z:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?F_UnkFunc13@IFont@font@hh@@UEAAXH@Z
+?F_UnkFunc13@IFont@font@hh@@UEAAXH@Z:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?IsLoaded@IFont@font@hh@@UEAA_NXZ
+?IsLoaded@IFont@font@hh@@UEAA_NXZ:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?GetFontName@IFont@font@hh@@UEAAPEBDXZ
+?GetFontName@IFont@font@hh@@UEAAPEBDXZ:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?GetTexture@IFont@font@hh@@UEAA_JHH@Z
+?GetTexture@IFont@font@hh@@UEAA_JHH@Z:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?GetFontSize@IFont@font@hh@@UEAAHH@Z
+?GetFontSize@IFont@font@hh@@UEAAHH@Z:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?GetGlyphMapData@IFont@font@hh@@UEAA_NIG_J@Z
+?GetGlyphMapData@IFont@font@hh@@UEAA_NIG_J@Z:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?GetGlyphMapData@IFont@font@hh@@UEAA_NI_J@Z
+?GetGlyphMapData@IFont@font@hh@@UEAA_NI_J@Z:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?F_UnkFunc13@IFont@font@hh@@UEAAXM@Z
+?F_UnkFunc13@IFont@font@hh@@UEAAXM@Z:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?IsCharacterSupported@IFont@font@hh@@UEAA_NG@Z
+?IsCharacterSupported@IFont@font@hh@@UEAA_NG@Z:
     mov rax, 014118f6e0h
     jmp rax
 
@@ -148865,6 +149380,11 @@ PUBLIC ?componentClass@GOCCharacterIkPxd@anim@hh@@0VGOComponentClass@game@3@B
     mov rax, 0143cf2240h
     jmp rax
 
+PUBLIC ?staticModuleClass@ScalableFontEngineAppModule@font@hh@@0VAppModuleClass@fw@3@B
+?staticModuleClass@ScalableFontEngineAppModule@font@hh@@0VAppModuleClass@fw@3@B:
+    mov rax, 0143cf2568h
+    jmp rax
+
 PUBLIC ?singletonInitNode@MessageManager@fnd@hh@@0VSingletonInitNode@23@B
 ?singletonInitNode@MessageManager@fnd@hh@@0VSingletonInitNode@23@B:
     mov rax, 0143cf2748h
@@ -167085,6 +167605,11 @@ PUBLIC ?instance@IniFileHolder@dbg@hh@@0PEAV123@EA
     mov rax, 0143dcda18h
     jmp rax
 
+PUBLIC ?instance@Application@fw@hh@@2PEAV123@EA
+?instance@Application@fw@hh@@2PEAV123@EA:
+    mov rax, 0143dcda48h
+    jmp rax
+
 PUBLIC ?gameServiceClass@MovieManager@fmv@hh@@0VGameServiceClass@game@3@B
 ?gameServiceClass@MovieManager@fmv@hh@@0VGameServiceClass@game@3@B:
     mov rax, 0143dcddf8h
@@ -178240,6 +178765,11 @@ PUBLIC ??_DVibHandleObj@VibrationHapticListener@SoundPlayer@snd@hh@@QEAAXXZ
     mov rax, 014d1b1800h
     jmp rax
 
+PUBLIC ??_DFontTexture@font@hh@@QEAAXXZ
+??_DFontTexture@font@hh@@QEAAXXZ:
+    mov rax, 014d1b1800h
+    jmp rax
+
 PUBLIC ??_GGOCCamera@camera@app@@QEAAXXZ
 ??_GGOCCamera@camera@app@@QEAAXXZ:
     mov rax, 014d1ba6d0h
@@ -178922,6 +179452,11 @@ PUBLIC ??_DVibration@hid@hh@@QEAAXXZ
 
 PUBLIC ?AddListener@UIElement@ui@hh@@QEAAXPEAVUIElementListener@123@@Z
 ?AddListener@UIElement@ui@hh@@QEAAXPEAVUIElementListener@123@@Z:
+    mov rax, 014d9407d0h
+    jmp rax
+
+PUBLIC ?AddKerning@ResScalableFontSet@font@hh@@QEAAXPEAVResOpticalKerning@23@@Z
+?AddKerning@ResScalableFontSet@font@hh@@QEAAXPEAVResOpticalKerning@23@@Z:
     mov rax, 014d9407d0h
     jmp rax
 
@@ -180622,6 +181157,11 @@ PUBLIC ?GetPackage@TextureStreamingModule@gfx@hh@@QEAAPEAVResTextureStreamingPac
 
 PUBLIC ?AddCallback@TextureStreamingModule@gfx@hh@@UEAAXXZ
 ?AddCallback@TextureStreamingModule@gfx@hh@@UEAAXXZ:
+    mov rax, 014f27e230h
+    jmp rax
+
+PUBLIC ?AddCallback@TextureStreamingModule@gfx@hh@@UEAAXPEAVApplication@fw@3@@Z
+?AddCallback@TextureStreamingModule@gfx@hh@@UEAAXPEAVApplication@fw@3@@Z:
     mov rax, 014f27e230h
     jmp rax
 
@@ -185740,6 +186280,16 @@ PUBLIC ?Create@UserServiceSteam@fnd@hh@@SAPEAV123@PEAVIAllocator@2csl@@@Z
     mov rax, 015231c030h
     jmp rax
 
+PUBLIC ??_DScalableFontEngineAppModule@font@hh@@QEAAXXZ
+??_DScalableFontEngineAppModule@font@hh@@QEAAXXZ:
+    mov rax, 0152362910h
+    jmp rax
+
+PUBLIC ?Create@ScalableFontEngineAppModule@font@hh@@CAPEAVAppModule@fw@3@PEAVIAllocator@fnd@csl@@@Z
+?Create@ScalableFontEngineAppModule@font@hh@@CAPEAVAppModule@fw@3@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 0152370fb0h
+    jmp rax
+
 PUBLIC ??0DeviceManager@hid@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
 ??0DeviceManager@hid@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 01523efee0h
@@ -186200,6 +186750,11 @@ PUBLIC ?OpenFileForReading@IFileSystem@fnd@hh@@UEAAPEAVStreamReader@23@AEBVUri@2
     mov rax, 015282f750h
     jmp rax
 
+PUBLIC ?GetFontName@ScalableFont@font@hh@@UEAAPEBDXZ
+?GetFontName@ScalableFont@font@hh@@UEAAPEBDXZ:
+    mov rax, 01528b76c0h
+    jmp rax
+
 PUBLIC ??0Renderable@gfnd@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
 ??0Renderable@gfnd@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 01528f0f10h
@@ -186250,6 +186805,21 @@ PUBLIC ?NotExists@VibrationObj@VibrationContainer@hid@hh@@QEAA_NXZ
     mov rax, 015297a3b0h
     jmp rax
 
+PUBLIC ??0FontContainer@font@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
+??0FontContainer@font@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 0152984320h
+    jmp rax
+
+PUBLIC ??_DFontContainer@font@hh@@QEAAXXZ
+??_DFontContainer@font@hh@@QEAAXXZ:
+    mov rax, 0152988490h
+    jmp rax
+
+PUBLIC ??_DFontContainerResourceListener@font@hh@@QEAAXXZ
+??_DFontContainerResourceListener@font@hh@@QEAAXXZ:
+    mov rax, 015298d8d0h
+    jmp rax
+
 PUBLIC ??0ActiveDeviceManager@hid@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
 ??0ActiveDeviceManager@hid@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 01529a3060h
@@ -186275,9 +186845,24 @@ PUBLIC ??0ResourceTypeRegistry@fnd@hh@@QEAA@XZ
     mov rax, 0152a132d0h
     jmp rax
 
+PUBLIC ??0BitmapFont@font@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
+??0BitmapFont@font@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 0152b467b0h
+    jmp rax
+
+PUBLIC ??_DBitmapFont@font@hh@@QEAAXXZ
+??_DBitmapFont@font@hh@@QEAAXXZ:
+    mov rax, 0152b47d00h
+    jmp rax
+
 PUBLIC ?UnkFunc7@AnimationControlPxd@anim@hh@@UEAAXM@Z
 ?UnkFunc7@AnimationControlPxd@anim@hh@@UEAAXM@Z:
     mov rax, 0152b4a808h
+    jmp rax
+
+PUBLIC ??0IFont@font@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
+??0IFont@font@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 0152bfe9a0h
     jmp rax
 
 PUBLIC ??0VibrationManager@hid@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
@@ -186778,6 +187363,21 @@ PUBLIC ??_DUniqueResourceContainer@fnd@hh@@QEAAXXZ
 PUBLIC ?ResolveName@FilePathResolver@fnd@hh@@UEAAPEADPEBDPEAUResourceTypeInfo@23@PEAD_K@Z
 ?ResolveName@FilePathResolver@fnd@hh@@UEAAPEADPEBDPEAUResourceTypeInfo@23@PEAD_K@Z:
     mov rax, 0153770720h
+    jmp rax
+
+PUBLIC ?FRE_UnkFunc3@FreeTypeFontRenderingEngine@font@hh@@UEAA_NGF_JD@Z
+?FRE_UnkFunc3@FreeTypeFontRenderingEngine@font@hh@@UEAA_NGF_JD@Z:
+    mov rax, 01537c0780h
+    jmp rax
+
+PUBLIC ?GetGlyphInfo@FreeTypeFontRenderingEngine@font@hh@@UEAA_NGFPEAUGlyphInfo@IFontRenderingEngine@23@D@Z
+?GetGlyphInfo@FreeTypeFontRenderingEngine@font@hh@@UEAA_NGFPEAUGlyphInfo@IFontRenderingEngine@23@D@Z:
+    mov rax, 01537c0780h
+    jmp rax
+
+PUBLIC ?FRE_UnkFunc4@FreeTypeFontRenderingEngine@font@hh@@UEAA_N_J00@Z
+?FRE_UnkFunc4@FreeTypeFontRenderingEngine@font@hh@@UEAA_N_J00@Z:
+    mov rax, 01537c1dd0h
     jmp rax
 
 PUBLIC ?BuildPart3@GPUTextureBuilder@Cyan@@AEAAIPEAUGPUElementParam@12@@Z

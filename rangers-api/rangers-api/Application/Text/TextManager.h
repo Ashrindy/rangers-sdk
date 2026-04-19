@@ -8,7 +8,7 @@ namespace app::text {
         , public app::fnd::AppResourceManagerListener
     {
         void* unk101;
-        void* unk102;
+        hh::fnd::Reference<hh::fnd::ResReflectionT<heur::rfl::DecoTechParams>> decoTechParams;
         void* unk103;
         hh::text::TagReplacer* tagReplacer;
         void* unk104;
