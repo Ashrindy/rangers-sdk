@@ -1,6 +1,6 @@
 #pragma once
 
-#define OBJINFO_CLASS_DECLARATION_BASE(ClassName) private:\
+#define OBJINFO_CLASS_DECLARATION_BASE(ClassName) public:\
 		static const hh::game::ObjInfoClass objInfoClass;\
 		ClassName(csl::fnd::IAllocator* allocator);\
 		static hh::game::ObjInfo* Create(csl::fnd::IAllocator* allocator);\

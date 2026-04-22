@@ -525,6 +525,7 @@ namespace rangerssdk::ucsl {
 #include "Hedgehog/Framework/AppModule.h"
 #include "Hedgehog/Framework/Application.h"
 #include "Hedgehog/Framework/SaveManagerInterface.h"
+#include "Hedgehog/Framework/SaveAsyncHandler.h"
 #include "Hedgehog/Framework/SyncTimer.h"
 
 #include "Hedgehog/Font/ScalableFont.h"
@@ -1192,6 +1193,7 @@ namespace rangerssdk::ucsl {
 #include "Application/Animation/AnimatorTriggerListener.h"
 
 #include "Application/Game/GOCScript.h"
+#include "Application/Game/GOCGuideCircle.h"
 #include "Application/Game/ReactiveService.h"
 #include "Application/Game/GOCBossActionSelect.h"
 #include "Application/Game/GOCBossAnimatorTriggerHelper.h"
@@ -1202,6 +1204,7 @@ namespace rangerssdk::ucsl {
 #include "Application/UI/UIMapMenu.h"
 #include "Application/UI/RequestOverlayTagReplace.h"
 #include "Application/UI/RequestOverlayBegin.h"
+#include "Application/UI/RequestOverlayCaptionSelectBox.h"
 #include "Application/UI/RequestOverlayWindow.h"
 #include "Application/UI/RequestOverlayCaption.h"
 #include "Application/UI/RequestOverlayCelebration.h"
@@ -1356,6 +1359,7 @@ namespace rangerssdk::ucsl {
 #include "Application/ObjParticleBase.h"
 #include "Application/ObjReactiveTest.h"
 #include "Application/ObjBlockObjectTest.h"
+#include "Application/ObjKodamaMasterKing.h"
 
 namespace rangerssdk::ucsl {
     inline csl::fnd::IAllocator* AllocatorSystem::get_allocator() { return hh::fnd::MemoryRouter::GetModuleAllocator(); }

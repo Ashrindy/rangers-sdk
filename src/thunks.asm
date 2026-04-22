@@ -27790,6 +27790,11 @@ PUBLIC ??0ComboBoxResourceVibration@?A0x9467174e@fnd@app@@QEAA@PEAVIAllocator@2c
     mov rax, 0140157170h
     jmp rax
 
+PUBLIC ?LoadPackfile@ResourceLoader@fnd@hh@@QEAAXPEBDAEAULocale@123@@Z
+?LoadPackfile@ResourceLoader@fnd@hh@@QEAAXPEBDAEAULocale@123@@Z:
+    mov rax, 0140157280h
+    jmp rax
+
 PUBLIC ?AddListener@AppResourceManager@fnd@app@@QEAAXPEAVAppResourceManagerListener@23@@Z
 ?AddListener@AppResourceManager@fnd@app@@QEAAXPEAVAppResourceManagerListener@23@@Z:
     mov rax, 0140157760h
@@ -29460,6 +29465,11 @@ PUBLIC ??_GGOCGuideCircle@game@app@@QEAAXXZ
     mov rax, 0140186850h
     jmp rax
 
+PUBLIC ??_DGOCGuideCircle@game@app@@QEAAXXZ
+??_DGOCGuideCircle@game@app@@QEAAXXZ:
+    mov rax, 0140186850h
+    jmp rax
+
 PUBLIC ?Create@GOCGuideCircle@game@app@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z
 ?Create@GOCGuideCircle@game@app@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 0140186b00h
@@ -29470,9 +29480,29 @@ PUBLIC ?Create@GOCGuideCircle@game@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z
     mov rax, 0140186b00h
     jmp rax
 
+PUBLIC ?GetRuntimeTypeInfo@GOCGuideCircle@game@app@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@GOCGuideCircle@game@app@@UEBAPEAXXZ:
+    mov rax, 0140186bb0h
+    jmp rax
+
+PUBLIC ?OnGOCEvent@GOCGuideCircle@game@app@@UEAAXW4GOCEvent@GOComponent@2hh@@AEAVGameObject@26@PEAX@Z
+?OnGOCEvent@GOCGuideCircle@game@app@@UEAAXW4GOCEvent@GOComponent@2hh@@AEAVGameObject@26@PEAX@Z:
+    mov rax, 0140186bc0h
+    jmp rax
+
+PUBLIC ?Setup@GOCGuideCircle@game@app@@QEAAXAEBUDescription@123@@Z
+?Setup@GOCGuideCircle@game@app@@QEAAXAEBUDescription@123@@Z:
+    mov rax, 0140186d20h
+    jmp rax
+
 PUBLIC ?GetClass@GOCGuideCircle@game@app@@SAPEBVGOComponentClass@2hh@@XZ
 ?GetClass@GOCGuideCircle@game@app@@SAPEBVGOComponentClass@2hh@@XZ:
     mov rax, 0140186d40h
+    jmp rax
+
+PUBLIC ?UpdateAsync@GOCGuideCircle@game@app@@UEAAXW4UpdatingPhase@fnd@hh@@AEBUSUpdateInfo@56@PEAX@Z
+?UpdateAsync@GOCGuideCircle@game@app@@UEAAXW4UpdatingPhase@fnd@hh@@AEBUSUpdateInfo@56@PEAX@Z:
+    mov rax, 0140186db0h
     jmp rax
 
 PUBLIC ??_D?$TransitionValue@M@ut@app@@QEAAXXZ
@@ -62200,6 +62230,11 @@ PUBLIC ?GetClass@ObjKodamaMap@app@@SAPEBVGameObjectClass@game@hh@@XZ
     mov rax, 014079f570h
     jmp rax
 
+PUBLIC ?Create@RequestOverlayCaptionSelectBox@ui@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z
+?Create@RequestOverlayCaptionSelectBox@ui@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 014079f580h
+    jmp rax
+
 PUBLIC ??0ObjKodamaMaster@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z
 ??0ObjKodamaMaster@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 014079f650h
@@ -62218,6 +62253,11 @@ PUBLIC ??_GObjKodamaMaster@app@@QEAAXXZ
 PUBLIC ??_GObjKodamaMasterInfo@app@@QEAAXXZ
 ??_GObjKodamaMasterInfo@app@@QEAAXXZ:
     mov rax, 014079f800h
+    jmp rax
+
+PUBLIC ??_DRequestOverlayCaptionSelectBox@ui@app@@QEAAXXZ
+??_DRequestOverlayCaptionSelectBox@ui@app@@QEAAXXZ:
+    mov rax, 014079f8b0h
     jmp rax
 
 PUBLIC ?GetClass@ObjKodamaMaster@app@@SAPEBVGameObjectClass@game@hh@@XZ
@@ -62240,9 +62280,49 @@ PUBLIC ??_GObjKodamaMasterKing@app@@QEAAXXZ
     mov rax, 01407a25c0h
     jmp rax
 
+PUBLIC ??_DObjKodamaMasterKing@app@@QEAAXXZ
+??_DObjKodamaMasterKing@app@@QEAAXXZ:
+    mov rax, 01407a25c0h
+    jmp rax
+
 PUBLIC ??_GObjKodamaMasterKingInfo@app@@QEAAXXZ
 ??_GObjKodamaMasterKingInfo@app@@QEAAXXZ:
     mov rax, 01407a2640h
+    jmp rax
+
+PUBLIC ??_DObjKodamaMasterKingInfo@app@@QEAAXXZ
+??_DObjKodamaMasterKingInfo@app@@QEAAXXZ:
+    mov rax, 01407a2640h
+    jmp rax
+
+PUBLIC ?AddCallback@ObjKodamaMasterKing@app@@UEAAXPEAVGameManager@game@hh@@@Z
+?AddCallback@ObjKodamaMasterKing@app@@UEAAXPEAVGameManager@game@hh@@@Z:
+    mov rax, 01407a26d0h
+    jmp rax
+
+PUBLIC ?GetInfoName@ObjKodamaMasterKingInfo@app@@UEAAPEBDXZ
+?GetInfoName@ObjKodamaMasterKingInfo@app@@UEAAPEBDXZ:
+    mov rax, 01407a3ec0h
+    jmp rax
+
+PUBLIC ?Initialize@ObjKodamaMasterKingInfo@app@@UEAAXPEAVGameManager@game@hh@@@Z
+?Initialize@ObjKodamaMasterKingInfo@app@@UEAAXPEAVGameManager@game@hh@@@Z:
+    mov rax, 01407a3f40h
+    jmp rax
+
+PUBLIC ?Load@ObjKodamaMasterKingInfo@app@@UEAAXXZ
+?Load@ObjKodamaMasterKingInfo@app@@UEAAXXZ:
+    mov rax, 01407a4040h
+    jmp rax
+
+PUBLIC ?OnContact@ObjKodamaMasterKing@app@@UEAAXXZ
+?OnContact@ObjKodamaMasterKing@app@@UEAAXXZ:
+    mov rax, 01407a4420h
+    jmp rax
+
+PUBLIC ?ProcessMessage@ObjKodamaMasterKing@app@@UEAA_NAEAVMessage@fnd@hh@@@Z
+?ProcessMessage@ObjKodamaMasterKing@app@@UEAA_NAEAVMessage@fnd@hh@@@Z:
+    mov rax, 01407a46c0h
     jmp rax
 
 PUBLIC ?GetClass@ObjKodamaMasterKing@app@@SAPEBVGameObjectClass@game@hh@@XZ
@@ -78815,6 +78895,21 @@ PUBLIC ??_GUICaptionSelectBox@ui@app@@QEAAXXZ
     mov rax, 0140a1c4b0h
     jmp rax
 
+PUBLIC ??_DUICaptionSelectBox@ui@app@@QEAAXXZ
+??_DUICaptionSelectBox@ui@app@@QEAAXXZ:
+    mov rax, 0140a1c4b0h
+    jmp rax
+
+PUBLIC ?AddCallback@UICaptionSelectBox@ui@app@@UEAAXPEAVGameManager@game@hh@@@Z
+?AddCallback@UICaptionSelectBox@ui@app@@UEAAXPEAVGameManager@game@hh@@@Z:
+    mov rax, 0140a1c570h
+    jmp rax
+
+PUBLIC ?UIL_UnkFunc1@UICaptionSelectBox@ui@app@@UEAAXXZ
+?UIL_UnkFunc1@UICaptionSelectBox@ui@app@@UEAAXXZ:
+    mov rax, 0140a1ccb0h
+    jmp rax
+
 PUBLIC ?GetClass@UICaptionSelectBox@ui@app@@SAPEBVGameObjectClass@game@hh@@XZ
 ?GetClass@UICaptionSelectBox@ui@app@@SAPEBVGameObjectClass@game@hh@@XZ:
     mov rax, 0140a1d600h
@@ -80218,6 +80313,11 @@ PUBLIC ?PreGameUpdateCallback@UIOverlayService@ui@app@@UEAAXPEAVGameManager@game
 PUBLIC ?PostGameUpdateCallback@UIOverlayService@ui@app@@UEAAXPEAVGameManager@game@hh@@AEBUSUpdateInfo@fnd@6@@Z
 ?PostGameUpdateCallback@UIOverlayService@ui@app@@UEAAXPEAVGameManager@game@hh@@AEBUSUpdateInfo@fnd@6@@Z:
     mov rax, 0140aca220h
+    jmp rax
+
+PUBLIC ?GetJobStatus@UIOverlayService@ui@app@@QEAAXIAEAUOverlayJobStatus@123@@Z
+?GetJobStatus@UIOverlayService@ui@app@@QEAAXIAEAUOverlayJobStatus@123@@Z:
+    mov rax, 0140aca6c0h
     jmp rax
 
 PUBLIC ?GetRuntimeTypeInfo@UIOverlayService@ui@app@@UEAAPEAXXZ
@@ -84490,13 +84590,13 @@ PUBLIC ??0VibrationObj@GOCVibration@game@hh@@QEAA@XZ
     mov rax, 0140bcbbb0h
     jmp rax
 
-PUBLIC ?UnkFunc4@TagReplaceable@text@hh@@UEAAPEAXPEAX@Z
-?UnkFunc4@TagReplaceable@text@hh@@UEAAPEAXPEAX@Z:
+PUBLIC ?UnkFunc4@TagReplacer@text@hh@@UEAAPEAXPEAX@Z
+?UnkFunc4@TagReplacer@text@hh@@UEAAPEAXPEAX@Z:
     mov rax, 0140bcbd60h
     jmp rax
 
-PUBLIC ?UnkFunc4@TagReplacer@text@hh@@UEAAPEAXPEAX@Z
-?UnkFunc4@TagReplacer@text@hh@@UEAAPEAXPEAX@Z:
+PUBLIC ?UnkFunc4@TagReplaceable@text@hh@@UEAAPEAXPEAX@Z
+?UnkFunc4@TagReplaceable@text@hh@@UEAAPEAXPEAX@Z:
     mov rax, 0140bcbd60h
     jmp rax
 
@@ -84510,13 +84610,13 @@ PUBLIC ?UnkFunc7@TagReplaceable@text@hh@@UEAAPEAXPEAX0@Z
     mov rax, 0140bcbd80h
     jmp rax
 
-PUBLIC ?UnkFunc7@TagReplaceable@text@hh@@UEAAPEAXPEBDPEAX@Z
-?UnkFunc7@TagReplaceable@text@hh@@UEAAPEAXPEBDPEAX@Z:
+PUBLIC ?UnkFunc7@TagReplacer@text@hh@@UEAAPEAXPEBDPEAX@Z
+?UnkFunc7@TagReplacer@text@hh@@UEAAPEAXPEBDPEAX@Z:
     mov rax, 0140bcbd80h
     jmp rax
 
-PUBLIC ?UnkFunc7@TagReplacer@text@hh@@UEAAPEAXPEBDPEAX@Z
-?UnkFunc7@TagReplacer@text@hh@@UEAAPEAXPEBDPEAX@Z:
+PUBLIC ?UnkFunc7@TagReplaceable@text@hh@@UEAAPEAXPEBDPEAX@Z
+?UnkFunc7@TagReplaceable@text@hh@@UEAAPEAXPEBDPEAX@Z:
     mov rax, 0140bcbd80h
     jmp rax
 
@@ -84530,13 +84630,13 @@ PUBLIC ?UnkFunc6@TagReplaceable@text@hh@@UEAAPEAXPEAX00@Z
     mov rax, 0140bcbdc0h
     jmp rax
 
-PUBLIC ?UnkFunc6@TagReplaceable@text@hh@@UEAAPEAXPEA_WIPEAX@Z
-?UnkFunc6@TagReplaceable@text@hh@@UEAAPEAXPEA_WIPEAX@Z:
+PUBLIC ?UnkFunc6@TagReplacer@text@hh@@UEAAPEAXPEA_WIPEAX@Z
+?UnkFunc6@TagReplacer@text@hh@@UEAAPEAXPEA_WIPEAX@Z:
     mov rax, 0140bcbdc0h
     jmp rax
 
-PUBLIC ?UnkFunc6@TagReplacer@text@hh@@UEAAPEAXPEA_WIPEAX@Z
-?UnkFunc6@TagReplacer@text@hh@@UEAAPEAXPEA_WIPEAX@Z:
+PUBLIC ?UnkFunc6@TagReplaceable@text@hh@@UEAAPEAXPEA_WIPEAX@Z
+?UnkFunc6@TagReplaceable@text@hh@@UEAAPEAXPEA_WIPEAX@Z:
     mov rax, 0140bcbdc0h
     jmp rax
 
@@ -92475,6 +92575,11 @@ PUBLIC ?SetPause@MoviePlayerCri@fmv@hh@@UEAAH_N@Z
     mov rax, 0140d75e70h
     jmp rax
 
+PUBLIC ?UnkFunc1@MoviePlayerCri@fmv@hh@@UEAAXXZ
+?UnkFunc1@MoviePlayerCri@fmv@hh@@UEAAXXZ:
+    mov rax, 0140d75ed0h
+    jmp rax
+
 PUBLIC ?UnkFunc5@MoviePlayerCri@fmv@hh@@UEAAPEAXHN@Z
 ?UnkFunc5@MoviePlayerCri@fmv@hh@@UEAAPEAXHN@Z:
     mov rax, 0140d76110h
@@ -99827,11 +99932,6 @@ PUBLIC ??_DTextButtonIconTextureBuilder@text@app@@QEAAXXZ
 
 PUBLIC ??_DUICaption@ui@app@@QEAAXXZ
 ??_DUICaption@ui@app@@QEAAXXZ:
-    mov rax, 0140ecd2a0h
-    jmp rax
-
-PUBLIC ??_DUICaptionSelectBox@ui@app@@QEAAXXZ
-??_DUICaptionSelectBox@ui@app@@QEAAXXZ:
     mov rax, 0140ecd2a0h
     jmp rax
 
@@ -145580,11 +145680,6 @@ PUBLIC ?objInfoClass@ObjKodamaMasterInfo@app@@0VObjInfoClass@game@hh@@B
     mov rax, 0143ccb3a8h
     jmp rax
 
-PUBLIC ?objInfoClass@ObjKodamaMasterKingInfo@app@@0VObjInfoClass@game@hh@@B
-?objInfoClass@ObjKodamaMasterKingInfo@app@@0VObjInfoClass@game@hh@@B:
-    mov rax, 0143ccb3b8h
-    jmp rax
-
 PUBLIC ?objInfoClass@ObjKodamaPeddlerInfo@app@@0VObjInfoClass@game@hh@@B
 ?objInfoClass@ObjKodamaPeddlerInfo@app@@0VObjInfoClass@game@hh@@B:
     mov rax, 0143ccb3c8h
@@ -147508,11 +147603,6 @@ PUBLIC ?gameObjectClass@UIBossLife@ui@app@@0VGameObjectClass@game@hh@@B
 PUBLIC ?gameObjectClass@UICaption@ui@app@@0VGameObjectClass@game@hh@@B
 ?gameObjectClass@UICaption@ui@app@@0VGameObjectClass@game@hh@@B:
     mov rax, 0143ce1350h
-    jmp rax
-
-PUBLIC ?gameObjectClass@UICaptionSelectBox@ui@app@@0VGameObjectClass@game@hh@@B
-?gameObjectClass@UICaptionSelectBox@ui@app@@0VGameObjectClass@game@hh@@B:
-    mov rax, 0143ce13b0h
     jmp rax
 
 PUBLIC ?gameObjectClass@UIClearIsland@ui@app@@0VGameObjectClass@game@hh@@B
@@ -178345,6 +178435,11 @@ PUBLIC ??_DOverlayJob@UIOverlayService@ui@app@@QEAAXXZ
     mov rax, 014cbf6e90h
     jmp rax
 
+PUBLIC ?GetJobById@UIOverlayService@ui@app@@QEBAPEAVOverlayJob@123@I@Z
+?GetJobById@UIOverlayService@ui@app@@QEBAPEAVOverlayJob@123@I@Z:
+    mov rax, 014cc0ce30h
+    jmp rax
+
 PUBLIC ?OnAddedToGame@UIOverlayService@ui@app@@UEAAXXZ
 ?OnAddedToGame@UIOverlayService@ui@app@@UEAAXXZ:
     mov rax, 014cc1f130h
@@ -178478,6 +178573,11 @@ PUBLIC ?GetGameDataAccessor@SaveInterface@save@app@@QEAA?AVGameDataAc@23@XZ
 PUBLIC ?GetOptionAccessor@SaveInterface@save@app@@QEAA?AVOptionAc@23@XZ
 ?GetOptionAccessor@SaveInterface@save@app@@QEAA?AVOptionAc@23@XZ:
     mov rax, 014cefce70h
+    jmp rax
+
+PUBLIC ?SaveOptionData@SaveInterface@save@app@@QEAA?AVSaveAsyncHandler@fw@hh@@XZ
+?SaveOptionData@SaveInterface@save@app@@QEAA?AVSaveAsyncHandler@fw@hh@@XZ:
+    mov rax, 014cf12480h
     jmp rax
 
 PUBLIC ?Initialize@SaveInterface@save@app@@QEAAXXZ
@@ -179982,6 +180082,11 @@ PUBLIC ?Unload@ResAtomCueSheet@snd@hh@@UEAAXXZ
 
 PUBLIC ??_DSoundObjectBase@snd@hh@@QEAAXXZ
 ??_DSoundObjectBase@snd@hh@@QEAAXXZ:
+    mov rax, 014e21c750h
+    jmp rax
+
+PUBLIC ??_DSaveAsyncHandler@fw@hh@@QEAAXXZ
+??_DSaveAsyncHandler@fw@hh@@QEAAXXZ:
     mov rax, 014e21c750h
     jmp rax
 
@@ -184805,6 +184910,11 @@ PUBLIC ??0SaveManagerInterface@fw@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
     mov rax, 015080b6f0h
     jmp rax
 
+PUBLIC ??0SaveAsyncHandler@fw@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
+??0SaveAsyncHandler@fw@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 0150869410h
+    jmp rax
+
 PUBLIC ??0LocalHeap@heap@fw@hh@@QEAA@PEAX_K@Z
 ??0LocalHeap@heap@fw@hh@@QEAA@PEAX_K@Z:
     mov rax, 015086bbf0h
@@ -184907,11 +185017,6 @@ PUBLIC ?UnkFunc1@MoviePlayerCri@fmv@hh@@UEAAPEAXXZ
 
 PUBLIC ?UnkFunc2@MoviePlayerCri@fmv@hh@@UEAAPEAXXZ
 ?UnkFunc2@MoviePlayerCri@fmv@hh@@UEAAPEAXXZ:
-    mov rax, 0150a4acb0h
-    jmp rax
-
-PUBLIC ?UnkFunc1@MoviePlayerCri@fmv@hh@@UEAAXXZ
-?UnkFunc1@MoviePlayerCri@fmv@hh@@UEAAXXZ:
     mov rax, 0150a4acb0h
     jmp rax
 
@@ -187107,6 +187212,11 @@ PUBLIC ?Instantiate@BuiltinTypeRegistry@fnd@hh@@SAPEAV123@XZ
 
 PUBLIC ?Clear@Unk2@ResourceLoader@fnd@hh@@QEAAXXZ
 ?Clear@Unk2@ResourceLoader@fnd@hh@@QEAAXXZ:
+    mov rax, 0153216210h
+    jmp rax
+
+PUBLIC ?Clear@UnpackedResourceContainer@fnd@hh@@QEAAXXZ
+?Clear@UnpackedResourceContainer@fnd@hh@@QEAAXXZ:
     mov rax, 0153216210h
     jmp rax
 

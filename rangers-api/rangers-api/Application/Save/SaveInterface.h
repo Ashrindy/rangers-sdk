@@ -42,6 +42,8 @@ namespace app::save {
         OptionAc GetOptionAccessor();
         ChallengeDataAc GetChallengeDataAccessor();
         csl::ut::MoveArray<HeaderData>& GetSaveHeaderData(bool isExtra);
+
+        hh::fw::SaveAsyncHandler SaveOptionData();
     };
 
     GameDataAc GetGameDataAccessor(hh::game::GameManager* gameManager);

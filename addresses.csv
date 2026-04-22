@@ -10288,6 +10288,7 @@
 140156f30,??0ComboBoxResourceSoundCueBGM@?A0x9467174e@fnd@app@@QEAA@PEAVIAllocator@2csl@@@Z,0
 140157040,??0ComboBoxResourceSoundCueObject@?A0x9467174e@fnd@app@@QEAA@PEAVIAllocator@2csl@@@Z,0
 140157170,??0ComboBoxResourceVibration@?A0x9467174e@fnd@app@@QEAA@PEAVIAllocator@2csl@@@Z,0
+140157280,?LoadPackfile@ResourceLoader@fnd@hh@@QEAAXPEBDAEAULocale@123@@Z,1
 1401575b0,j_??_GAppResourceManager@fnd@app@@QEAAXXZ,1
 1401575b0,j_??_DAppResourceManager@fnd@app@@QEAAXXZ,1
 140157760,?AddListener@AppResourceManager@fnd@app@@QEAAXPEAVAppResourceManagerListener@23@@Z,1
@@ -10739,10 +10740,15 @@
 140185e60,j_??_DBattlePhaseCyloopLanding@BossGiantState@app@@QEAAXXZ,1
 140185ec0,?Matrix34Multiply@math@csl@@YA?AVMatrix34@12@AEBV312@0@Z,1
 140185ec0,?Matrix44Multiply@math@csl@@YA?AVMatrix44@12@AEBV312@0@Z,1
-140186850,??_GGOCGuideCircle@game@app@@QEAAXXZ,0
+140186850,??_GGOCGuideCircle@game@app@@QEAAXXZ,1
+140186850,??_DGOCGuideCircle@game@app@@QEAAXXZ,1
 140186b00,?Create@GOCGuideCircle@game@app@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
 140186b00,?Create@GOCGuideCircle@game@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
+140186bb0,?GetRuntimeTypeInfo@GOCGuideCircle@game@app@@UEBAPEAXXZ,1
+140186bc0,?OnGOCEvent@GOCGuideCircle@game@app@@UEAAXW4GOCEvent@GOComponent@2hh@@AEAVGameObject@26@PEAX@Z,1
+140186d20,?Setup@GOCGuideCircle@game@app@@QEAAXAEBUDescription@123@@Z,1
 140186d40,?GetClass@GOCGuideCircle@game@app@@SAPEBVGOComponentClass@2hh@@XZ,0
+140186db0,?UpdateAsync@GOCGuideCircle@game@app@@UEAAXW4UpdatingPhase@fnd@hh@@AEBUSUpdateInfo@56@PEAX@Z,1
 140187780,??_D?$TransitionValue@M@ut@app@@QEAAXXZ,1
 1401877f0,j_??_GGOCHand@game@app@@QEAAXXZ,0
 140187ba0,?Create@GOCHand@game@app@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
@@ -18094,15 +18100,25 @@
 14079ddd0,??_GObjKodamaMap@app@@QEAAXXZ,0
 14079de60,??_GObjKodamaMapInfo@app@@QEAAXXZ,0
 14079f570,?GetClass@ObjKodamaMap@app@@SAPEBVGameObjectClass@game@hh@@XZ,0
+14079f580,?Create@RequestOverlayCaptionSelectBox@ui@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z,1
 14079f650,??0ObjKodamaMaster@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
 14079f6c0,??0ObjKodamaMasterInfo@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
 14079f780,??_GObjKodamaMaster@app@@QEAAXXZ,0
 14079f800,??_GObjKodamaMasterInfo@app@@QEAAXXZ,0
+14079f8b0,??_DRequestOverlayCaptionSelectBox@ui@app@@QEAAXXZ,1
 1407a23f0,?GetClass@ObjKodamaMaster@app@@SAPEBVGameObjectClass@game@hh@@XZ,0
 1407a2400,??0ObjKodamaMasterKing@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
 1407a24b0,??0ObjKodamaMasterKingInfo@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
-1407a25c0,??_GObjKodamaMasterKing@app@@QEAAXXZ,0
-1407a2640,??_GObjKodamaMasterKingInfo@app@@QEAAXXZ,0
+1407a25c0,??_GObjKodamaMasterKing@app@@QEAAXXZ,1
+1407a25c0,??_DObjKodamaMasterKing@app@@QEAAXXZ,1
+1407a2640,??_GObjKodamaMasterKingInfo@app@@QEAAXXZ,1
+1407a2640,??_DObjKodamaMasterKingInfo@app@@QEAAXXZ,1
+1407a26d0,?AddCallback@ObjKodamaMasterKing@app@@UEAAXPEAVGameManager@game@hh@@@Z,1
+1407a3ec0,?GetInfoName@ObjKodamaMasterKingInfo@app@@UEAAPEBDXZ,1
+1407a3f40,?Initialize@ObjKodamaMasterKingInfo@app@@UEAAXPEAVGameManager@game@hh@@@Z,1
+1407a4040,?Load@ObjKodamaMasterKingInfo@app@@UEAAXXZ,1
+1407a4420,?OnContact@ObjKodamaMasterKing@app@@UEAAXXZ,1
+1407a46c0,?ProcessMessage@ObjKodamaMasterKing@app@@UEAA_NAEAVMessage@fnd@hh@@@Z,1
 1407a7250,?GetClass@ObjKodamaMasterKing@app@@SAPEBVGameObjectClass@game@hh@@XZ,0
 1407a73d0,??0ObjKodamaNewForm@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
 1407a7470,??_GObjKodamaNewForm@app@@QEAAXXZ,0
@@ -21957,7 +21973,10 @@
 140a1c080,?GetClass@UICaption@ui@app@@SAPEBVGameObjectClass@game@hh@@XZ,0
 140a1c090,?Create@UICaption@ui@app@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
 140a1c090,?Create@UICaption@ui@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
-140a1c4b0,??_GUICaptionSelectBox@ui@app@@QEAAXXZ,0
+140a1c4b0,??_GUICaptionSelectBox@ui@app@@QEAAXXZ,1
+140a1c4b0,??_DUICaptionSelectBox@ui@app@@QEAAXXZ,1
+140a1c570,?AddCallback@UICaptionSelectBox@ui@app@@UEAAXPEAVGameManager@game@hh@@@Z,1
+140a1ccb0,?UIL_UnkFunc1@UICaptionSelectBox@ui@app@@UEAAXXZ,1
 140a1d600,?GetClass@UICaptionSelectBox@ui@app@@SAPEBVGameObjectClass@game@hh@@XZ,0
 140a1d610,?Create@UICaptionSelectBox@ui@app@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
 140a1d610,?Create@UICaptionSelectBox@ui@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
@@ -22306,6 +22325,8 @@
 140ac9140,??_DUIOverlayService@ui@app@@QEAAXXZ,1
 140ac9320,?PreGameUpdateCallback@UIOverlayService@ui@app@@UEAAXPEAVGameManager@game@hh@@AEBUSUpdateInfo@fnd@6@@Z,1
 140aca220,?PostGameUpdateCallback@UIOverlayService@ui@app@@UEAAXPEAVGameManager@game@hh@@AEBUSUpdateInfo@fnd@6@@Z,1
+140aca620,j_?GetJobById@UIOverlayService@ui@app@@QEBAPEAVOverlayJob@123@I@Z,1
+140aca6c0,?GetJobStatus@UIOverlayService@ui@app@@QEAAXIAEAUOverlayJobStatus@123@@Z,1
 140aca7e0,?GetRuntimeTypeInfo@UIOverlayService@ui@app@@UEAAPEAXXZ,1
 140aca7e0,?GetRuntimeTypeInfo@UIOverlayService@ui@app@@UEBAPEAXXZ,1
 140aca9a0,j_?OnAddedToGame@UIOverlayService@ui@app@@UEAAXXZ,1
@@ -22499,6 +22520,7 @@
 140b03250,?GetSaveHeaderData@SaveInterface@save@app@@QEAAAEAUHeaderData@23@E@Z,1
 140b03250,?GetSaveHeaderData@SaveInterface@save@app@@QEAAAEAV?$MoveArray@UHeaderData@save@app@@@ut@csl@@_N@Z,1
 140b03350,j_?GetOptionAccessor@SaveInterface@save@app@@QEAA?AVOptionAc@23@XZ,1
+140b04b70,j_?SaveOptionData@SaveInterface@save@app@@QEAA?AVSaveAsyncHandler@fw@hh@@XZ,1
 140b04dd0,j_?Initialize@SaveInterface@save@app@@QEAAXXZ,1
 140b05450,??_DSaveManager@save@app@@QEAAXXZ,1
 140b05730,?AddListener@SaveManager@save@app@@QEAAXPEAVSaveManagerListener@23@@Z,1
@@ -23478,16 +23500,16 @@
 140bcbb9e,??0Unk1@GOCMotorOnPath@game@app_cmn@@QEAA@XZ,1
 140bcbbb0,??0VibrationObj@GOCVibration@game@hh@@QEAA@XZ,1
 140bcbd30,j_??0TagReplaceable@text@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z,1
-140bcbd60,?UnkFunc4@TagReplaceable@text@hh@@UEAAPEAXPEAX@Z,1
 140bcbd60,?UnkFunc4@TagReplacer@text@hh@@UEAAPEAXPEAX@Z,1
+140bcbd60,?UnkFunc4@TagReplaceable@text@hh@@UEAAPEAXPEAX@Z,1
 140bcbd80,?UnkFunc7@TagReplacer@text@hh@@UEAAPEAXPEAX0@Z,1
 140bcbd80,?UnkFunc7@TagReplaceable@text@hh@@UEAAPEAXPEAX0@Z,1
-140bcbd80,?UnkFunc7@TagReplaceable@text@hh@@UEAAPEAXPEBDPEAX@Z,1
 140bcbd80,?UnkFunc7@TagReplacer@text@hh@@UEAAPEAXPEBDPEAX@Z,1
+140bcbd80,?UnkFunc7@TagReplaceable@text@hh@@UEAAPEAXPEBDPEAX@Z,1
 140bcbdc0,?UnkFunc6@TagReplacer@text@hh@@UEAAPEAXPEAX00@Z,1
 140bcbdc0,?UnkFunc6@TagReplaceable@text@hh@@UEAAPEAXPEAX00@Z,1
-140bcbdc0,?UnkFunc6@TagReplaceable@text@hh@@UEAAPEAXPEA_WIPEAX@Z,1
 140bcbdc0,?UnkFunc6@TagReplacer@text@hh@@UEAAPEAXPEA_WIPEAX@Z,1
+140bcbdc0,?UnkFunc6@TagReplaceable@text@hh@@UEAAPEAXPEA_WIPEAX@Z,1
 140bcc1e0,??0ConverseDataCollection@text@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z,1
 140bcc240,??_DConverseDataCollection@text@hh@@QEAAXXZ,1
 140bccab0,j_??_DSoundSystemCri@snd@hh@@QEAAXXZ,1
@@ -23520,6 +23542,7 @@
 140bcf4b0,??0SoundObjectBase@snd@hh@@QEAA@XZ,1
 140bcf4e0,??0SoundPlaybackObject@snd@hh@@QEAA@XZ,1
 140bcf550,j_??_DSoundObjectBase@snd@hh@@QEAAXXZ,1
+140bcf550,j_??_DSaveAsyncHandler@fw@hh@@QEAAXXZ,1
 140bcf5a0,??_DSoundPlaybackObject@snd@hh@@QEAAXXZ,1
 140bcf610,?DetachAisacAll@SoundHandle@snd@hh@@QEAAXXZ,1
 140bcf690,?GetCueName@SoundHandle@snd@hh@@QEBAPEBDXZ,1
@@ -26007,6 +26030,7 @@
 140d6b510,j_??_DSaveManagerInterface@fw@hh@@QEAAXXZ,0
 140d6b820,??_DSaveManagerInterface@fw@hh@@QEAAXXZ,1
 140d6c750,?UIEL_UnkFunc1@SaveManagerInterface@fw@hh@@UEAAXXZ,1
+140d6d0e0,j_??0SaveAsyncHandler@fw@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z,1
 140d6d120,j_??0LocalHeap@heap@fw@hh@@QEAA@PEAX_K@Z,1
 140d6d1e0,??_D?$FreeListHeapTemplate@VMutex@fnd@csl@@@fnd@csl@@QEAAXXZ,1
 140d6d230,??_DMemoryRouterAllocator@fnd@hh@@QEAAXXZ,1
@@ -26090,6 +26114,7 @@
 140d75eb0,j_?UnkFunc2@MoviePlayerCri@fmv@hh@@UEAAXXZ,1
 140d75eb0,j_?UnkFunc1Flag@MoviePlayerCri@fmv@hh@@UEAAXXZ,1
 140d75eb0,j_?Play@MoviePlayerCri@fmv@hh@@UEAAXXZ,1
+140d75ed0,?UnkFunc1@MoviePlayerCri@fmv@hh@@UEAAXXZ,1
 140d75ee0,j_?UnkFunc6@MoviePlayerCri@fmv@hh@@UEAAPEAXHH@Z,1
 140d75ee0,j_?UnkFunc6@MoviePlayerCri@fmv@hh@@UEAAPEAXH@Z,1
 140d75f90,j_?UnkFunc9@MoviePlayerCri@fmv@hh@@UEAAPEAXPEAX@Z,1
@@ -27826,7 +27851,6 @@
 140ecd2a0,??_DTerrainFar@trr@app@@QEAAXXZ,1
 140ecd2a0,??_DTextButtonIconTextureBuilder@text@app@@QEAAXXZ,1
 140ecd2a0,??_DUICaption@ui@app@@QEAAXXZ,1
-140ecd2a0,??_DUICaptionSelectBox@ui@app@@QEAAXXZ,1
 140ecd2a0,??_DUICredit@ui@app@@QEAAXXZ,1
 140ecd2a0,??_DUIBehaviorObjective@ui@app@@QEAAXXZ,1
 140ecd2a0,??_DUICelebration@ui@app@@QEAAXXZ,1
@@ -28604,6 +28628,7 @@
 140f2a180,??0UnpackedResourceContainer@fnd@hh@@QEAA@PEAVIAllocator@1csl@@@Z,1
 140f2a280,??_DUnpackedResourceContainer@fnd@hh@@QEAAXXZ,1
 140f2a460,j_?Clear@Unk2@ResourceLoader@fnd@hh@@QEAAXXZ,1
+140f2a460,j_?Clear@UnpackedResourceContainer@fnd@hh@@QEAAXXZ,1
 140f2a540,j_?LoadTypeInfo@Unk2@ResourceLoader@fnd@hh@@QEAAPEAVUnk1@1234@PEBUResourceTypeInfo@34@@Z,1
 140f2a6b0,?GetResourcesByTypeInfo@Unk2@ResourceLoader@fnd@hh@@QEAAAEBV?$MoveArray@PEAVManagedResource@fnd@hh@@@ut@csl@@PEBUResourceTypeInfo@34@@Z,1
 140f2a830,j_?Initialize@UnpackedResourceContainer@fnd@hh@@QEAAXPEAVResourceCriticalSection@23@@Z,1
@@ -39797,6 +39822,8 @@
 1414f5910,??_7RequestOverlayCaptionSelectBox@ui@app@@6B@,1
 1414f5b58,??_7ObjKodamaMasterKingInfo@app@@6B@,1
 1414f5ba8,??_7ObjKodamaMasterKing@app@@6B@,1
+1414f5c10,??_7ObjKodamaMasterKing@app@@6BContactListener@game@1@@,1
+1414f5c30,??_7ObjKodamaMasterKing@app@@6BGOCEventListener@game@1@@,1
 1414f5c40,??_7MsgTransitBossRushStage@game@app@@6B@,1
 1414f5c60,??_7?$MessageAsyncHandlerInplace@VMsgTransitBossRushStage@game@app@@@fnd@hh@@6B@,1
 1414f5c70,??_7MsgChangePlayerCharacter@game@app@@6B@,1
@@ -41466,6 +41493,7 @@
 14155b340,??_7UICaption@ui@app@@6B@,1
 14155b418,??_7UIListener@ui@hh@@6B@,1
 14155b440,??_7UICaptionSelectBox@ui@app@@6B@,1
+14155b4a8,??_7UICaptionSelectBox@ui@app@@6BUIListener@1hh@@@,1
 14155b548,??_7?$DelegateFunctor@V_lambda_988f7e67ac96de3fe276e6db630a4aa8_@@@?$Delegate@$$A6AXPEAVLayerController@ui@hh@@PEBD@Z@fnd@csl@@6B@,1
 14155b580,??_7?$DelegateFunctor@U?$Pair@PEAVUICaptionSelectBox@ui@app@@P8123@EAAXPEAVUIListViewElement@2hh@@AEAUListViewEventArg@25@@Z@ut@csl@@@?$Delegate@$$A6AXPEAVUIListViewElement@ui@hh@@AEAUListViewEventArg@23@@Z@fnd@csl@@6B@,1
 14155b720,??_7UIClearIsland@ui@app@@6B@,1
@@ -41777,6 +41805,8 @@
 14156d568,??_7UIResult@ui@app@@6B@,1
 14156d7d8,??_7OverlayJob@UIOverlayService@ui@app@@6B@,1
 14156d7e8,??_7UIOverlayService@ui@app@@6B@,1
+14156d830,??_7UIOverlayService@ui@app@@6BGameUpdateListener@game@hh@@@,1
+14156d850,??_7UIOverlayService@ui@app@@6BAppResourceManagerListener@fnd@2@@,1
 14156d880,??_7UISpeedRunPhaseResult@ui@app@@6B@,1
 14156d988,??_7?$DelegateFunctor@V_lambda_5b1d7f876ab6f26a4fd0290816a60ef0_@@@?$Delegate@$$A6AXPEAVLayerController@ui@hh@@PEBD@Z@fnd@csl@@6B@,1
 14156daf0,??_7UISpeedRunResult@ui@app@@6B@,1
@@ -42031,6 +42061,7 @@
 1415b1a60,?classId@ResAtomCueSheet@snd@hh@@0PEBXEB,0
 1415b1a70,??_7ResAtomCueSheet@snd@hh@@6B@,0
 1415b1bf0,??_7SoundObjectBase@snd@hh@@6B@,1
+1415b1bf0,??_7SaveAsyncHandler@fw@hh@@6B@,1
 1415b1bf8,??_7SoundPlaybackObject@snd@hh@@6B@,1
 1415b1d40,??_7SoundManager@services@heur@@6B@,1
 1415b1d40,??_7SoundManager@snd@hh@@6B@,1
@@ -42499,7 +42530,6 @@
 1416b78f0,??_7ResObjectWorld@resources@heur@@6B@,0
 1416b7920,?typeInfo@ResMasterLevel@level@app@@0UResourceTypeInfo@fnd@hh@@B,1
 1416b7940,?classId@ResMasterLevel@level@app@@0PEBXEB,0
-1416b7950,??_7ResMasterLevel@level@app@@6B@,0
 1416b7980,?typeInfo@ResLevel@level@app@@0UResourceTypeInfo@fnd@hh@@B,0
 1416b79a0,?classId@ResLevel@level@app@@0PEBXEB,0
 1416b79b0,??_7ResLevel@level@app@@6B@,0
@@ -75499,7 +75529,7 @@
 143cc50f0,?gameObjectClass@ObjKodamaLauncher@app@@0VGameObjectClass@game@hh@@B,0
 143cc5150,?gameObjectClass@ObjKodamaMap@app@@0VGameObjectClass@game@hh@@B,0
 143cc51b0,?gameObjectClass@ObjKodamaMaster@app@@0VGameObjectClass@game@hh@@B,0
-143cc5210,?gameObjectClass@ObjKodamaMasterKing@app@@0VGameObjectClass@game@hh@@B,0
+143cc5210,?gameObjectClass@ObjKodamaMasterKing@app@@0VGameObjectClass@game@hh@@B,1
 143cc5270,?gameObjectClass@ObjKodamaNewForm@app@@0VGameObjectClass@game@hh@@B,0
 143cc52d0,?gameObjectClass@ObjKodamaPeddler@app@@0VGameObjectClass@game@hh@@B,0
 143cc5330,?gameObjectClass@ObjKodamaQuest@app@@0VGameObjectClass@game@hh@@B,0
@@ -75933,7 +75963,6 @@
 143ccb378,?objInfoClass@ObjKodamaEscortInfo@app@@0VObjInfoClass@game@hh@@B,0
 143ccb398,?objInfoClass@ObjKodamaMapInfo@app@@0VObjInfoClass@game@hh@@B,0
 143ccb3a8,?objInfoClass@ObjKodamaMasterInfo@app@@0VObjInfoClass@game@hh@@B,0
-143ccb3b8,?objInfoClass@ObjKodamaMasterKingInfo@app@@0VObjInfoClass@game@hh@@B,0
 143ccb3c8,?objInfoClass@ObjKodamaPeddlerInfo@app@@0VObjInfoClass@game@hh@@B,0
 143ccb3e8,?objInfoClass@ObjTailsKodamaHackingInfo@app@@0VObjInfoClass@game@hh@@B,0
 143ccb3f8,?objInfoClass@ObjKodamaChildInfo@app@@0VObjInfoClass@game@hh@@B,0
@@ -76085,7 +76114,7 @@
 143ccd978,?classId@GOCGrind@game@app@@0PEBXEB,0
 143ccd980,?componentClass@GOCGrind@game@app@@0VGOComponentClass@2hh@@B,1
 143ccd9c8,?classId@GOCGuideCircle@game@app@@0PEBXEB,0
-143ccd9d0,?componentClass@GOCGuideCircle@game@app@@0VGOComponentClass@2hh@@B,0
+143ccd9d0,?componentClass@GOCGuideCircle@game@app@@0VGOComponentClass@2hh@@B,1
 143ccda18,?classId@GOCHand@game@app@@0PEBXEB,0
 143ccda20,?componentClass@GOCHand@game@app@@0VGOComponentClass@2hh@@B,0
 143ccda68,?classId@GOCHealth@game@app@@0PEBXEB,0
@@ -76319,7 +76348,6 @@
 143ce0f90,?gameObjectClass@TextButtonIconTextureBuilder@text@app@@0VGameObjectClass@game@hh@@B,0
 143ce1230,?gameObjectClass@UIBossLife@ui@app@@0VGameObjectClass@game@hh@@B,1
 143ce1350,?gameObjectClass@UICaption@ui@app@@0VGameObjectClass@game@hh@@B,0
-143ce13b0,?gameObjectClass@UICaptionSelectBox@ui@app@@0VGameObjectClass@game@hh@@B,0
 143ce1440,?gameObjectClass@UIClearIsland@ui@app@@0VGameObjectClass@game@hh@@B,0
 143ce14a0,?gameObjectClass@UIControlGuide@ui@app@@0VGameObjectClass@game@hh@@B,0
 143ce1500,?gameObjectClass@UICountdown@ui@app@@0VGameObjectClass@game@hh@@B,0
@@ -90381,6 +90409,7 @@
 14cbf3f40,??_DUIResult@ui@app@@QEAAXXZ,1
 14cbf6e90,??_GOverlayJob@UIOverlayService@ui@app@@QEAAXXZ,1
 14cbf6e90,??_DOverlayJob@UIOverlayService@ui@app@@QEAAXXZ,1
+14cc0ce30,?GetJobById@UIOverlayService@ui@app@@QEBAPEAVOverlayJob@123@I@Z,1
 14cc1f130,?OnAddedToGame@UIOverlayService@ui@app@@UEAAXXZ,1
 14cc290d0,?ARML_UnkFunc1@UIOverlayService@ui@app@@UEAAXH@Z,1
 14cc2e110,?ProcessMessage@UIOverlayService@ui@app@@UEAA_NAEAVMessage@fnd@hh@@@Z,1
@@ -90409,6 +90438,7 @@
 14cef1850,?AddUserElement@SaveInterface@save@app@@QEAAPEAVUserElement@23@AEBUUserId@fnd@hh@@@Z,1
 14cefc6d0,?GetGameDataAccessor@SaveInterface@save@app@@QEAA?AVGameDataAc@23@XZ,1
 14cefce70,?GetOptionAccessor@SaveInterface@save@app@@QEAA?AVOptionAc@23@XZ,1
+14cf12480,?SaveOptionData@SaveInterface@save@app@@QEAA?AVSaveAsyncHandler@fw@hh@@XZ,1
 14cf18df0,?Initialize@SaveInterface@save@app@@QEAAXXZ,1
 14cf6bbf0,?SetSavePermission@SaveManager@save@app@@QEAAXD_N@Z,1
 14cf79f10,?GetGameDataAccessor@SaveManager@save@app@@QEAA?AVGameDataAc@23@XZ,1
@@ -90710,6 +90740,7 @@
 14e1fb990,?Load@ResAtomCueSheet@snd@hh@@UEAAXPEAX_K@Z,1
 14e2088f0,?Unload@ResAtomCueSheet@snd@hh@@UEAAXXZ,1
 14e21c750,??_DSoundObjectBase@snd@hh@@QEAAXXZ,1
+14e21c750,??_DSaveAsyncHandler@fw@hh@@QEAAXXZ,1
 14e2294e0,?SetVolume@SoundHandle@snd@hh@@QEAAXM@Z,1
 14e22e6d0,??_DBossDragonFireBar@app@@QEAAXXZ,1
 14e22e6d0,??_DBossDragonLaser@app@@QEAAXXZ,1
@@ -91674,6 +91705,7 @@
 1507f5170,??_DEventStack@fw@hh@@QEAAXXZ,1
 150805680,?FireOnKeyUp@EventStack@fw@hh@@QEAAXAEAUKeyEventArgs@23@AEAE@Z,1
 15080b6f0,??0SaveManagerInterface@fw@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z,1
+150869410,??0SaveAsyncHandler@fw@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z,1
 15086bbf0,??0LocalHeap@heap@fw@hh@@QEAA@PEAX_K@Z,1
 150873480,?Alloc@?$FreeListHeapTemplate@VMutex@fnd@csl@@@fnd@csl@@EEAAPEAX_K0@Z,1
 1508a8e90,??0Window@fw@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z,1
@@ -91695,7 +91727,6 @@
 150a36020,??_DMoviePlayerCri@fmv@hh@@QEAAXXZ,1
 150a4acb0,?UnkFunc1@MoviePlayerCri@fmv@hh@@UEAAPEAXXZ,1
 150a4acb0,?UnkFunc2@MoviePlayerCri@fmv@hh@@UEAAPEAXXZ,1
-150a4acb0,?UnkFunc1@MoviePlayerCri@fmv@hh@@UEAAXXZ,1
 150a4acb0,?UnkFunc2@MoviePlayerCri@fmv@hh@@UEAAXXZ,1
 150a4acb0,?UnkFunc1Flag@MoviePlayerCri@fmv@hh@@UEAAXXZ,1
 150a4acb0,?Play@MoviePlayerCri@fmv@hh@@UEAAXXZ,1
@@ -92135,6 +92166,7 @@
 15320cd60,??_DBuiltinTypeRegistry@fnd@hh@@QEAAXXZ,1
 153214540,?Instantiate@BuiltinTypeRegistry@fnd@hh@@SAPEAV123@XZ,1
 153216210,?Clear@Unk2@ResourceLoader@fnd@hh@@QEAAXXZ,1
+153216210,?Clear@UnpackedResourceContainer@fnd@hh@@QEAAXXZ,1
 153236be0,?LoadTypeInfo@Unk2@ResourceLoader@fnd@hh@@QEAAPEAVUnk1@1234@PEBUResourceTypeInfo@34@@Z,1
 153236be0,?LoadTypeInfo@UnpackedResourceContainer@fnd@hh@@QEAAPEAVUnk1@123@PEBUResourceTypeInfo@23@@Z,1
 153236be0,?CreateUniqueResourceContainer@UnpackedResourceContainer@fnd@hh@@QEAAPEAVUniqueResourceContainer@23@PEBUResourceTypeInfo@23@@Z,1
