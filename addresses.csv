@@ -4013,6 +4013,7 @@
 14008cf50,??_DMsgUIBossLifeGaugeAppear@ui@app@@QEAAXXZ,1
 14008cf50,??_DMsgUIBossLifeGaugeVisibility@ui@app@@QEAAXXZ,1
 14008cf50,??_DMsgEndExternalControl@player@app@@QEAAXXZ,1
+14008cf50,??_DMsgChangePlayerCharacter@game@app@@QEAAXXZ,1
 14008d310,j_?CreateDefaultCameraFrame@CameraService@camera@app@@QEAAPEAVCameraFrame@2app_cmn@@HHHMMM@Z,1
 14008d5f0,j_?GameServiceRemovedCallback@CameraService@camera@app@@UEAAXPEAVGameService@game@hh@@@Z,1
 14008d660,?GetCameraFrame@CameraService@camera@app@@QEAA?AV?$Handle@VMessenger@fnd@hh@@V?$HandleManager@VMessenger@fnd@hh@@@23@@fnd@hh@@H@Z,1
@@ -4079,6 +4080,7 @@
 14008d680,?UnkFunc1@?$AppMessage@VMsgGetHomingTargetInfo@player@app@@@fnd@app@@UEAAIXZ,1
 14008d680,?UnkFunc1@?$AppMessage@VMsgBeginExternalControl@player@app@@@fnd@app@@UEAAIXZ,1
 14008d680,?UnkFunc2@GameModeResourceModule@game@app@@UEAAIXZ,1
+14008d680,?UnkFunc1@?$AppMessage@VMsgChangePlayerCharacter@game@app@@@fnd@app@@UEAAIXZ,1
 14008d680,?UnkFunc1@?$AppMessage@VMsgUICharacterActionGuide@ui@app@@@fnd@app@@UEAAIXZ,1
 14008d680,?UnkFunc1@?$AppMessage@VMsgColliderQueryEnter@physics@app@@@fnd@app@@UEAAIXZ,1
 14008d6f0,?GetRuntimeTypeInfo@CameraService@camera@app@@UEAAPEAXXZ,1
@@ -10743,6 +10745,7 @@
 140185ec0,?Matrix44Multiply@math@csl@@YA?AVMatrix44@12@AEBV312@0@Z,1
 140186850,??_GGOCGuideCircle@game@app@@QEAAXXZ,1
 140186850,??_DGOCGuideCircle@game@app@@QEAAXXZ,1
+1401868b0,?SetColor@GOCGuideCircle@game@app@@QEAAXW4Color@123@@Z,1
 140186b00,?Create@GOCGuideCircle@game@app@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
 140186b00,?Create@GOCGuideCircle@game@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
 140186bb0,?GetRuntimeTypeInfo@GOCGuideCircle@game@app@@UEBAPEAXXZ,1
@@ -18117,6 +18120,7 @@
 1407a2640,??_GObjKodamaMasterKingInfo@app@@QEAAXXZ,1
 1407a2640,??_DObjKodamaMasterKingInfo@app@@QEAAXXZ,1
 1407a26d0,?AddCallback@ObjKodamaMasterKing@app@@UEAAXPEAVGameManager@game@hh@@@Z,1
+1407a3140,?CreateAsyncHandler@?$AppMessage@VMsgChangePlayerCharacter@game@app@@@fnd@app@@UEAAPEAVMessageAsyncHandler@2hh@@PEAVIAllocator@2csl@@@Z,1
 1407a3ec0,?GetInfoName@ObjKodamaMasterKingInfo@app@@UEAAPEBDXZ,1
 1407a3f40,?Initialize@ObjKodamaMasterKingInfo@app@@UEAAXPEAVGameManager@game@hh@@@Z,1
 1407a4040,?Load@ObjKodamaMasterKingInfo@app@@UEAAXXZ,1

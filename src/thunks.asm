@@ -320,6 +320,11 @@ PUBLIC ??_DMsgEndExternalControl@player@app@@QEAAXXZ
     mov rax, 014008cf50h
     jmp rax
 
+PUBLIC ??_DMsgChangePlayerCharacter@game@app@@QEAAXXZ
+??_DMsgChangePlayerCharacter@game@app@@QEAAXXZ:
+    mov rax, 014008cf50h
+    jmp rax
+
 PUBLIC ?GetCameraFrame@CameraService@camera@app@@QEAA?AV?$Handle@VMessenger@fnd@hh@@V?$HandleManager@VMessenger@fnd@hh@@@23@@fnd@hh@@H@Z
 ?GetCameraFrame@CameraService@camera@app@@QEAA?AV?$Handle@VMessenger@fnd@hh@@V?$HandleManager@VMessenger@fnd@hh@@@23@@fnd@hh@@H@Z:
     mov rax, 014008d660h
@@ -637,6 +642,11 @@ PUBLIC ?UnkFunc1@?$AppMessage@VMsgBeginExternalControl@player@app@@@fnd@app@@UEA
 
 PUBLIC ?UnkFunc2@GameModeResourceModule@game@app@@UEAAIXZ
 ?UnkFunc2@GameModeResourceModule@game@app@@UEAAIXZ:
+    mov rax, 014008d680h
+    jmp rax
+
+PUBLIC ?UnkFunc1@?$AppMessage@VMsgChangePlayerCharacter@game@app@@@fnd@app@@UEAAIXZ
+?UnkFunc1@?$AppMessage@VMsgChangePlayerCharacter@game@app@@@fnd@app@@UEAAIXZ:
     mov rax, 014008d680h
     jmp rax
 
@@ -29468,6 +29478,11 @@ PUBLIC ??_GGOCGuideCircle@game@app@@QEAAXXZ
 PUBLIC ??_DGOCGuideCircle@game@app@@QEAAXXZ
 ??_DGOCGuideCircle@game@app@@QEAAXXZ:
     mov rax, 0140186850h
+    jmp rax
+
+PUBLIC ?SetColor@GOCGuideCircle@game@app@@QEAAXW4Color@123@@Z
+?SetColor@GOCGuideCircle@game@app@@QEAAXW4Color@123@@Z:
+    mov rax, 01401868b0h
     jmp rax
 
 PUBLIC ?Create@GOCGuideCircle@game@app@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z
@@ -62308,6 +62323,11 @@ PUBLIC ??_DObjKodamaMasterKingInfo@app@@QEAAXXZ
 PUBLIC ?AddCallback@ObjKodamaMasterKing@app@@UEAAXPEAVGameManager@game@hh@@@Z
 ?AddCallback@ObjKodamaMasterKing@app@@UEAAXPEAVGameManager@game@hh@@@Z:
     mov rax, 01407a26d0h
+    jmp rax
+
+PUBLIC ?CreateAsyncHandler@?$AppMessage@VMsgChangePlayerCharacter@game@app@@@fnd@app@@UEAAPEAVMessageAsyncHandler@2hh@@PEAVIAllocator@2csl@@@Z
+?CreateAsyncHandler@?$AppMessage@VMsgChangePlayerCharacter@game@app@@@fnd@app@@UEAAPEAVMessageAsyncHandler@2hh@@PEAVIAllocator@2csl@@@Z:
+    mov rax, 01407a3140h
     jmp rax
 
 PUBLIC ?GetInfoName@ObjKodamaMasterKingInfo@app@@UEAAPEBDXZ

@@ -108,4 +108,12 @@ namespace app::game {
     public:
         MsgHideKodama() : fnd::AppMessage<MsgHideKodama>{ hh::fnd::MessageID::HIDE_KODAMA } {}
     };
+
+    class MsgChangePlayerCharacter : public app::fnd::AppMessage<MsgChangePlayerCharacter> {
+    public:
+        player::CharacterIdU8 newCharId{ player::CharacterIdU8::SONIC };
+        bool startCharactersBgm{ false };
+
+        MsgChangePlayerCharacter() : fnd::AppMessage<MsgChangePlayerCharacter>{ hh::fnd::MessageID::CHANGE_PLAYER_CHARACTER } {}
+    };
 }

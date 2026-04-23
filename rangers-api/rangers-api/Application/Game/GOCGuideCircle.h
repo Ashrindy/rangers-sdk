@@ -28,6 +28,7 @@ namespace app::game{
 		virtual void OnGOCEvent(GOCEvent event, hh::game::GameObject& ownerGameObject, void* data) override;
 
         void Setup(const Description& desc);
+        void SetColor(Color color);
 
         GOCOMPONENT_CLASS_DECLARATION(GOCGuideCircle);
     };
