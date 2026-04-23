@@ -33,12 +33,17 @@ namespace app::save {
 
         SaveInterface(csl::fnd::IAllocator* allocator);
 
+        void Initialize();
+
         UserElement* AddUserElement(const hh::fnd::UserId& userId);
 
         GameDataAc GetGameDataAccessor();
         ArcadeDataAc GetArcadeDataAccessor();
         OptionAc GetOptionAccessor();
         ChallengeDataAc GetChallengeDataAccessor();
+        csl::ut::MoveArray<HeaderData>& GetSaveHeaderData(bool isExtra);
+
+        hh::fw::SaveAsyncHandler SaveOptionData();
     };
 
     GameDataAc GetGameDataAccessor(hh::game::GameManager* gameManager);
@@ -52,4 +57,5 @@ namespace app::save {
     ExtraCharacterAc GetExtraCharacterAccessor(hh::game::GameObject* gameObject, unsigned int idx);
     CharacterAc GetCharacterAccessor(hh::game::GameManager* gameManager, unsigned int idx);
     CharacterAc GetCharacterAccessor(hh::game::GameObject* gameObject, unsigned int idx);
+    bool IsBirthdayEnabled(hh::game::GameManager* gameManager);
 }

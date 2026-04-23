@@ -3,7 +3,7 @@
 namespace hh::needle{
     class CopyColorJob : public PostEffectRenderJob{
     public:
-        int64_t qwordF0;
+        PostEffectShader* postEffectShader;
 
         CopyColorJob();
 

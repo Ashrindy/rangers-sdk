@@ -106,12 +106,16 @@ namespace rangerssdk::ucsl {
 #include "cslib/csl/fnd/Function.h"
 #include "cslib/csl/fnd/ThreadSleep.h"
 #include "cslib/csl/fnd/Thread.h"
+#include "cslib/csl/fnd/Tick.h"
 
 #include <LinearMath/btDefaultMotionState.h>
 #include <BulletCollision/CollisionShapes/btSphereShape.h>
 #include <BulletCollision/CollisionShapes/btBoxShape.h>
 #include <BulletCollision/CollisionShapes/btCylinderShape.h>
 #include <BulletCollision/CollisionShapes/btCapsuleShape.h>
+#include <BulletCollision/CollisionShapes/btCompoundShape.h>
+#include <BulletCollision/CollisionShapes/btTriangleMeshShape.h>
+#include <BulletCollision/CollisionShapes/btTriangleIndexVertexArray.h>
 #include <BulletDynamics/Dynamics/btRigidBody.h>
 #include <BulletDynamics/Dynamics/btDiscreteDynamicsWorld.h>
 #include <BulletDynamics/ConstraintSolver/btGeneric6DofSpring2Constraint.h>
@@ -218,6 +222,7 @@ namespace rangerssdk::ucsl {
 #include "Hedgehog/Resource/TagResourceContainer.h"
 #include "Hedgehog/Resource/Packfile.h"
 #include "Hedgehog/Resource/ResourceLoader.h"
+#include "Hedgehog/Resource/ResourceLoaderManager.h"
 #include "Hedgehog/Resource/ResourceManager.h"
 #include "Hedgehog/Resource/ResourceResolver.h"
 #include "Hedgehog/Resource/FilePathResolverUtil.h"
@@ -237,6 +242,7 @@ namespace rangerssdk::ucsl {
 
 #include "Hedgehog/Needle/Utility/Binhash.h"
 #include "Hedgehog/Needle/Utility/MathUt.h"
+#include "Hedgehog/Needle/Utility/PODArray.h"
 #include "Hedgehog/Needle/Types.h"
 #include "Hedgehog/Needle/Rectangle.h"
 #include "Hedgehog/Needle/Box.h"
@@ -274,6 +280,7 @@ namespace rangerssdk::ucsl {
 #include "Hedgehog/Needle/MaterialResource.h"
 #include "Hedgehog/Needle/MeshResource.h"
 #include "Hedgehog/Needle/Model.h"
+#include "Hedgehog/Needle/TextureStreamingTexturePatternGuard.h"
 #include "Hedgehog/Needle/ViewportSetting.h"
 #include "Hedgehog/Needle/UnorderedAccessViewsSetting.h"
 #include "Hedgehog/Needle/RenderTargetsSetting.h"
@@ -298,7 +305,11 @@ namespace rangerssdk::ucsl {
 #include "Hedgehog/Needle/IMirageAnim.h"
 #include "Hedgehog/Needle/ModelInstance.h"
 #include "Hedgehog/Needle/PBRModelInstance.h"
+#include "Hedgehog/Needle/MaterialAnimationResource.h"
 #include "Hedgehog/Needle/TexcoordAnimationResource.h"
+#include "Hedgehog/Needle/PtAnimationResource.h"
+#include "Hedgehog/Needle/VisibilityAnimationResource.h"
+#include "Hedgehog/Needle/CameraMotionResource.h"
 #include "Hedgehog/Needle/RenderingCommandList.h"
 #include "Hedgehog/Needle/DisplaySwapDevice.h"
 #include "Hedgehog/Needle/ShaderListInfo.h"
@@ -336,6 +347,7 @@ namespace rangerssdk::ucsl {
 #include "Hedgehog/Needle/PostEffectPipelineJob.h"
 #include "Hedgehog/Needle/PostEffectLitePipelineJob.h"
 #include "Hedgehog/Needle/RenderDebugScreenJob.h"
+#include "Hedgehog/Needle/CopyColor.h"
 #include "Hedgehog/Needle/CopyColorJob.h"
 #include "Hedgehog/Needle/OcclusionCullingViewJob.h"
 #include "Hedgehog/Needle/GatherDrawPassShadowMapJob.h"
@@ -485,15 +497,19 @@ namespace rangerssdk::ucsl {
 #include "Hedgehog/GraphicsFoundation/DrawSystem.h"
 #include "Hedgehog/GraphicsFoundation/DrawSystemNeedle.h"
 
+#include "Hedgehog/User/UserInfoEvent.h"
+#include "Hedgehog/User/UserService.h"
+
 #include "Hedgehog/Font/ResBitmapFont.h"
 #include "Hedgehog/Font/ResOpticalKerning.h"
 #include "Hedgehog/Font/ResScalableFontSet.h"
 #include "Hedgehog/Font/TextListener.h"
 #include "Hedgehog/Font/TextTagWriterFeedListener.h"
+#include "Hedgehog/Font/FontTexture.h"
+#include "Hedgehog/Font/IFont.h"
+#include "Hedgehog/Font/IFontRenderingEngine.h"
+#include "Hedgehog/Font/BitmapFont.h"
 #include "Hedgehog/Font/FontContainer.h"
-
-#include "Hedgehog/User/UserInfoEvent.h"
-#include "Hedgehog/User/UserService.h"
 
 // Hedgehog Framework
 #include "Hedgehog/Framework/FrameworkConfig.h"
@@ -509,6 +525,10 @@ namespace rangerssdk::ucsl {
 #include "Hedgehog/Framework/AppModule.h"
 #include "Hedgehog/Framework/Application.h"
 #include "Hedgehog/Framework/SaveManagerInterface.h"
+#include "Hedgehog/Framework/SaveAsyncHandler.h"
+#include "Hedgehog/Framework/SyncTimer.h"
+
+#include "Hedgehog/Font/ScalableFont.h"
 
 #include "Hedgehog/Cri/CriMana.h"
 
@@ -659,6 +679,7 @@ namespace rangerssdk::ucsl {
 #include "Hedgehog/Graphics/ResMirageLightField.h"
 #include "Hedgehog/Graphics/ResProbe.h"
 #include "Hedgehog/Graphics/ResDecal.h"
+#include "Hedgehog/Graphics/ResDecalPointCloud.h"
 #include "Hedgehog/Graphics/ResVertexAnimationTexture.h"
 #include "Hedgehog/Graphics/ResPointcloud.h"
 #include "Hedgehog/Graphics/ResOcclusionCapsule.h"
@@ -677,6 +698,7 @@ namespace rangerssdk::ucsl {
 #include "Hedgehog/Graphics/VisibilityManager.h"
 #include "Hedgehog/Graphics/FxParamEditor.h"
 #include "Hedgehog/Graphics/ISkeletalMeshPose.h"
+#include "Hedgehog/Graphics/InteractionComputeService.h"
 
 #include "Hedgehog/FMV/MovieRenderObject.h"
 #include "Hedgehog/FMV/MoviePlayer.h"
@@ -689,7 +711,6 @@ namespace rangerssdk::ucsl {
 #include "Hedgehog/Physics/GOCBoxCollider.h"
 #include "Hedgehog/Physics/GOCCapsuleCollider.h"
 #include "Hedgehog/Physics/GOCCylinderCollider.h"
-#include "Hedgehog/Physics/GOCMeshCollider.h"
 #include "Hedgehog/Physics/PhysicsWorld.h"
 #include "Hedgehog/Physics/PhysicsWorldBullet.h"
 #include "Hedgehog/Physics/GOCCollisionQuery.h"
@@ -702,7 +723,9 @@ namespace rangerssdk::ucsl {
 #include "Hedgehog/Physics/PhysicsPickedObjectViewer.h"
 #include "Hedgehog/Physics/BulletPhysicsModule.h"
 #include "Hedgehog/Physics/Messages.h"
+#include "Hedgehog/Physics/Bullet/BtAllocator.h"
 #include "Hedgehog/Physics/ResPhysicsMesh.h"
+#include "Hedgehog/Physics/GOCMeshCollider.h"
 #include "Hedgehog/Physics/ResHeightField.h"
 #include "Hedgehog/Physics/GOCHeightFieldCollider.h"
 
@@ -837,6 +860,7 @@ namespace rangerssdk::ucsl {
 #include "Hedgehog/UI/CastTextContainer.h"
 #include "Hedgehog/UI/GOCUICollider.h"
 #include "Hedgehog/UI/GOCUIComposition.h"
+#include "Hedgehog/UI/GOCUIEffect.h"
 #include "Hedgehog/UI/UIObject.h"
 #include "Hedgehog/UI/UIElement.h"
 #include "Hedgehog/UI/UIElementSearchIndex.h"
@@ -972,6 +996,7 @@ namespace rangerssdk::ucsl {
 #include "ApplicationCommon/Game/GOCMotorConstant.h"
 #include "ApplicationCommon/Game/GOCMotorRotate.h"
 #include "ApplicationCommon/Game/GOCMotorOnPath.h"
+#include "ApplicationCommon/Game/GOCMotorSwing.h"
 #include "ApplicationCommon/Game/GOCMovement.h"
 
 #include "ApplicationCommon/Graphics/RenderTextureFreeCamera.h"
@@ -1001,18 +1026,29 @@ namespace rangerssdk::ucsl {
 #include "Application/Save/SaveDataLockImpl.h"
 #include "Application/Save/SaveInterface.h"
 #include "Application/Save/SaveManager.h"
+#include "Application/Save/SavePermission.h"
 
 #include "Application/Camera/CameraBridge.h"
 #include "Application/Camera/CameraService.h"
 #include "Application/Camera/CameraBehavior.h"
 #include "Application/Camera/CameraBoom.h"
+#include "Application/Camera/CameraFixDirectionBehavior.h"
+#include "Application/Camera/CameraInterpolationBehavior.h"
 #include "Application/Camera/BossLockOnCamera.h"
 #include "Application/Camera/FishingCamera.h"
+#include "Application/Camera/FollowCamera.h"
+#include "Application/Camera/FocusFrameCamera.h"
 
 #include "Application/Event/EventPlayer.h"
 #include "Application/Event/EventPreviewHelper.h"
 
+#include "Application/Event/EventEnvironmentCameraInterpolate.h"
 #include "Application/Event/EventEnvironmentPause.h"
+#include "Application/Event/EventEnvironmentInvisibleObjects.h"
+#include "Application/Event/EventEnvironmentFps.h"
+#include "Application/Event/EventEnvironmentSkip.h"
+#include "Application/Event/EventEnvironmentTime.h"
+#include "Application/Event/EventEnvironmentTerrain.h"
 
 #include "Application/Player/CharacterId.h"
 #include "Application/Player/PlayerCounterTimer.h"
@@ -1026,6 +1062,7 @@ namespace rangerssdk::ucsl {
 #include "Application/Player/PlayerHsmContext.h"
 #include "Application/Player/Blackboard/Blackboard.h"
 #include "Application/Player/Blackboard/GOCPlayerBlackboard.h"
+#include "Application/Player/Blackboard/PlayerBlackboardService.h"
 #include "Application/Player/StateParameter.h"
 #include "Application/Player/RelayedFlagsParameter.h"
 #include "Application/Player/PlayerStateParameter.h"
@@ -1036,6 +1073,7 @@ namespace rangerssdk::ucsl {
 #include "Application/Player/StatePlugin/StatePluginCyberStart.h"
 #include "Application/Player/StatePlugin/StatePluginBossBattle.h"
 #include "Application/Player/StatePlugin/StatePluginEffect.h"
+#include "Application/Player/StatePlugin/StatePluginCyloop.h"
 #include "Application/Player/HomingTargetInfo.h"
 #include "Application/Player/GravityController.h"
 #include "Application/Player/GOCPlayerHsm.h"
@@ -1045,6 +1083,7 @@ namespace rangerssdk::ucsl {
 #include "Application/Player/PlayerCollision.h"
 #include "Application/Player/PlayerController.h"
 #include "Application/Player/GOCPlayerCollider.h"
+#include "Application/Player/GOCPlayerEyesight.h"
 #include "Application/Player/ComponentCollector.h"
 #include "Application/Player/PlayerEffect.h"
 #include "Application/Player/EffectList.h"
@@ -1090,6 +1129,8 @@ namespace rangerssdk::ucsl {
 #include "Application/Text/AppTextListener.h"
 #include "Application/Text/TextManager.h"
 
+#include "Application/EnemyManager.h"
+
 #include "Application/Messages.h"
 
 #include "Application/Game/Helpers.h"
@@ -1099,6 +1140,7 @@ namespace rangerssdk::ucsl {
 #include "Application/Game/GameModeResourceModule.h"
 #include "Application/Game/StageTerrainModule.h"
 #include "Application/Game/StageObjectModule.h"
+#include "Application/Game/StageGraphicsModule.h"
 #include "Application/Game/GameModeResourceManager.h"
 #include "Application/Game/GameMode.h"
 #include "Application/Game/ApplicationExtension.h"
@@ -1106,6 +1148,7 @@ namespace rangerssdk::ucsl {
 #include "Application/Game/GameModeBoot.h"
 #include "Application/Game/GameModeStage.h"
 #include "Application/Game/GameModeFishing.h"
+#include "Application/Game/GameModeOpening.h"
 #include "Application/Game/GameModeExtension.h"
 #include "Application/Game/GameModeFishingExtension.h"
 #include "Application/Game/GameModeHsmExtension.h"
@@ -1133,17 +1176,27 @@ namespace rangerssdk::ucsl {
 #include "Application/Game/GOCParamBlackboard.h"
 #include "Application/Game/GOCBossMoveableRange.h"
 #include "Application/Game/GOCBossCyloopColliderHelper.h"
+#include "Application/Game/GOCBossPillar.h"
 #include "Application/Game/Messages.h"
 #include "Application/Game/Posture.h"
 #include "Application/Game/Script.h"
 #include "Application/Game/ObjectWorldService.h"
+#include "Application/Game/GravityManager.h"
+#include "Application/Game/GOCFoot.h"
+#include "Application/Game/RotatePivotFoot.h"
+
+#include "Application/Enemy/GOCEnemyPosture.h"
 
 #include "Application/ScriptSequence.h"
 #include "Application/ScriptSequenceManager.h"
 
+#include "Application/Animation/AnimatorTriggerListener.h"
+
 #include "Application/Game/GOCScript.h"
+#include "Application/Game/GOCGuideCircle.h"
 #include "Application/Game/ReactiveService.h"
 #include "Application/Game/GOCBossActionSelect.h"
+#include "Application/Game/GOCBossAnimatorTriggerHelper.h"
 
 #include "Application/UI/AppUITextInterface.h"
 #include "Application/UI/UIMusicSelect.h"
@@ -1151,18 +1204,24 @@ namespace rangerssdk::ucsl {
 #include "Application/UI/UIMapMenu.h"
 #include "Application/UI/RequestOverlayTagReplace.h"
 #include "Application/UI/RequestOverlayBegin.h"
+#include "Application/UI/RequestOverlayCaptionSelectBox.h"
 #include "Application/UI/RequestOverlayWindow.h"
 #include "Application/UI/RequestOverlayCaption.h"
+#include "Application/UI/RequestOverlayCelebration.h"
+#include "Application/UI/RequestOverlayToast.h"
 #include "Application/UI/UIOverlayService.h"
 #include "Application/UI/UIStaminaGaugeContext.h"
 #include "Application/UI/UIOpeningLogo.h"
 #include "Application/UI/UIResult.h"
 #include "Application/UI/UIGameCockpit.h"
+#include "Application/UI/UIBossLife.h"
 #include "Application/UI/GOCRenderTextureUI.h"
 #include "Application/UI/Messages.h"
 
 #include "Application/Physics/GOCColliderQuery.h"
 #include "Application/Physics/GOCMoveSphereColliderQuery.h"
+#include "Application/Physics/GOCCapsuleColliderQuery.h"
+#include "Application/Physics/GOCSphereColliderQuery.h"
 #include "Application/Physics/ColliderContainer.h"
 #include "Application/Physics/Messages.h"
 
@@ -1170,7 +1229,15 @@ namespace rangerssdk::ucsl {
 #include "Application/Graphics/ResPointcloudLight.h"
 #include "Application/Graphics/SceneParameters.h"
 #include "Application/Graphics/FxParamManager.h"
+#include "Application/Graphics/FxParamApplyEffectExtension.h"
+#include "Application/Graphics/FxParamBlurExtension.h"
+#include "Application/Graphics/FxParamBulletTimeExtension.h"
+#include "Application/Graphics/FxParamDofExtension.h"
+#include "Application/Graphics/FxParamChromaticAberrationExtension.h"
+#include "Application/Graphics/FxParamGameConditionExtension.h"
+#include "Application/Graphics/FxParamGraphicsOptionExtension.h"
 #include "Application/Graphics/FxParamTimeProgressExtension.h"
+#include "Application/Graphics/FxParamWeatherExtension.h"
 #include "Application/Graphics/FxColManager.h"
 #include "Application/Graphics/ModelNodeContainer.h"
 #include "Application/Graphics/MultiNodeContainer.h"
@@ -1178,9 +1245,14 @@ namespace rangerssdk::ucsl {
 #include "Application/Graphics/GeometryInstance.h"
 #include "Application/Graphics/GeometryInstanceManager.h"
 #include "Application/Graphics/GOCVisualGeometryInstance.h"
+#include "Application/Graphics/AuraEffectManager.h"
+#include "Application/Graphics/VisualModelCacheManager.h"
 
 #include "Application/Event/ObjEventExternalBase.h"
 #include "Application/Event/ObjEventExternalSonic.h"
+
+#include "Application/Event/ObjEvent.h"
+#include "Application/Event/ObjEventStageResolver.h"
 
 #include "Application/GismoResource.h"
 #include "Application/ObjGismo.h"
@@ -1256,6 +1328,7 @@ namespace rangerssdk::ucsl {
 #include "Application/GOCTargetPositionHelper.h"
 #include "Application/GOCEnemyAttackSign.h"
 #include "Application/BossBaseContext.h"
+#include "Application/BossHowl.h"
 
 #include "Application/Giant/BossGiantContext.h"
 #include "Application/Giant/BossGiant.h"
@@ -1265,9 +1338,12 @@ namespace rangerssdk::ucsl {
 #include "Application/IslandObjInfo.h"
 #include "Application/ObjSwitchVolume.h"
 #include "Application/ObjCamera.h"
+#include "Application/ObjCameraFollow.h"
 #include "Application/ObjCameraVolume.h"
 #include "Application/ObjAirFloor.h"
 #include "Application/ObjAirWall.h"
+#include "Application/ObjSpring.h"
+#include "Application/ObjDashRingInfo.h"
 #include "Application/ObjKnightIncidentFlyerEscapeShot.h"
 #include "Application/MeteorShowerService.h"
 #include "Application/MeteorShowerEffect.h"
@@ -1279,6 +1355,12 @@ namespace rangerssdk::ucsl {
 #include "Application/ObjFishingSequence.h"
 #include "Application/ObjFishingRod.h"
 #include "Application/ObjFishingBig.h"
+#include "Application/ObjStartPosition.h"
+#include "Application/ObjThornBall.h"
+#include "Application/ObjParticleBase.h"
+#include "Application/ObjReactiveTest.h"
+#include "Application/ObjBlockObjectTest.h"
+#include "Application/ObjKodamaMasterKing.h"
 
 namespace rangerssdk::ucsl {
     inline csl::fnd::IAllocator* AllocatorSystem::get_allocator() { return hh::fnd::MemoryRouter::GetModuleAllocator(); }

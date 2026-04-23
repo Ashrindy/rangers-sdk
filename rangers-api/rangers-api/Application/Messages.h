@@ -4,10 +4,10 @@ namespace app {
     class MsgDamage : public fnd::AppMessage<MsgDamage> {
     public:
         uint32_t dword20;
-        size_t qword28;
-        uint32_t dword30;
+        size_t damageFlags; // & 0x04 - cyloop, & 0x08 quick cyloop?
+        hh::fnd::Handle<hh::physics::GOCCollider> hitCollider;
         csl::math::Vector3 csl__math__vector440;
-        csl::math::Vector3 csl__math__vector450;
+        csl::math::Vector3 cyloopPosition;
         csl::math::Vector3 csl__math__vector460;
         float dword70;
         uint32_t dword74;
@@ -153,5 +153,55 @@ namespace app {
         int mode;
 
         MsgFishingChangeCameraMode() : fnd::AppMessage<MsgFishingChangeCameraMode>{ hh::fnd::MessageID::FISHING_CHANGE_CAMERA_MODE } {}
+    };
+
+    class MsgRaiseRings : public fnd::AppMessage<MsgRaiseRings> {
+    public:
+        int ringAmount;
+
+        MsgRaiseRings() : fnd::AppMessage<MsgRaiseRings>{ hh::fnd::MessageID::RAISE_RINGS } {}
+    };
+
+    class MsgEndBossEvent : public fnd::AppMessage<MsgEndBossEvent> {
+    public:
+        MsgEndBossEvent() : fnd::AppMessage<MsgEndBossEvent>{ hh::fnd::MessageID::END_BOSS_EVENT } {}
+    };
+
+    class MsgBeginBlockage : public fnd::AppMessage<MsgBeginBlockage> {
+    public:
+        hh::fnd::Handle<EnemyManager> enemyManager;
+
+        MsgBeginBlockage() : fnd::AppMessage<MsgBeginBlockage>{ hh::fnd::MessageID::BEGIN_BLOCKAGE } {}
+    };
+
+    class MsgEndBlockage : public fnd::AppMessage<MsgEndBlockage> {
+    public:
+        hh::fnd::Handle<EnemyManager> enemyManager;
+
+        MsgEndBlockage() : fnd::AppMessage<MsgEndBlockage>{ hh::fnd::MessageID::END_BLOCKAGE } {}
+    };
+    
+    class MsgBeginBossEvent : public fnd::AppMessage<MsgBeginBossEvent> {
+    public:
+        MsgBeginBossEvent() : fnd::AppMessage<MsgBeginBossEvent>{ hh::fnd::MessageID::BEGIN_BOSS_EVENT } {}
+    };
+
+    // Recipients - Player
+
+    class MsgBeginBossBattle : public fnd::AppMessage<MsgBeginBossBattle> {
+    public:
+        char unk0{ 1 };
+        hh::fnd::Reference<hh::fnd::HFrame> moveableRangeHFrame{ nullptr };
+        csl::math::Vector4 unk1{ 0, 3000, 0, 3.1415927f };
+        float unk2{ 0 };
+        float unk3{ 0 };
+        int64_t unk4{ 0 };
+        int64_t unk5{ 0 };
+        int64_t unk6{ 0 };
+        int unk7{ 0 };
+        char unk8{ 0 };
+        char unk9{ 1 };
+
+        MsgBeginBossBattle() : fnd::AppMessage<MsgBeginBossBattle>{ hh::fnd::MessageID::BEGIN_BOSS_BATTLE } {}
     };
 }

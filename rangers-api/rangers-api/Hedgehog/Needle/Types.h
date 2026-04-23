@@ -121,6 +121,32 @@ namespace hh::needle {
         float unk2;
     };
 
+    struct ViewParameter {
+        enum class RotationType : unsigned int {
+            NO_ROT = 1,
+            ROT,
+            AIM
+        };
+
+        float position[3];
+        float targetPosition[3];
+        float twist;
+        float rotation[4];
+        RotationType rotType;
+    };
+
+    struct ProjParameter {
+        float zNear;
+        float zFar;
+        float fov;
+        float aspectRatio;
+        float unk10;
+        float unk11;
+        float unk12;
+        float unk13;
+        float unk14;
+    };
+
     void EntryUniqueElementControl(unsigned int uniqueElementHash);
     void LeaveUniqueElementControl(unsigned int uniqueElementHash);
 }

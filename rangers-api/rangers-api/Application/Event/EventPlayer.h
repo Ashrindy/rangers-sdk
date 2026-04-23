@@ -22,18 +22,20 @@ namespace app::evt {
                 USE_SETUP_TRANSFORM, // uses the position, rotation and scale variables instead of the ones in the file
                 NO_UNLOAD,
                 CANT_SKIP,           // whetever the cutscene is unskippable or not
-                UNK0,                // pausable?
-                UNK1,                // unknown
+                PAUSABLE,
+                PAUSE_ENEMIES,
                 ENABLE_HUD,          // whetever the cockpit ui will show up
-                CAPPED_FPS = 0x4000
+                PROGRESS_TIME,
+                CAN_SAVE,
+                UNK3,
+                UNK4, // related to spawn
+                CAPPED_FPS = 14
             };
 
             char cutsceneName[40];
             char soundName[40];
-            csl::math::Vector3 position;
-            csl::math::Quaternion rotation;
-            csl::math::Vector3 scale;
-            int unk2;
+            csl::math::Transform transform;
+            bool suspendWorld;
             float speed;
             csl::ut::Bitset<Flag> playFlags;
 
@@ -49,29 +51,44 @@ namespace app::evt {
         };
 
         struct CameraInfo {
-            int unk0;
-            float interpolateTime;
+            float interpolateTimeOnStart;
+            float interpolateTimeOnFinish;
             bool lookAtEnabled;
             csl::math::Vector3 lookAtTarget;
 
             void SetLookAtTarget(csl::math::Vector3& target);
         };
 
-        enum class PlayerFlag : unsigned char {
+        struct ScenePlaybackInfo {
+            hh::dv::DiEventManager::ScenePlaybackInfo::Info scenePlaybackInfo;
+            bool usePage;
+
+            void SetPageIndex(int pageIdx);
+            void SetPage(const char* page);
+        };
+
+        enum class PlayerPositionFlag : unsigned char {
             USE_POSITION,   // set the player position from world position
             USE_ROTATION,   // set the player rotation from world position
             UNK0,           // unknown
         };
 
+        enum class PlayerFlag : unsigned char {
+            UNK0, // ObjEvent !playerAfterIdle
+            VISIBLE0,
+            VISIBLE1,
+            VISIBLE2,
+            VISIBLE3
+        };
+
         PlayInfo playInfo;
-        hh::dv::DiEventManager::ScenePlaybackInfo::Info scenePlaybackInfo;
-        char unk0;
+        ScenePlaybackInfo scenePlaybackInfo;
         int unk1;
         int unk2;
         heur::rfl::EventPlayTestParam::StartType playerStartType;
         hh::fnd::WorldPosition playerWorldPos;
+        csl::ut::Bitset<PlayerPositionFlag> playerPositionFlags;
         csl::ut::Bitset<PlayerFlag> playerFlags;
-        char flags2;
         int64_t unk4;
         CameraInfo cameraInfo;
 
@@ -154,6 +171,7 @@ namespace app::evt {
 
         EventSetupData& GetSetupData() const;
         hh::game::GameManager* GetGameManager() const;
+        app_cmn::camera::CameraParameter& GetCameraParameter() const;
     };
 
     class EventEnvironmentManager : public hh::fnd::BaseObject {
@@ -231,7 +249,7 @@ namespace app::evt {
         virtual bool DSCL_UnkFunc1(UnkFunc1Info& info, void** retElement) override;
         virtual bool DSCL_UnkFunc2(void* unk0, void* unk1) override;
         virtual bool DSCL_UnkFunc3() override;
-        virtual void OnCutsceneEnd() override;
+        virtual void OnCutsceneEnd(OnCutsceneEndInfo& info) override;
         virtual bool DSCL_UnkFunc13(void* unk0) override;
         virtual bool DSCL_UnkFunc14() override;
 

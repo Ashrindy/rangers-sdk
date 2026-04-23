@@ -33,7 +33,7 @@ namespace app{
         int unk22;
         hh::fnd::Reference<hh::game::GOCTransform> gocTransform;
         hh::fnd::Reference<hh::gfx::GOCVisualModel> gocVisualModel;
-        int64_t gocVisual; //hh::fnd::Reference<app::gfx::GOCVisualGeometryInstance>
+        hh::fnd::Reference<app::gfx::GOCVisualGeometryInstance> gocVisual;
         hh::fnd::Reference<hh::anim::GOCAnimationSingle> gocAnimation;
         hh::fnd::Reference<hh::eff::GOCEffect> gocEffect;
         hh::fnd::Reference<hh::snd::GOCSound> gocSound;

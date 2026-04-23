@@ -105,6 +105,8 @@ namespace app::save {
         void SetTime(game::Timestamp& time);
         bool GetTime(game::Timestamp& time);
         GamePlayData::SequenceDeprecated GetSequence() const;
+        bool GetCharacter(uint8_t& id) const;
+        bool GetWorldPosition(hh::fnd::WorldPosition& position) const;
     };
 
     class HeaderAc : public SaveDataAccessor<HeaderData> {
@@ -157,6 +159,7 @@ namespace app::save {
     class OptionGamePlayAc : public SaveDataAccessor<OptionGamePlayData> {
     public:
         uint8_t GetDLCSonicCostume() const;
+        uint8_t GetIslandVisual() const;
     };
 
     class OptionGraphicsAc : public SaveDataAccessor<OptionGraphicsData> {
@@ -171,6 +174,7 @@ namespace app::save {
         OptionControlsAc GetOptionControlsAc();
         OptionGamePlayAc GetOptionGamePlayAc();
         OptionGraphicsAc GetOptionGraphicsAc();
+        HeaderData::AppVersion GetAppVersion() const;
     };
 
     class PlayLogAc : public SaveDataAccessor<PlayLogData> {
@@ -187,5 +191,4 @@ namespace app::save {
     public:
 
     };
-
 }

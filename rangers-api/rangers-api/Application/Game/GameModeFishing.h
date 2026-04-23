@@ -104,11 +104,11 @@ namespace app::game{
 
         virtual void* GetRuntimeTypeInfo() const override;
         virtual bool ProcessMessage(hh::fnd::Message& message) override;
-        virtual bool Initialize() override;
-        virtual bool UnkFunc6(bool a2) override;
-        virtual bool UnkFunc9() override;
-        virtual bool UnkFunc10() override;
-        virtual bool Shutdown() override;
+        virtual void Initialize() override;
+        virtual void UnkFunc6(bool a2) override;
+        virtual void UnkFunc9() override;
+        virtual void UnkFunc10() override;
+        virtual int Shutdown() override;
 
         GameModeFishing(csl::fnd::IAllocator* allocator, UnkStr& unkStr);
     };

@@ -8,7 +8,7 @@ namespace hh::dv {
             struct Info {
                 float dword0;
                 int dword4;
-                int dword8;
+                int pageIndex;
                 int dwordC;
                 int qword10;
                 int qword14;
@@ -36,6 +36,8 @@ namespace hh::dv {
                 Info();
 
                 bool UseInfo() const;
+                void SetPageIndex(int pageIdx);
+                void SetPage(const char* page);
             };
 
             hh::fnd::Handle<DvSceneControl> dvSceneControl;
@@ -61,7 +63,7 @@ namespace hh::dv {
         virtual bool ReceiveMessage(hh::fnd::Message& message) override;
         virtual void OnAddedToGame() override;
         virtual void OnRemovedFromGame() override;
-        virtual void OnCutsceneEnd() override;
+        virtual void OnCutsceneEnd(OnCutsceneEndInfo& info) override;
 
         virtual void Setup(Description& desc);
         virtual bool UnkFunc1() { return false; }
