@@ -30715,6 +30715,11 @@ PUBLIC ??_GGameModeBossRush@game@app@@QEAAXXZ
     mov rax, 01401ac030h
     jmp rax
 
+PUBLIC ?Create@RequestOverlayToast@ui@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z
+?Create@RequestOverlayToast@ui@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 01401ae570h
+    jmp rax
+
 PUBLIC ??_D?$SaveDataAccessor@UExtraCharacterData@save@app@@@save@app@@QEAAXXZ
 ??_D?$SaveDataAccessor@UExtraCharacterData@save@app@@@save@app@@QEAAXXZ:
     mov rax, 01401ae660h
@@ -30723,6 +30728,11 @@ PUBLIC ??_D?$SaveDataAccessor@UExtraCharacterData@save@app@@@save@app@@QEAAXXZ
 PUBLIC ??_DExtraCharacterAc@save@app@@QEAAXXZ
 ??_DExtraCharacterAc@save@app@@QEAAXXZ:
     mov rax, 01401ae660h
+    jmp rax
+
+PUBLIC ??_DRequestOverlayToast@ui@app@@QEAAXXZ
+??_DRequestOverlayToast@ui@app@@QEAAXXZ:
+    mov rax, 01401ae6b0h
     jmp rax
 
 PUBLIC ?Create@Build@State@GameModeBossRush@game@app@@CAPEAV12345@PEAVIAllocator@fnd@csl@@@Z
@@ -78910,6 +78920,16 @@ PUBLIC ?UIL_UnkFunc1@UICaptionSelectBox@ui@app@@UEAAXXZ
     mov rax, 0140a1ccb0h
     jmp rax
 
+PUBLIC ?Setup@UICaptionSelectBox@ui@app@@QEAAXAEBUDescription@123@@Z
+?Setup@UICaptionSelectBox@ui@app@@QEAAXAEBUDescription@123@@Z:
+    mov rax, 0140a1cea0h
+    jmp rax
+
+PUBLIC ?Setup@UIToast@ui@app@@QEAAXAEBUDescription@123@@Z
+?Setup@UIToast@ui@app@@QEAAXAEBUDescription@123@@Z:
+    mov rax, 0140a1cea0h
+    jmp rax
+
 PUBLIC ?GetClass@UICaptionSelectBox@ui@app@@SAPEBVGameObjectClass@game@hh@@XZ
 ?GetClass@UICaptionSelectBox@ui@app@@SAPEBVGameObjectClass@game@hh@@XZ:
     mov rax, 0140a1d600h
@@ -80783,6 +80803,16 @@ PUBLIC ?Create@UICelebration@ui@app@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z
 PUBLIC ?Create@UICelebration@ui@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z
 ?Create@UICelebration@ui@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 0140af5410h
+    jmp rax
+
+PUBLIC ?AddCallback@UIToast@ui@app@@UEAAXPEAVGameManager@game@hh@@@Z
+?AddCallback@UIToast@ui@app@@UEAAXPEAVGameManager@game@hh@@@Z:
+    mov rax, 0140af5530h
+    jmp rax
+
+PUBLIC ?UIL_UnkFunc1@UIToast@ui@app@@UEAAXXZ
+?UIL_UnkFunc1@UIToast@ui@app@@UEAAXXZ:
+    mov rax, 0140af5cb0h
     jmp rax
 
 PUBLIC ?GetClass@UIToast@ui@app@@SAPEBVGameObjectClass@game@hh@@XZ
@@ -99947,11 +99977,6 @@ PUBLIC ??_DUIBehaviorObjective@ui@app@@QEAAXXZ
 
 PUBLIC ??_DUICelebration@ui@app@@QEAAXXZ
 ??_DUICelebration@ui@app@@QEAAXXZ:
-    mov rax, 0140ecd2a0h
-    jmp rax
-
-PUBLIC ??_DUIToast@ui@app@@QEAAXXZ
-??_DUIToast@ui@app@@QEAAXXZ:
     mov rax, 0140ecd2a0h
     jmp rax
 
@@ -170285,6 +170310,11 @@ PUBLIC ?Fade@ScreenFadeManager@game@app@@QEAAXM@Z
     mov rax, 014707e1d0h
     jmp rax
 
+PUBLIC ?IsFading@ScreenFadeManager@game@app@@QEAA_NXZ
+?IsFading@ScreenFadeManager@game@app@@QEAA_NXZ:
+    mov rax, 0147081880h
+    jmp rax
+
 PUBLIC ?fUnk1@GameService@game@hh@@UEAAXXZ
 ?fUnk1@GameService@game@hh@@UEAAXXZ:
     mov rax, 01470843e0h
@@ -178477,6 +178507,11 @@ PUBLIC ?PlayReservedAnimations@LayerController@ui@hh@@QEAAXAEAUAnimationList@123
 
 PUBLIC ??_GUIToast@ui@app@@QEAAXXZ
 ??_GUIToast@ui@app@@QEAAXXZ:
+    mov rax, 014cd383d0h
+    jmp rax
+
+PUBLIC ??_DUIToast@ui@app@@QEAAXXZ
+??_DUIToast@ui@app@@QEAAXXZ:
     mov rax, 014cd383d0h
     jmp rax
 

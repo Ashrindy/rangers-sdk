@@ -3,12 +3,12 @@
 namespace app::ui {
     class RequestOverlayCaptionSelectBox : public RequestOverlayBegin {
     public:
-        csl::ut::MoveArray<int64_t> qword20;
+        RequestOverlayTagReplace overlayTagReplace;
         csl::ut::String subtitleText;
         csl::ut::String subtitleSound;
-        float dword70;
+        float time;
         csl::ut::MoveArray<csl::ut::String> options;
-        int dword98;
+        int defaultSelectedOption;
         float dword9C;
         char wordA0;
         char wordA1;
@@ -16,7 +16,7 @@ namespace app::ui {
 
         inline RequestOverlayCaptionSelectBox(csl::fnd::IAllocator* allocator) : 
             RequestOverlayBegin{ allocator }, 
-            qword20{ allocator }, 
+            overlayTagReplace{ allocator },
             subtitleText{ allocator },
             subtitleSound{ allocator },
             options{ allocator } 
@@ -26,6 +26,10 @@ namespace app::ui {
 
     class UICaptionSelectBox : public hh::game::GameObject, public hh::ui::UIListener {
     public:
+        struct Description {
+            RequestOverlayCaptionSelectBox* selectBoxRequest;
+        };
+
         hh::fnd::Reference<RequestOverlayCaptionSelectBox> requestOverlay;
         hh::ui::LayerController* subtitleLc;
         hh::ui::LayerController* textFeedIconLc;
@@ -39,6 +43,8 @@ namespace app::ui {
 
 		virtual void AddCallback(hh::game::GameManager* gameManager) override;
         virtual void UIL_UnkFunc1() override;
+
+        void Setup(const Description& desc);
 
         GAMEOBJECT_CLASS_DECLARATION(UICaptionSelectBox);
     };

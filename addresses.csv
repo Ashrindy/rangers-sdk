@@ -10403,6 +10403,7 @@
 14016a360,j_?FadeOut@ScreenFadeManager@game@app@@QEAAXMPEBD@Z,1
 14016a490,j_?Fade@ScreenFadeManager@game@app@@QEAAXM@Z,1
 14016a580,?GetRuntimeTypeInfo@ScreenFadeManager@game@app@@UEBAPEAXXZ,1
+14016a600,j_?IsFading@ScreenFadeManager@game@app@@QEAA_NXZ,1
 14016a690,j_?fUnk1@GameService@game@hh@@UEAAXXZ,1
 14016a690,j_?OnAddedToGame@ScreenFadeManager@game@app@@UEAAXXZ,1
 14016a6e0,j_?ARML_UnkFunc1@ScreenFadeManager@game@app@@UEAAXH@Z,1
@@ -11072,8 +11073,10 @@
 1401aadf0,j_?Initialize@GameModeBoot@game@app@@UEAAXXZ,1
 1401abe80,??0GameModeBossRush@game@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
 1401ac030,??_GGameModeBossRush@game@app@@QEAAXXZ,0
+1401ae570,?Create@RequestOverlayToast@ui@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z,1
 1401ae660,??_D?$SaveDataAccessor@UExtraCharacterData@save@app@@@save@app@@QEAAXXZ,1
 1401ae660,??_DExtraCharacterAc@save@app@@QEAAXXZ,1
+1401ae6b0,??_DRequestOverlayToast@ui@app@@QEAAXXZ,1
 1401aeab0,?Create@Build@State@GameModeBossRush@game@app@@CAPEAV12345@PEAVIAllocator@fnd@csl@@@Z,0
 1401aeab0,??0Build@State@GameModeBossRush@game@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
 1401aeab0,?Create@Build@State@GameModeBossRush@game@app@@SAPEAV12345@PEAVIAllocator@fnd@csl@@@Z,0
@@ -21977,6 +21980,8 @@
 140a1c4b0,??_DUICaptionSelectBox@ui@app@@QEAAXXZ,1
 140a1c570,?AddCallback@UICaptionSelectBox@ui@app@@UEAAXPEAVGameManager@game@hh@@@Z,1
 140a1ccb0,?UIL_UnkFunc1@UICaptionSelectBox@ui@app@@UEAAXXZ,1
+140a1cea0,?Setup@UICaptionSelectBox@ui@app@@QEAAXAEBUDescription@123@@Z,1
+140a1cea0,?Setup@UIToast@ui@app@@QEAAXAEBUDescription@123@@Z,1
 140a1d600,?GetClass@UICaptionSelectBox@ui@app@@SAPEBVGameObjectClass@game@hh@@XZ,0
 140a1d610,?Create@UICaptionSelectBox@ui@app@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
 140a1d610,?Create@UICaptionSelectBox@ui@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
@@ -22427,7 +22432,10 @@
 140af5400,?GetClass@UICelebration@ui@app@@SAPEBVGameObjectClass@game@hh@@XZ,0
 140af5410,?Create@UICelebration@ui@app@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
 140af5410,?Create@UICelebration@ui@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
-140af54a0,j_??_GUIToast@ui@app@@QEAAXXZ,0
+140af54a0,j_??_GUIToast@ui@app@@QEAAXXZ,1
+140af54a0,j_??_DUIToast@ui@app@@QEAAXXZ,1
+140af5530,?AddCallback@UIToast@ui@app@@UEAAXPEAVGameManager@game@hh@@@Z,1
+140af5cb0,?UIL_UnkFunc1@UIToast@ui@app@@UEAAXXZ,1
 140af62d0,?GetClass@UIToast@ui@app@@SAPEBVGameObjectClass@game@hh@@XZ,0
 140af63b0,?Create@UIToast@ui@app@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
 140af63b0,?Create@UIToast@ui@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
@@ -27854,7 +27862,6 @@
 140ecd2a0,??_DUICredit@ui@app@@QEAAXXZ,1
 140ecd2a0,??_DUIBehaviorObjective@ui@app@@QEAAXXZ,1
 140ecd2a0,??_DUICelebration@ui@app@@QEAAXXZ,1
-140ecd2a0,??_DUIToast@ui@app@@QEAAXXZ,1
 140ecd2a0,??_DSaveProcess@save@app@@QEAAXXZ,1
 140ecd2a0,??_DRenderTextureFreeCameraManager@services@heur@@QEAAXXZ,1
 140ecd2a0,??_DGOCHsm2@gocs@heur@@QEAAXXZ,1
@@ -41863,6 +41870,7 @@
 141570fa0,??_7?$DelegateFunctor@V_lambda_70668cb365ec6015f37d28cd9fc2dcbe_@@@?$Delegate@$$A6AXPEAVLayerController@ui@hh@@PEBD@Z@fnd@csl@@6B@,1
 141570ff8,??_7UICelebration@ui@app@@6B@,1
 1415710d8,??_7UIToast@ui@app@@6B@,1
+141571140,??_7UIToast@ui@app@@6BUIListener@1hh@@@,1
 141571270,??_7UIWindow@ui@app@@6B@,1
 141571460,??_7?$DelegateFunctor@V_lambda_8111e1f80a24aaa6ea003d50fe0fd59a_@@@?$Delegate@$$A6AXPEAVLayerController@ui@hh@@PEBD@Z@fnd@csl@@6B@,1
 141571498,??_7?$DelegateFunctor@V_lambda_115f304c5d84f599a3a30320a18c132e_@@@?$Delegate@$$A6AXPEAVLayerController@ui@hh@@PEBD@Z@fnd@csl@@6B@,1
@@ -76399,7 +76407,7 @@
 143ce4ab0,?gameObjectClass@UIOperationGuide@ui@app@@0VGameObjectClass@game@hh@@B,0
 143ce51d0,?gameObjectClass@UIPracticeNotifier@ui@app@@0VGameObjectClass@game@hh@@B,0
 143ce58d0,?gameObjectClass@UICelebration@ui@app@@0VGameObjectClass@game@hh@@B,0
-143ce5940,?gameObjectClass@UIToast@ui@app@@0VGameObjectClass@game@hh@@B,0
+143ce5940,?gameObjectClass@UIToast@ui@app@@0VGameObjectClass@game@hh@@B,1
 143ce59b0,?gameObjectClass@UIWindow@ui@app@@0VGameObjectClass@game@hh@@B,0
 143ce5d00,?gameObjectClass@SaveProcess@save@app@@0VGameObjectClass@game@hh@@B,0
 143ce5fe8,?classId@GOCTinyFsm2@gocs@heur@@0PEBXEB,0
@@ -88768,6 +88776,7 @@
 147045220,?AddCallback@FadeObject@game@app@@UEAAXPEAVGameManager@2hh@@@Z,1
 14707b2a0,?FadeOut@ScreenFadeManager@game@app@@QEAAXMPEBD@Z,1
 14707e1d0,?Fade@ScreenFadeManager@game@app@@QEAAXM@Z,1
+147081880,?IsFading@ScreenFadeManager@game@app@@QEAA_NXZ,1
 1470843e0,?fUnk1@GameService@game@hh@@UEAAXXZ,1
 1470843e0,?OnAddedToGame@ScreenFadeManager@game@app@@UEAAXXZ,1
 147084de0,?ARML_UnkFunc1@ScreenFadeManager@game@app@@UEAAXH@Z,1
@@ -90418,7 +90427,8 @@
 14cc91130,??_DUISelectDifficulity@ui@app@@QEAAXXZ,0
 14ccba8f0,??_GUIPracticeNotifier@ui@app@@QEAAXXZ,0
 14cce5c40,?PlayReservedAnimations@LayerController@ui@hh@@QEAAXAEAUAnimationList@123@@Z,1
-14cd383d0,??_GUIToast@ui@app@@QEAAXXZ,0
+14cd383d0,??_GUIToast@ui@app@@QEAAXXZ,1
+14cd383d0,??_DUIToast@ui@app@@QEAAXXZ,1
 14cd38c60,??_GUIWindow@ui@app@@QEAAXXZ,0
 14cd78740,?GetOptionAudioAc@OptionAc@save@app@@QEAA?AVOptionAudioAc@23@XZ,1
 14cd9e6d0,?GetFlagContainerAc@GameDataAc@save@app@@QEAA?AVFlagContainerAc@23@XZ,1

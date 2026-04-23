@@ -1208,6 +1208,7 @@ namespace rangerssdk::ucsl {
 #include "Application/UI/RequestOverlayWindow.h"
 #include "Application/UI/RequestOverlayCaption.h"
 #include "Application/UI/RequestOverlayCelebration.h"
+#include "Application/UI/RequestOverlayToast.h"
 #include "Application/UI/UIOverlayService.h"
 #include "Application/UI/UIStaminaGaugeContext.h"
 #include "Application/UI/UIOpeningLogo.h"
