@@ -408,6 +408,7 @@ namespace rangerssdk::ucsl {
 #include "Hedgehog/Needle/ClipMapRenderer.h"
 #include "Hedgehog/Needle/CyberHologramModelRenderJob.h"
 #include "Hedgehog/Needle/RangersDeferredRenderJob.h"
+#include "Hedgehog/Needle/SimpleCaptureJob.h"
 
 #include "Hedgehog/Needle/ImplDX11/Types.h"
 #include "Hedgehog/Needle/ImplDX11/NeedleResourceContainer.h"
@@ -699,6 +700,7 @@ namespace rangerssdk::ucsl {
 #include "Hedgehog/Graphics/FxParamEditor.h"
 #include "Hedgehog/Graphics/ISkeletalMeshPose.h"
 #include "Hedgehog/Graphics/InteractionComputeService.h"
+#include "Hedgehog/GraphicsFoundation/CaptureRenderable.h"
 
 #include "Hedgehog/FMV/MovieRenderObject.h"
 #include "Hedgehog/FMV/MoviePlayer.h"
@@ -1227,6 +1229,7 @@ namespace rangerssdk::ucsl {
 
 #include "Application/Graphics/ResFxColFile2.h"
 #include "Application/Graphics/ResPointcloudLight.h"
+#include "Application/Graphics/ResPointcloudModel.h"
 #include "Application/Graphics/SceneParameters.h"
 #include "Application/Graphics/FxParamManager.h"
 #include "Application/Graphics/FxParamApplyEffectExtension.h"
@@ -1334,6 +1337,7 @@ namespace rangerssdk::ucsl {
 #include "Application/Giant/BossGiant.h"
 
 #include "Application/VolumeTrigger.h"
+#include "Application/PassPlaneTrigger.h"
 #include "Application/MyApplication.h"
 #include "Application/IslandObjInfo.h"
 #include "Application/ObjSwitchVolume.h"
@@ -1361,6 +1365,7 @@ namespace rangerssdk::ucsl {
 #include "Application/ObjReactiveTest.h"
 #include "Application/ObjBlockObjectTest.h"
 #include "Application/ObjKodamaMasterKing.h"
+#include "Application/ObjWarpTrigger.h"
 
 namespace rangerssdk::ucsl {
     inline csl::fnd::IAllocator* AllocatorSystem::get_allocator() { return hh::fnd::MemoryRouter::GetModuleAllocator(); }

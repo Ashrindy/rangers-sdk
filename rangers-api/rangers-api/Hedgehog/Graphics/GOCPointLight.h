@@ -36,6 +36,7 @@ namespace hh::gfx{
             union{
                 PointProperties pointProps;
                 DirectionalProperties directionalProps;
+                needle::AnimController* lightAnimController;
             };
         };
 
@@ -65,6 +66,7 @@ namespace hh::gfx{
         void SetLightIntensity(unsigned int lightIdx, float intensity);
         void SetLightProperties(unsigned int lightIdx, float* colorARGB, float radius, float rotationMultiplier, float attenuationRadius, float innerConeAngle, float outerConeAngle, bool enableShadow);
         void SetLightProperties(unsigned int lightIdx, float* colorARGB, float radius, float rotationMultiplier, float attenuationRadius, float innerConeAngle, float outerConeAngle, csl::math::Vector3& position, csl::math::Quaternion& rotation);
+        bool SetLightAnimTime(unsigned int lightIdx, float time);
         void RemoveLight(unsigned int lightIdx);
         int CreateLight(LightSetupInfo& info);
         int CreateLight(ResMirageLight* resource, hh::fnd::HFrame* hFrame);

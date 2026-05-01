@@ -147,6 +147,10 @@ namespace hh::needle {
         float unk14;
     };
 
+    struct Resolution {
+        unsigned int x, y;
+    };
+
     void EntryUniqueElementControl(unsigned int uniqueElementHash);
     void LeaveUniqueElementControl(unsigned int uniqueElementHash);
 }

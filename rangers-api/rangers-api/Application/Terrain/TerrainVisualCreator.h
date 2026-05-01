@@ -26,7 +26,7 @@ namespace app::trr {
 
             class CreatePointcloudModelInstance : public hh::ut::StateBase<TerrainVisualCreator> {
             public:
-                csl::ut::MoveArray<void*> resources;
+                csl::ut::MoveArray<gfx::ResPointcloudModel*> resources;
                 unsigned int currentResourceIndex;
 
                 virtual void Enter(TerrainVisualCreator& context, int previousState) override;
@@ -95,7 +95,7 @@ namespace app::trr {
 
         TerrainVisualObject* object;
         hh::ut::HsmBase hsm;
-        hh::fnd::Reference<hh::ut::HsmBase> phh__ut__hsmbase90;
+        hh::fnd::Reference<hh::ut::StateManager> stateManager;
         TerrainVisualResourceBinder* resourceBinder;
         UnkCB* cb1;
         hh::gfnd::ResTexture* noGITexture;

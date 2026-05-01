@@ -25,5 +25,6 @@ namespace hh::physics {
         fnd::Handle<GOCCollider> actor;
         MsgTriggerLeave(const fnd::Handle<GOCCollider>& subject, const fnd::Handle<GOCCollider>& actor);
 		virtual fnd::MessageAsyncHandler* CreateAsyncHandler(csl::fnd::IAllocator* allocator) override;
+        hh::fnd::Handle<hh::game::GameObject> GetActorObject() const;
     };
 }
