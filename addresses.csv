@@ -4077,6 +4077,7 @@
 14008d680,?UnkFunc0@BossActionPluginGiant01@game@app@@UEAA_JXZ,1
 14008d680,?UnkFunc0@BossActionPluginGiant01ImmAction@game@app@@UEAA_JXZ,1
 14008d680,?UnkFunc1@?$AppMessage@VMsgChangePlayerCharacter@game@app@@@fnd@app@@UEAAIXZ,1
+14008d680,?UnkFunc1@?$AppMessage@VMsgMotionCamera@camera@app@@@fnd@app@@UEAAIXZ,1
 14008d680,?EE_UnkFunc2@EventEnvironment@evt@app@@UEAA_NXZ,1
 14008d680,?UnkFunc1@?$AppMessage@VMsgGetHomingTargetInfo@player@app@@@fnd@app@@UEAAIXZ,1
 14008d680,?UnkFunc1@?$AppMessage@VMsgBeginExternalControl@player@app@@@fnd@app@@UEAAIXZ,1
@@ -4371,8 +4372,15 @@
 1400aeed0,??0MotionBlendCamera@camera@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
 1400aef60,??_DPlayerReferenceMotionCamera@camera@app@@QEAAXXZ,0
 1400af070,??_GMotionBlendCamera@camera@app@@QEAAXXZ,0
+1400af9d0,?ProcessMessage@MotionCamera@camera@app@@UEAA_NAEAVMessage@fnd@hh@@@Z,1
 1400afde0,??0MotionCamera@camera@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
-1400afeb0,??_GMotionCamera@camera@app@@QEAAXXZ,0
+1400afe70,??0Description@MotionCamera@camera@app@@QEAA@XZ,1
+1400afeb0,??_GMotionCamera@camera@app@@QEAAXXZ,1
+1400afeb0,??_DMotionCamera@camera@app@@QEAAXXZ,1
+1400b01d0,?GetControllerName@MotionCamera@camera@app@@UEBAPEBDXZ,1
+1400b0210,?UnkFunc3@MotionCamera@camera@app@@UEAA_JXZ,1
+1400b02a0,?UnkFunc2@MotionCamera@camera@app@@UEAAX_J@Z,1
+1400b04f0,?Setup@MotionCamera@camera@app@@QEAAXAEBUDescription@123@@Z,1
 1400b0710,??0MultiFocusCamera@camera@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
 1400b0790,??_GMultiFocusCamera@camera@app@@QEAAXXZ,0
 1400b0c30,??0ObjectPanCamera@camera@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
@@ -4517,6 +4525,7 @@
 1400bfe80,??_GVerticalCamera@camera@app@@QEAAXXZ,0
 1400c0400,??_DMsgGetTargetPosition@app@@QEAAXXZ,1
 1400c0400,??_DMsgWarpToPoint@player@app@@QEAAXXZ,1
+1400c0400,??_DMsgMotionCamera@camera@app@@QEAAXXZ,1
 1400c0500,?ContGetQWORD680@Control@gindows@@UEAAPEAXPEAX@Z,1
 1400c0500,?GetLocalPreferredClientSize@Control@gindows@@UEAAXPEAH@Z,1
 1400c0510,?ContGetQWORD688@Control@gindows@@UEAAPEAXPEAX@Z,1
@@ -19883,6 +19892,7 @@
 1408f6ce0,??_DPostureMoveOnSplineByTime@player@app@@QEAAXXZ,0
 1408f6d70,??_GPostureMoveOnSplineByTime@player@app@@QEAAXXZ,0
 1408f7490,??0PostureParry@player@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
+1408f75c0,?CreateAsyncHandler@?$AppMessage@VMsgMotionCamera@camera@app@@@fnd@app@@UEAAPEAVMessageAsyncHandler@2hh@@PEAVIAllocator@2csl@@@Z,1
 1408f76a0,??0PosturePropellerJump@player@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
 1408f76e0,??_GPosturePropellerJump@player@app@@QEAAXXZ,0
 1408f7750,j_?UnkFunc6@PostureSliding@player@app@@UEAAXXZ,1
@@ -22752,6 +22762,7 @@
 140b78e20,?GetGUID@DvNodeBase@dv@hh@@QEBAPEADXZ,1
 140b78e30,?GetUnk8b@Target@Orientation@CameraParameter@camera@app_cmn@@QEBAIXZ,1
 140b78e30,?GetZRot@Target@Orientation@CameraParameter@camera@app_cmn@@QEBAMXZ,1
+140b78e30,?GetStart@AnimController@needle@hh@@QEBAMXZ,1
 140b78e40,?SetAngleX@Orientation@CameraParameter@camera@app_cmn@@QEAAXM@Z,1
 140b78e50,?SetTargetPosition@CameraParameter@camera@app_cmn@@QEAAXAEAVVector3@math@csl@@@Z,1
 140b78e50,?SetPosition@Positioning@CameraParameter@camera@app_cmn@@QEAAXAEAVVector3@math@csl@@@Z,1
@@ -27513,7 +27524,6 @@
 140ecd2a0,??_DMiniBossChargerLaserCamera@camera@app@@QEAAXXZ,1
 140ecd2a0,??_DMiniBossTyrantTornadoCamera@camera@app@@QEAAXXZ,1
 140ecd2a0,??_DMotionBlendCamera@camera@app@@QEAAXXZ,1
-140ecd2a0,??_DMotionCamera@camera@app@@QEAAXXZ,1
 140ecd2a0,??_DMultiFocusCamera@camera@app@@QEAAXXZ,1
 140ecd2a0,??_DPointCamera@camera@app@@QEAAXXZ,1
 140ecd2a0,??_DRailDivingCamera@camera@app@@QEAAXXZ,1
@@ -30441,6 +30451,7 @@
 141106130,?Setup@SShaderContextSetup@ImplDX11@needle@hh@@QEAAXAEBUShader2InitializeInfo@234@@Z,1
 1411140e0,??0AnimController@needle@hh@@QEAA@XZ,1
 141114130,??_DAnimController@needle@hh@@QEAAXXZ,1
+141114170,?GetEnd@AnimController@needle@hh@@QEBAMXZ,1
 141114190,?GetSpeed@AnimController@needle@hh@@QEBAMXZ,1
 1411141a0,j_?SetAnimationParameters@AnimController@needle@hh@@QEAAXMMM@Z,1
 1411141b0,?SetUnk2@AnimController@needle@hh@@UEAAXXZ,1

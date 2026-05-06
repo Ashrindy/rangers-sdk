@@ -630,6 +630,11 @@ PUBLIC ?UnkFunc1@?$AppMessage@VMsgChangePlayerCharacter@game@app@@@fnd@app@@UEAA
     mov rax, 014008d680h
     jmp rax
 
+PUBLIC ?UnkFunc1@?$AppMessage@VMsgMotionCamera@camera@app@@@fnd@app@@UEAAIXZ
+?UnkFunc1@?$AppMessage@VMsgMotionCamera@camera@app@@@fnd@app@@UEAAIXZ:
+    mov rax, 014008d680h
+    jmp rax
+
 PUBLIC ?EE_UnkFunc2@EventEnvironment@evt@app@@UEAA_NXZ
 ?EE_UnkFunc2@EventEnvironment@evt@app@@UEAA_NXZ:
     mov rax, 014008d680h
@@ -1460,14 +1465,49 @@ PUBLIC ??_GMotionBlendCamera@camera@app@@QEAAXXZ
     mov rax, 01400af070h
     jmp rax
 
+PUBLIC ?ProcessMessage@MotionCamera@camera@app@@UEAA_NAEAVMessage@fnd@hh@@@Z
+?ProcessMessage@MotionCamera@camera@app@@UEAA_NAEAVMessage@fnd@hh@@@Z:
+    mov rax, 01400af9d0h
+    jmp rax
+
 PUBLIC ??0MotionCamera@camera@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z
 ??0MotionCamera@camera@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 01400afde0h
     jmp rax
 
+PUBLIC ??0Description@MotionCamera@camera@app@@QEAA@XZ
+??0Description@MotionCamera@camera@app@@QEAA@XZ:
+    mov rax, 01400afe70h
+    jmp rax
+
 PUBLIC ??_GMotionCamera@camera@app@@QEAAXXZ
 ??_GMotionCamera@camera@app@@QEAAXXZ:
     mov rax, 01400afeb0h
+    jmp rax
+
+PUBLIC ??_DMotionCamera@camera@app@@QEAAXXZ
+??_DMotionCamera@camera@app@@QEAAXXZ:
+    mov rax, 01400afeb0h
+    jmp rax
+
+PUBLIC ?GetControllerName@MotionCamera@camera@app@@UEBAPEBDXZ
+?GetControllerName@MotionCamera@camera@app@@UEBAPEBDXZ:
+    mov rax, 01400b01d0h
+    jmp rax
+
+PUBLIC ?UnkFunc3@MotionCamera@camera@app@@UEAA_JXZ
+?UnkFunc3@MotionCamera@camera@app@@UEAA_JXZ:
+    mov rax, 01400b0210h
+    jmp rax
+
+PUBLIC ?UnkFunc2@MotionCamera@camera@app@@UEAAX_J@Z
+?UnkFunc2@MotionCamera@camera@app@@UEAAX_J@Z:
+    mov rax, 01400b02a0h
+    jmp rax
+
+PUBLIC ?Setup@MotionCamera@camera@app@@QEAAXAEBUDescription@123@@Z
+?Setup@MotionCamera@camera@app@@QEAAXAEBUDescription@123@@Z:
+    mov rax, 01400b04f0h
     jmp rax
 
 PUBLIC ??0MultiFocusCamera@camera@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z
@@ -2037,6 +2077,11 @@ PUBLIC ??_DMsgGetTargetPosition@app@@QEAAXXZ
 
 PUBLIC ??_DMsgWarpToPoint@player@app@@QEAAXXZ
 ??_DMsgWarpToPoint@player@app@@QEAAXXZ:
+    mov rax, 01400c0400h
+    jmp rax
+
+PUBLIC ??_DMsgMotionCamera@camera@app@@QEAAXXZ
+??_DMsgMotionCamera@camera@app@@QEAAXXZ:
     mov rax, 01400c0400h
     jmp rax
 
@@ -69680,6 +69725,11 @@ PUBLIC ??0PostureParry@player@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z
     mov rax, 01408f7490h
     jmp rax
 
+PUBLIC ?CreateAsyncHandler@?$AppMessage@VMsgMotionCamera@camera@app@@@fnd@app@@UEAAPEAVMessageAsyncHandler@2hh@@PEAVIAllocator@2csl@@@Z
+?CreateAsyncHandler@?$AppMessage@VMsgMotionCamera@camera@app@@@fnd@app@@UEAAPEAVMessageAsyncHandler@2hh@@PEAVIAllocator@2csl@@@Z:
+    mov rax, 01408f75c0h
+    jmp rax
+
 PUBLIC ??0PosturePropellerJump@player@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z
 ??0PosturePropellerJump@player@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 01408f76a0h
@@ -82147,6 +82197,11 @@ PUBLIC ?GetUnk8b@Target@Orientation@CameraParameter@camera@app_cmn@@QEBAIXZ
 
 PUBLIC ?GetZRot@Target@Orientation@CameraParameter@camera@app_cmn@@QEBAMXZ
 ?GetZRot@Target@Orientation@CameraParameter@camera@app_cmn@@QEBAMXZ:
+    mov rax, 0140b78e30h
+    jmp rax
+
+PUBLIC ?GetStart@AnimController@needle@hh@@QEBAMXZ
+?GetStart@AnimController@needle@hh@@QEBAMXZ:
     mov rax, 0140b78e30h
     jmp rax
 
@@ -98165,11 +98220,6 @@ PUBLIC ??_DMotionBlendCamera@camera@app@@QEAAXXZ
     mov rax, 0140ecd2a0h
     jmp rax
 
-PUBLIC ??_DMotionCamera@camera@app@@QEAAXXZ
-??_DMotionCamera@camera@app@@QEAAXXZ:
-    mov rax, 0140ecd2a0h
-    jmp rax
-
 PUBLIC ??_DMultiFocusCamera@camera@app@@QEAAXXZ
 ??_DMultiFocusCamera@camera@app@@QEAAXXZ:
     mov rax, 0140ecd2a0h
@@ -110018,6 +110068,11 @@ PUBLIC ??0AnimController@needle@hh@@QEAA@XZ
 PUBLIC ??_DAnimController@needle@hh@@QEAAXXZ
 ??_DAnimController@needle@hh@@QEAAXXZ:
     mov rax, 0141114130h
+    jmp rax
+
+PUBLIC ?GetEnd@AnimController@needle@hh@@QEBAMXZ
+?GetEnd@AnimController@needle@hh@@QEBAMXZ:
+    mov rax, 0141114170h
     jmp rax
 
 PUBLIC ?GetSpeed@AnimController@needle@hh@@QEBAMXZ

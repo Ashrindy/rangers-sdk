@@ -25,6 +25,7 @@ namespace hh::needle {
         void SetStart(float start);
         void SetEnd(float end);
         inline void SetFps(float fps) { this->fps = fps; }
+        float GetStart() const;
         float GetEnd() const;
         void SetAnimationParameters(float start, float end, float fps);
     };

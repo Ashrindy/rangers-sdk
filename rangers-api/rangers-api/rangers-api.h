@@ -1030,6 +1030,7 @@ namespace rangerssdk::ucsl {
 #include "Application/Save/SaveManager.h"
 #include "Application/Save/SavePermission.h"
 
+#include "Application/Camera/Messages.h"
 #include "Application/Camera/CameraBridge.h"
 #include "Application/Camera/CameraService.h"
 #include "Application/Camera/CameraBehavior.h"
@@ -1040,6 +1041,7 @@ namespace rangerssdk::ucsl {
 #include "Application/Camera/FishingCamera.h"
 #include "Application/Camera/FollowCamera.h"
 #include "Application/Camera/FocusFrameCamera.h"
+#include "Application/Camera/MotionCamera.h"
 
 #include "Application/Event/EventPlayer.h"
 #include "Application/Event/EventPreviewHelper.h"
