@@ -204,4 +204,19 @@ namespace app {
 
         MsgBeginBossBattle() : fnd::AppMessage<MsgBeginBossBattle>{ hh::fnd::MessageID::BEGIN_BOSS_BATTLE } {}
     };
+
+    class MsgCharacterBeginLookAt : public fnd::AppMessage<MsgCharacterBeginLookAt> {
+    public:
+        csl::math::Vector3 targetPosition{ 0, 0, 0 };
+        float easeInTime{ -1 };
+
+        MsgCharacterBeginLookAt() : fnd::AppMessage<MsgCharacterBeginLookAt>{ hh::fnd::MessageID::CHARACTER_BEGIN_LOOK_AT } {}
+    };
+
+    class MsgCharacterEndLookAt : public fnd::AppMessage<MsgCharacterEndLookAt> {
+    public:
+        float easeOutTime{ -1 };
+
+        MsgCharacterEndLookAt() : fnd::AppMessage<MsgCharacterEndLookAt>{ hh::fnd::MessageID::CHARACTER_END_LOOK_AT } {}
+    };
 }

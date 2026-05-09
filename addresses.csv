@@ -4014,6 +4014,7 @@
 14008cf50,??_DMsgUIBossLifeGaugeVisibility@ui@app@@QEAAXXZ,1
 14008cf50,??_DMsgEndExternalControl@player@app@@QEAAXXZ,1
 14008cf50,??_DMsgChangePlayerCharacter@game@app@@QEAAXXZ,1
+14008cf50,??_DMsgCharacterEndLookAt@app@@QEAAXXZ,1
 14008d310,j_?CreateDefaultCameraFrame@CameraService@camera@app@@QEAAPEAVCameraFrame@2app_cmn@@HHHMMM@Z,1
 14008d5f0,j_?GameServiceRemovedCallback@CameraService@camera@app@@UEAAXPEAVGameService@game@hh@@@Z,1
 14008d660,?GetCameraFrame@CameraService@camera@app@@QEAA?AV?$Handle@VMessenger@fnd@hh@@V?$HandleManager@VMessenger@fnd@hh@@@23@@fnd@hh@@H@Z,1
@@ -4078,6 +4079,8 @@
 14008d680,?UnkFunc0@BossActionPluginGiant01ImmAction@game@app@@UEAA_JXZ,1
 14008d680,?UnkFunc1@?$AppMessage@VMsgChangePlayerCharacter@game@app@@@fnd@app@@UEAAIXZ,1
 14008d680,?UnkFunc1@?$AppMessage@VMsgMotionCamera@camera@app@@@fnd@app@@UEAAIXZ,1
+14008d680,?UnkFunc1@?$AppMessage@VMsgCharacterBeginLookAt@app@@@fnd@app@@UEAAIXZ,1
+14008d680,?UnkFunc1@?$AppMessage@VMsgCharacterEndLookAt@app@@@fnd@app@@UEAAIXZ,1
 14008d680,?EE_UnkFunc2@EventEnvironment@evt@app@@UEAA_NXZ,1
 14008d680,?UnkFunc1@?$AppMessage@VMsgGetHomingTargetInfo@player@app@@@fnd@app@@UEAAIXZ,1
 14008d680,?UnkFunc1@?$AppMessage@VMsgBeginExternalControl@player@app@@@fnd@app@@UEAAIXZ,1
@@ -9144,6 +9147,7 @@
 14011a8c0,??_DOptionGamePlayAc@save@app@@QEAAXXZ,1
 14011a910,??_GAutoSequenceManager@dbg@app@@QEAAXXZ,0
 14011a9f0,??_DMsgChangeLayerTimeScale@game@app@@QEAAXXZ,1
+14011a9f0,??_DMsgCharacterBeginLookAt@app@@QEAAXXZ,1
 14011b820,j_?OnAddedToGame@MonologueService@game@app@@UEAAXXZ,1
 14011b820,j_?OnAddedToGame@AppResourceManager@fnd@app@@UEAAXXZ,1
 14011b820,j_?OnAddedToGame@ReactiveService@game@app@@UEAAXXZ,1
@@ -10403,6 +10407,11 @@
 140169040,j_??_GFadeObject@game@app@@QEAAXXZ,1
 140169040,j_??_DFadeObject@game@app@@QEAAXXZ,1
 1401690a0,j_?AddCallback@FadeObject@game@app@@UEAAXPEAVGameManager@2hh@@@Z,1
+140169210,?FadeOut@FadeObject@game@app@@QEAAXM@Z,1
+140169240,j_?Fade@FadeObject@game@app@@QEAAXM@Z,1
+1401692e0,j_?Fade@FadeObject@game@app@@QEAAXMD@Z,1
+140169390,?IsFadeOver@FadeObject@game@app@@QEAA_NXZ,1
+1401693f0,j_?IsFading@FadeObject@game@app@@QEAA_NXZ,1
 140169570,?Setup@FadeObject@game@app@@QEAAXAEAUDescription@123@@Z,1
 140169bf0,?GetClass@FadeObject@game@app@@SAPEBVGameObjectClass@2hh@@XZ,0
 140169c20,?Create@FadeObject@game@app@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z,1
@@ -10416,6 +10425,7 @@
 14016a360,j_?FadeOut@ScreenFadeManager@game@app@@QEAAXMPEBD@Z,1
 14016a490,j_?Fade@ScreenFadeManager@game@app@@QEAAXM@Z,1
 14016a580,?GetRuntimeTypeInfo@ScreenFadeManager@game@app@@UEBAPEAXXZ,1
+14016a590,?IsFadeOver@ScreenFadeManager@game@app@@QEAA_NXZ,1
 14016a600,j_?IsFading@ScreenFadeManager@game@app@@QEAA_NXZ,1
 14016a690,j_?fUnk1@GameService@game@hh@@UEAAXXZ,1
 14016a690,j_?OnAddedToGame@ScreenFadeManager@game@app@@UEAAXXZ,1
@@ -10827,6 +10837,7 @@
 14018daf0,?Create@GOCLookAt@game@app@@CAPEAVGOComponent@2hh@@PEAVIAllocator@fnd@csl@@@Z,1
 14018dc60,?GetRuntimeTypeInfo@GOCLookAt@game@app@@UEAAPEAXXZ,1
 14018dc60,?GetRuntimeTypeInfo@GOCLookAt@game@app@@UEBAPEAXXZ,1
+14018dc80,?SetTargetPosition@GOCLookAt@game@app@@QEAAXAEBVVector3@math@csl@@@Z,1
 14018dde0,j_?Setup@GOCLookAt@game@app@@QEAAXAEBUSetupInfo@123@@Z,1
 14018de20,?GetClass@GOCLookAt@game@app@@SAPEBVGOComponentClass@2hh@@XZ,1
 14018de50,?UpdateAsync@GOCLookAt@game@app@@UEAAXW4UpdatingPhase@fnd@hh@@AEBUSUpdateInfo@56@PEAX@Z,1
@@ -19001,6 +19012,8 @@
 1408547f0,??_GObjLevitateTestInfo@app@@QEAAXXZ,0
 140855320,??0ObjLookAtTargetTest@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
 140855360,??_GObjLookAtTargetTest@app@@QEAAXXZ,0
+1408555e0,?CreateAsyncHandler@?$AppMessage@VMsgCharacterBeginLookAt@app@@@fnd@app@@UEAAPEAVMessageAsyncHandler@2hh@@PEAVIAllocator@2csl@@@Z,1
+1408556a0,?CreateAsyncHandler@?$AppMessage@VMsgCharacterEndLookAt@app@@@fnd@app@@UEAAPEAVMessageAsyncHandler@2hh@@PEAVIAllocator@2csl@@@Z,1
 140855b70,??0ObjLuaTest@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
 140855bf0,??0ObjLuaTestInfo@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
 140855c20,??_GLuaUnit@ObjLuaTest@app@@QEAAXXZ,0
@@ -76167,6 +76180,7 @@
 143cccc30,?gameObjectClass@ObjEventExternalSuperSonic2@evt@app@@0VGameObjectClass@game@hh@@B,0
 143cccca0,?gameObjectClass@ObjEventExternalTails@evt@app@@0VGameObjectClass@game@hh@@B,0
 143cccff0,?gameObjectClass@Debris@game@app@@0VGameObjectClass@2hh@@B,0
+143ccd060,?gameObjectClass@FadeObject@game@app@@0VGameObjectClass@2hh@@B,1
 143ccd0c0,?gameObjectClass@ImageFadeObject@game@app@@0VGameObjectClass@2hh@@B,0
 143ccd3a0,?singletonInitNode@ApplicationSequenceRegistry@game@app@@0VSingletonInitNode@fnd@hh@@B,0
 143ccd3f8,?classId@GOCAI@game@app@@0PEBXEB,0
@@ -88854,6 +88868,9 @@
 147036220,??_GFadeObject@game@app@@QEAAXXZ,1
 147036220,??_DFadeObject@game@app@@QEAAXXZ,1
 147045220,?AddCallback@FadeObject@game@app@@UEAAXPEAVGameManager@2hh@@@Z,1
+147048800,?Fade@FadeObject@game@app@@QEAAXM@Z,1
+14704abe0,?Fade@FadeObject@game@app@@QEAAXMD@Z,1
+147050a00,?IsFading@FadeObject@game@app@@QEAA_NXZ,1
 14707b2a0,?FadeOut@ScreenFadeManager@game@app@@QEAAXMPEBD@Z,1
 14707e1d0,?Fade@ScreenFadeManager@game@app@@QEAAXM@Z,1
 147081880,?IsFading@ScreenFadeManager@game@app@@QEAA_NXZ,1

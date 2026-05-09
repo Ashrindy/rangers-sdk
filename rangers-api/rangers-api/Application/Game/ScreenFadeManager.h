@@ -7,8 +7,8 @@ namespace app::game{
         public app::fnd::AppResourceManagerListener
     {
     public:
-        hh::fnd::Handle<FadeObject> fadeObj0;
-        hh::fnd::Handle<FadeObject> fadeObj1;
+        hh::fnd::Handle<FadeObject> fadeObjH; // high render priority
+        hh::fnd::Handle<FadeObject> fadeObjL; // low render priority
         hh::fnd::Handle<hh::game::GameObject> handle2;
         hh::fnd::Handle<hh::game::GameObject> handle3;
         int unk0;
@@ -24,7 +24,8 @@ namespace app::game{
         void Fade(float length);
         void FadeOut(float length, const char* name); // Name goes unused though
         inline void FadeOut(float length) { FadeOut(length, nullptr); }
-        bool IsFading();
+        bool IsFading(); // Actually should be something like IsDoneFading, as it checks whether the FSM state is the done fade idle
+        bool IsFadeOver();// And this checks whether the FSM state is the no fade idle
 
         GAMESERVICE_CLASS_DECLARATION(ScreenFadeManager)
     };

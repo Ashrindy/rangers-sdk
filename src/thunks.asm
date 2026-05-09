@@ -325,6 +325,11 @@ PUBLIC ??_DMsgChangePlayerCharacter@game@app@@QEAAXXZ
     mov rax, 014008cf50h
     jmp rax
 
+PUBLIC ??_DMsgCharacterEndLookAt@app@@QEAAXXZ
+??_DMsgCharacterEndLookAt@app@@QEAAXXZ:
+    mov rax, 014008cf50h
+    jmp rax
+
 PUBLIC ?GetCameraFrame@CameraService@camera@app@@QEAA?AV?$Handle@VMessenger@fnd@hh@@V?$HandleManager@VMessenger@fnd@hh@@@23@@fnd@hh@@H@Z
 ?GetCameraFrame@CameraService@camera@app@@QEAA?AV?$Handle@VMessenger@fnd@hh@@V?$HandleManager@VMessenger@fnd@hh@@@23@@fnd@hh@@H@Z:
     mov rax, 014008d660h
@@ -632,6 +637,16 @@ PUBLIC ?UnkFunc1@?$AppMessage@VMsgChangePlayerCharacter@game@app@@@fnd@app@@UEAA
 
 PUBLIC ?UnkFunc1@?$AppMessage@VMsgMotionCamera@camera@app@@@fnd@app@@UEAAIXZ
 ?UnkFunc1@?$AppMessage@VMsgMotionCamera@camera@app@@@fnd@app@@UEAAIXZ:
+    mov rax, 014008d680h
+    jmp rax
+
+PUBLIC ?UnkFunc1@?$AppMessage@VMsgCharacterBeginLookAt@app@@@fnd@app@@UEAAIXZ
+?UnkFunc1@?$AppMessage@VMsgCharacterBeginLookAt@app@@@fnd@app@@UEAAIXZ:
+    mov rax, 014008d680h
+    jmp rax
+
+PUBLIC ?UnkFunc1@?$AppMessage@VMsgCharacterEndLookAt@app@@@fnd@app@@UEAAIXZ
+?UnkFunc1@?$AppMessage@VMsgCharacterEndLookAt@app@@@fnd@app@@UEAAIXZ:
     mov rax, 014008d680h
     jmp rax
 
@@ -23115,6 +23130,11 @@ PUBLIC ??_DMsgChangeLayerTimeScale@game@app@@QEAAXXZ
     mov rax, 014011a9f0h
     jmp rax
 
+PUBLIC ??_DMsgCharacterBeginLookAt@app@@QEAAXXZ
+??_DMsgCharacterBeginLookAt@app@@QEAAXXZ:
+    mov rax, 014011a9f0h
+    jmp rax
+
 PUBLIC ?OnRemovedFromGame@MonologueService@game@app@@UEAAXXZ
 ?OnRemovedFromGame@MonologueService@game@app@@UEAAXXZ:
     mov rax, 014011b840h
@@ -28150,6 +28170,16 @@ PUBLIC ?GetClass@ExpManager@game@app@@SAPEBVGameServiceClass@2hh@@XZ
     mov rax, 0140169030h
     jmp rax
 
+PUBLIC ?FadeOut@FadeObject@game@app@@QEAAXM@Z
+?FadeOut@FadeObject@game@app@@QEAAXM@Z:
+    mov rax, 0140169210h
+    jmp rax
+
+PUBLIC ?IsFadeOver@FadeObject@game@app@@QEAA_NXZ
+?IsFadeOver@FadeObject@game@app@@QEAA_NXZ:
+    mov rax, 0140169390h
+    jmp rax
+
 PUBLIC ?Setup@FadeObject@game@app@@QEAAXAEAUDescription@123@@Z
 ?Setup@FadeObject@game@app@@QEAAXAEAUDescription@123@@Z:
     mov rax, 0140169570h
@@ -28203,6 +28233,11 @@ PUBLIC ??_DScreenFadeManager@game@app@@QEAAXXZ
 PUBLIC ?GetRuntimeTypeInfo@ScreenFadeManager@game@app@@UEBAPEAXXZ
 ?GetRuntimeTypeInfo@ScreenFadeManager@game@app@@UEBAPEAXXZ:
     mov rax, 014016a580h
+    jmp rax
+
+PUBLIC ?IsFadeOver@ScreenFadeManager@game@app@@QEAA_NXZ
+?IsFadeOver@ScreenFadeManager@game@app@@QEAA_NXZ:
+    mov rax, 014016a590h
     jmp rax
 
 PUBLIC ?ARML_UnkFunc0@ScreenFadeManager@game@app@@UEAAXH@Z
@@ -29768,6 +29803,11 @@ PUBLIC ?GetRuntimeTypeInfo@GOCLookAt@game@app@@UEAAPEAXXZ
 PUBLIC ?GetRuntimeTypeInfo@GOCLookAt@game@app@@UEBAPEAXXZ
 ?GetRuntimeTypeInfo@GOCLookAt@game@app@@UEBAPEAXXZ:
     mov rax, 014018dc60h
+    jmp rax
+
+PUBLIC ?SetTargetPosition@GOCLookAt@game@app@@QEAAXAEBVVector3@math@csl@@@Z
+?SetTargetPosition@GOCLookAt@game@app@@QEAAXAEBVVector3@math@csl@@@Z:
+    mov rax, 014018dc80h
     jmp rax
 
 PUBLIC ?GetClass@GOCLookAt@game@app@@SAPEBVGOComponentClass@2hh@@XZ
@@ -66278,6 +66318,16 @@ PUBLIC ??0ObjLookAtTargetTest@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z
 PUBLIC ??_GObjLookAtTargetTest@app@@QEAAXXZ
 ??_GObjLookAtTargetTest@app@@QEAAXXZ:
     mov rax, 0140855360h
+    jmp rax
+
+PUBLIC ?CreateAsyncHandler@?$AppMessage@VMsgCharacterBeginLookAt@app@@@fnd@app@@UEAAPEAVMessageAsyncHandler@2hh@@PEAVIAllocator@2csl@@@Z
+?CreateAsyncHandler@?$AppMessage@VMsgCharacterBeginLookAt@app@@@fnd@app@@UEAAPEAVMessageAsyncHandler@2hh@@PEAVIAllocator@2csl@@@Z:
+    mov rax, 01408555e0h
+    jmp rax
+
+PUBLIC ?CreateAsyncHandler@?$AppMessage@VMsgCharacterEndLookAt@app@@@fnd@app@@UEAAPEAVMessageAsyncHandler@2hh@@PEAVIAllocator@2csl@@@Z
+?CreateAsyncHandler@?$AppMessage@VMsgCharacterEndLookAt@app@@@fnd@app@@UEAAPEAVMessageAsyncHandler@2hh@@PEAVIAllocator@2csl@@@Z:
+    mov rax, 01408556a0h
     jmp rax
 
 PUBLIC ??0ObjLuaTest@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z
@@ -146535,6 +146585,11 @@ PUBLIC ?gameObjectClass@Debris@game@app@@0VGameObjectClass@2hh@@B
     mov rax, 0143cccff0h
     jmp rax
 
+PUBLIC ?gameObjectClass@FadeObject@game@app@@0VGameObjectClass@2hh@@B
+?gameObjectClass@FadeObject@game@app@@0VGameObjectClass@2hh@@B:
+    mov rax, 0143ccd060h
+    jmp rax
+
 PUBLIC ?gameObjectClass@ImageFadeObject@game@app@@0VGameObjectClass@2hh@@B
 ?gameObjectClass@ImageFadeObject@game@app@@0VGameObjectClass@2hh@@B:
     mov rax, 0143ccd0c0h
@@ -170548,6 +170603,21 @@ PUBLIC ??_DFadeObject@game@app@@QEAAXXZ
 PUBLIC ?AddCallback@FadeObject@game@app@@UEAAXPEAVGameManager@2hh@@@Z
 ?AddCallback@FadeObject@game@app@@UEAAXPEAVGameManager@2hh@@@Z:
     mov rax, 0147045220h
+    jmp rax
+
+PUBLIC ?Fade@FadeObject@game@app@@QEAAXM@Z
+?Fade@FadeObject@game@app@@QEAAXM@Z:
+    mov rax, 0147048800h
+    jmp rax
+
+PUBLIC ?Fade@FadeObject@game@app@@QEAAXMD@Z
+?Fade@FadeObject@game@app@@QEAAXMD@Z:
+    mov rax, 014704abe0h
+    jmp rax
+
+PUBLIC ?IsFading@FadeObject@game@app@@QEAA_NXZ
+?IsFading@FadeObject@game@app@@QEAA_NXZ:
+    mov rax, 0147050a00h
     jmp rax
 
 PUBLIC ?FadeOut@ScreenFadeManager@game@app@@QEAAXMPEBD@Z
