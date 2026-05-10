@@ -83575,6 +83575,11 @@ PUBLIC ??_DResourceManagerResolver@fnd@hh@@QEAAXXZ
     mov rax, 0140b98d10h
     jmp rax
 
+PUBLIC ??_DGhostOverlapFilterCallback@bullet@physics@hh@@QEAAXXZ
+??_DGhostOverlapFilterCallback@bullet@physics@hh@@QEAAXXZ:
+    mov rax, 0140b98d10h
+    jmp rax
+
 PUBLIC ??_GSurfRideViewerManager@services@heur@@QEAAXXZ
 ??_GSurfRideViewerManager@services@heur@@QEAAXXZ:
     mov rax, 0140b98d40h
@@ -86110,6 +86115,11 @@ PUBLIC ??0PickedObjectInfo@physics@hh@@QEAA@XZ
     mov rax, 0140bec7c0h
     jmp rax
 
+PUBLIC ??_DbtGhostPairCallback@@QEAAXXZ
+??_DbtGhostPairCallback@@QEAAXXZ:
+    mov rax, 0140bef150h
+    jmp rax
+
 PUBLIC ?UnkFunc13@PhysicsWorldBullet@physics@hh@@EEAA_KXZ
 ?UnkFunc13@PhysicsWorldBullet@physics@hh@@EEAA_KXZ:
     mov rax, 0140bef3a0h
@@ -86760,6 +86770,21 @@ PUBLIC ?GetClass@GOCCollisionCache@gocs@heur@@SAPEBVGOComponentClass@game@hh@@XZ
     mov rax, 0140c139c0h
     jmp rax
 
+PUBLIC ??0CollisionShape@bullet@physics@hh@@QEAA@PEAVIAllocator@fnd@csl@@PEAX_N@Z
+??0CollisionShape@bullet@physics@hh@@QEAA@PEAVIAllocator@fnd@csl@@PEAX_N@Z:
+    mov rax, 0140c14c70h
+    jmp rax
+
+PUBLIC ??0CollisionShape@bullet@physics@hh@@QEAA@PEAVIAllocator@fnd@csl@@PEAVbtCollisionShape@@_N@Z
+??0CollisionShape@bullet@physics@hh@@QEAA@PEAVIAllocator@fnd@csl@@PEAVbtCollisionShape@@_N@Z:
+    mov rax, 0140c14c70h
+    jmp rax
+
+PUBLIC ??_DCollisionShape@bullet@physics@hh@@QEAAXXZ
+??_DCollisionShape@bullet@physics@hh@@QEAAXXZ:
+    mov rax, 0140c14e90h
+    jmp rax
+
 PUBLIC ?AddToQueue@EventQueue@physics@hh@@QEAAXAEAUQueueEntry@123@@Z
 ?AddToQueue@EventQueue@physics@hh@@QEAAXAEAUQueueEntry@123@@Z:
     mov rax, 0140c15c00h
@@ -86770,9 +86795,44 @@ PUBLIC ?AddToQueue@EventQueue@physics@hh@@QEAAXAEBUQueueEntryDesc@123@@Z
     mov rax, 0140c15c00h
     jmp rax
 
+PUBLIC ??0OverlapFilterCallback@bullet@physics@hh@@QEAA@PEAH@Z
+??0OverlapFilterCallback@bullet@physics@hh@@QEAA@PEAH@Z:
+    mov rax, 0140c1a5a0h
+    jmp rax
+
 PUBLIC ??_DResolver@EffectManager@eff@hh@@QEAAXXZ
 ??_DResolver@EffectManager@eff@hh@@QEAAXXZ:
     mov rax, 0140c1aa40h
+    jmp rax
+
+PUBLIC ?needBroadphaseCollision@GhostOverlapFilterCallback@bullet@physics@hh@@UEBA_NPEAUbtBroadphaseProxy@@0@Z
+?needBroadphaseCollision@GhostOverlapFilterCallback@bullet@physics@hh@@UEBA_NPEAUbtBroadphaseProxy@@0@Z:
+    mov rax, 0140c1c160h
+    jmp rax
+
+PUBLIC ??_DCollisionObjectListener@bullet@physics@hh@@QEAAXXZ
+??_DCollisionObjectListener@bullet@physics@hh@@QEAAXXZ:
+    mov rax, 0140c20e98h
+    jmp rax
+
+PUBLIC ?COL_UnkFunc1@Trigger@bullet@physics@hh@@UEAA_J_J@Z
+?COL_UnkFunc1@Trigger@bullet@physics@hh@@UEAA_J_J@Z:
+    mov rax, 0140c20f80h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@Trigger@bullet@physics@hh@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@Trigger@bullet@physics@hh@@UEBAPEAXXZ:
+    mov rax, 0140c212d0h
+    jmp rax
+
+PUBLIC ?C_UnkFunc0@Trigger@bullet@physics@hh@@UEAAX_J@Z
+?C_UnkFunc0@Trigger@bullet@physics@hh@@UEAAX_J@Z:
+    mov rax, 0140c216a0h
+    jmp rax
+
+PUBLIC ?SetTransform@Trigger@bullet@physics@hh@@UEAAXAEAUWorldPosition@fnd@4@DPEAX@Z
+?SetTransform@Trigger@bullet@physics@hh@@UEAAXAEAUWorldPosition@fnd@4@DPEAX@Z:
+    mov rax, 0140c216a0h
     jmp rax
 
 PUBLIC ??0PhysicsViewerBase@physics@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
@@ -86798,6 +86858,61 @@ PUBLIC ?CompUnkFunc@Control@gindows@@UEAAXXZ
 PUBLIC ??_GGOCCollisionCache@gocs@heur@@QEAAXXZ
 ??_GGOCCollisionCache@gocs@heur@@QEAAXXZ:
     mov rax, 0140c22df0h
+    jmp rax
+
+PUBLIC ??_DGOCColliderImpl@physics@hh@@QEAAXXZ
+??_DGOCColliderImpl@physics@hh@@QEAAXXZ:
+    mov rax, 0140c238a0h
+    jmp rax
+
+PUBLIC ?UnkFunc6@GOCColliderBullet@physics@hh@@UEAAXXZ
+?UnkFunc6@GOCColliderBullet@physics@hh@@UEAAXXZ:
+    mov rax, 0140c238d0h
+    jmp rax
+
+PUBLIC ?UnkFunc4@GOCColliderBullet@physics@hh@@UEAADXZ
+?UnkFunc4@GOCColliderBullet@physics@hh@@UEAADXZ:
+    mov rax, 0140c23bd0h
+    jmp rax
+
+PUBLIC ?UnkFunc2@GOCColliderBullet@physics@hh@@UEAAXXZ
+?UnkFunc2@GOCColliderBullet@physics@hh@@UEAAXXZ:
+    mov rax, 0140c23ca0h
+    jmp rax
+
+PUBLIC ?SetObjectLayer@GOCColliderBullet@physics@hh@@UEAAXPEAVGOCCollider@23@_JPEAX@Z
+?SetObjectLayer@GOCColliderBullet@physics@hh@@UEAAXPEAVGOCCollider@23@_JPEAX@Z:
+    mov rax, 0140c23ca0h
+    jmp rax
+
+PUBLIC ?OnStateUpdate@GOCColliderBullet@physics@hh@@UEAAXPEAVGOCCollider@23@W4StateUpdateType@GOCColliderImpl@23@PEAX@Z
+?OnStateUpdate@GOCColliderBullet@physics@hh@@UEAAXPEAVGOCCollider@23@W4StateUpdateType@GOCColliderImpl@23@PEAX@Z:
+    mov rax, 0140c23ca0h
+    jmp rax
+
+PUBLIC ?UnkFunc7@GOCColliderBullet@physics@hh@@UEAAXXZ
+?UnkFunc7@GOCColliderBullet@physics@hh@@UEAAXXZ:
+    mov rax, 0140c23fb0h
+    jmp rax
+
+PUBLIC ?UnkFunc9@GOCColliderBullet@physics@hh@@UEAAXXZ
+?UnkFunc9@GOCColliderBullet@physics@hh@@UEAAXXZ:
+    mov rax, 0140c24210h
+    jmp rax
+
+PUBLIC ?GetInfo@GOCColliderImplInfo@physics@hh@@SAPEAU123@XZ
+?GetInfo@GOCColliderImplInfo@physics@hh@@SAPEAU123@XZ:
+    mov rax, 0140c24520h
+    jmp rax
+
+PUBLIC ?UnkFunc8@GOCColliderBullet@physics@hh@@UEAAXXZ
+?UnkFunc8@GOCColliderBullet@physics@hh@@UEAAXXZ:
+    mov rax, 0140c24530h
+    jmp rax
+
+PUBLIC ?UnkFunc5@GOCColliderBullet@physics@hh@@UEAADXZ
+?UnkFunc5@GOCColliderBullet@physics@hh@@UEAADXZ:
+    mov rax, 0140c247b0h
     jmp rax
 
 PUBLIC ??_GGOCRigidBody@gocs@heur@@QEAAXXZ
@@ -86865,6 +86980,26 @@ PUBLIC ?GetStreamReader@ResTextureStreamingPackage@gfx@hh@@QEBAPEAVStreamReaderW
     mov rax, 0140c25fe0h
     jmp rax
 
+PUBLIC ??_DWorldObject@bullet@physics@hh@@QEAAXXZ
+??_DWorldObject@bullet@physics@hh@@QEAAXXZ:
+    mov rax, 0140c27170h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@WorldObject@bullet@physics@hh@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@WorldObject@bullet@physics@hh@@UEBAPEAXXZ:
+    mov rax, 0140c27510h
+    jmp rax
+
+PUBLIC ?UnkFunc0@WorldObject@bullet@physics@hh@@UEAAPEAXXZ
+?UnkFunc0@WorldObject@bullet@physics@hh@@UEAAPEAXXZ:
+    mov rax, 0140c27520h
+    jmp rax
+
+PUBLIC ?Init@WorldObject@bullet@physics@hh@@UEAAXXZ
+?Init@WorldObject@bullet@physics@hh@@UEAAXXZ:
+    mov rax, 0140c27520h
+    jmp rax
+
 PUBLIC ??_GGOC6DOFJoint@gocs@heur@@QEAAXXZ
 ??_GGOC6DOFJoint@gocs@heur@@QEAAXXZ:
     mov rax, 0140c279f0h
@@ -86893,6 +87028,26 @@ PUBLIC ?Create@GOCSoftBody@gocs@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z
 PUBLIC ?Create@GOCSoftBody@gocs@heur@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z
 ?Create@GOCSoftBody@gocs@heur@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 0140c28390h
+    jmp rax
+
+PUBLIC ?serialize@btCollisionObject@@UEBAPEBDPEAXPEAVbtSerializer@@@Z
+?serialize@btCollisionObject@@UEBAPEBDPEAXPEAVbtSerializer@@@Z:
+    mov rax, 0140c2ff00h
+    jmp rax
+
+PUBLIC ?serializeSingleObject@btCollisionObject@@UEBAXPEAVbtSerializer@@@Z
+?serializeSingleObject@btCollisionObject@@UEBAXPEAVbtSerializer@@@Z:
+    mov rax, 0140c30200h
+    jmp rax
+
+PUBLIC ?calculateSerializeBufferSize@btCollisionObject@@UEBAHXZ
+?calculateSerializeBufferSize@btCollisionObject@@UEBAHXZ:
+    mov rax, 0140c30310h
+    jmp rax
+
+PUBLIC ?checkCollideWithOverride@btCollisionObject@@UEBA_NPEBV1@@Z
+?checkCollideWithOverride@btCollisionObject@@UEBA_NPEBV1@@Z:
+    mov rax, 0140c30320h
     jmp rax
 
 PUBLIC ??0SetupInfo@PathManager@path@hh@@QEAA@XZ
@@ -115752,6 +115907,71 @@ PUBLIC ?GetName@SimpleCaptureJob@needle@hh@@UEAAPEBDXZ
 
 PUBLIC ?GetClassSize@SimpleCaptureJob@needle@hh@@UEAAIXZ
 ?GetClassSize@SimpleCaptureJob@needle@hh@@UEAAIXZ:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?UnkFunc0@GOCColliderImpl@physics@hh@@UEAAXXZ
+?UnkFunc0@GOCColliderImpl@physics@hh@@UEAAXXZ:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?UnkFunc1@GOCColliderImpl@physics@hh@@UEAAXXZ
+?UnkFunc1@GOCColliderImpl@physics@hh@@UEAAXXZ:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?UnkFunc2@GOCColliderImpl@physics@hh@@UEAAXXZ
+?UnkFunc2@GOCColliderImpl@physics@hh@@UEAAXXZ:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?UnkFunc3@GOCColliderImpl@physics@hh@@UEAAXXZ
+?UnkFunc3@GOCColliderImpl@physics@hh@@UEAAXXZ:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?UnkFunc6@GOCColliderImpl@physics@hh@@UEAAXXZ
+?UnkFunc6@GOCColliderImpl@physics@hh@@UEAAXXZ:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?UnkFunc7@GOCColliderImpl@physics@hh@@UEAAXXZ
+?UnkFunc7@GOCColliderImpl@physics@hh@@UEAAXXZ:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?UnkFunc8@GOCColliderImpl@physics@hh@@UEAAXXZ
+?UnkFunc8@GOCColliderImpl@physics@hh@@UEAAXXZ:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?UnkFunc9@GOCColliderImpl@physics@hh@@UEAAXXZ
+?UnkFunc9@GOCColliderImpl@physics@hh@@UEAAXXZ:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?UnkFunc0@GOCColliderImpl@physics@hh@@UEAAXPEAVGOCCollider@23@@Z
+?UnkFunc0@GOCColliderImpl@physics@hh@@UEAAXPEAVGOCCollider@23@@Z:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?OnAdded@GOCColliderImpl@physics@hh@@UEAAXPEAVGOCCollider@23@@Z
+?OnAdded@GOCColliderImpl@physics@hh@@UEAAXPEAVGOCCollider@23@@Z:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?OnRemoved@GOCColliderImpl@physics@hh@@UEAAXPEAVGOCCollider@23@@Z
+?OnRemoved@GOCColliderImpl@physics@hh@@UEAAXPEAVGOCCollider@23@@Z:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?SetObjectLayer@GOCColliderImpl@physics@hh@@UEAAXPEAVGOCCollider@23@_JPEAX@Z
+?SetObjectLayer@GOCColliderImpl@physics@hh@@UEAAXPEAVGOCCollider@23@_JPEAX@Z:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?OnStateUpdate@GOCColliderImpl@physics@hh@@UEAAXPEAVGOCCollider@23@W4StateUpdateType@123@PEAX@Z
+?OnStateUpdate@GOCColliderImpl@physics@hh@@UEAAXPEAVGOCCollider@23@W4StateUpdateType@123@PEAX@Z:
     mov rax, 014118f6e0h
     jmp rax
 
@@ -148565,9 +148785,9 @@ PUBLIC ?componentClass@GOCCollisionCache@gocs@heur@@0VGOComponentClass@game@hh@@
     mov rax, 0143ce7730h
     jmp rax
 
-PUBLIC ?componentClass@GOCRigidBody@gocs@heur@@0VGOComponentClass@game@hh@@B
-?componentClass@GOCRigidBody@gocs@heur@@0VGOComponentClass@game@hh@@B:
-    mov rax, 0143ce7780h
+PUBLIC ?info@GOCColliderImplInfo@physics@hh@@2U123@A
+?info@GOCColliderImplInfo@physics@hh@@2U123@A:
+    mov rax, 0143ce7770h
     jmp rax
 
 PUBLIC ?componentClass@GOCCharacterRigidBody@gocs@heur@@0VGOComponentClass@game@hh@@B
@@ -166890,6 +167110,11 @@ PUBLIC ?instance@BtAllocator@physics@hh@@2V123@A
     mov rax, 0143dc3d88h
     jmp rax
 
+PUBLIC ?colliderInfo@physics@hh@@3PEAUColliderInfo@12@EA
+?colliderInfo@physics@hh@@3PEAUColliderInfo@12@EA:
+    mov rax, 0143dc3db8h
+    jmp rax
+
 PUBLIC ?gameServiceClass@PathManager@path@hh@@0VGameServiceClass@game@3@B
 ?gameServiceClass@PathManager@path@hh@@0VGameServiceClass@game@3@B:
     mov rax, 0143dc4390h
@@ -180910,9 +181135,24 @@ PUBLIC ?UnkFunc11@PhysicsWorldBullet@physics@hh@@UEAA_KXZ
     mov rax, 014e5ba2c0h
     jmp rax
 
+PUBLIC ?addOverlappingPair@btGhostPairCallback@@UEAAPEAUbtBroadphasePair@@PEAUbtBroadphaseProxy@@0@Z
+?addOverlappingPair@btGhostPairCallback@@UEAAPEAUbtBroadphasePair@@PEAUbtBroadphaseProxy@@0@Z:
+    mov rax, 014e5bad50h
+    jmp rax
+
 PUBLIC ?Create@PhysicsWorldBullet@physics@hh@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z
 ?Create@PhysicsWorldBullet@physics@hh@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 014e5c2a20h
+    jmp rax
+
+PUBLIC ?removeOverlappingPair@btGhostPairCallback@@UEAAPEAXPEAUbtBroadphaseProxy@@0PEAVbtDispatcher@@@Z
+?removeOverlappingPair@btGhostPairCallback@@UEAAPEAXPEAUbtBroadphaseProxy@@0PEAVbtDispatcher@@@Z:
+    mov rax, 014e5c6ea0h
+    jmp rax
+
+PUBLIC ?setCollisionShape@btCollisionObject@@UEAAXPEAVbtCollisionShape@@@Z
+?setCollisionShape@btCollisionObject@@UEAAXPEAVbtCollisionShape@@@Z:
+    mov rax, 014e5d6f70h
     jmp rax
 
 PUBLIC ?Create@ResPhysicsMesh@resources@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z
@@ -181220,6 +181460,41 @@ PUBLIC ??_DPhysicsOverlapJob@physics@hh@@QEAAXXZ
     mov rax, 014e7ebb80h
     jmp rax
 
+PUBLIC ??0Trigger@bullet@physics@hh@@QEAA@PEAVGOCCollider@23@PEAVReferencedObject@fnd@3@_N@Z
+??0Trigger@bullet@physics@hh@@QEAA@PEAVGOCCollider@23@PEAVReferencedObject@fnd@3@_N@Z:
+    mov rax, 014e8954c0h
+    jmp rax
+
+PUBLIC ??0Trigger@bullet@physics@hh@@QEAA@PEAVGOCCollider@23@PEAVCollisionShape@123@_N@Z
+??0Trigger@bullet@physics@hh@@QEAA@PEAVGOCCollider@23@PEAVCollisionShape@123@_N@Z:
+    mov rax, 014e8954c0h
+    jmp rax
+
+PUBLIC ??_DTrigger@bullet@physics@hh@@QEAAXXZ
+??_DTrigger@bullet@physics@hh@@QEAAXXZ:
+    mov rax, 014e896c50h
+    jmp rax
+
+PUBLIC ?Init@Trigger@bullet@physics@hh@@UEAAXXZ
+?Init@Trigger@bullet@physics@hh@@UEAAXXZ:
+    mov rax, 014e898880h
+    jmp rax
+
+PUBLIC ?UnkFunc1@Trigger@bullet@physics@hh@@UEAAX_J@Z
+?UnkFunc1@Trigger@bullet@physics@hh@@UEAAX_J@Z:
+    mov rax, 014e8a2aa0h
+    jmp rax
+
+PUBLIC ?C_UnkFunc1@Trigger@bullet@physics@hh@@UEAAXH@Z
+?C_UnkFunc1@Trigger@bullet@physics@hh@@UEAAXH@Z:
+    mov rax, 014e8b3bc0h
+    jmp rax
+
+PUBLIC ?SetObjectLayer@Trigger@bullet@physics@hh@@UEAAXDPEAX0@Z
+?SetObjectLayer@Trigger@bullet@physics@hh@@UEAAXDPEAX0@Z:
+    mov rax, 014e8b3bc0h
+    jmp rax
+
 PUBLIC ?Create@GOCCollisionCache@gocs@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z
 ?Create@GOCCollisionCache@gocs@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 014e8c1090h
@@ -181228,6 +181503,71 @@ PUBLIC ?Create@GOCCollisionCache@gocs@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z
 PUBLIC ?Create@GOCCollisionCache@gocs@heur@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z
 ?Create@GOCCollisionCache@gocs@heur@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 014e8c1090h
+    jmp rax
+
+PUBLIC ??_DGOCColliderBullet@physics@hh@@QEAAXXZ
+??_DGOCColliderBullet@physics@hh@@QEAAXXZ:
+    mov rax, 014e8c8a10h
+    jmp rax
+
+PUBLIC ?UnkFunc1@GOCColliderBullet@physics@hh@@UEAAXXZ
+?UnkFunc1@GOCColliderBullet@physics@hh@@UEAAXXZ:
+    mov rax, 014e8e89b0h
+    jmp rax
+
+PUBLIC ?OnRemoved@GOCColliderBullet@physics@hh@@UEAAXPEAVGOCCollider@23@@Z
+?OnRemoved@GOCColliderBullet@physics@hh@@UEAAXPEAVGOCCollider@23@@Z:
+    mov rax, 014e8e89b0h
+    jmp rax
+
+PUBLIC ??0GOCColliderBullet@physics@hh@@QEAA@XZ
+??0GOCColliderBullet@physics@hh@@QEAA@XZ:
+    mov rax, 014e8eae20h
+    jmp rax
+
+PUBLIC ?UnkFunc3@GOCColliderBullet@physics@hh@@UEAAXXZ
+?UnkFunc3@GOCColliderBullet@physics@hh@@UEAAXXZ:
+    mov rax, 014e8ebf00h
+    jmp rax
+
+PUBLIC ?UnkFunc0@GOCColliderBullet@physics@hh@@UEAAXXZ
+?UnkFunc0@GOCColliderBullet@physics@hh@@UEAAXXZ:
+    mov rax, 014e8edd60h
+    jmp rax
+
+PUBLIC ?UnkFunc0@GOCColliderBullet@physics@hh@@UEAAXPEAVGOCCollider@23@@Z
+?UnkFunc0@GOCColliderBullet@physics@hh@@UEAAXPEAVGOCCollider@23@@Z:
+    mov rax, 014e8edd60h
+    jmp rax
+
+PUBLIC ?OnAdded@GOCColliderBullet@physics@hh@@UEAAXPEAVGOCCollider@23@@Z
+?OnAdded@GOCColliderBullet@physics@hh@@UEAAXPEAVGOCCollider@23@@Z:
+    mov rax, 014e8edd60h
+    jmp rax
+
+PUBLIC ??0WorldObject@bullet@physics@hh@@QEAA@PEAVGOCCollider@23@_N@Z
+??0WorldObject@bullet@physics@hh@@QEAA@PEAVGOCCollider@23@_N@Z:
+    mov rax, 014e922f10h
+    jmp rax
+
+PUBLIC ?UnkFunc1@WorldObject@bullet@physics@hh@@UEAAX_J@Z
+?UnkFunc1@WorldObject@bullet@physics@hh@@UEAAX_J@Z:
+    mov rax, 014e95ebd0h
+    jmp rax
+
+PUBLIC ?addOverlappingObjectInternal@btPairCachingGhostObject@@UEAAXPEAUbtBroadphaseProxy@@0@Z
+?addOverlappingObjectInternal@btPairCachingGhostObject@@UEAAXPEAUbtBroadphaseProxy@@0@Z:
+    mov rax, 014eadbb40h
+    jmp rax
+
+PUBLIC ?removeOverlappingObjectInternal@btPairCachingGhostObject@@UEAAXPEAUbtBroadphaseProxy@@PEAVbtDispatcher@@0@Z
+?removeOverlappingObjectInternal@btPairCachingGhostObject@@UEAAXPEAUbtBroadphaseProxy@@PEAVbtDispatcher@@0@Z:
+    mov rax, 014eadf2c0h
+    jmp rax
+
+PUBLIC ??_DbtPairCachingGhostObject@@QEAAXXZ
+??_DbtPairCachingGhostObject@@QEAAXXZ:
+    mov rax, 014eaeeda0h
     jmp rax
 
 PUBLIC ??_DPathManager@path@hh@@QEAAXXZ

@@ -142,7 +142,7 @@ namespace hh::physics {
         };
 
         uint64_t pad; // probably some of the next data is actually one big block that's 16 aligned
-        uint64_t unk101;
+        GOCColliderImpl* impl;
         fnd::HFrame* frame;
         fnd::HFrame* frame2;
         fnd::WorldPosition transformedWorldPosition;
@@ -160,8 +160,8 @@ namespace hh::physics {
         csl::ut::InplaceMoveArray<GOCColliderListener*, 1> listeners;
         csl::ut::MoveArray<void*> unk110;
         uint64_t unk111;
-        float unk112;
-        float unk113;
+        float friction;
+        float restitution;
 
         GOCCollider(csl::fnd::IAllocator* allocator);
 

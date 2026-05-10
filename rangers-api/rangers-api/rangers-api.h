@@ -116,6 +116,8 @@ namespace rangerssdk::ucsl {
 #include <BulletCollision/CollisionShapes/btCompoundShape.h>
 #include <BulletCollision/CollisionShapes/btTriangleMeshShape.h>
 #include <BulletCollision/CollisionShapes/btTriangleIndexVertexArray.h>
+#include <BulletCollision/CollisionDispatch/btGhostObject.h>
+#include <BulletCollision/BroadphaseCollision/btOverlappingPairCache.h>
 #include <BulletDynamics/Dynamics/btRigidBody.h>
 #include <BulletDynamics/Dynamics/btDiscreteDynamicsWorld.h>
 #include <BulletDynamics/ConstraintSolver/btGeneric6DofSpring2Constraint.h>
@@ -708,6 +710,13 @@ namespace rangerssdk::ucsl {
 
 #include "Hedgehog/Physics/ShapeHolder.h"
 #include "Hedgehog/Physics/EventQueue.h"
+#include "Hedgehog/Physics/Bullet/OverlapFilterCallback.h"
+#include "Hedgehog/Physics/Bullet/ImplBase.h"
+#include "Hedgehog/Physics/Bullet/WorldObject.h"
+#include "Hedgehog/Physics/Bullet/Collider.h"
+#include "Hedgehog/Physics/Bullet/CollisionShape.h"
+#include "Hedgehog/Physics/Bullet/Trigger.h"
+#include "Hedgehog/Physics/GOCColliderImpl.h"
 #include "Hedgehog/Physics/GOCCollider.h"
 #include "Hedgehog/Physics/GOCSphereCollider.h"
 #include "Hedgehog/Physics/GOCBoxCollider.h"
