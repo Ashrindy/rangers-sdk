@@ -89610,6 +89610,11 @@ PUBLIC ?PostStepCallback@VisualManager@gfx@hh@@UEAAXPEAVGameManager@game@3@AEBUG
     mov rax, 0140d07690h
     jmp rax
 
+PUBLIC ?GetInstance@VisualManager@gfx@hh@@SAPEAV123@XZ
+?GetInstance@VisualManager@gfx@hh@@SAPEAV123@XZ:
+    mov rax, 0140d076e0h
+    jmp rax
+
 PUBLIC ?GetRuntimeTypeInfo@VisualManager@gfx@hh@@UEAAPEAXXZ
 ?GetRuntimeTypeInfo@VisualManager@gfx@hh@@UEAAPEAXXZ:
     mov rax, 0140d076f0h
@@ -106083,6 +106088,11 @@ PUBLIC ?UnkFunc11@PBRModelInstance@needle@hh@@UEAAXXZ
 PUBLIC ?SetTexSrtBlender@PBRModelInstance@needle@hh@@QEAAXPEAV?$AnimBlender@VAnimTexSrtControl@needle@hh@@@23@@Z
 ?SetTexSrtBlender@PBRModelInstance@needle@hh@@QEAAXPEAV?$AnimBlender@VAnimTexSrtControl@needle@hh@@@23@@Z:
     mov rax, 014100d710h
+    jmp rax
+
+PUBLIC ?SetVisible@PBRModelInstance@needle@hh@@QEAAX_N@Z
+?SetVisible@PBRModelInstance@needle@hh@@QEAAX_N@Z:
+    mov rax, 014100d980h
     jmp rax
 
 PUBLIC ?UnkFunc10@PBRModelInstance@needle@hh@@UEAAXXZ
@@ -168173,6 +168183,11 @@ PUBLIC ?gameServiceClass@TextureStreamingService@gfx@hh@@0VGameServiceClass@game
 PUBLIC ?gameServiceClass@PlacementCollisionService@services@heur@@0VGameServiceClass@game@hh@@B
 ?gameServiceClass@PlacementCollisionService@services@heur@@0VGameServiceClass@game@hh@@B:
     mov rax, 0143dc78c8h
+    jmp rax
+
+PUBLIC ?instance@VisualManager@gfx@hh@@2PEAV123@EA
+?instance@VisualManager@gfx@hh@@2PEAV123@EA:
+    mov rax, 0143dc78e0h
     jmp rax
 
 PUBLIC ?ID@?$NeedleType@UPickColorParameter@needle@hh@@@needle@hh@@2VCNameIDObjectStatic@23@A

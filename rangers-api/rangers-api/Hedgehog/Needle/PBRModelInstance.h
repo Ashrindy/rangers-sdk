@@ -37,6 +37,8 @@ namespace hh::needle {
         char unk11[0x30];
         char unk12[0x30];
         short unk13;
+        bool isVisible;
+        int unk15;
 
         virtual void UnkFunc8() override;
         virtual void UnkFunc9() override;
@@ -56,5 +58,6 @@ namespace hh::needle {
         void SetMaterialBlender(AnimBlender<AnimMaterialControl>* blender);
         void SetTexPatBlender(AnimBlender<AnimTexPatControl>* blender);
         void SetVisibilityBlender(AnimBlender<AnimVisControl>* blender);
+        void SetVisible(bool visible);
     };
 }

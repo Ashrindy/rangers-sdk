@@ -24945,6 +24945,7 @@
 140d07430,j_??_DVisualManager@gfx@hh@@QEAAXXZ,1
 140d07690,?Step@VisualManager@gfx@hh@@UEAAXAEBUSUpdateInfo@fnd@3@@Z,1
 140d07690,?PostStepCallback@VisualManager@gfx@hh@@UEAAXPEAVGameManager@game@3@AEBUGameStepInfo@53@@Z,1
+140d076e0,?GetInstance@VisualManager@gfx@hh@@SAPEAV123@XZ,1
 140d076f0,?GetRuntimeTypeInfo@VisualManager@gfx@hh@@UEAAPEAXXZ,1
 140d076f0,?GetRuntimeTypeInfo@VisualManager@gfx@hh@@UEBAPEAXXZ,1
 140d077e0,?SetModelTransform@VisualManager@gfx@hh@@QEAA_KPEAVGOCVisualModel@23@@Z,1
@@ -29390,6 +29391,7 @@
 14100d6c0,j_?SetTexPatBlender@PBRModelInstance@needle@hh@@QEAAXPEAV?$AnimBlender@VAnimTexPatControl@needle@hh@@@23@@Z,1
 14100d710,?SetTexSrtBlender@PBRModelInstance@needle@hh@@QEAAXPEAV?$AnimBlender@VAnimTexSrtControl@needle@hh@@@23@@Z,1
 14100d930,j_?SetVisibilityBlender@PBRModelInstance@needle@hh@@QEAAXPEAV?$AnimBlender@VAnimVisControl@needle@hh@@@23@@Z,1
+14100d980,?SetVisible@PBRModelInstance@needle@hh@@QEAAX_N@Z,1
 14100dd10,j_?UnkFunc9@PBRModelInstance@needle@hh@@UEAAXXZ,1
 14100e070,?UnkFunc10@PBRModelInstance@needle@hh@@UEAAXXZ,1
 14100e880,j_??0Unk1@SetupInfo@GOCVisualUserModel@gfx@hh@@QEAA@XZ,1
@@ -88252,6 +88254,7 @@
 143dc74c0,?gameServiceClass@InteractionComputeService@gfx@hh@@0VGameServiceClass@game@3@B,1
 143dc74d8,?gameServiceClass@TextureStreamingService@gfx@hh@@0VGameServiceClass@game@3@B,1
 143dc78c8,?gameServiceClass@PlacementCollisionService@services@heur@@0VGameServiceClass@game@hh@@B,0
+143dc78e0,?instance@VisualManager@gfx@hh@@2PEAV123@EA,1
 143dc79b0,?ID@?$NeedleType@UPickColorParameter@needle@hh@@@needle@hh@@2VCNameIDObjectStatic@23@A,1
 143dc9220,?gameServiceClass@VisibilityManager@services@heur@@0VGameServiceClass@game@hh@@B,0
 143dcb728,?instance@GameManager@game@hh@@2PEAV123@EA,1
