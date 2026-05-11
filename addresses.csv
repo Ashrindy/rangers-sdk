@@ -24350,8 +24350,12 @@
 140ce8760,?UnkFunc8@RenderingEngine@gfx@hh@@UEAA_KXZ,1
 140ce8760,?RunComponents@RenderingEngine@gfx@hh@@UEAAXXZ,1
 140ce89e0,j_??$GetSceneParam@UFxSHLightFieldParameter@needle@hh@@@SceneParamContainer@needle@hh@@QEAAPEAV?$ParamHolder@UFxSHLightFieldParameter@needle@hh@@@012@XZ,1
+140ce89e0,j_??$GetSceneParam@UFxBloomParameter@needle@hh@@@SceneParamContainer@needle@hh@@QEAAPEAV?$ParamHolder@UFxBloomParameter@needle@hh@@@012@XZ,1
 140ce8fc0,??$GetSceneParam@UFxCyberNoiseEffectParameter@needle@hh@@@RenderProperty@needle@hh@@QEAAPEAV?$ParamHolder@UFxCyberNoiseEffectParameter@needle@hh@@@SceneParamContainer@12@XZ,1
 140ce9050,j_??$GetSceneParam@UFxFieldScanEffectRenderParameter@needle@hh@@@SceneParamContainer@needle@hh@@QEAAPEAV?$ParamHolder@UFxFieldScanEffectRenderParameter@needle@hh@@@012@XZ,1
+140ce9150,j_??$GetSceneParam@UFxDOFParameter@needle@hh@@@SceneParamContainer@needle@hh@@QEAAPEAV?$ParamHolder@UFxDOFParameter@needle@hh@@@012@XZ,1
+140ceadf0,j_??$GetSceneParam@UFxShadowMapParameter@needle@hh@@@SceneParamContainer@needle@hh@@QEAAPEAV?$ParamHolder@UFxShadowMapParameter@needle@hh@@@012@XZ,1
+140ceb340,j_??$GetSceneParam@UFxVolumetricShadowParameter@needle@hh@@@SceneParamContainer@needle@hh@@QEAAPEAV?$ParamHolder@UFxVolumetricShadowParameter@needle@hh@@@012@XZ,1
 140ceb660,j_??$HasSceneParam@UFxCyberNPCSSEffectRenderParameter@needle@hh@@@SceneParamContainer@needle@hh@@QEAA_NXZ,1
 140ceb6d0,??$HasSceneParam@UFxCyberNoiseEffectParameter@needle@hh@@@RenderProperty@needle@hh@@QEBA_NXZ,1
 140ceb740,j_??0RenderingEngineRangers@gfx@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z,1
@@ -25010,6 +25014,7 @@
 140d0f8a0,?GetSupportFX@RenderingEngineNeedle@gfx@hh@@UEAAPEAVSupportFX@needle@3@XZ,1
 140d0f8b0,j_?UnkFunc20@RenderingEngineNeedle@gfx@hh@@UEAA_KXZ,1
 140d0f8b0,j_?GetWorld@RenderingEngineNeedle@gfx@hh@@UEBAPEAXXZ,1
+140d0f8b0,j_?GetWorlds@RenderingEngineNeedle@gfx@hh@@UEBAPEAPEAVWorld@needle@3@XZ,1
 140d0f900,j_?Startup@RenderingEngineNeedle@gfx@hh@@UEAA_KXZ,1
 140d0fbc0,?UnkFunc2@NeedleRenderer@gfx@hh@@UEAAXXZ,1
 140d0fbc0,?Render@NeedleRenderer@gfx@hh@@UEAAXPEAVRenderingDeviceContext@needle@3@@Z,1
@@ -91165,8 +91170,11 @@
 14efee5a0,??0RenderingEngine@gfx@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z,1
 14f0201b0,??$GetSceneParam@UFxSHLightFieldParameter@needle@hh@@@SceneParamContainer@needle@hh@@QEAAPEAV?$ParamHolder@UFxSHLightFieldParameter@needle@hh@@@012@XZ,1
 14f0201b0,??$GetSceneParam@UFxSHLightFieldParameter@needle@hh@@@RenderProperty@needle@hh@@QEAAPEAV?$ParamHolder@UFxSHLightFieldParameter@needle@hh@@@SceneParamContainer@12@XZ,1
+14f0201b0,??$GetSceneParam@UFxBloomParameter@needle@hh@@@SceneParamContainer@needle@hh@@QEAAPEAV?$ParamHolder@UFxBloomParameter@needle@hh@@@012@XZ,1
 14f072db0,??$GetSceneParam@UFxFieldScanEffectRenderParameter@needle@hh@@@SceneParamContainer@needle@hh@@QEAAPEAV?$ParamHolder@UFxFieldScanEffectRenderParameter@needle@hh@@@012@XZ,1
 14f072db0,??$GetSceneParam@UFxFieldScanEffectRenderParameter@needle@hh@@@RenderProperty@needle@hh@@QEAAPEAV?$ParamHolder@UFxFieldScanEffectRenderParameter@needle@hh@@@SceneParamContainer@12@XZ,1
+14f073750,??$GetSceneParam@UFxDOFParameter@needle@hh@@@SceneParamContainer@needle@hh@@QEAAPEAV?$ParamHolder@UFxDOFParameter@needle@hh@@@012@XZ,1
+14f165eb0,??$GetSceneParam@UFxVolumetricShadowParameter@needle@hh@@@SceneParamContainer@needle@hh@@QEAAPEAV?$ParamHolder@UFxVolumetricShadowParameter@needle@hh@@@012@XZ,1
 14f17e030,??$HasSceneParam@UFxCyberNPCSSEffectRenderParameter@needle@hh@@@SceneParamContainer@needle@hh@@QEAA_NXZ,1
 14f17e030,??$HasSceneParam@UFxCyberNPCSSEffectRenderParameter@needle@hh@@@RenderProperty@needle@hh@@QEBA_NXZ,1
 14f17f550,??0RenderingEngineRangers@gfx@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z,1
@@ -91364,6 +91372,7 @@
 14f808d60,?GetPixelShader@NeedleShaderListInfo@Impl@RenderingEngineNeedle@gfx@hh@@UEAAPEAVPixelShader@needle@5@PEBD@Z,1
 14f8092a0,?UnkFunc20@RenderingEngineNeedle@gfx@hh@@UEAA_KXZ,1
 14f8092a0,?GetWorld@RenderingEngineNeedle@gfx@hh@@UEBAPEAXXZ,1
+14f8092a0,?GetWorlds@RenderingEngineNeedle@gfx@hh@@UEBAPEAPEAVWorld@needle@3@XZ,1
 14f8123b0,?Startup@RenderingEngineNeedle@gfx@hh@@UEAA_KXZ,1
 14f891a10,?UnkFunc2@CaptureComponent@gfx@hh@@UEAAXXZ,1
 14f89f5c0,??0CallbackJob@needle@hh@@QEAA@IP6AXPEAVPipelineInfo@12@IPEAX@Z1@Z,1

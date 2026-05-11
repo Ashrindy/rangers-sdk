@@ -55,7 +55,7 @@ namespace hh::gfx {
         virtual void AddRenderableToRenderTextureHandle(needle::RenderTextureHandle* handle, gfnd::Renderable* renderable) {}
         virtual unsigned int UnkFunc18() { return 0; }
         virtual void SetDebugViewType(unsigned int debugViewType) {}
-        virtual void* GetWorld() const;
+        virtual needle::World** GetWorlds() const;
         virtual void UnkFunc21() {}
         virtual void UnkFunc22() {}
         virtual needle::RenderingPipeline* GetMainRenderingPipeline() const { return 0; }

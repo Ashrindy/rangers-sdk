@@ -181870,6 +181870,11 @@ PUBLIC ??$GetSceneParam@UFxSHLightFieldParameter@needle@hh@@@RenderProperty@need
     mov rax, 014f0201b0h
     jmp rax
 
+PUBLIC ??$GetSceneParam@UFxBloomParameter@needle@hh@@@SceneParamContainer@needle@hh@@QEAAPEAV?$ParamHolder@UFxBloomParameter@needle@hh@@@012@XZ
+??$GetSceneParam@UFxBloomParameter@needle@hh@@@SceneParamContainer@needle@hh@@QEAAPEAV?$ParamHolder@UFxBloomParameter@needle@hh@@@012@XZ:
+    mov rax, 014f0201b0h
+    jmp rax
+
 PUBLIC ??$GetSceneParam@UFxFieldScanEffectRenderParameter@needle@hh@@@SceneParamContainer@needle@hh@@QEAAPEAV?$ParamHolder@UFxFieldScanEffectRenderParameter@needle@hh@@@012@XZ
 ??$GetSceneParam@UFxFieldScanEffectRenderParameter@needle@hh@@@SceneParamContainer@needle@hh@@QEAAPEAV?$ParamHolder@UFxFieldScanEffectRenderParameter@needle@hh@@@012@XZ:
     mov rax, 014f072db0h
@@ -181878,6 +181883,16 @@ PUBLIC ??$GetSceneParam@UFxFieldScanEffectRenderParameter@needle@hh@@@SceneParam
 PUBLIC ??$GetSceneParam@UFxFieldScanEffectRenderParameter@needle@hh@@@RenderProperty@needle@hh@@QEAAPEAV?$ParamHolder@UFxFieldScanEffectRenderParameter@needle@hh@@@SceneParamContainer@12@XZ
 ??$GetSceneParam@UFxFieldScanEffectRenderParameter@needle@hh@@@RenderProperty@needle@hh@@QEAAPEAV?$ParamHolder@UFxFieldScanEffectRenderParameter@needle@hh@@@SceneParamContainer@12@XZ:
     mov rax, 014f072db0h
+    jmp rax
+
+PUBLIC ??$GetSceneParam@UFxDOFParameter@needle@hh@@@SceneParamContainer@needle@hh@@QEAAPEAV?$ParamHolder@UFxDOFParameter@needle@hh@@@012@XZ
+??$GetSceneParam@UFxDOFParameter@needle@hh@@@SceneParamContainer@needle@hh@@QEAAPEAV?$ParamHolder@UFxDOFParameter@needle@hh@@@012@XZ:
+    mov rax, 014f073750h
+    jmp rax
+
+PUBLIC ??$GetSceneParam@UFxVolumetricShadowParameter@needle@hh@@@SceneParamContainer@needle@hh@@QEAAPEAV?$ParamHolder@UFxVolumetricShadowParameter@needle@hh@@@012@XZ
+??$GetSceneParam@UFxVolumetricShadowParameter@needle@hh@@@SceneParamContainer@needle@hh@@QEAAPEAV?$ParamHolder@UFxVolumetricShadowParameter@needle@hh@@@012@XZ:
+    mov rax, 014f165eb0h
     jmp rax
 
 PUBLIC ??$HasSceneParam@UFxCyberNPCSSEffectRenderParameter@needle@hh@@@SceneParamContainer@needle@hh@@QEAA_NXZ
@@ -182862,6 +182877,11 @@ PUBLIC ?UnkFunc20@RenderingEngineNeedle@gfx@hh@@UEAA_KXZ
 
 PUBLIC ?GetWorld@RenderingEngineNeedle@gfx@hh@@UEBAPEAXXZ
 ?GetWorld@RenderingEngineNeedle@gfx@hh@@UEBAPEAXXZ:
+    mov rax, 014f8092a0h
+    jmp rax
+
+PUBLIC ?GetWorlds@RenderingEngineNeedle@gfx@hh@@UEBAPEAPEAVWorld@needle@3@XZ
+?GetWorlds@RenderingEngineNeedle@gfx@hh@@UEBAPEAPEAVWorld@needle@3@XZ:
     mov rax, 014f8092a0h
     jmp rax
 
