@@ -771,6 +771,7 @@ namespace rangerssdk::ucsl {
 #include "Hedgehog/Animation/BindableCollection.h"
 #include "Hedgehog/Animation/SkeletalMeshBinding.h"
 #include "Hedgehog/Animation/SkeletonBlender.h"
+#include "Hedgehog/Animation/PxdAnimation.h"
 #include "Hedgehog/Animation/ResSkeleton.h"
 #include "Hedgehog/Animation/ResSkeletonPxd.h"
 #include "Hedgehog/Animation/ResAnimation.h"

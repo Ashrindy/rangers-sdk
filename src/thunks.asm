@@ -97185,8 +97185,28 @@ PUBLIC ?UnkFunc1@ResAnimationPxd@anim@hh@@UEAA_KXZ
     mov rax, 0140e98ce0h
     jmp rax
 
+PUBLIC ?GetDuration@ResAnimationPxd@anim@hh@@UEBAMXZ
+?GetDuration@ResAnimationPxd@anim@hh@@UEBAMXZ:
+    mov rax, 0140e98ce0h
+    jmp rax
+
+PUBLIC ?UnkFunc2@ResAnimationPxd@anim@hh@@UEAA_KXZ
+?UnkFunc2@ResAnimationPxd@anim@hh@@UEAA_KXZ:
+    mov rax, 0140e98d00h
+    jmp rax
+
+PUBLIC ?GetFrameLength@ResAnimationPxd@anim@hh@@UEAAIXZ
+?GetFrameLength@ResAnimationPxd@anim@hh@@UEAAIXZ:
+    mov rax, 0140e98d00h
+    jmp rax
+
 PUBLIC ?UnkFunc3@ResAnimationPxd@anim@hh@@UEAA_KXZ
 ?UnkFunc3@ResAnimationPxd@anim@hh@@UEAA_KXZ:
+    mov rax, 0140e98d20h
+    jmp rax
+
+PUBLIC ?GetTrackCount@ResAnimationPxd@anim@hh@@UEBAIXZ
+?GetTrackCount@ResAnimationPxd@anim@hh@@UEBAIXZ:
     mov rax, 0140e98d20h
     jmp rax
 
@@ -97205,6 +97225,11 @@ PUBLIC ?UnkFunc6@ResAnimationPxd@anim@hh@@UEAA_KXZ
     mov rax, 0140e98fc0h
     jmp rax
 
+PUBLIC ?IsMirrored@ResAnimationPxd@anim@hh@@UEBA_NXZ
+?IsMirrored@ResAnimationPxd@anim@hh@@UEBA_NXZ:
+    mov rax, 0140e98fc0h
+    jmp rax
+
 PUBLIC ?Reload@ResAnimationPxd@anim@hh@@UEAAXPEAX_K@Z
 ?Reload@ResAnimationPxd@anim@hh@@UEAAXPEAX_K@Z:
     mov rax, 0140e99190h
@@ -97212,6 +97237,16 @@ PUBLIC ?Reload@ResAnimationPxd@anim@hh@@UEAAXPEAX_K@Z
 
 PUBLIC ?UnkFunc4@ResAnimationPxd@anim@hh@@UEAA_KXZ
 ?UnkFunc4@ResAnimationPxd@anim@hh@@UEAA_KXZ:
+    mov rax, 0140e991e0h
+    jmp rax
+
+PUBLIC ?GetTrackTransforms@ResAnimationPxd@anim@hh@@UEAAX_JAEAV?$MoveArray@VTransform@math@csl@@@ut@csl@@@Z
+?GetTrackTransforms@ResAnimationPxd@anim@hh@@UEAAX_JAEAV?$MoveArray@VTransform@math@csl@@@ut@csl@@@Z:
+    mov rax, 0140e991e0h
+    jmp rax
+
+PUBLIC ?GetTrackTransforms@ResAnimationPxd@anim@hh@@UEAAXMAEAV?$MoveArray@VTransform@math@csl@@@ut@csl@@@Z
+?GetTrackTransforms@ResAnimationPxd@anim@hh@@UEAAXMAEAV?$MoveArray@VTransform@math@csl@@@ut@csl@@@Z:
     mov rax, 0140e991e0h
     jmp rax
 
@@ -97253,11 +97288,6 @@ PUBLIC ?GetBoneGroup@ResSkeletonPxd@anim@hh@@UEBAFH@Z
 PUBLIC ?GetBoneGroup@ResSkeletonPxd@anim@hh@@UEBAHH@Z
 ?GetBoneGroup@ResSkeletonPxd@anim@hh@@UEBAHH@Z:
     mov rax, 0140e99e20h
-    jmp rax
-
-PUBLIC ?GetBoneTransform@ResSkeletonPxd@anim@hh@@UEBA?AVTransform@math@csl@@H@Z
-?GetBoneTransform@ResSkeletonPxd@anim@hh@@UEBA?AVTransform@math@csl@@H@Z:
-    mov rax, 0140e99e40h
     jmp rax
 
 PUBLIC ?GetTypeInfo@ResSkeletonPxd@anim@hh@@SAPEBUResourceTypeInfo@fnd@3@XZ
@@ -98060,9 +98090,89 @@ PUBLIC ?Update@AnimationState@anim@hh@@QEAAXXZ
     mov rax, 0140eb1690h
     jmp rax
 
+PUBLIC ??0PxdCompressedAnimation@anim@hh@@QEAA@PEAVIAllocator@fnd@csl@@PEAUAnimationData@v200@anmpxd@resources@ucsl@@@Z
+??0PxdCompressedAnimation@anim@hh@@QEAA@PEAVIAllocator@fnd@csl@@PEAUAnimationData@v200@anmpxd@resources@ucsl@@@Z:
+    mov rax, 0140eb82c0h
+    jmp rax
+
 PUBLIC ??_DStateManagerImpl@internal@ut@hh@@QEAAXXZ
 ??_DStateManagerImpl@internal@ut@hh@@QEAAXXZ:
     mov rax, 0140eb84d0h
+    jmp rax
+
+PUBLIC ??_DPxdCompressedAnimationHints@anim@hh@@QEAAXXZ
+??_DPxdCompressedAnimationHints@anim@hh@@QEAAXXZ:
+    mov rax, 0140eb84d0h
+    jmp rax
+
+PUBLIC ?GetHints@PxdAclAnimation@anim@hh@@UEAAPEAVPxdAnimationHints@23@PEAVIAllocator@fnd@csl@@@Z
+?GetHints@PxdAclAnimation@anim@hh@@UEAAPEAVPxdAnimationHints@23@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 0140eb8610h
+    jmp rax
+
+PUBLIC ?UnkFunc3@PxdCompressedAnimation@anim@hh@@UEAAPEAX_J@Z
+?UnkFunc3@PxdCompressedAnimation@anim@hh@@UEAAPEAX_J@Z:
+    mov rax, 0140eb8700h
+    jmp rax
+
+PUBLIC ?GetHints@PxdCompressedAnimation@anim@hh@@UEAAPEAVPxdAnimationHints@23@PEAVIAllocator@fnd@csl@@@Z
+?GetHints@PxdCompressedAnimation@anim@hh@@UEAAPEAVPxdAnimationHints@23@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 0140eb8700h
+    jmp rax
+
+PUBLIC ?GetRootTrackInfo@PxdAclAnimation@anim@hh@@UEAAXAEAVTransform@math@csl@@M@Z
+?GetRootTrackInfo@PxdAclAnimation@anim@hh@@UEAAXAEAVTransform@math@csl@@M@Z:
+    mov rax, 0140eb8e90h
+    jmp rax
+
+PUBLIC ?UnkFunc2@PxdCompressedAnimation@anim@hh@@UEAAPEAX_J@Z
+?UnkFunc2@PxdCompressedAnimation@anim@hh@@UEAAPEAX_J@Z:
+    mov rax, 0140eb8f00h
+    jmp rax
+
+PUBLIC ?GetTrackInfo@PxdCompressedAnimation@anim@hh@@UEAAXMAEAVTransform@math@csl@@@Z
+?GetTrackInfo@PxdCompressedAnimation@anim@hh@@UEAAXMAEAVTransform@math@csl@@@Z:
+    mov rax, 0140eb8f00h
+    jmp rax
+
+PUBLIC ?GetRootTrackInfo@PxdCompressedAnimation@anim@hh@@UEAAXMAEAVTransform@math@csl@@_J@Z
+?GetRootTrackInfo@PxdCompressedAnimation@anim@hh@@UEAAXMAEAVTransform@math@csl@@_J@Z:
+    mov rax, 0140eb8f00h
+    jmp rax
+
+PUBLIC ?GetRootTrackInfo@PxdCompressedAnimation@anim@hh@@UEAAXAEAVTransform@math@csl@@M@Z
+?GetRootTrackInfo@PxdCompressedAnimation@anim@hh@@UEAAXAEAVTransform@math@csl@@M@Z:
+    mov rax, 0140eb8f00h
+    jmp rax
+
+PUBLIC ?GetFrameLength@PxdCompressedAnimation@anim@hh@@UEBAIXZ
+?GetFrameLength@PxdCompressedAnimation@anim@hh@@UEBAIXZ:
+    mov rax, 0140eb8f70h
+    jmp rax
+
+PUBLIC ?GetTrackCount@PxdCompressedAnimation@anim@hh@@UEBAIXZ
+?GetTrackCount@PxdCompressedAnimation@anim@hh@@UEBAIXZ:
+    mov rax, 0140eb8f70h
+    jmp rax
+
+PUBLIC ?GetTrackCount@PxdAclAnimation@anim@hh@@UEBAIXZ
+?GetTrackCount@PxdAclAnimation@anim@hh@@UEBAIXZ:
+    mov rax, 0140eb8f70h
+    jmp rax
+
+PUBLIC ?GetTrackInfo@PxdAclAnimation@anim@hh@@UEAAXMAEAVTransform@math@csl@@_J@Z
+?GetTrackInfo@PxdAclAnimation@anim@hh@@UEAAXMAEAVTransform@math@csl@@_J@Z:
+    mov rax, 0140eb8f90h
+    jmp rax
+
+PUBLIC ?UnkFunc1@PxdCompressedAnimation@anim@hh@@UEAAPEAX_J00@Z
+?UnkFunc1@PxdCompressedAnimation@anim@hh@@UEAAPEAX_J00@Z:
+    mov rax, 0140eb8ff0h
+    jmp rax
+
+PUBLIC ?GetTrackInfo@PxdCompressedAnimation@anim@hh@@UEAAXMAEAVTransform@math@csl@@_J@Z
+?GetTrackInfo@PxdCompressedAnimation@anim@hh@@UEAAXMAEAVTransform@math@csl@@_J@Z:
+    mov rax, 0140eb8ff0h
     jmp rax
 
 PUBLIC ??0AnimationControl@anim@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
@@ -98078,6 +98188,11 @@ PUBLIC ??_DAnimationControl@anim@hh@@QEAAXXZ
 PUBLIC ?Create@SkeletonControl@anim@hh@@SAPEAVAnimationControlPxd@23@PEAVIAllocator@fnd@csl@@PEAVResAnimation@23@_N@Z
 ?Create@SkeletonControl@anim@hh@@SAPEAVAnimationControlPxd@23@PEAVIAllocator@fnd@csl@@PEAVResAnimation@23@_N@Z:
     mov rax, 0140ebb420h
+    jmp rax
+
+PUBLIC ??_DPose@anim@hh@@QEAAXXZ
+??_DPose@anim@hh@@QEAAXXZ:
+    mov rax, 0140ebb540h
     jmp rax
 
 PUBLIC ?Create@AsmControlCreator@anim@hh@@SAPEAVAnimationControl@23@PEAVIAllocator@fnd@csl@@AEBVAsmResourceManager@23@H_N@Z
@@ -115985,6 +116100,51 @@ PUBLIC ?OnStateUpdate@GOCColliderImpl@physics@hh@@UEAAXPEAVGOCCollider@23@W4Stat
     mov rax, 014118f6e0h
     jmp rax
 
+PUBLIC ?UnkFunc1@Pose@anim@hh@@UEAA_KXZ
+?UnkFunc1@Pose@anim@hh@@UEAA_KXZ:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?UnkFunc2@Pose@anim@hh@@UEAA_KXZ
+?UnkFunc2@Pose@anim@hh@@UEAA_KXZ:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?UnkFunc3@Pose@anim@hh@@UEAA_KXZ
+?UnkFunc3@Pose@anim@hh@@UEAA_KXZ:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?UnkFunc4@Pose@anim@hh@@UEAA_KXZ
+?UnkFunc4@Pose@anim@hh@@UEAA_KXZ:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?ISMP_UnkFunc1@ISkeletalMeshPose@gfx@hh@@UEAA_KXZ
+?ISMP_UnkFunc1@ISkeletalMeshPose@gfx@hh@@UEAA_KXZ:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?ISMP_UnkFunc2@ISkeletalMeshPose@gfx@hh@@UEAA_KXZ
+?ISMP_UnkFunc2@ISkeletalMeshPose@gfx@hh@@UEAA_KXZ:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?ISMP_UnkFunc3@ISkeletalMeshPose@gfx@hh@@UEAA_KXZ
+?ISMP_UnkFunc3@ISkeletalMeshPose@gfx@hh@@UEAA_KXZ:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?ISMP_UnkFunc4@ISkeletalMeshPose@gfx@hh@@UEAA_KXZ
+?ISMP_UnkFunc4@ISkeletalMeshPose@gfx@hh@@UEAA_KXZ:
+    mov rax, 014118f6e0h
+    jmp rax
+
+PUBLIC ?ISMP_UnkFunc5@ISkeletalMeshPose@gfx@hh@@UEAA_KXZ
+?ISMP_UnkFunc5@ISkeletalMeshPose@gfx@hh@@UEAA_KXZ:
+    mov rax, 014118f6e0h
+    jmp rax
+
 PUBLIC ?IsValidToWrite@SConstantData@SParameterBuffer@ImplDX11@needle@hh@@QEAA_NPEAXI@Z
 ?IsValidToWrite@SConstantData@SParameterBuffer@ImplDX11@needle@hh@@QEAA_NPEAXI@Z:
     mov rax, 014118f720h
@@ -130157,6 +130317,11 @@ PUBLIC ?classId@ResAnimator@anim@hh@@0PEBXEB
 
 PUBLIC ?typeInfo@ResAnimation@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
 ?typeInfo@ResAnimation@resources@heur@@0UResourceTypeInfo@fnd@hh@@B:
+    mov rax, 01416ff490h
+    jmp rax
+
+PUBLIC ?typeInfo@ResAnimationPxd@anim@hh@@0UResourceTypeInfo@fnd@3@B
+?typeInfo@ResAnimationPxd@anim@hh@@0UResourceTypeInfo@fnd@3@B:
     mov rax, 01416ff490h
     jmp rax
 
@@ -179685,6 +179850,11 @@ PUBLIC ??_DBlendingTransitionEffect@anim@hh@@QEAAXXZ
     mov rax, 014d346d10h
     jmp rax
 
+PUBLIC ??_DPxdCompressedAnimation@anim@hh@@QEAAXXZ
+??_DPxdCompressedAnimation@anim@hh@@QEAAXXZ:
+    mov rax, 014d346d10h
+    jmp rax
+
 PUBLIC ?OnAddedToGame@ObjectWorld@game@hh@@UEAAXXZ
 ?OnAddedToGame@ObjectWorld@game@hh@@UEAAXXZ:
     mov rax, 014d34c720h
@@ -186655,14 +186825,34 @@ PUBLIC ?Create@ResAnimation@resources@heur@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z
     mov rax, 0151e1d960h
     jmp rax
 
+PUBLIC ?Create@ResAnimationPxd@anim@hh@@CAPEAVManagedResource@fnd@3@PEAVIAllocator@5csl@@@Z
+?Create@ResAnimationPxd@anim@hh@@CAPEAVManagedResource@fnd@3@PEAVIAllocator@5csl@@@Z:
+    mov rax, 0151e1d960h
+    jmp rax
+
 PUBLIC ??_GResAnimation@resources@heur@@QEAAXXZ
 ??_GResAnimation@resources@heur@@QEAAXXZ:
+    mov rax, 0151e1ede0h
+    jmp rax
+
+PUBLIC ??_DResAnimationPxd@anim@hh@@QEAAXXZ
+??_DResAnimationPxd@anim@hh@@QEAAXXZ:
     mov rax, 0151e1ede0h
     jmp rax
 
 PUBLIC ?UnkFunc9@ResAnimationPxd@anim@hh@@UEAA_KXZ
 ?UnkFunc9@ResAnimationPxd@anim@hh@@UEAA_KXZ:
     mov rax, 0151e2aa00h
+    jmp rax
+
+PUBLIC ?Load@ResAnimationPxd@anim@hh@@UEAAXPEAX_K@Z
+?Load@ResAnimationPxd@anim@hh@@UEAAXPEAX_K@Z:
+    mov rax, 0151e34100h
+    jmp rax
+
+PUBLIC ?InitPxdAnimation@ResAnimationPxd@anim@hh@@QEAAXPEAUAnimationPXDData@23@@Z
+?InitPxdAnimation@ResAnimationPxd@anim@hh@@QEAAXPEAUAnimationPXDData@23@@Z:
+    mov rax, 0151e36fa0h
     jmp rax
 
 PUBLIC ?Unload@ResAnimationPxd@anim@hh@@UEAAXXZ
@@ -186683,6 +186873,11 @@ PUBLIC ??_DResSkeletonPxd@anim@hh@@QEAAXXZ
 PUBLIC ?GetBoneIndex@ResSkeletonPxd@anim@hh@@UEBAHPEBD@Z
 ?GetBoneIndex@ResSkeletonPxd@anim@hh@@UEBAHPEBD@Z:
     mov rax, 0151e5e670h
+    jmp rax
+
+PUBLIC ?GetBoneTransform@ResSkeletonPxd@anim@hh@@UEBA?AVTransform@math@csl@@H@Z
+?GetBoneTransform@ResSkeletonPxd@anim@hh@@UEBA?AVTransform@math@csl@@H@Z:
+    mov rax, 0151e70510h
     jmp rax
 
 PUBLIC ?Load@ResSkeletonPxd@anim@hh@@UEAAXPEAX_K@Z
@@ -187100,6 +187295,21 @@ PUBLIC ?Create@GOCCharacterIkPxd@anim@hh@@CAPEAVGOComponent@game@3@PEAVIAllocato
     mov rax, 01521258d0h
     jmp rax
 
+PUBLIC ??0PxdAclAnimation@anim@hh@@QEAA@PEAVIAllocator@fnd@csl@@PEAUAnimationData@v200@anmpxd@resources@ucsl@@@Z
+??0PxdAclAnimation@anim@hh@@QEAA@PEAVIAllocator@fnd@csl@@PEAUAnimationData@v200@anmpxd@resources@ucsl@@@Z:
+    mov rax, 015213ca30h
+    jmp rax
+
+PUBLIC ??_DDecompressionContext@PxdAclAnimation@anim@hh@@QEAAXXZ
+??_DDecompressionContext@PxdAclAnimation@anim@hh@@QEAAXXZ:
+    mov rax, 015214a050h
+    jmp rax
+
+PUBLIC ??_DPxdAclAnimation@anim@hh@@QEAAXXZ
+??_DPxdAclAnimation@anim@hh@@QEAAXXZ:
+    mov rax, 015214c1d0h
+    jmp rax
+
 PUBLIC ??_DResCharacterIk@anim@hh@@QEAAXXZ
 ??_DResCharacterIk@anim@hh@@QEAAXXZ:
     mov rax, 015216e8e0h
@@ -187108,6 +187318,11 @@ PUBLIC ??_DResCharacterIk@anim@hh@@QEAAXXZ
 PUBLIC ?Create@ResCharacterIk@anim@hh@@CAPEAVManagedResource@fnd@3@PEAVIAllocator@5csl@@@Z
 ?Create@ResCharacterIk@anim@hh@@CAPEAVManagedResource@fnd@3@PEAVIAllocator@5csl@@@Z:
     mov rax, 015217c550h
+    jmp rax
+
+PUBLIC ??0Pose@anim@hh@@QEAA@PEAVIAllocator@fnd@csl@@PEAVResSkeleton@12@@Z
+??0Pose@anim@hh@@QEAA@PEAVIAllocator@fnd@csl@@PEAVResSkeleton@12@@Z:
+    mov rax, 0152185a70h
     jmp rax
 
 PUBLIC ?UnkFunc14@AnimationControlPxd@anim@hh@@UEAAXPEAE@Z
