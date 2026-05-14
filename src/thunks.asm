@@ -172720,6 +172720,11 @@ PUBLIC ?WorldChunkAddedCallback@ObjectWorldService@game@app@@UEAAXPEAVObjectWorl
     mov rax, 0148096340h
     jmp rax
 
+PUBLIC ?TryGetObjectWorldPosByID@GameManager@game@hh@@QEAA_NUObjectId@23@AEAUWorldPosition@fnd@3@@Z
+?TryGetObjectWorldPosByID@GameManager@game@hh@@QEAA_NUObjectId@23@AEAUWorldPosition@fnd@3@@Z:
+    mov rax, 01480988d0h
+    jmp rax
+
 PUBLIC ?GetObjectState@WorldObjectStatus@game@hh@@QEAAGI@Z
 ?GetObjectState@WorldObjectStatus@game@hh@@QEAAGI@Z:
     mov rax, 01480a6c60h

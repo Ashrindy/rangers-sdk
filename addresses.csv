@@ -12165,6 +12165,7 @@
 140216bc0,?Create@ObjectWorldService@game@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
 140216de0,?GetClass@ObjectWorldService@game@app@@SAPEBVGameServiceClass@2hh@@XZ,0
 140216ef0,?GetObjectDataByName@game@hh@@YA?AUObjectDataAccessor@12@PEAVGameManager@12@HPEBD@Z,1
+140216f70,j_?TryGetObjectWorldPosByID@GameManager@game@hh@@QEAA_NUObjectId@23@AEAUWorldPosition@fnd@3@@Z,1
 140217240,j_?GetObjectState@WorldObjectStatus@game@hh@@QEAAGI@Z,1
 140217360,j_?Shutdown@GameObject@game@hh@@QEAAXXZ,1
 1402174a0,j_?SetObjectState@WorldObjectStatus@game@hh@@QEAAXIG@Z,1
@@ -89353,6 +89354,7 @@
 14808c870,?OnAddedToGame@ObjectWorldService@game@app@@UEAAXXZ,1
 14808cbc0,?OnRemovedFromGame@ObjectWorldService@game@app@@UEAAXXZ,1
 148096340,?WorldChunkAddedCallback@ObjectWorldService@game@app@@UEAAXPEAVObjectWorldChunk@2hh@@@Z,1
+1480988d0,?TryGetObjectWorldPosByID@GameManager@game@hh@@QEAA_NUObjectId@23@AEAUWorldPosition@fnd@3@@Z,1
 1480a6c60,?GetObjectState@WorldObjectStatus@game@hh@@QEAAGI@Z,1
 1480b1200,?Shutdown@GameObject@game@hh@@QEAAXXZ,1
 1480b40a0,?SetObjectState@WorldObjectStatus@game@hh@@QEAAXIG@Z,1
