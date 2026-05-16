@@ -21,6 +21,8 @@ namespace app {
         virtual void OnEnter(hh::physics::MsgTriggerEnter& msg) override;
         virtual void OnLeave(hh::physics::MsgTriggerLeave& msg) override;
 
+        void TurnCameraOff(char playerId);
+
         GAMEOBJECT_CLASS_DECLARATION_INLINE_GET_CLASS(ObjCameraVolume)
     };
 }

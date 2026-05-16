@@ -650,6 +650,11 @@ PUBLIC ?UnkFunc1@?$AppMessage@VMsgCharacterEndLookAt@app@@@fnd@app@@UEAAIXZ
     mov rax, 014008d680h
     jmp rax
 
+PUBLIC ?UnkFunc1@?$AppMessage@VMsgCameraOff@camera@app@@@fnd@app@@UEAAIXZ
+?UnkFunc1@?$AppMessage@VMsgCameraOff@camera@app@@@fnd@app@@UEAAIXZ:
+    mov rax, 014008d680h
+    jmp rax
+
 PUBLIC ?EE_UnkFunc2@EventEnvironment@evt@app@@UEAA_NXZ
 ?EE_UnkFunc2@EventEnvironment@evt@app@@UEAA_NXZ:
     mov rax, 014008d680h
@@ -26640,6 +26645,11 @@ PUBLIC ??_DMsgHoldOn@player@app@@QEAAXXZ
     mov rax, 014013b5e0h
     jmp rax
 
+PUBLIC ??_DMsgCameraOff@camera@app@@QEAAXXZ
+??_DMsgCameraOff@camera@app@@QEAAXXZ:
+    mov rax, 014013b5e0h
+    jmp rax
+
 PUBLIC ??_DMsgGetCyloopPoint@app@@QEAAXXZ
 ??_DMsgGetCyloopPoint@app@@QEAAXXZ:
     mov rax, 014013b620h
@@ -44363,6 +44373,11 @@ PUBLIC ??0ObjCameraShakeTrigger@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z
 PUBLIC ??_GObjCameraShakeTrigger@app@@QEAAXXZ
 ??_GObjCameraShakeTrigger@app@@QEAAXXZ:
     mov rax, 014036da30h
+    jmp rax
+
+PUBLIC ?CreateAsyncHandler@?$AppMessage@VMsgCameraOff@camera@app@@@fnd@app@@UEAAPEAVMessageAsyncHandler@2hh@@PEAVIAllocator@2csl@@@Z
+?CreateAsyncHandler@?$AppMessage@VMsgCameraOff@camera@app@@@fnd@app@@UEAAPEAVMessageAsyncHandler@2hh@@PEAVIAllocator@2csl@@@Z:
+    mov rax, 014036f0b0h
     jmp rax
 
 PUBLIC ??0ObjCameraVolumeOnce@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z
@@ -174418,6 +174433,11 @@ PUBLIC ?VL_UnkFunc1@ObjCameraVolume@app@@UEAAXXZ
 PUBLIC ?OnEnter@ObjCameraVolume@app@@UEAAXAEAVMsgTriggerEnter@physics@hh@@@Z
 ?OnEnter@ObjCameraVolume@app@@UEAAXAEAVMsgTriggerEnter@physics@hh@@@Z:
     mov rax, 0148dde190h
+    jmp rax
+
+PUBLIC ?TurnCameraOff@ObjCameraVolume@app@@QEAAXD@Z
+?TurnCameraOff@ObjCameraVolume@app@@QEAAXD@Z:
+    mov rax, 0148de2d40h
     jmp rax
 
 PUBLIC ?VL_UnkFunc3@VolumeListener@app@@UEAAXXZ

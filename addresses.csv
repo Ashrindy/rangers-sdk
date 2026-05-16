@@ -4081,6 +4081,7 @@
 14008d680,?UnkFunc1@?$AppMessage@VMsgMotionCamera@camera@app@@@fnd@app@@UEAAIXZ,1
 14008d680,?UnkFunc1@?$AppMessage@VMsgCharacterBeginLookAt@app@@@fnd@app@@UEAAIXZ,1
 14008d680,?UnkFunc1@?$AppMessage@VMsgCharacterEndLookAt@app@@@fnd@app@@UEAAIXZ,1
+14008d680,?UnkFunc1@?$AppMessage@VMsgCameraOff@camera@app@@@fnd@app@@UEAAIXZ,1
 14008d680,?EE_UnkFunc2@EventEnvironment@evt@app@@UEAA_NXZ,1
 14008d680,?UnkFunc1@?$AppMessage@VMsgGetHomingTargetInfo@player@app@@@fnd@app@@UEAAIXZ,1
 14008d680,?UnkFunc1@?$AppMessage@VMsgBeginExternalControl@player@app@@@fnd@app@@UEAAIXZ,1
@@ -10001,6 +10002,7 @@
 14013b5e0,??_DMsgSetMenuEnabled@game@app@@QEAAXXZ,1
 14013b5e0,??_DMsgAddActionChainScore@app@@QEAAXXZ,1
 14013b5e0,??_DMsgHoldOn@player@app@@QEAAXXZ,1
+14013b5e0,??_DMsgCameraOff@camera@app@@QEAAXXZ,1
 14013b620,??_DMsgGetCyloopPoint@app@@QEAAXXZ,1
 14013b620,??_DMsgSpringImpulse@app@@QEAAXXZ,1
 14013b620,??_DMsgHoldRelease@player@app@@QEAAXXZ,1
@@ -14304,9 +14306,11 @@
 14036ece0,j_??0ObjCameraVolume@app@@AEAA@PEAVIAllocator@fnd@csl@@@Z,1
 14036ee80,j_??_DObjCameraVolume@app@@QEAAXXZ,1
 14036ef80,j_?AddCallback@ObjCameraVolume@app@@UEAAXPEAVGameManager@game@hh@@@Z,1
+14036f0b0,?CreateAsyncHandler@?$AppMessage@VMsgCameraOff@camera@app@@@fnd@app@@UEAAPEAVMessageAsyncHandler@2hh@@PEAVIAllocator@2csl@@@Z,1
 14036f470,j_?VL_UnkFunc1@VolumeListener@app@@UEAAXXZ,1
 14036f470,j_?VL_UnkFunc1@ObjCameraVolume@app@@UEAAXXZ,1
 14036f470,j_?OnEnter@ObjCameraVolume@app@@UEAAXAEAVMsgTriggerEnter@physics@hh@@@Z,1
+14036f4e0,j_?TurnCameraOff@ObjCameraVolume@app@@QEAAXD@Z,1
 14036f5b0,j_?VL_UnkFunc3@VolumeListener@app@@UEAAXXZ,1
 14036f5b0,j_?VL_UnkFunc3@ObjCameraVolume@app@@UEAAXXZ,1
 14036f5b0,j_?OnLeave@ObjCameraVolume@app@@UEAAXAEAVMsgTriggerLeave@physics@hh@@@Z,1
@@ -89694,6 +89698,7 @@
 148dde190,?VL_UnkFunc1@VolumeListener@app@@UEAAXXZ,1
 148dde190,?VL_UnkFunc1@ObjCameraVolume@app@@UEAAXXZ,1
 148dde190,?OnEnter@ObjCameraVolume@app@@UEAAXAEAVMsgTriggerEnter@physics@hh@@@Z,1
+148de2d40,?TurnCameraOff@ObjCameraVolume@app@@QEAAXD@Z,1
 148deb300,?VL_UnkFunc3@VolumeListener@app@@UEAAXXZ,1
 148deb300,?VL_UnkFunc3@ObjCameraVolume@app@@UEAAXXZ,1
 148deb300,?OnLeave@ObjCameraVolume@app@@UEAAXAEAVMsgTriggerLeave@physics@hh@@@Z,1
