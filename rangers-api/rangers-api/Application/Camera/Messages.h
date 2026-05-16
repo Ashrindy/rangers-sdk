@@ -7,4 +7,13 @@ namespace app::camera {
 
         MsgMotionCamera() : fnd::AppMessage<MsgMotionCamera>{ hh::fnd::MessageID::MOTION_CAMERA } {}
     };
+
+    class MsgCameraOff : public fnd::AppMessage<MsgCameraOff> {
+    public:
+        float easeOutTime{ 0.0f };
+        unsigned int easeType{ 0 };
+        char playerId{ 0 };
+
+        MsgCameraOff() : fnd::AppMessage<MsgCameraOff>{ hh::fnd::MessageID::CAMERA_OFF } {}
+    };
 }
