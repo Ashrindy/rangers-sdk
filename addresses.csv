@@ -10049,6 +10049,9 @@
 140140f10,j_??_DEventSceneManager@evt@app@@QEAAXXZ,1
 1401414f0,j_?GetEventScene@EventSceneManager@evt@app@@QEAAPEAVEventScene@23@PEBD@Z,1
 140141af0,j_??_DQuestManager@app@@QEAAXXZ,0
+140141d10,j_?GetLevelName@EventSetupData@evt@app@@QEAAXAEAVString@ut@csl@@@Z,1
+140141d10,j_?GetLevelName@EventSetupData@evt@app@@SAXPEADAEAVString@ut@csl@@@Z,1
+140141d10,j_?GetLevelName@EventSetupData@evt@app@@SAXPEBDAEAVString@ut@csl@@@Z,1
 140142be0,??_GDevEventInfo@evt@app@@QEAAXXZ,0
 140142be0,??_DDevEventInfo@evt@app@@QEAAXXZ,0
 140142c40,??_GObjEventStageResolver@evt@app@@QEAAXXZ,1
@@ -22715,8 +22718,8 @@
 140b1b010,?UnkFunc2@?$MirageAnimController@VNameIDRef@needle@hh@@UAnimVisResult@23@@needle@hh@@UEAAHXZ,1
 140b1b010,?Tick@Application@fw@hh@@UEAA_KXZ,1
 140b1b010,?SetController@Vibration@hid@hh@@UEAA_NII@Z,1
-140b1b010,?GetDependRefcountObject@NeedleRefcountObject@needle@hh@@UEAAPEAV123@XZ,1
 140b1b010,?SetController@Vibration@hid@hh@@UEAA_NIII@Z,1
+140b1b010,?GetDependRefcountObject@NeedleRefcountObject@needle@hh@@UEAAPEAV123@XZ,1
 140b1b010,?GetModelGatherBufferSize@RenderingEngine@gfx@hh@@UEAAIXZ,1
 140b1b010,?GetDvSceneControl@DiEventManager@dv@hh@@UEAAPEAVDvSceneControl@23@XZ,1
 140b1be10,??_GCrashReportDatabaseWin@crashpad@@QEAAXXZ,0
@@ -88936,6 +88939,9 @@
 146c24530,??_DEventSceneManager@evt@app@@QEAAXXZ,1
 146c3db00,?GetEventScene@EventSceneManager@evt@app@@QEAAPEAVEventScene@23@PEBD@Z,1
 146c58f20,??_DQuestManager@app@@QEAAXXZ,0
+146c75720,?GetLevelName@EventSetupData@evt@app@@QEAAXAEAVString@ut@csl@@@Z,1
+146c75720,?GetLevelName@EventSetupData@evt@app@@SAXPEADAEAVString@ut@csl@@@Z,1
+146c75720,?GetLevelName@EventSetupData@evt@app@@SAXPEBDAEAVString@ut@csl@@@Z,1
 146c82000,??0EventEnvironmentCameraInterpolate@evt@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
 146c83ea0,?EE_UnkFunc14@EventEnvironmentCameraInterpolate@evt@app@@UEAAHXZ,1
 146c9f270,??0EventEnvironmentCameraLookAt@evt@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0

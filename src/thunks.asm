@@ -81985,13 +81985,13 @@ PUBLIC ?SetController@Vibration@hid@hh@@UEAA_NII@Z
     mov rax, 0140b1b010h
     jmp rax
 
-PUBLIC ?GetDependRefcountObject@NeedleRefcountObject@needle@hh@@UEAAPEAV123@XZ
-?GetDependRefcountObject@NeedleRefcountObject@needle@hh@@UEAAPEAV123@XZ:
+PUBLIC ?SetController@Vibration@hid@hh@@UEAA_NIII@Z
+?SetController@Vibration@hid@hh@@UEAA_NIII@Z:
     mov rax, 0140b1b010h
     jmp rax
 
-PUBLIC ?SetController@Vibration@hid@hh@@UEAA_NIII@Z
-?SetController@Vibration@hid@hh@@UEAA_NIII@Z:
+PUBLIC ?GetDependRefcountObject@NeedleRefcountObject@needle@hh@@UEAAPEAV123@XZ
+?GetDependRefcountObject@NeedleRefcountObject@needle@hh@@UEAAPEAV123@XZ:
     mov rax, 0140b1b010h
     jmp rax
 
@@ -170623,6 +170623,21 @@ PUBLIC ?GetEventScene@EventSceneManager@evt@app@@QEAAPEAVEventScene@23@PEBD@Z
 PUBLIC ??_DQuestManager@app@@QEAAXXZ
 ??_DQuestManager@app@@QEAAXXZ:
     mov rax, 0146c58f20h
+    jmp rax
+
+PUBLIC ?GetLevelName@EventSetupData@evt@app@@QEAAXAEAVString@ut@csl@@@Z
+?GetLevelName@EventSetupData@evt@app@@QEAAXAEAVString@ut@csl@@@Z:
+    mov rax, 0146c75720h
+    jmp rax
+
+PUBLIC ?GetLevelName@EventSetupData@evt@app@@SAXPEADAEAVString@ut@csl@@@Z
+?GetLevelName@EventSetupData@evt@app@@SAXPEADAEAVString@ut@csl@@@Z:
+    mov rax, 0146c75720h
+    jmp rax
+
+PUBLIC ?GetLevelName@EventSetupData@evt@app@@SAXPEBDAEAVString@ut@csl@@@Z
+?GetLevelName@EventSetupData@evt@app@@SAXPEBDAEAVString@ut@csl@@@Z:
+    mov rax, 0146c75720h
     jmp rax
 
 PUBLIC ??0EventEnvironmentCameraInterpolate@evt@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z

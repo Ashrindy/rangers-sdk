@@ -95,6 +95,8 @@ namespace app::evt {
         EventSetupData();
 
         void Setup(const char* cutsceneName);
+        static void GetLevelName(const char* cutsceneName, csl::ut::String& value);
+        inline void GetLevelName(csl::ut::String& value) const { return GetLevelName(playInfo.cutsceneName, value); }
     };
 
     class EventScene : public hh::fnd::BaseObject, hh::dv::DvSceneControlListener {
