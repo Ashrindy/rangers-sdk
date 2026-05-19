@@ -6,16 +6,10 @@ namespace hh::dv {
         class ScenePlaybackInfo : public hh::fnd::ReferencedObject{
         public:
             struct Info {
-                float dword0;
-                int dword4;
+                float curPageStart;
+                float curPageEnd;
                 int pageIndex;
-                int dwordC;
-                int qword10;
-                int qword14;
-                int qword18;
-                int qword1C;
-                int qword20;
-                int qword24;
+                char curPageName[32];
                 int qword28;
                 int qword2C;
                 int qword30;

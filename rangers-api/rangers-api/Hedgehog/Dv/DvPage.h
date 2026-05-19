@@ -83,6 +83,7 @@ namespace hh::dv{
         virtual int GetStart();
         int GetEnd() const;
         bool ShouldTransition(PageInfo& pageInfo, int& destinationPageId);
+        char* GetName() const;
 
         DvPage(csl::fnd::IAllocator* allocator);
     };

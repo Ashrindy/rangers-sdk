@@ -81980,8 +81980,18 @@ PUBLIC ?Tick@Application@fw@hh@@UEAA_KXZ
     mov rax, 0140b1b010h
     jmp rax
 
+PUBLIC ?SetController@Vibration@hid@hh@@UEAA_NII@Z
+?SetController@Vibration@hid@hh@@UEAA_NII@Z:
+    mov rax, 0140b1b010h
+    jmp rax
+
 PUBLIC ?GetDependRefcountObject@NeedleRefcountObject@needle@hh@@UEAAPEAV123@XZ
 ?GetDependRefcountObject@NeedleRefcountObject@needle@hh@@UEAAPEAV123@XZ:
+    mov rax, 0140b1b010h
+    jmp rax
+
+PUBLIC ?SetController@Vibration@hid@hh@@UEAA_NIII@Z
+?SetController@Vibration@hid@hh@@UEAA_NIII@Z:
     mov rax, 0140b1b010h
     jmp rax
 
@@ -87498,6 +87508,11 @@ PUBLIC ?GetClass@GOCNavMeshCrowdAgent@gocs@heur@@SAPEBVGOComponentClass@game@hh@
 PUBLIC ?SetIncludeFlag@NavMeshAgent@navmesh@hh@@QEAAXE@Z
 ?SetIncludeFlag@NavMeshAgent@navmesh@hh@@QEAAXE@Z:
     mov rax, 0140cda060h
+    jmp rax
+
+PUBLIC ?GetName@DvPage@dv@hh@@QEBAPEADXZ
+?GetName@DvPage@dv@hh@@QEBAPEADXZ:
+    mov rax, 0140cda390h
     jmp rax
 
 PUBLIC ?GetComponentByHash@RenderingEngine@gfx@hh@@QEAAPEAVRenderingComponent@23@H@Z
@@ -94248,6 +94263,16 @@ PUBLIC ?gameServiceClass@DiEventPreviewManager@dv@hh@@0VGameServiceClass@game@3@
 PUBLIC ?InitializePages@DvSceneTimeline@dv@hh@@QEAAXPEAX_JPEAVDvSceneControl@23@@Z
 ?InitializePages@DvSceneTimeline@dv@hh@@QEAAXPEAX_JPEAVDvSceneControl@23@@Z:
     mov rax, 0140d9af10h
+    jmp rax
+
+PUBLIC ?GetPage@DvSceneTimeline@dv@hh@@QEBAPEAVDvPage@23@I@Z
+?GetPage@DvSceneTimeline@dv@hh@@QEBAPEAVDvPage@23@I@Z:
+    mov rax, 0140d9b390h
+    jmp rax
+
+PUBLIC ?GetPage@DvSceneTimeline@dv@hh@@QEBAPEAVDvPage@23@PEAD@Z
+?GetPage@DvSceneTimeline@dv@hh@@QEBAPEAVDvPage@23@PEAD@Z:
+    mov rax, 0140d9b3b0h
     jmp rax
 
 PUBLIC ?Clear@DvSceneTimeline@dv@hh@@QEAAXXZ
@@ -103285,9 +103310,9 @@ PUBLIC ?UnkFunc12@VibrationWin32@hid@hh@@UEAAXXZ
     mov rax, 0140f22bc0h
     jmp rax
 
-PUBLIC ?UnkFunc10@VibrationWin32@hid@hh@@UEAAIXZ
-?UnkFunc10@VibrationWin32@hid@hh@@UEAAIXZ:
-    mov rax, 0140f22c20h
+PUBLIC ?SetRumble@VibrationWin32@hid@hh@@UEAAX_N@Z
+?SetRumble@VibrationWin32@hid@hh@@UEAAX_N@Z:
+    mov rax, 0140f22bc0h
     jmp rax
 
 PUBLIC ??0SimpleGravityEffect@game@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z
@@ -179330,6 +179355,11 @@ PUBLIC ?GetOptionGamePlayAc@OptionAc@save@app@@QEAA?AVOptionGamePlayAc@23@XZ
     mov rax, 014cdbe160h
     jmp rax
 
+PUBLIC ?GetOptionGraphicsAc@OptionAc@save@app@@QEAA?AVOptionGraphicsAc@23@XZ
+?GetOptionGraphicsAc@OptionAc@save@app@@QEAA?AVOptionGraphicsAc@23@XZ:
+    mov rax, 014cdc7630h
+    jmp rax
+
 PUBLIC ?GetHeaderAccessor@GameDataAc@save@app@@QEAA?AVHeaderAc@23@XZ
 ?GetHeaderAccessor@GameDataAc@save@app@@QEAA?AVHeaderAc@23@XZ:
     mov rax, 014cdcc3c0h
@@ -188195,9 +188225,44 @@ PUBLIC ?UnkFunc11@VibrationWin32@hid@hh@@UEAAXXZ
     mov rax, 01530ae110h
     jmp rax
 
+PUBLIC ?SetRumble@VibrationWin32@hid@hh@@UEAAXAEAURumble@Vibration@23@@Z
+?SetRumble@VibrationWin32@hid@hh@@UEAAXAEAURumble@Vibration@23@@Z:
+    mov rax, 01530ae110h
+    jmp rax
+
+PUBLIC ?SetRumble@VibrationWin32@hid@hh@@UEAAXAEAURumbleData@Vibration@23@@Z
+?SetRumble@VibrationWin32@hid@hh@@UEAAXAEAURumbleData@Vibration@23@@Z:
+    mov rax, 01530ae110h
+    jmp rax
+
+PUBLIC ?StartRumble@VibrationWin32@hid@hh@@UEAAXAEAURumbleData@Vibration@23@@Z
+?StartRumble@VibrationWin32@hid@hh@@UEAAXAEAURumbleData@Vibration@23@@Z:
+    mov rax, 01530ae110h
+    jmp rax
+
 PUBLIC ?UnkFunc13@VibrationWin32@hid@hh@@UEAAXXZ
 ?UnkFunc13@VibrationWin32@hid@hh@@UEAAXXZ:
     mov rax, 01530bf4c0h
+    jmp rax
+
+PUBLIC ?StopRumble@VibrationWin32@hid@hh@@UEAAXXZ
+?StopRumble@VibrationWin32@hid@hh@@UEAAXXZ:
+    mov rax, 01530bf4c0h
+    jmp rax
+
+PUBLIC ?UnkFunc10@VibrationWin32@hid@hh@@UEAAIXZ
+?UnkFunc10@VibrationWin32@hid@hh@@UEAAIXZ:
+    mov rax, 01530d2680h
+    jmp rax
+
+PUBLIC ?SetController@VibrationWin32@hid@hh@@UEAA_NII@Z
+?SetController@VibrationWin32@hid@hh@@UEAA_NII@Z:
+    mov rax, 01530d2680h
+    jmp rax
+
+PUBLIC ?SetController@VibrationWin32@hid@hh@@UEAA_NIII@Z
+?SetController@VibrationWin32@hid@hh@@UEAA_NIII@Z:
+    mov rax, 01530d2680h
     jmp rax
 
 PUBLIC ??0VibrationDataContainer@hid@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z

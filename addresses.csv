@@ -22551,6 +22551,7 @@
 140afbff0,??0ExtraIslandStageContainerAc@save@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
 140afc040,j_?GetFlagContainerAc@GameDataAc@save@app@@QEAA?AVFlagContainerAc@23@XZ,1
 140afc100,j_?GetGamePlayAccessor@GameDataAc@save@app@@QEAA?AVGamePlayAc@23@XZ,1
+140afc1a0,j_?GetOptionGraphicsAc@OptionAc@save@app@@QEAA?AVOptionGraphicsAc@23@XZ,1
 140afc1f0,?GetGuardLevel@CharacterAc@save@app@@QEBADXZ,1
 140afc200,j_?GetHeaderAccessor@GameDataAc@save@app@@QEAA?AVHeaderAc@23@XZ,1
 140afc2c0,?GetMasterVolume@OptionAudioAc@save@app@@QEBAEXZ,1
@@ -22713,7 +22714,9 @@
 140b1b010,?UnkFunc2@?$MirageAnimController@HUAnimTexPatResult@needle@hh@@@needle@hh@@UEAAHXZ,1
 140b1b010,?UnkFunc2@?$MirageAnimController@VNameIDRef@needle@hh@@UAnimVisResult@23@@needle@hh@@UEAAHXZ,1
 140b1b010,?Tick@Application@fw@hh@@UEAA_KXZ,1
+140b1b010,?SetController@Vibration@hid@hh@@UEAA_NII@Z,1
 140b1b010,?GetDependRefcountObject@NeedleRefcountObject@needle@hh@@UEAAPEAV123@XZ,1
+140b1b010,?SetController@Vibration@hid@hh@@UEAA_NIII@Z,1
 140b1b010,?GetModelGatherBufferSize@RenderingEngine@gfx@hh@@UEAAIXZ,1
 140b1b010,?GetDvSceneControl@DiEventManager@dv@hh@@UEAAPEAVDvSceneControl@23@XZ,1
 140b1be10,??_GCrashReportDatabaseWin@crashpad@@QEAAXXZ,0
@@ -24348,6 +24351,7 @@
 140cd92c0,j_??_DNavMeshAgent@navmesh@hh@@QEAAXXZ,1
 140cd9430,j_?Setup@NavMeshAgent@navmesh@hh@@QEAAXPEAUConfig@v1@navmeshconfig@resources@ucsl@@@Z,1
 140cda060,?SetIncludeFlag@NavMeshAgent@navmesh@hh@@QEAAXE@Z,1
+140cda390,?GetName@DvPage@dv@hh@@QEBAPEADXZ,1
 140cda580,j_??0NavMeshImpl@navmesh@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z,1
 140cda5c0,j_??_DNavMeshImpl@navmesh@hh@@QEAAXXZ,1
 140ce8350,j_??0RenderingEngine@gfx@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z,1
@@ -26552,6 +26556,8 @@
 140d9abb0,j_??0DvSceneTimeline@dv@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z,1
 140d9ac50,j_??_DDvSceneTimeline@dv@hh@@QEAAXXZ,1
 140d9af10,?InitializePages@DvSceneTimeline@dv@hh@@QEAAXPEAX_JPEAVDvSceneControl@23@@Z,1
+140d9b390,?GetPage@DvSceneTimeline@dv@hh@@QEBAPEAVDvPage@23@I@Z,1
+140d9b3b0,?GetPage@DvSceneTimeline@dv@hh@@QEBAPEAVDvPage@23@PEAD@Z,1
 140d9b4f0,?Clear@DvSceneTimeline@dv@hh@@QEAAXXZ,1
 140d9b540,j_?InitializeCuts@DvSceneTimeline@dv@hh@@QEAAX_JPEAM@Z,1
 140d9b690,?InitializeDisableFrames@DvSceneTimeline@dv@hh@@QEAAX_JPEAUDisableFrame@123@@Z,1
@@ -28746,10 +28752,16 @@
 140f22b00,??_DVibrationWin32@hid@hh@@QEAAXXZ,1
 140f22b60,?GetRuntimeTypeInfo@VibrationWin32@hid@hh@@UEBAPEAXXZ,1
 140f22b70,j_?UnkFunc11@VibrationWin32@hid@hh@@UEAAXXZ,1
+140f22b70,j_?SetRumble@VibrationWin32@hid@hh@@UEAAXAEAURumble@Vibration@23@@Z,1
+140f22b70,j_?SetRumble@VibrationWin32@hid@hh@@UEAAXAEAURumbleData@Vibration@23@@Z,1
+140f22b70,j_?StartRumble@VibrationWin32@hid@hh@@UEAAXAEAURumbleData@Vibration@23@@Z,1
 140f22bc0,?UnkFunc12@VibrationWin32@hid@hh@@UEAAXXZ,1
+140f22bc0,?SetRumble@VibrationWin32@hid@hh@@UEAAX_N@Z,1
 140f22bf0,j_?UnkFunc13@VibrationWin32@hid@hh@@UEAAXXZ,1
+140f22bf0,j_?StopRumble@VibrationWin32@hid@hh@@UEAAXXZ,1
 140f22c20,j_?UnkFunc10@VibrationWin32@hid@hh@@UEAAIXZ,1
-140f22c20,?UnkFunc10@VibrationWin32@hid@hh@@UEAAIXZ,1
+140f22c20,j_?SetController@VibrationWin32@hid@hh@@UEAA_NII@Z,1
+140f22c20,j_?SetController@VibrationWin32@hid@hh@@UEAA_NIII@Z,1
 140f22c30,??0SimpleGravityEffect@game@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,1
 140f22c30,??0PointingWin32@hid@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z,1
 140f22c70,??_DPointingWin32@hid@hh@@QEAAXXZ,1
@@ -90682,6 +90694,7 @@
 14cd9e6d0,?GetFlagContainerAc@GameDataAc@save@app@@QEAA?AVFlagContainerAc@23@XZ,1
 14cdaaec0,?GetGamePlayAccessor@GameDataAc@save@app@@QEAA?AVGamePlayAc@23@XZ,1
 14cdbe160,?GetOptionGamePlayAc@OptionAc@save@app@@QEAA?AVOptionGamePlayAc@23@XZ,1
+14cdc7630,?GetOptionGraphicsAc@OptionAc@save@app@@QEAA?AVOptionGraphicsAc@23@XZ,1
 14cdcc3c0,?GetHeaderAccessor@GameDataAc@save@app@@QEAA?AVHeaderAc@23@XZ,1
 14ce0fda0,??0CyberStageAc@save@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,1
 14ce0fda0,?GetCyberStageAccessor@CyberStageContainerAc@save@app@@QEAA?AVCyberStageAc@23@I@Z,1
@@ -92455,7 +92468,14 @@
 1530a5610,??0Keyboard@hid@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z,1
 1530ab9d0,??0Mouse@hid@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z,1
 1530ae110,?UnkFunc11@VibrationWin32@hid@hh@@UEAAXXZ,1
+1530ae110,?SetRumble@VibrationWin32@hid@hh@@UEAAXAEAURumble@Vibration@23@@Z,1
+1530ae110,?SetRumble@VibrationWin32@hid@hh@@UEAAXAEAURumbleData@Vibration@23@@Z,1
+1530ae110,?StartRumble@VibrationWin32@hid@hh@@UEAAXAEAURumbleData@Vibration@23@@Z,1
 1530bf4c0,?UnkFunc13@VibrationWin32@hid@hh@@UEAAXXZ,1
+1530bf4c0,?StopRumble@VibrationWin32@hid@hh@@UEAAXXZ,1
+1530d2680,?UnkFunc10@VibrationWin32@hid@hh@@UEAAIXZ,1
+1530d2680,?SetController@VibrationWin32@hid@hh@@UEAA_NII@Z,1
+1530d2680,?SetController@VibrationWin32@hid@hh@@UEAA_NIII@Z,1
 1530dddd0,??0VibrationDataContainer@hid@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z,1
 1530df220,??_DVibrationDataContainer@hid@hh@@QEAAXXZ,1
 153178560,?Exists@VibrationContainer@hid@hh@@QEAA_NH@Z,1

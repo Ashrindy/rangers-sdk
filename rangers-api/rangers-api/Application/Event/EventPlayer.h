@@ -100,6 +100,8 @@ namespace app::evt {
     class EventScene : public hh::fnd::BaseObject, hh::dv::DvSceneControlListener {
     public:
         enum class Flags : unsigned int {
+            HAS_MOVIE = 0x7,
+            HAS_MOVIE_4K = 0x8,
             UNK0 = 0x11,
             MOVIE_PLAYING = 0x12
         };
@@ -110,7 +112,7 @@ namespace app::evt {
         EventSetupData setupData;
         void* resourceCollection;
         hh::fnd::Handle<hh::fmv::MovieHandleObj> movieHandle;
-        bool unkBool1;
+        hh::snd::SoundHandle soundHandle;
         long long unk2;
         float unk3;
         csl::ut::Bitset<Flags> flags;

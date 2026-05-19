@@ -57,6 +57,8 @@ namespace hh::dv{
         void InitializeCuts(int64_t cutCount, float* cuts);
         void InitializeDisableFrames(int64_t disableFrameCount, DisableFrame* disableFrames);
         void InitializePages(void* pages, int64_t pageCount, hh::dv::DvSceneControl* dvsc);
+        DvPage* GetPage(unsigned int pageId) const;
+        DvPage* GetPage(char* pageName) const;
 
         DvSceneTimeline(csl::fnd::IAllocator* allocator);
     };
