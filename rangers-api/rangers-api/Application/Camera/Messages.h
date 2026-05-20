@@ -16,4 +16,13 @@ namespace app::camera {
 
         MsgCameraOff() : fnd::AppMessage<MsgCameraOff>{ hh::fnd::MessageID::CAMERA_OFF } {}
     };
+
+    class MsgShakeCameraName : public fnd::AppMessage<MsgShakeCameraName> {
+    public:
+        const char* cameraShakeName{ nullptr };
+        csl::math::Vector3 offset{ 0, 0, 0 };
+        char unk0{ 0 };
+
+        MsgShakeCameraName() : fnd::AppMessage<MsgShakeCameraName>{ hh::fnd::MessageID::SHAKE_CAMERA_NAME } {}
+    };
 }
