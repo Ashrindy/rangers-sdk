@@ -8,6 +8,7 @@ namespace hh::physics {
 
         MsgTriggerBase(fnd::MessageID id, GOCCollider* subject, GOCCollider* actor);
         hh::fnd::Handle<hh::game::GameObject> GetActorObject() const;
+        csl::math::Vector3 GetContactPoint() const;
     };
     class MsgTriggerEnter : public MsgTriggerBase {
     public:

@@ -7,7 +7,7 @@ namespace app{
         int32_t qword3E4;
         game::GOCBossActionSelect* bossActionSelect;
         game::GOCBossPillar* bossPillar;
-        int64_t qword3F8;
+        game::GOCHealth* gocHealth;
         int32_t currentState;
         int16_t word404;
         int64_t qword408;
@@ -16,10 +16,11 @@ namespace app{
         int32_t damageEffectStage;
         int64_t dword428;
         csl::ut::InplaceMoveArray<hh::physics::GOCMeshCollider*, 2> meshColliders;
-        int64_t qword458;
-        int32_t qword468;
-        int32_t qword46C;
+        float dword468;
+        hh::fnd::Handle<hh::fnd::Messenger> dword46C;
         int32_t dword470;
+        int32_t dword474;
+        int32_t dword478;
 
         virtual uint64_t PPL_UnkFunc0() override;
         virtual int8_t TPHL_UnkFunc0() override { return 0; }

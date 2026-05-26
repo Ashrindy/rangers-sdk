@@ -9,10 +9,17 @@ namespace app::game{
 
     class BossActionPluginBase : public hh::fnd::ReferencedObject{
     public:
-        struct UnkStr0 {
-            int unk0;
+        struct PossibleAction {
+            unsigned int attackId;
             int stateId;
-            int64_t unk1;
+            unsigned int priority;
+            float readyTime;
+        };
+
+        struct PossibleActionName {
+            csl::ut::String stateName;
+        private:
+            char stateNameAllocation[0x80];
         };
 
         short unk0;
@@ -31,11 +38,11 @@ namespace app::game{
         virtual bool UnkFunc7() { return false; }
         virtual bool ProcessMessage(hh::fnd::Message& msg) { return false; }
         virtual bool UnkFunc9(int64_t a2) { return false; }
-        virtual bool UnkFunc10(csl::ut::MoveArray<UnkStr0>& a2) { return false; }
-        virtual bool UnkFunc11(int64_t a2) { return false; }
+        virtual bool GetPossibleActions(csl::ut::MoveArray<PossibleAction>& actions) { return false; }
+        virtual bool GetPossibleActionNames(csl::ut::MoveArray<PossibleActionName>& actionNames) { return false; }
         virtual bool GetState(int64_t& id, csl::ut::String& name) { return false; }
-        virtual bool UnkFunc13(int64_t a2, int64_t a3) { return false;  }
-        virtual void ExecuteState0(int stateIdx) {}
+        virtual bool GetPreparedAction(int64_t* stateId, float* readyTime) { return false;  }
+        virtual void ExecuteState(int& stateIdx) {}
         virtual void ExecuteState1(int& state, unsigned char unk0) {}
 
         inline BossActionPluginBase(csl::fnd::IAllocator* allocator) : ReferencedObject{ allocator, true } {}
@@ -82,7 +89,7 @@ namespace app::game{
 
     class BossActionSelectListener {
     public:
-        virtual void BASL_UnkFunc0() {};
+        virtual void OnExecuteState(int& state, const char* stateName) {};
         virtual void BASL_UnkFunc1() {};
         virtual void BASL_UnkFunc2() {};
         virtual void ExecuteState1(int& state, unsigned char unk0) {};

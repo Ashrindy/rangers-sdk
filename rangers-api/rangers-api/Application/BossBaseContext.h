@@ -59,7 +59,7 @@ namespace app{
         hh::fnd::Reference<gfx::MultiNodeContainer> multiNodeContainer;
         hh::fnd::Reference<physics::ColliderContainer> colliderContainer;
         csl::ut::MoveArray<int64_t> qword60;
-        csl::ut::MoveArray<int64_t> qword80;
+        csl::ut::MoveArray<hh::fnd::Handle<hh::physics::GOCCollider>> qword80;
         csl::ut::MoveArray<BattleCollision> battleCollisions;
         csl::ut::MoveArray<int64_t> qwordC0;
         csl::ut::MoveArray<int64_t> qwordE0;
@@ -74,7 +74,7 @@ namespace app{
         float cameraTimeElapsed;
         csl::math::Transform startObjectBossTransform;
         float dword200;
-        csl::math::Vector3 lastHitPosition;
+        csl::math::Vector3 cyloopHitPosition;
         csl::math::Vector4 csl__math__vector4220;
         csl::math::Vector4 relatedToLastHit;
         hh::fnd::WorldPosition playerWarpPosition;

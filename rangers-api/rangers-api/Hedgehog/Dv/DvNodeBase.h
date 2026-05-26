@@ -34,8 +34,8 @@ namespace hh::dv{
         csl::ut::String nodeName;
         csl::math::Transform transform;
         csl::math::Matrix44 matrix;
-        DvResource* dvResource;
-        DvNodeBase* parent;
+        hh::fnd::Reference<DvResource> dvResource;
+        hh::fnd::Reference<DvNodeBase> parent;
         csl::ut::MoveArray<DvNodeBase*> childrenElements0;
         csl::ut::MoveArray<DvNodeBase*> childrenPath;
         csl::ut::MoveArray<DvNodeBase*> childrenCamera;

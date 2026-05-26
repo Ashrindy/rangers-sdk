@@ -55,7 +55,7 @@ namespace app{
         char* countParamName;
         char* atkTypeParamName;
         int64_t qword48;
-        int dword50;
+        float dword50;
         float dword54;
         float dword58;
         csl::ut::String handAnimStateName;
@@ -758,11 +758,11 @@ namespace app{
             virtual void Reset() override;
             virtual bool UpdateState(hh::fnd::UpdatingPhase phase, float deltaTime) override;
             virtual bool UnkFunc9(int64_t a2) override;
-            virtual bool UnkFunc10(csl::ut::MoveArray<UnkStr0>& a2) override;
-            virtual bool UnkFunc11(int64_t a2) override;
+            virtual bool GetPossibleActions(csl::ut::MoveArray<PossibleAction>& actions) override;
+            virtual bool GetPossibleActionNames(csl::ut::MoveArray<PossibleActionName>& actionNames) override;
             virtual bool GetState(int64_t& id, csl::ut::String& name) override;
-            virtual bool UnkFunc13(int64_t a2, int64_t a3) override;
-            virtual void ExecuteState0(int stateIdx) override;
+            virtual bool GetPreparedAction(int64_t* stateId, float* readyTime) override;
+            virtual void ExecuteState(int& stateIdx) override;
             virtual void ExecuteState1(int& state, unsigned char unk0) override;
         };
 
@@ -776,10 +776,10 @@ namespace app{
 
             GOCBossActionSelect* bossActionSelect;
             app_cmn::fsm::GOCHsm2* gocHsm;
-            int stateId;
+            int currentActionStateId;
             csl::ut::MoveArray<int64_t> qword40;
             int dword60;
-            float dword64;
+            float actionReadyTimer;
             float dword68;
             float dword6C;
             int curImmediateAction;
@@ -797,11 +797,11 @@ namespace app{
             virtual bool UnkFunc7() override;
             virtual bool ProcessMessage(hh::fnd::Message& msg) override;
             virtual bool UnkFunc9(int64_t a2) override;
-            virtual bool UnkFunc10(csl::ut::MoveArray<UnkStr0>& a2) override;
-            virtual bool UnkFunc11(int64_t a2) override;
+            virtual bool GetPossibleActions(csl::ut::MoveArray<PossibleAction>& actions) override;
+            virtual bool GetPossibleActionNames(csl::ut::MoveArray<PossibleActionName>& actionNames) override;
             virtual bool GetState(int64_t& id, csl::ut::String& name) override;
-            virtual bool UnkFunc13(int64_t a2, int64_t a3) override;
-            virtual void ExecuteState0(int stateIdx) override;
+            virtual bool GetPreparedAction(int64_t* stateId, float* readyTime) override;
+            virtual void ExecuteState(int& stateIdx) override;
             virtual void ExecuteState1(int& state, unsigned char unk0) override;
         };
     }

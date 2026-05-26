@@ -159,6 +159,7 @@ namespace hh::needle {
         ComputeShader* GetComputeShader(void* data, size_t size);
         void DestroyRenderUnit(const char* name);
         PBRModelInstance* CreatePBRModelInstance(Model* model, const PBRModelCreationInfo& info);
+        static Rectangle GetRenderTargetRect(RenderTargetManager* manager, const RenderTargetReference& rtRef, SupportFX::FxViewport& viewport);
 
         void SetupLightField(LightFieldDescription& desc, const char* sceneName);
 

@@ -348,6 +348,7 @@ namespace rangerssdk::ucsl {
 #include "Hedgehog/Needle/PostEffectRenderJob.h"
 #include "Hedgehog/Needle/PostEffectPipelineJob.h"
 #include "Hedgehog/Needle/PostEffectLitePipelineJob.h"
+#include "Hedgehog/Needle/FXAAJob.h"
 #include "Hedgehog/Needle/RenderDebugScreenJob.h"
 #include "Hedgehog/Needle/CopyColor.h"
 #include "Hedgehog/Needle/CopyColorJob.h"
@@ -1347,6 +1348,8 @@ namespace rangerssdk::ucsl {
 
 #include "Application/Giant/BossGiantContext.h"
 #include "Application/Giant/BossGiant.h"
+
+#include "Application/Dragon/BossDragonHomingMissile.h"
 
 #include "Application/VolumeTrigger.h"
 #include "Application/PassPlaneTrigger.h"

@@ -3,29 +3,42 @@
 namespace app {
     class MsgDamage : public fnd::AppMessage<MsgDamage> {
     public:
+        enum class ParryFlags : unsigned int {
+            ENABLED,
+            SLOW,
+            UNK0,
+            UNK1,
+            JUST,
+            SPECIAL_CAMERA_ANIM,
+            COUNTER_SMASH,
+            UNK2
+        };
+
         uint32_t dword20;
-        size_t damageFlags; // & 0x04 - cyloop, & 0x08 quick cyloop?
+        size_t damageFlags; // |= 0x02 - killing, & 0x04 - cyloop, & 0x08 quick cyloop, |= 0x40 - blow off, |= 0x200 - quake?, |= 0x10000000 - only parry
         hh::fnd::Handle<hh::physics::GOCCollider> hitCollider;
         csl::math::Vector3 csl__math__vector440;
         csl::math::Vector3 cyloopPosition;
-        csl::math::Vector3 csl__math__vector460;
+        csl::math::Vector3 attackVelocity;
         float dword70;
-        uint32_t dword74;
+        hh::fnd::Handle<hh::physics::GOCCollider> attackerCollider;
         csl::math::Vector3 csl__math__vector480;
         csl::math::Vector3 csl__math__vector490;
         csl::math::Vector3 csl__math__vector4A0;
-        uint64_t qwordB0;
+        uint32_t damageHP;
+        uint32_t dwordB4;
         uint64_t qwordB8;
         float qwordC0;
-        uint32_t qwordC4;
-        short wordC8;
+        csl::ut::Bitset<ParryFlags> parryFlags;
+        short practiceUIType; // ObjDamageTestAttack::Kind
         csl::math::Vector3 csl__math__vector4D0;
         csl::math::Vector3 csl__math__vector4E0;
         csl::math::Vector3 csl__math__vector4F0;
         csl::math::Quaternion csl__math__vector4100;
         uint32_t dword110;
 
-        MsgDamage(unsigned int dword20Param, size_t qword28Param) : fnd::AppMessage<MsgDamage>{ hh::fnd::MessageID::DAMAGE } {}
+        MsgDamage(unsigned int dword20Param, size_t qword28Param);
+        void HandleEnter(hh::physics::MsgTriggerEnter& msg);
     };
 
     class MsgGetCyloopPoint : public fnd::AppMessage<MsgGetCyloopPoint> {
@@ -192,15 +205,18 @@ namespace app {
     public:
         char unk0{ 1 };
         hh::fnd::Reference<hh::fnd::HFrame> moveableRangeHFrame{ nullptr };
-        csl::math::Vector4 unk1{ 0, 3000, 0, 3.1415927f };
-        float unk2{ 0 };
-        float unk3{ 0 };
+        csl::math::Vector4 unk1{ 0, 300, 0, 3.1415927f };
+        float unk2{ 10 };
+        float unk3{ 10 };
         int64_t unk4{ 0 };
         int64_t unk5{ 0 };
         int64_t unk6{ 0 };
         int unk7{ 0 };
         char unk8{ 0 };
         char unk9{ 1 };
+        csl::math::Vector4 unk10{ 0, 0, 0, 0 };
+        int unk12{ 0 }; // When 1, the player gets pulled to the boss
+        bool shouldNoclip{ false };
 
         MsgBeginBossBattle() : fnd::AppMessage<MsgBeginBossBattle>{ hh::fnd::MessageID::BEGIN_BOSS_BATTLE } {}
     };

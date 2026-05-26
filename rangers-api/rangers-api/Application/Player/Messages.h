@@ -1,5 +1,9 @@
 #pragma once
 
+namespace app {
+    class MsgDamage;
+}
+
 namespace app::player {
     class MsgAddNotifyPreDeadListener : public fnd::AppMessage<MsgAddNotifyPreDeadListener> {
     public:
@@ -76,5 +80,15 @@ namespace app::player {
         short unk0{ 0 };
 
         MsgEndExternalControl() : fnd::AppMessage<MsgEndExternalControl>{ hh::fnd::MessageID::END_EXTERNAL_CONTROL} {}
+    };
+
+    class MsgChangeDamageState : public fnd::AppMessage<MsgChangeDamageState> {
+    public:
+        csl::math::Vector3 attackVelocity{ 0, 0, 0 };
+        MsgDamage* damageMsg{ nullptr };
+        int unk1{ 0 };
+
+        MsgChangeDamageState(csl::math::Vector3& attackVelocity);
+        MsgChangeDamageState() : fnd::AppMessage<MsgChangeDamageState>{ hh::fnd::MessageID::CHANGE_DAMAGE_STATE} {}
     };
 }

@@ -4074,7 +4074,6 @@
 14008d680,?UnkFunc1@?$AppMessage@VMsgBeginBossBattle@app@@@fnd@app@@UEAAIXZ,1
 14008d680,?BPHB_UnkFunc6@BattlePhaseHandL@BossGiantState@app@@UEAAXXZ,1
 14008d680,?BPHB_UnkFunc6@BattlePhaseHandR@BossGiantState@app@@UEAAXXZ,1
-14008d680,?UnkFunc0@BossActionPluginBase@game@app@@UEAA_JXZ,1
 14008d680,?UnkFunc0@BossActionPluginGiant01@game@app@@UEAA_JXZ,1
 14008d680,?UnkFunc0@BossActionPluginGiant01ImmAction@game@app@@UEAA_JXZ,1
 14008d680,?UnkFunc1@?$AppMessage@VMsgChangePlayerCharacter@game@app@@@fnd@app@@UEAAIXZ,1
@@ -4082,6 +4081,8 @@
 14008d680,?UnkFunc1@?$AppMessage@VMsgCharacterBeginLookAt@app@@@fnd@app@@UEAAIXZ,1
 14008d680,?UnkFunc1@?$AppMessage@VMsgCharacterEndLookAt@app@@@fnd@app@@UEAAIXZ,1
 14008d680,?UnkFunc1@?$AppMessage@VMsgCameraOff@camera@app@@@fnd@app@@UEAAIXZ,1
+14008d680,?UnkFunc1@?$AppMessage@VMsgShakeCameraName@camera@app@@@fnd@app@@UEAAIXZ,1
+14008d680,?UnkFunc1@?$AppMessage@VMsgChangeDamageState@player@app@@@fnd@app@@UEAAIXZ,1
 14008d680,?EE_UnkFunc2@EventEnvironment@evt@app@@UEAA_NXZ,1
 14008d680,?UnkFunc1@?$AppMessage@VMsgGetHomingTargetInfo@player@app@@@fnd@app@@UEAAIXZ,1
 14008d680,?UnkFunc1@?$AppMessage@VMsgBeginExternalControl@player@app@@@fnd@app@@UEAAIXZ,1
@@ -4530,6 +4531,8 @@
 1400c0400,??_DMsgGetTargetPosition@app@@QEAAXXZ,1
 1400c0400,??_DMsgWarpToPoint@player@app@@QEAAXXZ,1
 1400c0400,??_DMsgMotionCamera@camera@app@@QEAAXXZ,1
+1400c0400,??_DMsgShakeCameraName@camera@app@@QEAAXXZ,1
+1400c0440,?CreateAsyncHandler@?$AppMessage@VMsgShakeCameraName@camera@app@@@fnd@app@@UEAAPEAVMessageAsyncHandler@2hh@@PEAVIAllocator@2csl@@@Z,1
 1400c0500,?ContGetQWORD680@Control@gindows@@UEAAPEAXPEAX@Z,1
 1400c0500,?GetLocalPreferredClientSize@Control@gindows@@UEAAXPEAH@Z,1
 1400c0510,?ContGetQWORD688@Control@gindows@@UEAAPEAXPEAX@Z,1
@@ -9149,6 +9152,7 @@
 14011a910,??_GAutoSequenceManager@dbg@app@@QEAAXXZ,0
 14011a9f0,??_DMsgChangeLayerTimeScale@game@app@@QEAAXXZ,1
 14011a9f0,??_DMsgCharacterBeginLookAt@app@@QEAAXXZ,1
+14011a9f0,??_DMsgChangeDamageState@player@app@@QEAAXXZ,1
 14011b820,j_?OnAddedToGame@MonologueService@game@app@@UEAAXXZ,1
 14011b820,j_?OnAddedToGame@AppResourceManager@fnd@app@@UEAAXXZ,1
 14011b820,j_?OnAddedToGame@ReactiveService@game@app@@UEAAXXZ,1
@@ -9937,6 +9941,7 @@
 140137290,?SetPageIndex@ScenePlaybackInfo@EventSetupData@evt@app@@QEAAXH@Z,1
 1401372b0,j_?SetPage@ScenePlaybackInfo@EventSetupData@evt@app@@QEAAXPEBD@Z,1
 1401372d0,?SetTransform@EventSetupData@evt@app@@QEAAXPEAVVector4@math@csl@@@Z,1
+1401372d0,?SetTransform@PlayInfo@EventSetupData@evt@app@@QEAAXAEAVTransform@math@csl@@@Z,1
 140137450,j_??_GEventPlayer@evt@app@@QEAAXXZ,1
 140137450,j_??_DEventPlayer@evt@app@@QEAAXXZ,1
 140137580,?HideObject@EventPlayer@evt@app@@QEAAXAEAV?$Handle@VGameObject@game@hh@@V?$HandleManager@VMessenger@fnd@hh@@@fnd@3@@fnd@hh@@@Z,1
@@ -11101,6 +11106,7 @@
 1401aadf0,j_?UnkFunc5@GameModeBoot@game@app@@UEAA_NXZ,1
 1401aadf0,j_?Initialize@GameModeBoot@game@app@@UEAA_NXZ,1
 1401aadf0,j_?Initialize@GameModeBoot@game@app@@UEAAXXZ,1
+1401aadf0,?Initialize@GameModeBoot@game@app@@UEAAXXZ,1
 1401abe80,??0GameModeBossRush@game@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
 1401ac030,??_GGameModeBossRush@game@app@@QEAAXXZ,0
 1401ae570,?Create@RequestOverlayToast@ui@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z,1
@@ -13087,6 +13093,7 @@
 14027c1a0,??0BossDragonFireBarInfo@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
 14027c1f0,??_GBossDragonFireBar@app@@QEAAXXZ,0
 14027c280,??_GBossDragonFireBarInfo@app@@QEAAXXZ,0
+14027cb70,?Load@BossDragonHomingMissileInfo@app@@UEAAXXZ,1
 14027cd30,?GetClass@BossDragonFireBar@app@@SAPEBVGameObjectClass@game@hh@@XZ,0
 14027cd90,?Create@BossDragonFireBar@app@@CAPEAV12@PEAVIAllocator@fnd@csl@@@Z,0
 14027cd90,?Create@BossDragonFireBar@app@@SAPEAV12@PEAVIAllocator@fnd@csl@@@Z,0
@@ -13094,8 +13101,16 @@
 14027d710,?Create@BossDragonHomingLaser@app@@CAPEAV12@PEAVIAllocator@fnd@csl@@@Z,0
 14027d710,?Create@BossDragonHomingLaser@app@@SAPEAV12@PEAVIAllocator@fnd@csl@@@Z,0
 14027d7c0,??0BossDragonHomingMissileInfo@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
-14027d820,??_GBossDragonHomingMissile@app@@QEAAXXZ,0
-14027d8c0,??_GBossDragonHomingMissileInfo@app@@QEAAXXZ,0
+14027d7f0,??0Description@BossDragonHomingMissile@app@@QEAA@XZ,1
+14027d820,??_GBossDragonHomingMissile@app@@QEAAXXZ,1
+14027d820,??_DBossDragonHomingMissile@app@@QEAAXXZ,1
+14027d8c0,??_GBossDragonHomingMissileInfo@app@@QEAAXXZ,1
+14027d8c0,??_DBossDragonHomingMissileInfo@app@@QEAAXXZ,1
+14027d920,?AddCallback@BossDragonHomingMissile@app@@UEAAXPEAVGameManager@game@hh@@@Z,1
+14027e240,?GetInfoName@BossDragonHomingMissileInfo@app@@UEAAPEBDXZ,1
+14027e250,?Initialize@BossDragonHomingMissileInfo@app@@UEAAXPEAVGameManager@game@hh@@@Z,1
+14027e5b0,?ProcessMessage@BossDragonHomingMissile@app@@UEAA_NAEAVMessage@fnd@hh@@@Z,1
+14027e7f0,?Setup@BossDragonHomingMissile@app@@QEAAXAEBUDescription@12@@Z,1
 14027f6b0,?GetClass@BossDragonHomingMissile@app@@SAPEBVGameObjectClass@game@hh@@XZ,0
 14027fa00,?Create@BossDragonHomingMissile@app@@CAPEAV12@PEAVIAllocator@fnd@csl@@@Z,0
 14027fa00,?Create@BossDragonHomingMissile@app@@SAPEAV12@PEAVIAllocator@fnd@csl@@@Z,0
@@ -13700,8 +13715,13 @@
 1402cb1b0,?Create@ObjBossDashCirclePoint@app@@SAPEAV12@PEAVIAllocator@fnd@csl@@@Z,0
 1402cb350,?UnkFunc10@BossActionPluginGiant01@game@app@@UEAA_NAEAV?$MoveArray@_J@ut@csl@@@Z,1
 1402cb350,?UnkFunc10@BossActionPluginGiant01@game@app@@UEAA_NAEAV?$MoveArray@UUnkStr0@BossActionPluginBase@game@app@@@ut@csl@@@Z,1
+1402cb350,?GetPossibleActions@BossActionPluginGiant01@game@app@@UEAA_NAEAV?$MoveArray@UPossibleAction@BossActionPluginBase@game@app@@@ut@csl@@@Z,1
 1402cb550,?UnkFunc11@BossActionPluginGiant01@game@app@@UEAA_N_J@Z,1
 1402cb550,?UnkFunc11@BossActionPluginGiant01ImmAction@game@app@@UEAA_N_J@Z,1
+1402cb550,?UnkFunc11@BossActionPluginGiant01@game@app@@UEAA_NAEAV?$MoveArray@UUnkStr1@BossActionPluginBase@game@app@@@ut@csl@@@Z,1
+1402cb550,?UnkFunc11@BossActionPluginGiant01ImmAction@game@app@@UEAA_NAEAV?$MoveArray@UUnkStr1@BossActionPluginBase@game@app@@@ut@csl@@@Z,1
+1402cb550,?GetPossibleActionNames@BossActionPluginGiant01@game@app@@UEAA_NAEAV?$MoveArray@UPossibleActionName@BossActionPluginBase@game@app@@@ut@csl@@@Z,1
+1402cb550,?GetPossibleActionNames@BossActionPluginGiant01ImmAction@game@app@@UEAA_NAEAV?$MoveArray@UPossibleActionName@BossActionPluginBase@game@app@@@ut@csl@@@Z,1
 1402cb6f0,?UnkFunc12@BossActionPluginGiant01@game@app@@UEAA_N_JAEAVString@ut@csl@@@Z,1
 1402cb6f0,?GetState@BossActionPluginGiant01@game@app@@UEAA_N_JAEAVString@ut@csl@@@Z,1
 1402cb6f0,?GetState@BossActionPluginGiant01@game@app@@UEAA_NAEA_JAEAVString@ut@csl@@@Z,1
@@ -13713,6 +13733,8 @@
 1402cbd90,?UnkFunc2@BossActionPluginGiant01@game@app@@UEAAXXZ,1
 1402cbd90,?OnRemoved@BossActionPluginGiant01@game@app@@UEAAXXZ,1
 1402cbda0,?ExecuteState0@BossActionPluginGiant01@game@app@@UEAAXH@Z,1
+1402cbda0,?ExecuteState0@BossActionPluginGiant01@game@app@@UEAAXAEAH@Z,1
+1402cbda0,?ExecuteState@BossActionPluginGiant01@game@app@@UEAAXAEAH@Z,1
 1402cbe10,?UpdateState@BossActionPluginGiant01@game@app@@UEAA_NHM@Z,1
 1402cbe10,?UpdateState@BossActionPluginGiant01@game@app@@UEAA_NW4UpdatingPhase@fnd@hh@@M@Z,1
 1402cc900,?UnkFunc4@BossActionPluginGiant01ImmAction@game@app@@UEAA_NXZ,1
@@ -13720,8 +13742,11 @@
 1402cc900,?IsInState@BossActionPluginGiant01ImmAction@game@app@@UEAA_NXZ,1
 1402cc910,?UnkFunc13@BossActionPluginGiant01ImmAction@game@app@@UEAAX_J0@Z,1
 1402cc910,?UnkFunc13@BossActionPluginGiant01ImmAction@game@app@@UEAA_N_J0@Z,1
+1402cc910,?GetPreparedAction@BossActionPluginGiant01ImmAction@game@app@@UEAA_NAEA_JAEAM@Z,1
+1402cc910,?GetPreparedAction@BossActionPluginGiant01ImmAction@game@app@@UEAA_NPEA_JPEAM@Z,1
 1402cc990,?UnkFunc10@BossActionPluginGiant01ImmAction@game@app@@UEAA_NAEAV?$MoveArray@_J@ut@csl@@@Z,1
 1402cc990,?UnkFunc10@BossActionPluginGiant01ImmAction@game@app@@UEAA_NAEAV?$MoveArray@UUnkStr0@BossActionPluginBase@game@app@@@ut@csl@@@Z,1
+1402cc990,?GetPossibleActions@BossActionPluginGiant01ImmAction@game@app@@UEAA_NAEAV?$MoveArray@UPossibleAction@BossActionPluginBase@game@app@@@ut@csl@@@Z,1
 1402ccb00,?UnkFunc12@BossActionPluginGiant01ImmAction@game@app@@UEAA_N_JAEAVString@ut@csl@@@Z,1
 1402ccb00,?GetState@BossActionPluginGiant01ImmAction@game@app@@UEAA_N_JAEAVString@ut@csl@@@Z,1
 1402ccb00,?GetState@BossActionPluginGiant01ImmAction@game@app@@UEAA_NAEA_JAEAVString@ut@csl@@@Z,1
@@ -13731,6 +13756,8 @@
 1402cd390,?UnkFunc2@BossActionPluginGiant01ImmAction@game@app@@UEAAXXZ,1
 1402cd390,?OnRemoved@BossActionPluginGiant01ImmAction@game@app@@UEAAXXZ,1
 1402cd3a0,?ExecuteState0@BossActionPluginGiant01ImmAction@game@app@@UEAAXH@Z,1
+1402cd3a0,?ExecuteState0@BossActionPluginGiant01ImmAction@game@app@@UEAAXAEAH@Z,1
+1402cd3a0,?ExecuteState@BossActionPluginGiant01ImmAction@game@app@@UEAAXAEAH@Z,1
 1402cd4b0,?ProcessMessage@BossActionPluginGiant01ImmAction@game@app@@UEAA_NAEAVMessage@fnd@hh@@@Z,1
 1402cd520,?UpdateState@BossActionPluginGiant01ImmAction@game@app@@UEAA_NHM@Z,1
 1402cd520,?UpdateState@BossActionPluginGiant01ImmAction@game@app@@UEAA_NW4UpdatingPhase@fnd@hh@@M@Z,1
@@ -14743,6 +14770,7 @@
 1403fe870,j_??_DObjGismo@app@@QEAAXXZ,1
 1403fe930,j_??_GObjGismoInfo@app@@QEAAXXZ,0
 1403fe990,j_?AddCallback@ObjGismo@app@@UEAAXPEAVGameManager@game@hh@@@Z,1
+140400e40,?ProcessMessage@ObjGismo@app@@UEAA_NAEAVMessage@fnd@hh@@@Z,1
 1404024c0,?Update@ObjGismo@app@@UEAAXW4UpdatingPhase@fnd@hh@@AEBUSUpdateInfo@45@@Z,1
 140402730,?UpdateAsync@ObjGismo@app@@UEAAXW4UpdatingPhase@fnd@hh@@AEBUSUpdateInfo@45@PEAX@Z,1
 140402e00,j_?Create@ResGismoConfigDesign@app@@CAPEAV12@PEAVIAllocator@fnd@csl@@@Z,0
@@ -16638,6 +16666,8 @@
 1405f3c00,?Create@GOCTimeStopGroup@app@@SAPEAV12@PEAVIAllocator@fnd@csl@@@Z,0
 1405f3e10,?UnkFunc13@BossActionPluginGiant01@game@app@@UEAAX_J0@Z,1
 1405f3e10,?UnkFunc13@BossActionPluginGiant01@game@app@@UEAA_N_J0@Z,1
+1405f3e10,?GetPreparedAction@BossActionPluginGiant01@game@app@@UEAA_NAEA_JAEAM@Z,1
+1405f3e10,?GetPreparedAction@BossActionPluginGiant01@game@app@@UEAA_NPEA_JPEAM@Z,1
 1405f3f70,??0EnemyPostureContext@enemy@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,1
 1405f3f70,??0EnemyPostureContext@enemy@app@@QEAA@PEAVIAllocator@fnd@csl@@PEAVGameObject@game@hh@@@Z,1
 1405f3fe0,??_GGOCEnemyPosture@enemy@app@@QEAAXXZ,1
@@ -16667,6 +16697,8 @@
 1405f9160,??0ObjKnucklesWallInfo@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
 1405f9220,??_GObjKnucklesWallInfo@app@@QEAAXXZ,0
 1405fb840,??0MsgDamage@app@@AEAA@I_K@Z,1
+1405fb840,??0MsgDamage@app@@QEAA@I_K@Z,1
+1405fba20,?HandleEnter@MsgDamage@app@@QEAAXAEAVMsgTriggerEnter@physics@hh@@@Z,1
 1405fbc10,??0MiniBossAshura@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
 1405fbfa0,??_GMiniBossAshura@app@@QEAAXXZ,0
 140601240,?GetClass@MiniBossAshura@app@@SAPEBVGameObjectClass@game@hh@@XZ,0
@@ -19717,14 +19749,15 @@
 1408bc600,?UpdateAsync@GOCPlayerVisual@player@app@@UEAAXW4UpdatingPhase@fnd@hh@@AEBUSUpdateInfo@56@@Z,1
 1408bc600,?UpdateAsync@GOCPlayerVisual@player@app@@UEAAXW4UpdatingPhase@fnd@hh@@AEBUSUpdateInfo@56@PEAX@Z,1
 1408bc750,??0MsgAvoidDamage@player@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
-1408bc790,??0MsgChangeDamageState@player@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
+1408bc790,??0MsgChangeDamageState@player@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,1
+1408bc790,??0MsgChangeDamageState@player@app@@QEAA@AEAVVector3@math@csl@@@Z,1
 1408bc7e0,??0MsgChangeDeadState@player@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
 1408bc830,??0MsgGravitySwitched@player@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
 1408bc870,j_??0MsgHitDamage@player@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
 1408bc8c0,??0MsgNotifyAnimationEventAction@player@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
 1408bc900,j_??0MsgSetupGroundImpulse@player@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
 1408bc930,??_DMsgAvoidDamage@player@app@@QEAAXXZ,0
-1408bc9e0,??_DMsgChangeDamageState@player@app@@QEAAXXZ,0
+1408bc9e0,?CreateAsyncHandler@?$AppMessage@VMsgChangeDamageState@player@app@@@fnd@app@@UEAAPEAVMessageAsyncHandler@2hh@@PEAVIAllocator@2csl@@@Z,1
 1408bcaa0,??_DMsgChangeDeadState@player@app@@QEAAXXZ,0
 1408bcb60,??_DMsgGravitySwitched@player@app@@QEAAXXZ,0
 1408bcc10,??_DMsgHitDamage@player@app@@QEAAXXZ,0
@@ -24124,6 +24157,7 @@
 140c0fa90,?CreateAsyncHandler@MsgTriggerEnter@physics@hh@@UEAAPEAVMessageAsyncHandler@fnd@3@PEAVIAllocator@5csl@@@Z,1
 140c0fb60,?CreateAsyncHandler@MsgTriggerLeave@physics@hh@@UEAAPEAVMessageAsyncHandler@fnd@3@PEAVIAllocator@5csl@@@Z,1
 140c0fc10,?CreateAsyncHandler@MsgTriggerStay@physics@hh@@UEAAPEAVMessageAsyncHandler@fnd@3@PEAVIAllocator@5csl@@@Z,1
+140c0fd10,j_?GetContactPoint@MsgTriggerBase@physics@hh@@QEBA?AVVector3@math@csl@@XZ,1
 140c0fd80,j_?GetActorObject@MsgTriggerBase@physics@hh@@QEBA?AV?$Handle@VGameObject@game@hh@@V?$HandleManager@VMessenger@fnd@hh@@@fnd@3@@fnd@3@XZ,1
 140c0fdc0,j_?GetActorObject@MsgTriggerLeave@physics@hh@@QEBA?AV?$Handle@VGameObject@game@hh@@V?$HandleManager@VMessenger@fnd@hh@@@fnd@3@@fnd@3@XZ,1
 140c103a0,?GetClass@GOCRigidBody@gocs@heur@@SAPEBVGOComponentClass@game@hh@@XZ,0
@@ -27036,7 +27070,6 @@
 140db3a50,?SetVisibility@EffectHandle@eff@hh@@QEAAX_N@Z,1
 140db3a50,?SetVisible@EffectHandle@eff@hh@@QEAAX_N@Z,1
 140db3a80,?SetWorldMatrix@EffectHandle@eff@hh@@QEAAXAEBVMatrix34@math@csl@@@Z,1
-140db3b40,??_DBossDragonHomingMissile@app@@QEAAXXZ,1
 140db3b40,??_DObjChainBooster@app@@QEAAXXZ,1
 140db3b40,??_DObjExtendPillar@app@@QEAAXXZ,1
 140db3b40,??_DObjFishingPortal@app@@QEAAXXZ,1
@@ -28183,7 +28216,7 @@
 140edb190,?Create@ResVibration@hid@hh@@CAPEAVManagedResource@fnd@3@PEAVIAllocator@5csl@@@Z,1
 140edb1f0,j_??_DResVibration@hid@hh@@QEAAXXZ,1
 140edb260,?GetTypeInfo@ResVibration@hid@hh@@SAPEBUResourceTypeInfo@fnd@3@XZ,1
-140edb270,?Load@ResVibration@hid@hh@@UEAAXPEAX_K@Z,1
+140edb270,j_?Load@ResVibration@hid@hh@@UEAAXPEAX_K@Z,1
 140edb2b0,j_??0Message@fnd@hh@@QEAA@I@Z,1
 140edb2e0,??_DObjEnergyBall@app@@QEAAXXZ,0
 140edb470,??0HFrame@fnd@hh@@QEAA@PEAVIAllocator@1csl@@@Z,1
@@ -29561,7 +29594,9 @@
 14101efe0,??0RenderTargetReference@needle@hh@@QEAA@I@Z,1
 14101f000,j_??0PostEffectShader@needle@hh@@QEAA@XZ,1
 14101f0a0,j_??_DPostEffectShader@needle@hh@@QEAAXXZ,1
+14101f1f0,?GetRenderTargetRect@SupportFX@needle@hh@@SA?AURectangle@23@PEAVRenderTargetManager@23@AEBURenderTargetReference@23@AEAUFxViewport@123@@Z,1
 14101f440,j_?Setup@PostEffectShader@needle@hh@@QEAAXPEAVRenderingDevice@23@PEAVVertexShader@23@PEAVPixelShader@23@VInstanceParameterContainerData@23@33@Z,1
+14101f440,j_?Setup@PostEffectShader@needle@hh@@QEAAXPEAVRenderingDevice@23@PEAVVertexShader@23@PEAVPixelShader@23@PEAVInstanceParameterContainerData@23@33@Z,1
 14101f770,j_??0RenderTargetManager@needle@hh@@QEAA@IIIIPEAVRenderProperty@12@PEAVIAllocator@fnd@csl@@@Z,1
 14101f9e0,j_??_DRenderTargetManager@needle@hh@@QEAAXXZ,1
 14101fb20,?ClearDepthStencil@RenderTargetManager@needle@hh@@QEAAXAEBURenderTargetReference@23@_N@Z,1
@@ -29933,6 +29968,7 @@
 1410546f0,?GetName@RenderDebugScreenJob@needle@hh@@UEAAPEBDXZ,1
 141054700,?GetClassSize@RenderDebugScreenJob@needle@hh@@UEAAIXZ,1
 141054710,j_?Setup@RenderDebugScreenJob@needle@hh@@UEAAXAEAV?$intrusive_ptr@VRenderingDevice@needle@hh@@USRefCountAddReleaseNeedleObject@23@$00@23@@Z,1
+141054710,j_?Setup@RenderDebugScreenJob@needle@hh@@UEAAXAEBURenderJobContext@23@@Z,1
 141054800,?Render@RenderDebugScreenJob@needle@hh@@UEAAXPEAVPipelineInfo@23@@Z,1
 141054b00,j_??0PostEffectLitePipelineJob@needle@hh@@QEAA@XZ,1
 141054cc0,j_??_DPostEffectLitePipelineJob@needle@hh@@QEAAXXZ,1
@@ -29958,6 +29994,7 @@
 14105ab20,?GetName@FrameBufferCaptureParamBuildJob@needle@hh@@UEAAPEBDXZ,1
 14105ab30,j_?Start@FrameBufferCaptureJob@needle@hh@@UEAAXAEBURenderJobContext@23@@Z,1
 14105abd0,?Run@FrameBufferCaptureParamBuildJob@needle@hh@@UEAAXPEAVParamValueOverrideHelper@23@PEAVPipelineInfo@23@II@Z,1
+141065d00,??$GetSceneParam@UFxAntiAliasing@needle@hh@@@PipelineInfo@needle@hh@@QEAAPEAV?$ParamHolder@UFxAntiAliasing@needle@hh@@@SceneParamContainer@12@XZ,1
 1410721f0,j_??0SCOcclusionCapsule@needle@hh@@QEAA@XZ,1
 141072cd0,j_?Initialize@SCOcclusionCapsule@needle@hh@@UEAAXAEBUInitializeInfo@SceneContext@23@@Z,1
 141072f50,j_??0SCPostEffectVolume@needle@hh@@QEAA@XZ,1
@@ -30051,6 +30088,16 @@
 141097170,j_?SetTexture@PostEffectRenderJob@needle@hh@@UEAAXIPEAVTexture@23@@Z,1
 1410971b0,j_?UnkFunc21@PostEffectRenderJob@needle@hh@@UEAAXIPEAX@Z,1
 1410971b0,j_?SetRenderTarget@PostEffectRenderJob@needle@hh@@UEAAXIPEAVRenderTarget@23@@Z,1
+14109ead0,j_??0FXAAJob@needle@hh@@QEAA@PEAVRenderManager@12@@Z,1
+14109eb20,??_DFXAAJob@needle@hh@@QEAAXXZ,1
+14109eb80,?GetNameHash@FXAAJob@needle@hh@@UEAAIXZ,1
+14109eb90,?GetName@FXAAJob@needle@hh@@UEAAPEBDXZ,1
+14109eba0,?GetClassSize@FXAAJob@needle@hh@@UEAAIXZ,1
+14109ebb0,j_?UnkFunc23@FXAAJob@needle@hh@@UEAAXXZ,1
+14109ec00,j_?Setup@FXAAJob@needle@hh@@UEAAXAEAV?$intrusive_ptr@VRenderingDevice@needle@hh@@USRefCountAddReleaseNeedleObject@23@$00@23@@Z,1
+14109ec00,j_?Setup@FXAAJob@needle@hh@@UEAAXAEBURenderJobContext@23@@Z,1
+14109ee90,?Render@FXAAJob@needle@hh@@UEAAXPEAVPipelineInfo@23@@Z,1
+14109f140,?UnkFunc9@FXAAJob@needle@hh@@UEAAXPEAVPipelineInfo@23@@Z,1
 1410a6510,??0ShadowMapRenderJob@needle@hh@@QEAA@PEAVIAllocator@fnd@csl@@HD@Z,1
 1410a6660,??_DShadowMapRenderJob@needle@hh@@QEAAXXZ,1
 1410a6a30,?GetNameHash@ShadowMapRenderJob@needle@hh@@UEAAIXZ,1
@@ -30072,12 +30119,14 @@
 1410b81d0,?GetNameHash@ColorContrastJob@needle@hh@@UEAAIXZ,1
 1410b81e0,?GetName@ColorContrastJob@needle@hh@@UEAAPEBDXZ,1
 1410b81f0,?Setup@ColorContrastJob@needle@hh@@UEAAXAEAV?$intrusive_ptr@VRenderingDevice@needle@hh@@USRefCountAddReleaseNeedleObject@23@$00@23@@Z,1
+1410b81f0,?Setup@ColorContrastJob@needle@hh@@UEAAXAEBURenderJobContext@23@@Z,1
 1410b8340,?Render@ColorContrastJob@needle@hh@@UEAAXPEAVPipelineInfo@23@@Z,1
 1410b87d0,??0CopyColorJob@needle@hh@@QEAA@XZ,1
 1410b8800,?GetNameHash@CopyColorJob@needle@hh@@UEAAIXZ,1
 1410b8810,?GetName@CopyColorJob@needle@hh@@UEAAPEBDXZ,1
 1410b8820,?UnkFunc22@CopyColorJob@needle@hh@@UEAAXXZ,1
 1410b8820,?Setup@CopyColorJob@needle@hh@@UEAAXAEAV?$intrusive_ptr@VRenderingDevice@needle@hh@@USRefCountAddReleaseNeedleObject@23@$00@23@@Z,1
+1410b8820,?Setup@CopyColorJob@needle@hh@@UEAAXAEBURenderJobContext@23@@Z,1
 1410b8980,?Render@CopyColorJob@needle@hh@@UEAAXPEAVPipelineInfo@23@@Z,1
 1410baf00,?RsdxCheckEvent@rsdx@hh@@YA_NPEAX@Z,1
 1410bafa0,?RsdxResetEvent@rsdx@hh@@YAXPEAX@Z,1
@@ -43285,6 +43334,7 @@
 141d27e08,??_7ModelRenderOpPtJob@needle@hh@@6B@,1
 141d3aa20,??_7RenderOptionParamLisetener@needle@hh@@6B@,1
 141d7a8f0,??_7PostEffectRenderJob@needle@hh@@6B@,1
+141e557e0,??_7FXAAJob@needle@hh@@6B@,1
 141ea59f8,??_7ShadowMapRenderJob@needle@hh@@6B@,1
 14253dd60,??_7SimpleCaptureJob@needle@hh@@6B@,1
 143092490,??_7Impl@IBLGGXSamplingTexture@needle@hh@@6B@,1
@@ -76416,7 +76466,7 @@
 143cd0dd0,?gameObjectClass@BossBigLaser@app@@0VGameObjectClass@game@hh@@B,0
 143cd0e30,?gameObjectClass@BossHowl@app@@0VGameObjectClass@game@hh@@B,1
 143cd0ff0,?gameObjectClass@BossDragonFireBar@app@@0VGameObjectClass@game@hh@@B,0
-143cd10b0,?gameObjectClass@BossDragonHomingMissile@app@@0VGameObjectClass@game@hh@@B,0
+143cd10b0,?gameObjectClass@BossDragonHomingMissile@app@@0VGameObjectClass@game@hh@@B,1
 143cd1230,?gameObjectClass@BossDragonMissile@app@@0VGameObjectClass@game@hh@@B,0
 143cd1290,?gameObjectClass@BossDragonRippleLaser@app@@0VGameObjectClass@game@hh@@B,0
 143cd1340,?gameObjectClass@BossDragonRoad@app@@0VGameObjectClass@game@hh@@B,0
@@ -89186,7 +89236,6 @@
 1476d0520,??_DGameModeBoot@game@app@@QEAAXXZ,1
 1476dbdb0,?UnkFunc5@GameModeBoot@game@app@@UEAA_NXZ,1
 1476dbdb0,?Initialize@GameModeBoot@game@app@@UEAA_NXZ,1
-1476dbdb0,?Initialize@GameModeBoot@game@app@@UEAAXXZ,1
 147729b20,??0GameModeCyberStage@game@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
 1477329f0,??_GGameModeCyberStage@game@app@@QEAAXXZ,0
 14775a470,?Create@Build@State@GameModeCyberStage@game@app@@CAPEAV12345@PEAVIAllocator@fnd@csl@@@Z,0
@@ -91164,6 +91213,7 @@
 14e75cbd0,?GetShape@GOCSphereCollider@physics@hh@@UEBAXAEAUColliShape@23@@Z,1
 14e763860,?Setup@GOCSphereCollider@physics@hh@@QEAAXAEBUSetupInfo@123@@Z,1
 14e7765a0,??0MsgTriggerLeave@physics@hh@@QEAA@AEBV?$Handle@VGOCCollider@physics@hh@@V?$HandleManager@VGOComponent@game@hh@@@fnd@3@@fnd@2@0@Z,1
+14e78a740,?GetContactPoint@MsgTriggerBase@physics@hh@@QEBA?AVVector3@math@csl@@XZ,1
 14e78c020,?GetActorObject@MsgTriggerBase@physics@hh@@QEBA?AV?$Handle@VGameObject@game@hh@@V?$HandleManager@VMessenger@fnd@hh@@@fnd@3@@fnd@3@XZ,1
 14e78d8f0,?GetActorObject@MsgTriggerLeave@physics@hh@@QEBA?AV?$Handle@VGameObject@game@hh@@V?$HandleManager@VMessenger@fnd@hh@@@fnd@3@@fnd@3@XZ,1
 14e7aa8a0,??0PhysicsRaycastJob@physics@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z,1
@@ -91658,7 +91708,6 @@
 150040cb0,??_DObjDarumaDropInfo@app@@QEAAXXZ,0
 150040cb0,??_DObjBossSpringInfo@app@@QEAAXXZ,0
 150040cb0,??_DBossDragonFireBarInfo@app@@QEAAXXZ,0
-150040cb0,??_DBossDragonHomingMissileInfo@app@@QEAAXXZ,0
 150040cb0,??_DBossDragonMissileInfo@app@@QEAAXXZ,0
 150040cb0,??_DBossDragonRoadInfo@app@@QEAAXXZ,0
 150040cb0,??_DBossKnightMissileInfo@app@@QEAAXXZ,0
@@ -92339,6 +92388,7 @@
 1524dce10,?Load@ResTexture@gfnd@hh@@UEAAXPEAX_K@Z,1
 1524e76b0,?Unload@ResTexture@gfnd@hh@@UEAAXXZ,1
 1524ee510,??_DResVibration@hid@hh@@QEAAXXZ,1
+1524f7db0,?Load@ResVibration@hid@hh@@UEAAXPEAX_K@Z,1
 1525038d0,??0Message@fnd@hh@@QEAA@I@Z,1
 1525038d0,??0Message@fnd@hh@@QEAA@W4MessageID@12@@Z,1
 1525256d0,??0HsmBase@ut@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z,1
@@ -92642,6 +92692,7 @@
 15425c340,??0PostEffectShader@needle@hh@@QEAA@XZ,1
 154264250,??_DPostEffectShader@needle@hh@@QEAAXXZ,1
 15426c4a0,?Setup@PostEffectShader@needle@hh@@QEAAXPEAVRenderingDevice@23@PEAVVertexShader@23@PEAVPixelShader@23@VInstanceParameterContainerData@23@33@Z,1
+15426c4a0,?Setup@PostEffectShader@needle@hh@@QEAAXPEAVRenderingDevice@23@PEAVVertexShader@23@PEAVPixelShader@23@PEAVInstanceParameterContainerData@23@33@Z,1
 15426c7b0,??0RenderTargetManager@needle@hh@@QEAA@IIIIPEAVRenderProperty@12@PEAVIAllocator@fnd@csl@@@Z,1
 154285dd0,??_DRenderTargetManager@needle@hh@@QEAAXXZ,1
 1542e77f0,?Initialize@RenderTargetManager@needle@hh@@QEAAXPEAVRenderingDevice@23@PEAVRenderingDeviceContext@23@IIII@Z,1
@@ -92755,6 +92806,7 @@
 1548678b0,??0RenderDebugScreenJob@needle@hh@@QEAA@XZ,1
 1548707d0,??_DRenderDebugScreenJob@needle@hh@@QEAAXXZ,1
 154877a60,?Setup@RenderDebugScreenJob@needle@hh@@UEAAXAEAV?$intrusive_ptr@VRenderingDevice@needle@hh@@USRefCountAddReleaseNeedleObject@23@$00@23@@Z,1
+154877a60,?Setup@RenderDebugScreenJob@needle@hh@@UEAAXAEBURenderJobContext@23@@Z,1
 154885d30,??0PostEffectLitePipelineJob@needle@hh@@QEAA@XZ,1
 1548a3010,??_DPostEffectLitePipelineJob@needle@hh@@QEAAXXZ,1
 1548eba00,??0OcclusionCullingViewJob@needle@hh@@QEAA@I@Z,1
@@ -92804,6 +92856,10 @@
 154eb7cd0,?SetTexture@PostEffectRenderJob@needle@hh@@UEAAXIPEAVTexture@23@@Z,1
 154ebc1b0,?UnkFunc21@PostEffectRenderJob@needle@hh@@UEAAXIPEAX@Z,1
 154ebc1b0,?SetRenderTarget@PostEffectRenderJob@needle@hh@@UEAAXIPEAVRenderTarget@23@@Z,1
+154f66550,??0FXAAJob@needle@hh@@QEAA@PEAVRenderManager@12@@Z,1
+154f78500,?UnkFunc23@FXAAJob@needle@hh@@UEAAXXZ,1
+154f83d50,?Setup@FXAAJob@needle@hh@@UEAAXAEAV?$intrusive_ptr@VRenderingDevice@needle@hh@@USRefCountAddReleaseNeedleObject@23@$00@23@@Z,1
+154f83d50,?Setup@FXAAJob@needle@hh@@UEAAXAEBURenderJobContext@23@@Z,1
 15500f5e0,??0GlobalParameterBuilder@needle@hh@@QEAA@PEAVIAllocator@fnd@csl@@III@Z,1
 15511f2a0,??0SimpleCaptureJob@needle@hh@@QEAA@HH@Z,1
 15513a9a0,?Start@SimpleCaptureJob@needle@hh@@UEAAXAEBURenderJobContext@23@@Z,1
