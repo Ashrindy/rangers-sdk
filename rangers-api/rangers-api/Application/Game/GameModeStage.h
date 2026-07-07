@@ -83,7 +83,7 @@ namespace app::game {
 		virtual void* GetRuntimeTypeInfo() const override;
 		virtual bool ProcessMessage(hh::fnd::Message& message) override;
         virtual void Initialize() override;
-        virtual void UnkFunc6(bool a2) override;
+        virtual void Deinitialize(bool a2) override;
         virtual void UnkFunc7() override;
         virtual void UnkFunc8() override;
         virtual void UnkFunc9() override;

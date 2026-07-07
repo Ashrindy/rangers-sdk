@@ -153,7 +153,9 @@ namespace app::save {
 
     class OptionControlsAc : public SaveDataAccessor<OptionControlsData> {
     public:
+        static uint32_t GetInputID(OptionControlsData::InputKey inputKey);
 
+        OptionControlsData::InputKey GetMainMapping(unsigned int idx) const;
     };
 
     class OptionGamePlayAc : public SaveDataAccessor<OptionGamePlayData> {
@@ -164,7 +166,16 @@ namespace app::save {
 
     class OptionGraphicsAc : public SaveDataAccessor<OptionGraphicsData> {
     public:
-
+        unsigned short GetWidth() const;
+        unsigned short GetHeight() const;
+        unsigned char GetBrightness() const;
+        OptionGraphicsData::GraphicQuality GetQuality() const;
+        OptionGraphicsData::Shadow GetShadow() const;
+        OptionGraphicsData::FrameRate GetFrameRate() const;
+        OptionGraphicsData::AntiAliasing GetAntiAliasing() const;
+        OptionGraphicsData::Bloom GetBloom() const;
+        OptionGraphicsData::VolumetricLight GetVolumetricLight() const;
+        OptionGraphicsData::RederingScale GetRenderingScale() const;
     };
 
     class OptionAc : public SaveDataAccessor<OptionData> {

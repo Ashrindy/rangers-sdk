@@ -11,6 +11,11 @@ namespace hh::needle {
         unsigned int w;
     };
 
+    struct float_vector2 {
+        float x;
+        float y;
+    };
+
     struct float_vector3 {
         float x;
         float y;

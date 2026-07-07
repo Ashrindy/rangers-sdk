@@ -8,7 +8,7 @@ namespace app::game {
         virtual void* GetRuntimeTypeInfo() const override;
         virtual void Initialize() override;
         virtual void UnkFunc9() override;
-        virtual void UnkFunc11() override;
+        virtual void Update(const hh::fnd::SUpdateInfo& updateInfo) override;
         void InitializeServices();
 
         GameModeOpening(csl::fnd::IAllocator* allocator);

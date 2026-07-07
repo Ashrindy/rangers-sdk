@@ -6,9 +6,7 @@ namespace app::game {
     class GameMode : public hh::fnd::Messenger {
     public:
         hh::game::GameManager* gameManager;
-        uint64_t unk2;
-        uint16_t unk3;
-        uint32_t unk4;
+        hh::fnd::SUpdateInfo updateInfo;
         uint64_t fsm[9]; // tinyfsm
         csl::ut::MoveArray<GameService*> gameServices;
         csl::ut::MoveArray<GameModeExtension*> extensions;
@@ -17,16 +15,18 @@ namespace app::game {
         char flags; //0x02 - off
 
         void SetState(unsigned int stateId);
+        void DestroyExtensions();
+        void DestroyServices();
 		virtual void* GetRuntimeTypeInfo() const override;
 		virtual bool fUnk3(hh::fnd::Message& message) override;
         virtual bool UnkFunc4() { return true; }
         virtual void Initialize() {}
-        virtual void UnkFunc6(bool a2) {}
+        virtual void Deinitialize(bool a2) {}
         virtual void UnkFunc7() {}
         virtual void UnkFunc8() {}
         virtual void UnkFunc9() {}
         virtual void UnkFunc10() {}
-        virtual void UnkFunc11() {}
+        virtual void Update(const hh::fnd::SUpdateInfo& updateInfo) {}
         virtual int Shutdown();
         virtual void UnkFunc13() {}
 

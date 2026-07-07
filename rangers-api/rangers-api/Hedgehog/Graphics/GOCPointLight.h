@@ -43,8 +43,8 @@ namespace hh::gfx{
         struct LightSetupInfo{
             ucsl::resources::light::v2::LightType type;
             csl::math::Vector3 position;
-            float radius;
-            float unk4;
+            float sourceRadius;
+            float halfLength;
             float attenuationRadius;
             float innerConeAngle;
             float outerConeAngle;

@@ -8,7 +8,7 @@ namespace app::game{
 
         virtual void* GetRuntimeTypeInfo() const override;
         virtual void Initialize() override;
-        virtual void UnkFunc6(bool a2) override;
+        virtual void Deinitialize(bool a2) override;
 
         GameModeBoot(csl::fnd::IAllocator* allocator);
     };
