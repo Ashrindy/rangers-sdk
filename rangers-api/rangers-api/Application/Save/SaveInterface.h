@@ -54,8 +54,11 @@ namespace app::save {
     OptionAc GetOptionAccessor(hh::game::GameObject* gameObject);
     ChallengeDataAc GetChallengeDataAccessor(hh::game::GameObject* gameObject);
     ExtraFlagAc GetExtraFlagAccessor(hh::game::GameManager* gameManager);
+    ExtraCharacterAc GetExtraCharacterAccessor(hh::game::GameManager* gameObject, unsigned int idx);
     ExtraCharacterAc GetExtraCharacterAccessor(hh::game::GameObject* gameObject, unsigned int idx);
     CharacterAc GetCharacterAccessor(hh::game::GameManager* gameManager, unsigned int idx);
+    CharacterAc GetCharacterAccessor(GameDataAc* gameDataAc, unsigned int idx);
+    CharacterAc GetSelectedCharacterAccessor(GameDataAc* gameDataAc, hh::game::GameManager* gameManager);
     CharacterAc GetCharacterAccessor(hh::game::GameObject* gameObject, unsigned int idx);
     bool IsBirthdayEnabled(hh::game::GameManager* gameManager);
 }

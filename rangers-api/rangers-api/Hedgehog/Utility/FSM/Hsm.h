@@ -34,5 +34,6 @@ namespace hh::ut {
         void Update(fnd::UpdatingPhase phase, float deltaTime);
         void UpdateAsync(fnd::UpdatingPhase phase, float deltaTime);
         bool ProcessMessage(const hh::fnd::Message& message);
+        void ChangeBottomState(int state);
     };
 }

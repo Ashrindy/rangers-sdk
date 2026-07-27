@@ -1,13 +1,12 @@
 #pragma once
 
 namespace app::player {
-    class VisualLocatorNormal : public VisualLocator {
+    class VisualLocatorStandFlat : public VisualLocator {
     public:
-        csl::math::Transform transform2;
-        float unkTau;
-        uint8_t unk101;
+        char byte50;
+        int dword54;
 
-        DEFAULT_CREATE_FUNC(VisualLocatorNormal);
+        DEFAULT_CREATE_FUNC(VisualLocatorStandFlat);
 
         virtual unsigned int GetNameHash() override;
         virtual uint64_t UnkFunc2() override { return 0; }

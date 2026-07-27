@@ -231,6 +231,7 @@ namespace app::evt {
         hh::fnd::Handle<hh::game::GameObject> eventLayerChecker;
         bool unk4;
         int unk5;
+        hh::fnd::Handle<hh::game::GameObject> eventQteInputObject;
         csl::ut::Bitset<Flag> flags;
 
         void AddListener(EventPlayerListener* listener);

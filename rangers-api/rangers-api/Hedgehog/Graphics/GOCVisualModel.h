@@ -170,6 +170,7 @@ namespace hh::gfx {
         void SetPose(anim::Pose* pose);
         void ClearPose(anim::Pose* pose);
         void SetShaderParameterFloat(const char* materialName, const char* shaderParamName, const float* value);
+		void ClearAABB();
 
         // TexSrtControl* SetTexSrtAnimation(hh::gfx::TexSrtDesc& description);
         TexSrtBlender* SetTexSrtBlender(hh::gfx::TexSrtBlenderDesc& description);

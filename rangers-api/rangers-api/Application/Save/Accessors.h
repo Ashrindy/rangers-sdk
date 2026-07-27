@@ -56,12 +56,16 @@ namespace app::save {
         short GetNumRings() const;
         short GetBoostGaugeLevel() const;
         bool HasChaosEmeralds() const;
+		void SetRingCount(uint16_t count);
+		void SetQuickCyloopGauge(float gauge);
     };
 
     class ExtraCharacterAc : public SaveDataAccessor<ExtraCharacterData> {
     public:
         float GetBossRushQuickCyloopGauge() const;
         int GetBossRushNumRings() const;
+		void SetBossRushNumRings(unsigned int rings);
+		void SetBossRushQuickCyloopGauge(unsigned int cyloopGauge);
     };
 
     class ExtraCharacterContainerAc : public SaveDataAccessor<ExtraCharacterContainerData> {
@@ -106,7 +110,9 @@ namespace app::save {
         bool GetTime(game::Timestamp& time);
         GamePlayData::SequenceDeprecated GetSequence() const;
         bool GetCharacter(uint8_t& id) const;
+        void SetCharacter(uint8_t& id);
         bool GetWorldPosition(hh::fnd::WorldPosition& position) const;
+        void SetWorldPosition(hh::fnd::WorldPosition& position);
     };
 
     class HeaderAc : public SaveDataAccessor<HeaderData> {
@@ -162,6 +168,7 @@ namespace app::save {
     public:
         uint8_t GetDLCSonicCostume() const;
         uint8_t GetIslandVisual() const;
+        OptionGamePlayData::LanguageType GetLanguageType() const;
     };
 
     class OptionGraphicsAc : public SaveDataAccessor<OptionGraphicsData> {

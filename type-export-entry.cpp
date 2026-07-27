@@ -289,3 +289,4 @@ template class hh::needle::AnimBlender<hh::needle::AnimTexSrtControl>;
 
 template class app::game::BossActionPluginManager<app::BossBaseContext>;
 template class hh::fnd::Reference<hh::ui::surfride::SurfRideShaderManager>;
+template class hh::fnd::Reference<app::player::StatePluginInWater::WaterDepthProcess>;
