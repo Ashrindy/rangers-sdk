@@ -30,7 +30,7 @@ namespace hh::dv{
         uint32_t flags; //prolly a bitset
         NodeType nodeType;
         char guid[16];
-        char padding[16];
+        char parentGuid[16];
         csl::ut::String nodeName;
         csl::math::Transform transform;
         csl::math::Matrix44 matrix;

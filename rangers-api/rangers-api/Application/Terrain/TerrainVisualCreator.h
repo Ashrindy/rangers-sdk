@@ -111,6 +111,19 @@ namespace app::trr {
 
         void StepHSM(float deltaTime);
 
+        struct ModelInstanceDescription {
+            hh::fnd::ManagedResource* resource;
+            const char* idname;
+            csl::math::Matrix34 worldTransform;
+            const char* resourceName;
+            const char* instanceName;
+            int64_t unk1;
+            int64_t unk2;
+            int64_t unk3;
+        };
+
+        void CreateModelInstance(const ModelInstanceDescription& desc);
+
         CREATE_FUNC(TerrainVisualCreator, TerrainVisualObject* object, TerrainVisualResourceBinder* resourceBinder, UnkCB* cb1Param);
     };
 }

@@ -1175,6 +1175,7 @@ namespace rangerssdk::ucsl {
 #include "Application/Game/GameModeResourceManager.h"
 #include "Application/Game/GameMode.h"
 #include "Application/Game/ApplicationExtension.h"
+#include "Application/Game/ApplicationFpsExtension.h"
 #include "Application/Game/ApplicationSequenceExtension.h"
 #include "Application/Game/GameModeBoot.h"
 #include "Application/Game/GameModeStage.h"
@@ -1216,6 +1217,7 @@ namespace rangerssdk::ucsl {
 #include "Application/Game/GravityManager.h"
 #include "Application/Game/GOCFoot.h"
 #include "Application/Game/RotatePivotFoot.h"
+#include "Application/Game/StageTerrainObject.h"
 
 #include "Application/Enemy/GOCEnemyPosture.h"
 
